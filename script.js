@@ -18,7 +18,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 // Smooth reveal animation
 const revealItems = document.querySelectorAll(
-  ".profile-link, .highlight-card, .course-card, .info-card, .list-card, .journal-list div, .research-impact div, .blog-card"
+  ".profile-link, .highlight-card, .course-card, .info-card, .list-card, .journal-list div, .research-impact div, .medium-blog-card"
 );
 
 const observer = new IntersectionObserver(
@@ -39,52 +39,88 @@ revealItems.forEach(item => {
   observer.observe(item);
 });
 
-// Automatically load Medium blog posts
+// Automatically load Medium blog posts in Medium-style layout
 const blogContainer = document.getElementById("blogPosts");
 
 const mediumRSS =
   "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@michaelmahesh";
 
+function getFirstImageFromHTML(html) {
+  const tempDiv = document.createElement("div");
+  tempDiv.innerHTML = html;
+
+  const img = tempDiv.querySelector("img");
+  return img ? img.src : "https://miro.medium.com/v2/resize:fit:720/format:webp/1*Qy7B6XJfXw4Q2JqLxYbWAA.jpeg";
+}
+
+function getPlainDescription(html) {
+  const tempDiv = document.createElement("div");
+  tempDiv.innerHTML = html;
+
+  const plainText = tempDiv.textContent || tempDiv.innerText || "";
+  return plainText.length > 160
+    ? plainText.substring(0, 160) + "..."
+    : plainText;
+}
+
 async function loadMediumPosts() {
+  if (!blogContainer) return;
+
   try {
     const response = await fetch(mediumRSS);
     const data = await response.json();
 
     blogContainer.innerHTML = "";
 
-    // Change this number if you want more or fewer posts
-    const postsToShow = data.items.slice(0, 6);
+    // Show all posts automatically
+    const postsToShow = data.items;
 
     postsToShow.forEach(post => {
-      const tempDiv = document.createElement("div");
-      tempDiv.innerHTML = post.description;
-
-      const plainText = tempDiv.textContent || tempDiv.innerText || "";
-      const shortDescription = plainText.substring(0, 140) + "...";
+      const imageUrl = getFirstImageFromHTML(post.description);
+      const shortDescription = getPlainDescription(post.description);
 
       const publishedDate = new Date(post.pubDate).toLocaleDateString("en-IN", {
-        year: "numeric",
         month: "short",
-        day: "numeric"
+        day: "numeric",
+        year: "numeric"
       });
 
       const blogCard = document.createElement("article");
-      blogCard.className = "blog-card hidden-item";
+      blogCard.className = "medium-blog-card hidden-item";
 
       blogCard.innerHTML = `
-        <span class="blog-tag">Medium Article</span>
-        <h3>${post.title}</h3>
-        <span class="blog-date">Published: ${publishedDate}</span>
-        <p>${shortDescription}</p>
-        <a href="${post.link}" target="_blank" class="blog-btn">Read More</a>
+        <div class="medium-blog-content">
+          <div class="medium-author">
+            <span class="medium-avatar">M</span>
+            <span class="medium-author-name">Michael Mahesh K</span>
+            <span class="medium-date">· ${publishedDate}</span>
+          </div>
+
+          <h3>${post.title}</h3>
+
+          <p>${shortDescription}</p>
+
+          <div class="medium-blog-actions">
+            <a href="${post.link}" target="_blank" class="medium-read-btn">
+              Read More
+            </a>
+            <span class="medium-save">♡</span>
+          </div>
+        </div>
+
+        <a href="${post.link}" target="_blank">
+          <img src="${imageUrl}" alt="${post.title}" class="medium-blog-image">
+        </a>
       `;
 
       blogContainer.appendChild(blogCard);
     });
 
-    // Add animation to loaded blog cards
-    document.querySelectorAll(".blog-card").forEach(item => {
-      observer.observe(item);
+    // Add reveal animation to loaded blog cards
+    document.querySelectorAll(".medium-blog-card").forEach(item => {
+      if (typeof observer !== "undefined") {
+        observer.observe(item);
+      }
     });
 
   } catch (error) {
@@ -96,6 +132,4 @@ async function loadMediumPosts() {
   }
 }
 
-if (blogContainer) {
-  loadMediumPosts();
-}
+loadMediumPosts();
