@@ -683,3 +683,13 @@ footer {
     text-align: center;
   }
 }
+.hidden-item {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: 0.6s ease;
+}
+
+.show-item {
+  opacity: 1;
+  transform: translateY(0);
+}
