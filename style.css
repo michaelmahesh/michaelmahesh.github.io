@@ -685,7 +685,36 @@ a {
   object-fit: cover;
   background: #f3f4f6;
 }
+/* Make full Medium blog card clickable */
+.medium-blog-card {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
 
+.medium-blog-card:hover h3 {
+  color: var(--blue);
+}
+
+.medium-blog-card:hover .medium-blog-image {
+  transform: scale(1.02);
+}
+
+.medium-blog-image {
+  transition: 0.3s ease;
+}
+
+.medium-blog-actions {
+  justify-content: space-between;
+}
+
+.medium-clap,
+.medium-read-text,
+.medium-save {
+  color: #6b7280;
+  font-size: 15px;
+  font-weight: 700;
+}
 .blog-loading {
   text-align: center;
   color: var(--muted);
