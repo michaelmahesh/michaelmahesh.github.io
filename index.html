@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,18 +14,18 @@
 
   <style>
     :root {
-      --bg: #07111f;
-      --bg-soft: #0d1b2e;
-      --card: rgba(255, 255, 255, 0.08);
-      --card-strong: rgba(255, 255, 255, 0.12);
-      --text: #f5f7fb;
-      --muted: #aab7c9;
-      --line: rgba(255, 255, 255, 0.14);
-      --accent: #6ee7f9;
-      --accent-2: #a78bfa;
-      --accent-3: #34d399;
-      --warning: #fbbf24;
-      --shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+      --bg: #f7fbff;
+      --bg-soft: #eef6ff;
+      --card: rgba(255, 255, 255, 0.82);
+      --card-strong: rgba(255, 255, 255, 0.96);
+      --text: #102033;
+      --muted: #5d6f86;
+      --line: rgba(49, 94, 142, 0.14);
+      --accent: #3b82f6;
+      --accent-2: #8b5cf6;
+      --accent-3: #14b8a6;
+      --warning: #f59e0b;
+      --shadow: 0 24px 70px rgba(59, 130, 246, 0.12);
       --radius: 28px;
     }
 
@@ -40,10 +42,10 @@
     body {
       font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(103, 232, 249, 0.18), transparent 32%),
-        radial-gradient(circle at 80% 20%, rgba(167, 139, 250, 0.20), transparent 28%),
-        radial-gradient(circle at 50% 90%, rgba(52, 211, 153, 0.10), transparent 35%),
-        var(--bg);
+        radial-gradient(circle at top left, rgba(147, 197, 253, 0.35), transparent 32%),
+        radial-gradient(circle at 80% 20%, rgba(221, 214, 254, 0.42), transparent 28%),
+        radial-gradient(circle at 50% 90%, rgba(153, 246, 228, 0.28), transparent 35%),
+        linear-gradient(180deg, #ffffff 0%, var(--bg) 45%, #ffffff 100%);
       color: var(--text);
       line-height: 1.6;
       overflow-x: hidden;
@@ -59,8 +61,8 @@
       inset: 0;
       pointer-events: none;
       background-image:
-        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+        linear-gradient(rgba(59,130,246,0.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59,130,246,0.055) 1px, transparent 1px);
       background-size: 54px 54px;
       mask-image: linear-gradient(to bottom, black, transparent 85%);
       z-index: -1;
@@ -78,7 +80,7 @@
       margin: 14px auto 0;
       width: min(1180px, calc(100% - 36px));
       border: 1px solid var(--line);
-      background: rgba(7, 17, 31, 0.72);
+      background: rgba(255, 255, 255, 0.78);
       backdrop-filter: blur(20px);
       border-radius: 999px;
       box-shadow: var(--shadow);
@@ -107,7 +109,7 @@
       place-items: center;
       border-radius: 50%;
       background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: #06111f;
+      color: #ffffff;
       font-weight: 900;
     }
 
@@ -137,8 +139,8 @@
     .nav-cta {
       padding: 10px 16px;
       border-radius: 999px;
-      background: #fff;
-      color: #07111f;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #ffffff;
       font-weight: 800;
       font-size: 14px;
     }
@@ -233,7 +235,7 @@
 
     .btn.primary {
       background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: #06111f;
+      color: #ffffff;
       border: 0;
     }
 
@@ -246,7 +248,7 @@
       position: relative;
       padding: 24px;
       border: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.06));
+      background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(248,251,255,0.88));
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       overflow: hidden;
@@ -269,7 +271,7 @@
       min-height: 410px;
       border-radius: 24px;
       background:
-        linear-gradient(135deg, rgba(110,231,249,0.18), rgba(167,139,250,0.14)),
+        linear-gradient(135deg, rgba(219,234,254,0.70), rgba(237,233,254,0.62)),
         url("profile.jpg");
       background-size: cover;
       background-position: center;
@@ -284,7 +286,7 @@
       place-items: center;
       text-align: center;
       padding: 24px;
-      background: linear-gradient(135deg, rgba(6,17,31,0.70), rgba(6,17,31,0.35));
+      background: linear-gradient(135deg, rgba(255,255,255,0.80), rgba(239,246,255,0.56));
     }
 
     .profile-placeholder h2 {
@@ -312,7 +314,7 @@
     .mini-stat {
       padding: 14px;
       border-radius: 18px;
-      background: rgba(7,17,31,0.76);
+      background: rgba(255,255,255,0.84);
       border: 1px solid var(--line);
       backdrop-filter: blur(14px);
     }
@@ -369,7 +371,7 @@
       border: 1px solid var(--line);
       background: var(--card);
       border-radius: var(--radius);
-      box-shadow: 0 12px 35px rgba(0,0,0,0.18);
+      box-shadow: 0 12px 35px rgba(59,130,246,0.10);
       transition: 0.25s ease;
     }
 
@@ -431,7 +433,7 @@
       padding: 22px;
       border-radius: var(--radius);
       border: 1px solid var(--line);
-      background: rgba(255,255,255,0.07);
+      background: rgba(255,255,255,0.78);
     }
 
     .timeline-date {
@@ -452,7 +454,7 @@
     .publication {
       padding: 18px;
       border-radius: 22px;
-      background: rgba(255,255,255,0.07);
+      background: rgba(255,255,255,0.78);
       border: 1px solid var(--line);
     }
 
@@ -468,25 +470,53 @@
 
     .link-grid {
       display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 12px;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
     }
 
     .social-link {
-      padding: 16px 12px;
+      min-height: 118px;
+      padding: 18px 12px;
       text-align: center;
-      border-radius: 20px;
+      border-radius: 24px;
       border: 1px solid var(--line);
-      background: rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.82);
       font-weight: 800;
       color: var(--muted);
       transition: 0.25s ease;
+      display: grid;
+      place-items: center;
+      gap: 10px;
+      box-shadow: 0 12px 30px rgba(59,130,246,0.08);
+    }
+
+    .social-logo {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #dbeafe, #ede9fe);
+      border: 1px solid var(--line);
+      color: var(--accent);
+      font-size: 16px;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+    }
+
+    .social-link span:last-child {
+      font-size: 14px;
     }
 
     .social-link:hover {
       color: var(--text);
-      background: linear-gradient(135deg, rgba(110,231,249,0.18), rgba(167,139,250,0.18));
+      background: linear-gradient(135deg, rgba(219,234,254,0.95), rgba(237,233,254,0.95));
       transform: translateY(-4px);
+    }
+
+    .social-link:hover .social-logo {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #ffffff;
     }
 
     .contact-card {
@@ -528,7 +558,7 @@
       }
 
       .link-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .nav-links,
@@ -547,7 +577,7 @@
         right: 0;
         top: 72px;
         padding: 16px;
-        background: rgba(7,17,31,0.96);
+        background: rgba(255,255,255,0.96);
         border: 1px solid var(--line);
         border-radius: 24px;
       }
@@ -584,11 +614,14 @@
       </a>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#links">Links</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#subjects">Subjects</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#journals">Journals</a></li>
+        <li><a href="#connect">Connect</a></li>
       </ul>
 
       <a class="nav-cta" href="mailto:michaelmaheshk@gmail.com">Contact</a>
@@ -601,14 +634,14 @@
       <div class="container hero-grid">
         <div class="reveal">
           <div class="eyebrow"><span class="pulse"></span> AI Researcher • Academic Leader • Ph.D. Supervisor</div>
-          <h1>Building intelligent systems for <span class="gradient-text">vision, healthcare & mobility.</span></h1>
+          <h1>Dr. K. Michael Mahesh <span class="gradient-text">AI Researcher & Computer Vision Expert.</span></h1>
           <p class="hero-lead">
-            I am Dr. K. Michael Mahesh, Associate Professor at Saveetha Engineering College, Chennai. My work focuses on Deep Learning, Computer Vision, Biomedical Imaging, ADAS, and AI-integrated emerging technologies.
+            Associate Professor, Ph.D. Supervisor, and AI researcher specializing in Deep Learning, Computer Vision, Digital Image Processing, Biomedical Imaging, ADAS, and Generative AI. I also provide training and academic mentoring for students, researchers, and professionals who want to learn AI, Machine Learning, Deep Learning, Image Processing, Python, OpenCV, and research publication writing.
           </p>
           <div class="hero-actions">
-            <a class="btn primary" href="#publications">View Research</a>
+            <a class="btn primary" href="#connect">Contact for Training</a>
             <a class="btn" href="my_cv-2.pdf" target="_blank">Download Resume</a>
-            <a class="btn" href="mailto:michaelmaheshk@gmail.com">Email Me</a>
+            <a class="btn" href="#research">View Research Work</a>
           </div>
         </div>
 
@@ -662,44 +695,22 @@
       </div>
     </section>
 
-    <section id="expertise">
+    <section id="skills">
       <div class="container">
         <div class="section-head reveal">
           <div>
-            <p class="eyebrow">Expertise</p>
-            <h2 class="section-title">Research areas and technical stack.</h2>
+            <p class="eyebrow">Skills</p>
+            <h2 class="section-title">Technical and academic strengths.</h2>
           </div>
         </div>
 
-        <div class="grid grid-2">
-          <div class="card reveal">
-            <h3>Core Research Domains</h3>
-            <div class="tags">
-              <span class="tag">Artificial Intelligence</span>
-              <span class="tag">Machine Learning</span>
-              <span class="tag">Deep Learning</span>
-              <span class="tag">Computer Vision</span>
-              <span class="tag">Digital Image Processing</span>
-              <span class="tag">Biomedical Imaging</span>
-              <span class="tag">ADAS</span>
-              <span class="tag">Generative AI</span>
-              <span class="tag">Intelligent Automation</span>
-            </div>
-          </div>
-
-          <div class="card reveal">
-            <h3>Teaching & Leadership</h3>
-            <div class="tags">
-              <span class="tag">Ph.D. Supervision</span>
-              <span class="tag">Curriculum Design</span>
-              <span class="tag">Research Mentoring</span>
-              <span class="tag">Accreditation</span>
-              <span class="tag">IQAC</span>
-              <span class="tag">NAAC</span>
-              <span class="tag">Academic Administration</span>
-              <span class="tag">International Collaboration</span>
-            </div>
-          </div>
+        <div class="grid grid-3">
+          <article class="card reveal"><div class="icon">🐍</div><h3>Programming</h3><p>Python, C, C++, MATLAB basics, research coding, and AI model implementation.</p></article>
+          <article class="card reveal"><div class="icon">🧠</div><h3>AI & Deep Learning</h3><p>CNN, RNN, LSTM, Transformers, GANs, PyTorch, TensorFlow, and model optimization.</p></article>
+          <article class="card reveal"><div class="icon">👁️</div><h3>Computer Vision</h3><p>OpenCV, image segmentation, object detection, medical imaging, ADAS, and visual intelligence.</p></article>
+          <article class="card reveal"><div class="icon">🤖</div><h3>Agent AI Tools</h3><p>LangChain, LangGraph, LangSmith, Ollama, Hugging Face, RAG workflows, and AI assistants.</p></article>
+          <article class="card reveal"><div class="icon">📚</div><h3>Research Writing</h3><p>Journal paper writing, Scopus/WoS publication guidance, literature review, and proposal drafting.</p></article>
+          <article class="card reveal"><div class="icon">🎓</div><h3>Training</h3><p>Hands-on training for students, faculty, and researchers in AI, ML, DL, Python, and Image Processing.</p></article>
         </div>
       </div>
     </section>
@@ -746,57 +757,68 @@
       </div>
     </section>
 
-    <section id="publications">
+    <section id="subjects">
       <div class="container">
-        <div class="section-head reveal">
-          <div>
-            <p class="eyebrow">Selected Research</p>
-            <h2 class="section-title">Recent publications.</h2>
-          </div>
-          <p class="section-subtitle">Add DOI links later for each publication to make this section stronger for academic visitors.</p>
-        </div>
-
-        <div class="publication-list">
-          <div class="publication reveal">
-            <strong>MICH-Net: A Novel Deep Learning Architecture With African Fire Hawk Optimization for Steering Angle Prediction in ADAS</strong>
-            <span>IEEE Transactions on Intelligent Transportation Systems, 2025</span>
-          </div>
-          <div class="publication reveal">
-            <strong>Multi-Modal Lung Cancer Detection Using Pyramidal Cascade Neuro-Fuzzy Fractional Network</strong>
-            <span>Cancer Investigation, 2025</span>
-          </div>
-          <div class="publication reveal">
-            <strong>DeepDrive: A braking decision-making approach using optimized GAN and Deep CNN for ADAS</strong>
-            <span>Engineering Applications of Artificial Intelligence, 2023</span>
-          </div>
-          <div class="publication reveal">
-            <strong>HY-LSTM: A new time series deep learning architecture for estimation of pedestrian time to cross in ADAS</strong>
-            <span>Journal of Visual Communication and Image Representation, 2023</span>
-          </div>
-          <div class="publication reveal">
-            <strong>DeepJoint segmentation for the classification of severity-levels of glioma tumour using multimodal MRI images</strong>
-            <span>IET Image Processing, 2020</span>
-          </div>
+        <div class="section-head reveal"><div><p class="eyebrow">Subjects Taught</p><h2 class="section-title">Teaching areas.</h2></div></div>
+        <div class="grid grid-3">
+          <article class="card reveal"><div class="icon">🧠</div><h3>Deep Learning</h3><p>Neural networks, CNN, RNN, LSTM, Transformers, GANs, optimization, and real-time projects.</p></article>
+          <article class="card reveal"><div class="icon">🖼️</div><h3>Digital Image Processing</h3><p>Image enhancement, filtering, segmentation, feature extraction, OpenCV, and applications.</p></article>
+          <article class="card reveal"><div class="icon">📊</div><h3>Machine Learning</h3><p>Supervised learning, unsupervised learning, model evaluation, regression, classification, and deployment.</p></article>
+          <article class="card reveal"><div class="icon">🐍</div><h3>Python for AI</h3><p>Python basics, NumPy, Pandas, Matplotlib, OpenCV, PyTorch, and TensorFlow foundations.</p></article>
+          <article class="card reveal"><div class="icon">🚗</div><h3>ADAS & Computer Vision</h3><p>Object detection, road scene analysis, steering angle prediction, braking decisions, and vision systems.</p></article>
+          <article class="card reveal"><div class="icon">📝</div><h3>Research Methodology</h3><p>Problem identification, literature survey, manuscript preparation, indexing, and academic presentation.</p></article>
         </div>
       </div>
     </section>
 
-    <section id="links">
+    <section id="research">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><p class="eyebrow">Research Work</p><h2 class="section-title">Selected research contributions.</h2></div>
+          <p class="section-subtitle">Research areas include AI for healthcare, biomedical imaging, ADAS, intelligent vision systems, WSN, UAV communication, and optimized deep learning models.</p>
+        </div>
+        <div class="publication-list">
+          <div class="publication reveal"><strong>MICH-Net: A Novel Deep Learning Architecture With African Fire Hawk Optimization for Steering Angle Prediction in ADAS</strong><span>IEEE Transactions on Intelligent Transportation Systems, 2025</span></div>
+          <div class="publication reveal"><strong>Multi-Modal Lung Cancer Detection Using Pyramidal Cascade Neuro-Fuzzy Fractional Network</strong><span>Cancer Investigation, 2025</span></div>
+          <div class="publication reveal"><strong>DeepDrive: A braking decision-making approach using optimized GAN and Deep CNN for ADAS</strong><span>Engineering Applications of Artificial Intelligence, 2023</span></div>
+          <div class="publication reveal"><strong>HY-LSTM: A new time series deep learning architecture for estimation of pedestrian time to cross in ADAS</strong><span>Journal of Visual Communication and Image Representation, 2023</span></div>
+          <div class="publication reveal"><strong>DeepJoint segmentation for the classification of severity-levels of glioma tumour using multimodal MRI images</strong><span>IET Image Processing, 2020</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="journals">
+      <div class="container">
+        <div class="section-head reveal"><div><p class="eyebrow">International Journal</p><h2 class="section-title">Publication profile and indexing.</h2></div></div>
+        <div class="grid grid-3">
+          <article class="card reveal"><div class="icon">🌍</div><h3>Scopus / WoS Publications</h3><p>Published research in international journals and conferences across AI, image processing, ADAS, healthcare, and intelligent systems.</p></article>
+          <article class="card reveal"><div class="icon">🏆</div><h3>Awards & Recognition</h3><p>Recipient of Dr. C. V. Raman Achievement Award by IET UK Young Professional Section.</p></article>
+          <article class="card reveal"><div class="icon">💡</div><h3>Patents & Innovation</h3><p>Patent contributions include IoT-based sugar level measurement using saliva and PPG-based biometric recognition.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="connect">
       <div class="container">
         <div class="section-head reveal">
           <div>
-            <p class="eyebrow">Connect</p>
-            <h2 class="section-title">ResearchGate, LinkedIn, GitHub, Scholar, ORCID.</h2>
+            <p class="eyebrow">Let's Connect</p>
+            <h2 class="section-title">For training, research collaboration, invited talks, and academic mentoring.</h2>
           </div>
+          <p class="section-subtitle">If you need training in Python, Machine Learning, Deep Learning, Digital Image Processing, Computer Vision, OpenCV, PyTorch, TensorFlow, or research publication writing, feel free to contact me.</p>
         </div>
 
         <div class="link-grid reveal">
-          <a class="social-link" href="#" target="_blank">ResearchGate</a>
-          <a class="social-link" href="https://www.linkedin.com/in/michaelmahesh" target="_blank">LinkedIn</a>
-          <a class="social-link" href="#" target="_blank">GitHub</a>
-          <a class="social-link" href="mailto:michaelmaheshk@gmail.com">Email</a>
-          <a class="social-link" href="#" target="_blank">Google Scholar</a>
-          <a class="social-link" href="https://orcid.org/0000-0002-9948-5743" target="_blank">ORCID</a>
+          <a class="social-link" href="#" target="_blank" aria-label="ResearchGate profile"><span class="social-logo">RG</span><span>ResearchGate</span></a>
+          <a class="social-link" href="https://www.linkedin.com/in/michaelmahesh" target="_blank" aria-label="LinkedIn profile"><span class="social-logo">in</span><span>LinkedIn</span></a>
+          <a class="social-link" href="#" target="_blank" aria-label="GitHub profile"><span class="social-logo">GH</span><span>GitHub</span></a>
+          <a class="social-link" href="mailto:michaelmaheshk@gmail.com" aria-label="Email Dr Michael Mahesh"><span class="social-logo">@</span><span>Email</span></a>
+          <a class="social-link" href="#" target="_blank" aria-label="Google Scholar profile"><span class="social-logo">GS</span><span>Google Scholar</span></a>
+          <a class="social-link" href="https://orcid.org/0000-0002-9948-5743" target="_blank" aria-label="ORCID profile"><span class="social-logo">ID</span><span>ORCID</span></a>
+          <a class="social-link" href="#" target="_blank" aria-label="Scopus author profile"><span class="social-logo">Sc</span><span>Scopus</span></a>
+          <a class="social-link" href="https://saveetha.irins.org/myprofile" target="_blank" aria-label="IRINS profile"><span class="social-logo">IR</span><span>IRINS</span></a>
+          <a class="social-link" href="https://www.webofscience.com/wos/author/record/AAU-5370-2021" target="_blank" aria-label="Web of Science author profile"><span class="social-logo">WoS</span><span>Web of Science</span></a>
+          <a class="social-link" href="my_cv-2.pdf" target="_blank" aria-label="Download resume"><span class="social-logo">CV</span><span>Resume</span></a>
         </div>
       </div>
     </section>
@@ -805,11 +827,11 @@
       <div class="container">
         <div class="contact-card reveal">
           <div>
-            <p class="eyebrow">Collaboration</p>
-            <h2 class="section-title">Open to international research partnerships.</h2>
-            <p class="section-subtitle">Visiting Professor roles, joint Ph.D. supervision, funded AI projects, and AI & Intelligent Systems research center development.</p>
+            <p class="eyebrow">Training & Collaboration</p>
+            <h2 class="section-title">Need AI training or research guidance?</h2>
+            <p class="section-subtitle">I welcome students, faculty members, research scholars, and professionals for training programs, workshops, project guidance, publication mentoring, and international research collaboration.</p>
           </div>
-          <a class="btn primary" href="mailto:michaelmaheshk@gmail.com">Start a Conversation</a>
+          <a class="btn primary" href="mailto:michaelmaheshk@gmail.com">Contact Me</a>
         </div>
       </div>
     </section>
