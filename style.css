@@ -217,7 +217,7 @@ a {
 
 .profile-links {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 12px;
   padding: 18px;
   background: white;
@@ -530,26 +530,27 @@ a {
 
 .journal-list {
   display: grid;
-  gap: 14px;
+  gap: 16px;
 }
 
 .journal-list div {
   display: grid;
   grid-template-columns: 42px 1fr;
-  gap: 14px;
+  gap: 16px;
   align-items: start;
-  background: white;
+  background: #ffffff;
   border: 1px solid var(--border);
+  border-left: 5px solid var(--blue);
   border-radius: 16px;
   box-shadow: var(--shadow);
-  padding: 18px;
+  padding: 18px 20px;
 }
 
 .journal-list span {
-  width: 36px;
-  height: 36px;
-  background: var(--light-blue);
-  color: var(--blue);
+  width: 38px;
+  height: 38px;
+  background: var(--blue);
+  color: #ffffff;
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -557,7 +558,33 @@ a {
 }
 
 .journal-list p {
+  margin: 0;
+  line-height: 1.7;
   color: var(--muted);
+}
+
+.journal-list strong {
+  color: var(--blue-dark);
+  font-size: 16px;
+}
+
+.journal-list em {
+  color: #4b5563;
+  font-style: normal;
+}
+
+.journal-list b {
+  color: var(--blue-dark);
+}
+
+.journal-list a {
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.journal-list a:hover {
+  text-decoration: underline;
 }
 
 /* CONNECT */
