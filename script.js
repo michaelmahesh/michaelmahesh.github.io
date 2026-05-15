@@ -85,33 +85,33 @@ async function loadMediumPosts() {
         year: "numeric"
       });
 
-      const blogCard = document.createElement("article");
+      const blogCard = document.createElement("a");
       blogCard.className = "medium-blog-card hidden-item";
-
+      blogCard.href = post.link;
+      blogCard.target = "_blank";
+      blogCard.rel = "noopener noreferrer";
+      
       blogCard.innerHTML = `
-        <div class="medium-blog-content">
-          <div class="medium-author">
-            <span class="medium-avatar">M</span>
-            <span class="medium-author-name">Michael Mahesh K</span>
-            <span class="medium-date">· ${publishedDate}</span>
-          </div>
-
-          <h3>${post.title}</h3>
-
-          <p>${shortDescription}</p>
-
-          <div class="medium-blog-actions">
-            <a href="${post.link}" target="_blank" class="medium-read-btn">
-              Read More
-            </a>
-            <span class="medium-save">♡</span>
-          </div>
+      <div class="medium-blog-content">
+        <div class="medium-author">
+          <span class="medium-avatar">M</span>
+          <span class="medium-author-name">Michael Mahesh K</span>
+          <span class="medium-date">· ${publishedDate}</span>
         </div>
 
-        <a href="${post.link}" target="_blank">
-          <img src="${imageUrl}" alt="${post.title}" class="medium-blog-image">
-        </a>
-      `;
+        <h3>${post.title}</h3>
+
+        <p>${shortDescription}</p>
+
+        <div class="medium-blog-actions">
+          <span class="medium-clap">👏</span>
+          <span class="medium-read-text">Read on Medium</span>
+          <span class="medium-save">♡</span>
+        </div>
+      </div>
+
+      <img src="${imageUrl}" alt="${post.title}" class="medium-blog-image">
+    `;
 
       blogContainer.appendChild(blogCard);
     });
