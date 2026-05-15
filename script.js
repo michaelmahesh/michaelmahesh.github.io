@@ -38,4 +38,3 @@ revealItems.forEach(item => {
   item.classList.add("hidden-item");
   observer.observe(item);
 });
-
