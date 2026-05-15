@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -155,8 +153,62 @@
       cursor: pointer;
     }
 
+    .top-banner {
+      min-height: 430px;
+      background:
+        linear-gradient(90deg, rgba(15, 118, 110, 0.72), rgba(37, 99, 235, 0.58)),
+        url("banner.jpg");
+      background-size: cover;
+      background-position: center;
+      display: grid;
+      align-items: end;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .banner-overlay {
+      width: 100%;
+      padding: 80px 0 44px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.88));
+    }
+
+    .banner-content {
+      display: grid;
+      grid-template-columns: 230px 1fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .banner-photo-wrap {
+      width: 230px;
+      height: 230px;
+      border-radius: 50%;
+      padding: 8px;
+      background: #ffffff;
+      box-shadow: 0 24px 55px rgba(15, 118, 110, 0.22);
+    }
+
+    .banner-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+    }
+
+    .top-banner h1 {
+      margin-top: 18px;
+      color: #ffffff;
+      text-shadow: 0 3px 18px rgba(0,0,0,0.28);
+    }
+
+    .top-banner .hero-lead {
+      color: #f8fafc;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.22);
+      font-weight: 700;
+    }
+
     .hero {
-      padding: 96px 0 64px;
+      padding: 64px 0 64px;
     }
 
     .hero-grid {
@@ -271,8 +323,8 @@
       min-height: 410px;
       border-radius: 24px;
       background:
-        linear-gradient(135deg, rgba(219,234,254,0.70), rgba(237,233,254,0.62)),
-        url("profile.jpg");
+        linear-gradient(135deg, rgba(255,255,255,0.42), rgba(239,246,255,0.58)),
+        url("college.jpg");
       background-size: cover;
       background-position: center;
       border: 1px solid var(--line);
@@ -356,6 +408,73 @@
     .grid {
       display: grid;
       gap: 18px;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .course-card {
+      position: relative;
+      min-height: 420px;
+      padding: 24px;
+      border-radius: 30px;
+      border: 1px solid var(--line);
+      background: #ffffff;
+      box-shadow: 0 18px 45px rgba(59,130,246,0.10);
+      overflow: hidden;
+    }
+
+    .course-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 96px;
+      opacity: 0.95;
+    }
+
+    .course-card.blue::before { background: linear-gradient(135deg, #dbeafe, #bfdbfe); }
+    .course-card.violet::before { background: linear-gradient(135deg, #ede9fe, #ddd6fe); }
+    .course-card.green::before { background: linear-gradient(135deg, #dcfce7, #ccfbf1); }
+    .course-card.orange::before { background: linear-gradient(135deg, #ffedd5, #fed7aa); }
+
+    .course-number {
+      position: relative;
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #ffffff;
+      color: var(--accent);
+      font-size: 28px;
+      font-weight: 900;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      margin-bottom: 24px;
+    }
+
+    .course-card h3 {
+      position: relative;
+      font-size: 21px;
+      line-height: 1.15;
+      letter-spacing: -0.04em;
+      margin-bottom: 12px;
+    }
+
+    .course-card p {
+      color: var(--muted);
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+
+    .course-card ul {
+      display: grid;
+      gap: 9px;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
     }
 
     .grid-3 {
@@ -550,6 +669,8 @@
     }
 
     @media (max-width: 900px) {
+      .banner-content,
+      .course-grid,
       .hero-grid,
       .grid-3,
       .grid-2,
@@ -588,6 +709,22 @@
     }
 
     @media (max-width: 560px) {
+      .banner-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .banner-photo-wrap {
+        margin: 0 auto;
+        width: 190px;
+        height: 190px;
+      }
+
+      .top-banner h1 {
+        color: #ffffff;
+        font-size: 42px;
+      }
+
       .floating-card,
       .link-grid {
         grid-template-columns: 1fr;
@@ -630,6 +767,21 @@
   </nav>
 
   <main id="home">
+    <section class="top-banner" aria-label="Academic banner">
+      <div class="banner-overlay">
+        <div class="container banner-content reveal">
+          <div class="banner-photo-wrap">
+            <img src="profile.jpg" alt="Dr. K. Michael Mahesh" class="banner-photo">
+          </div>
+          <div>
+            <p class="eyebrow">Professor | AI Researcher | Computer Vision Expert</p>
+            <h1>Dr. K. Michael Mahesh</h1>
+            <p class="hero-lead">Associate Professor • Ph.D. Supervisor • Deep Learning • Image Processing • Machine Learning • ADAS</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="hero">
       <div class="container hero-grid">
         <div class="reveal">
@@ -646,11 +798,11 @@
         </div>
 
         <div class="hero-card reveal">
-          <div class="profile-orb">
+          <div class="profile-orb college-card">
             <div class="profile-placeholder">
               <div>
-                <h2>Dr. K.<br>Michael<br>Mahesh</h2>
-                <p>Replace this area with your photo by saving it as <b>profile.jpg</b></p>
+                <h2>Training<br>& Research<br>Hub</h2>
+                <p>AI • ML • Deep Learning • Image Processing • Research Publications</p>
               </div>
             </div>
             <div class="floating-card">
@@ -753,6 +905,45 @@
               <p>M.E. from Sri Sai Ram Engineering College and B.E. from St. Xavier’s Catholic College of Engineering.</p>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="training">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Training Programs</p>
+            <h2 class="section-title">Flagship courses for students, faculty, and researchers.</h2>
+          </div>
+          <p class="section-subtitle">These course cards can be used for workshops, FDPs, student training, internship batches, and LinkedIn announcements.</p>
+        </div>
+
+        <div class="course-grid">
+          <article class="course-card blue reveal">
+            <div class="course-number">1</div>
+            <h3>Master AI & Data Science</h3>
+            <p>From data to intelligent decision-making using Python and ML.</p>
+            <ul><li>Python for Data Science</li><li>Statistics & Probability</li><li>Machine Learning</li><li>Deep Learning</li><li>NLP & Text Analytics</li><li>Real-world Projects</li></ul>
+          </article>
+          <article class="course-card violet reveal">
+            <div class="course-number">2</div>
+            <h3>Full Stack Generative AI</h3>
+            <p>Build smart AI applications with LLMs and modern AI tools.</p>
+            <ul><li>Prompt Engineering</li><li>LLMs & APIs</li><li>RAG Systems</li><li>Vector Databases</li><li>LangChain</li><li>AI-powered Web Apps</li></ul>
+          </article>
+          <article class="course-card green reveal">
+            <div class="course-number">3</div>
+            <h3>Building Agentic AI</h3>
+            <p>Design autonomous AI agents that plan, act, and learn.</p>
+            <ul><li>Agent Architecture</li><li>Planning & Reasoning</li><li>Memory Systems</li><li>Tool Calling</li><li>Multi-Agent Systems</li><li>Evaluation & Guardrails</li></ul>
+          </article>
+          <article class="course-card orange reveal">
+            <div class="course-number">4</div>
+            <h3>Deep Learning & Computer Vision</h3>
+            <p>See, analyze, and build intelligent visual systems.</p>
+            <ul><li>Neural Networks</li><li>CNN Architectures</li><li>Object Detection</li><li>Image Segmentation</li><li>OpenCV</li><li>YOLO & Vision Transformers</li></ul>
+          </article>
         </div>
       </div>
     </section>
