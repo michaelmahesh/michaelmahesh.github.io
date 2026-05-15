@@ -19,30 +19,34 @@
 <body>
 
   <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="nav-container">
-      <a href="#home" class="brand">
-        <span class="brand-logo">KM</span>
-        <span>
-          <strong>Dr. K. Michael Mahesh</strong>
-          <small>AI Researcher | Professor | Mentor</small>
-        </span>
-      </a>
+<header class="navbar">
+  <div class="nav-container">
 
-      <button class="menu-btn" id="menuBtn">☰</button>
+    <a href="#home" class="brand" aria-label="Go to home section">
+      <span class="brand-logo">KM</span>
+      <span>
+        <strong>Dr. K. Michael Mahesh</strong>
+        <small>AI Researcher | Professor | Mentor</small>
+      </span>
+    </a>
 
-      <nav class="nav-links" id="navLinks">
-        <a href="#about">About Me</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#subjects">Subjects</a>
-        <a href="#research">Research</a>
-        <a href="#journals">Journals</a>
-        <a href="#connect">Connect</a>
-      </nav>
-    </div>
-  </header>
+    <button class="menu-btn" id="menuBtn" aria-label="Open mobile menu">
+      ☰
+    </button>
+
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="#about">About Me</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#subjects">Subjects</a>
+      <a href="#research">Research</a>
+      <a href="#journals">Journals</a>
+      <a href="#connect">Connect</a>
+    </nav>
+
+  </div>
+</header>
 
   <!-- HERO / BANNER -->
   <section class="hero" id="home">
@@ -687,6 +691,6 @@
   <footer>
     <p>© <span id="year"></span> Dr. K. Michael Mahesh. All Rights Reserved.</p>
   </footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
