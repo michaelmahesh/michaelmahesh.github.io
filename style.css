@@ -880,3 +880,11 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+/* VISITOR COUNTER */
+.footer-counter {
+  margin-top: 10px;
+}
+
+.footer-counter img {
+  height: 24px;
+}
