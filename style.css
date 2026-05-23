@@ -881,10 +881,7 @@ footer {
   transform: translateY(0);
 }
 /* VISITOR COUNTER */
-.footer-counter {
-  margin-top: 10px;
-}
-
-.footer-counter img {
-  height: 24px;
+.footer-counter img{
+    height: 28px;
+    border-radius: 6px;
 }
