@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Dr. K. Michael Mahesh | AI Researcher & Professor</title>
+  <title>Dr. K. Michael Mahesh | AI & Computer Vision Research</title>
 
   <!-- SEO -->
   <meta name="description"
-    content="Official academic portfolio of Dr. K. Michael Mahesh - Professor, AI Researcher, Computer Vision Expert, Ph.D. Supervisor, and educator.">
+    content="Dr. K. Michael Mahesh — Professor, AI Researcher, Computer Vision Researcher, Ph.D. Supervisor, educator and creator of practical AI, Deep Learning, Computer Vision and Image Processing resources.">
 
   <meta name="keywords"
-    content="Dr Michael Mahesh, AI Researcher, Computer Vision, Deep Learning, Machine Learning, Professor, Saveetha Engineering College, OpenCV, PyTorch, Generative AI, ADAS">
+    content="Dr Michael Mahesh, Artificial Intelligence, AI Researcher, Computer Vision, Deep Learning, Machine Learning, Image Processing, OpenCV, Medical AI, Generative AI, Agentic AI, ADAS, Professor, PhD Supervisor">
 
   <meta name="author" content="Dr. K. Michael Mahesh">
   <meta name="robots" content="index, follow">
@@ -20,23 +20,27 @@
   <link rel="canonical" href="https://michaelmahesh.github.io/">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Dr. K. Michael Mahesh | AI Researcher & Professor">
+  <meta property="og:title"
+    content="Dr. K. Michael Mahesh | AI & Computer Vision Research">
 
   <meta property="og:description"
-    content="Official academic portfolio showcasing AI research, deep learning projects, publications, teaching, and computer vision expertise.">
+    content="Research, tutorials, projects, publications and learning resources in Artificial Intelligence, Computer Vision, Deep Learning and Image Processing.">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://michaelmahesh.github.io">
-  <meta property="og:image" content="https://michaelmahesh.github.io/profile.jpg">
+  <meta property="og:image"
+    content="https://michaelmahesh.github.io/profile.jpg">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Dr. K. Michael Mahesh | AI Researcher & Professor">
+  <meta name="twitter:title"
+    content="Dr. K. Michael Mahesh | AI & Computer Vision Research">
 
   <meta name="twitter:description"
-    content="AI Researcher, Computer Vision Expert, Professor, and Ph.D. Supervisor.">
+    content="AI Researcher, Professor, Computer Vision Researcher and Ph.D. Supervisor.">
 
-  <meta name="twitter:image" content="https://michaelmahesh.github.io/profile.jpg">
+  <meta name="twitter:image"
+    content="https://michaelmahesh.github.io/profile.jpg">
 
   <meta name="theme-color" content="#0b5cad">
 
@@ -44,14 +48,13 @@
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
 
-  <!-- CSS -->
+  <!-- Existing CSS -->
   <link rel="stylesheet" href="style.css">
 
   <!-- Google AdSense -->
@@ -60,7 +63,8 @@
     crossorigin="anonymous"></script>
 
   <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SL2GKJ42ES"></script>
+  <script async
+    src="https://www.googletagmanager.com/gtag/js?id=G-SL2GKJ42ES"></script>
 
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -70,12 +74,737 @@
     }
 
     gtag("js", new Date());
-
     gtag("config", "G-SL2GKJ42ES");
   </script>
 
-  <!-- JavaScript -->
+  <!-- Existing JavaScript -->
   <script src="script.js" defer></script>
+
+
+  <!-- =========================================================
+       PHASE 1 ADDITIONAL STYLES
+       These styles allow the new homepage sections to work
+       while keeping your existing style.css.
+       ========================================================= -->
+
+  <style>
+
+    /* ---------------------------------------------------------
+       PHASE 1: HERO
+       --------------------------------------------------------- */
+
+    .phase1-hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 85% 15%, rgba(255,255,255,.14), transparent 28%),
+        radial-gradient(circle at 15% 85%, rgba(255,255,255,.08), transparent 25%),
+        linear-gradient(135deg, #073b72 0%, #0b5cad 55%, #0f8bd8 100%);
+      color: #ffffff;
+    }
+
+    .phase1-hero::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 50%;
+      top: -250px;
+      right: -180px;
+    }
+
+    .phase1-hero::after {
+      content: "";
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 50%;
+      bottom: -220px;
+      left: -120px;
+    }
+
+    .phase1-hero-inner {
+      position: relative;
+      z-index: 2;
+      min-height: 590px;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 30px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.18);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .hero-eyebrow::before {
+      content: "●";
+      font-size: .6rem;
+    }
+
+    .phase1-hero h1 {
+      color: #ffffff;
+      font-size: clamp(2.4rem, 5vw, 4.6rem);
+      line-height: 1.02;
+      margin: 0 0 20px;
+      letter-spacing: -.04em;
+    }
+
+    .phase1-hero h1 span {
+      display: block;
+      color: #d9efff;
+    }
+
+    .phase1-hero h2 {
+      color: #ffffff;
+      font-size: clamp(1.2rem, 2vw, 1.7rem);
+      font-weight: 600;
+      margin: 0 0 18px;
+    }
+
+    .phase1-hero-description {
+      max-width: 680px;
+      color: rgba(255,255,255,.88);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+
+    .phase1-hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 30px;
+    }
+
+    .phase1-hero-tags span {
+      padding: 7px 12px;
+      border-radius: 20px;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.16);
+      font-size: .78rem;
+      color: #ffffff;
+    }
+
+    .phase1-hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .phase1-hero-buttons a {
+      text-decoration: none;
+    }
+
+    .phase1-hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .phase1-profile-card {
+      width: min(390px, 100%);
+      padding: 20px;
+      border-radius: 28px;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.18);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 30px 70px rgba(0,0,0,.20);
+    }
+
+    .phase1-profile-card img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 22px;
+      display: block;
+    }
+
+    .phase1-profile-caption {
+      padding: 18px 5px 4px;
+      text-align: center;
+    }
+
+    .phase1-profile-caption strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 5px;
+    }
+
+    .phase1-profile-caption span {
+      font-size: .82rem;
+      color: rgba(255,255,255,.75);
+    }
+
+
+    /* ---------------------------------------------------------
+       RESEARCH AT A GLANCE
+       --------------------------------------------------------- */
+
+    .research-glance {
+      background: #ffffff;
+      border-bottom: 1px solid #e5edf4;
+    }
+
+    .research-glance-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: #dfe7ee;
+      border: 1px solid #dfe7ee;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 12px 35px rgba(15,45,70,.06);
+    }
+
+    .research-glance-card {
+      background: #ffffff;
+      padding: 28px 22px;
+      text-align: center;
+    }
+
+    .research-glance-number {
+      display: block;
+      color: #0b5cad;
+      font-size: 2.25rem;
+      line-height: 1;
+      font-weight: 800;
+      margin-bottom: 9px;
+    }
+
+    .research-glance-label {
+      display: block;
+      color: #5d6b76;
+      font-size: .88rem;
+      font-weight: 600;
+    }
+
+
+    /* ---------------------------------------------------------
+       FEATURED RESEARCH
+       --------------------------------------------------------- */
+
+    .featured-research {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .featured-research-main {
+      position: relative;
+      overflow: hidden;
+      padding: 38px;
+      border-radius: 22px;
+      background:
+        linear-gradient(135deg, #073b72, #0b5cad);
+      color: #ffffff;
+      box-shadow: 0 20px 50px rgba(11,92,173,.18);
+    }
+
+    .featured-research-main::after {
+      content: "";
+      position: absolute;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.12);
+      right: -100px;
+      bottom: -120px;
+    }
+
+    .featured-label {
+      position: relative;
+      z-index: 2;
+      display: inline-block;
+      padding: 6px 11px;
+      border-radius: 20px;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.16);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .featured-research-main h3 {
+      position: relative;
+      z-index: 2;
+      color: #ffffff;
+      font-size: clamp(1.45rem, 2.4vw, 2.15rem);
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+
+    .featured-research-main p {
+      position: relative;
+      z-index: 2;
+      color: rgba(255,255,255,.84);
+      line-height: 1.75;
+      margin-bottom: 24px;
+    }
+
+    .featured-meta {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 25px;
+    }
+
+    .featured-meta span {
+      padding: 6px 10px;
+      border-radius: 15px;
+      background: rgba(255,255,255,.10);
+      font-size: .75rem;
+    }
+
+    .featured-research-side {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .research-side-card {
+      flex: 1;
+      padding: 25px;
+      background: #ffffff;
+      border: 1px solid #dfe7ee;
+      border-radius: 18px;
+      box-shadow: 0 10px 28px rgba(15,45,70,.06);
+    }
+
+    .research-side-card span {
+      font-size: 1.6rem;
+    }
+
+    .research-side-card h4 {
+      margin: 12px 0 7px;
+      color: #123047;
+    }
+
+    .research-side-card p {
+      margin: 0;
+      color: #5d6b76;
+      font-size: .88rem;
+      line-height: 1.65;
+    }
+
+
+    /* ---------------------------------------------------------
+       TOPIC CARDS
+       --------------------------------------------------------- */
+
+    .topic-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .topic-card {
+      position: relative;
+      padding: 28px;
+      border: 1px solid #dfe7ee;
+      border-radius: 18px;
+      background: #ffffff;
+      text-decoration: none;
+      color: inherit;
+      transition: .25s ease;
+      overflow: hidden;
+    }
+
+    .topic-card:hover {
+      transform: translateY(-5px);
+      border-color: #b8d7ef;
+      box-shadow: 0 15px 35px rgba(15,45,70,.10);
+    }
+
+    .topic-icon {
+      width: 50px;
+      height: 50px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: #eaf4ff;
+      font-size: 1.45rem;
+      margin-bottom: 17px;
+    }
+
+    .topic-card h3 {
+      margin-bottom: 8px;
+      color: #123047;
+    }
+
+    .topic-card p {
+      color: #5d6b76;
+      line-height: 1.65;
+      font-size: .88rem;
+      margin-bottom: 14px;
+    }
+
+    .topic-arrow {
+      color: #0b5cad;
+      font-weight: 700;
+      font-size: .82rem;
+    }
+
+
+    /* ---------------------------------------------------------
+       TUTORIAL CARDS
+       --------------------------------------------------------- */
+
+    .tutorial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .tutorial-card {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #dfe7ee;
+      border-radius: 18px;
+      background: #ffffff;
+      overflow: hidden;
+      transition: .25s ease;
+    }
+
+    .tutorial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(15,45,70,.09);
+    }
+
+    .tutorial-card-top {
+      padding: 20px 20px 0;
+    }
+
+    .tutorial-category {
+      display: inline-block;
+      padding: 5px 9px;
+      border-radius: 12px;
+      background: #eaf4ff;
+      color: #0b5cad;
+      font-size: .7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    .tutorial-card-body {
+      padding: 18px 20px 22px;
+      flex: 1;
+    }
+
+    .tutorial-card h3 {
+      color: #123047;
+      line-height: 1.35;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .tutorial-card p {
+      color: #5d6b76;
+      font-size: .86rem;
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+
+    .tutorial-link {
+      color: #0b5cad;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: .84rem;
+    }
+
+
+    /* ---------------------------------------------------------
+       PROJECTS
+       --------------------------------------------------------- */
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .project-card {
+      padding: 28px;
+      border-radius: 18px;
+      background: #ffffff;
+      border: 1px solid #dfe7ee;
+      transition: .25s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(15,45,70,.09);
+    }
+
+    .project-card .project-icon {
+      font-size: 1.7rem;
+      margin-bottom: 14px;
+    }
+
+    .project-card h3 {
+      margin-bottom: 9px;
+      color: #123047;
+    }
+
+    .project-card p {
+      color: #5d6b76;
+      font-size: .87rem;
+      line-height: 1.7;
+    }
+
+    .project-status {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 5px 9px;
+      border-radius: 12px;
+      background: #f0f7ff;
+      color: #0b5cad;
+      font-size: .7rem;
+      font-weight: 700;
+    }
+
+
+    /* ---------------------------------------------------------
+       KNOWLEDGE HUB
+       --------------------------------------------------------- */
+
+    .knowledge-hub {
+      background:
+        linear-gradient(180deg, #f5f8fb 0%, #ffffff 100%);
+    }
+
+    .knowledge-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .knowledge-card {
+      padding: 24px;
+      border-radius: 17px;
+      background: #ffffff;
+      border: 1px solid #dfe7ee;
+    }
+
+    .knowledge-card h3 {
+      margin-bottom: 8px;
+      color: #123047;
+    }
+
+    .knowledge-card p {
+      color: #5d6b76;
+      font-size: .86rem;
+      line-height: 1.65;
+      margin-bottom: 15px;
+    }
+
+    .knowledge-card a {
+      color: #0b5cad;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: .82rem;
+    }
+
+
+    /* ---------------------------------------------------------
+       PROFESSOR INTRO
+       --------------------------------------------------------- */
+
+    .professor-intro {
+      display: grid;
+      grid-template-columns: .35fr .65fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .professor-intro-image img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 22px;
+      display: block;
+      box-shadow: 0 18px 45px rgba(15,45,70,.12);
+    }
+
+    .professor-intro-content h2 {
+      margin-bottom: 14px;
+      color: #123047;
+    }
+
+    .professor-intro-content p {
+      color: #5d6b76;
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+
+
+    /* ---------------------------------------------------------
+       ACADEMIC PROFILE LINKS
+       --------------------------------------------------------- */
+
+    .phase1-academic-links {
+      background: #f5f8fb;
+    }
+
+
+    /* ---------------------------------------------------------
+       SECTION UTILITIES
+       --------------------------------------------------------- */
+
+    .phase1-section {
+      padding: 78px 0;
+    }
+
+    .phase1-section-alt {
+      background: #f5f8fb;
+    }
+
+    .phase1-section-heading {
+      max-width: 760px;
+      margin: 0 auto 38px;
+      text-align: center;
+    }
+
+    .phase1-section-heading .eyebrow {
+      color: #0b5cad;
+      font-size: .75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 8px;
+    }
+
+    .phase1-section-heading h2 {
+      color: #123047;
+      margin-bottom: 10px;
+      font-size: clamp(1.7rem, 3vw, 2.45rem);
+    }
+
+    .phase1-section-heading p {
+      color: #5d6b76;
+      line-height: 1.7;
+    }
+
+    .phase1-center-button {
+      display: flex;
+      justify-content: center;
+      margin-top: 32px;
+    }
+
+
+    /* ---------------------------------------------------------
+       RESPONSIVE
+       --------------------------------------------------------- */
+
+    @media (max-width: 1050px) {
+
+      .phase1-hero-inner {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding-top: 70px;
+        padding-bottom: 70px;
+        text-align: center;
+      }
+
+      .phase1-hero-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .phase1-hero-tags,
+      .phase1-hero-buttons {
+        justify-content: center;
+      }
+
+      .phase1-hero-visual {
+        order: -1;
+      }
+
+      .phase1-profile-card {
+        max-width: 300px;
+      }
+
+      .featured-research {
+        grid-template-columns: 1fr;
+      }
+
+      .professor-intro {
+        grid-template-columns: 1fr;
+      }
+
+      .professor-intro-image {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 800px) {
+
+      .research-glance-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .topic-grid,
+      .tutorial-grid,
+      .project-grid,
+      .knowledge-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .phase1-section {
+        padding: 58px 0;
+      }
+
+      .phase1-hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .research-glance-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .topic-grid,
+      .tutorial-grid,
+      .project-grid,
+      .knowledge-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-research-main {
+        padding: 28px 22px;
+      }
+
+      .research-glance-card {
+        padding: 22px 12px;
+      }
+
+      .research-glance-number {
+        font-size: 1.8rem;
+      }
+    }
+
+  </style>
 
 </head>
 
@@ -83,12 +812,15 @@
 <body>
 
 
-  <!-- NAVBAR -->
+  <!-- =========================================================
+       NAVIGATION
+       ========================================================= -->
+
   <header class="navbar">
 
     <div class="nav-container">
 
-      <a href="#home" class="brand" aria-label="Go to home section">
+      <a href="#home" class="brand" aria-label="Go to home">
 
         <span class="brand-logo">KM</span>
 
@@ -115,16 +847,21 @@
         id="navLinks"
         aria-label="Main navigation">
 
-        <a href="#about">About Me</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#subjects">Subjects</a>
-        <a href="#teaching">Teaching</a>
+        <a href="#home">Home</a>
+
+        <a href="#ai-cv">AI &amp; CV</a>
+
+        <a href="#tutorials">Tutorials</a>
+
         <a href="#research">Research</a>
+
+        <a href="#projects">Projects</a>
+
         <a href="#journals">Publications</a>
-        <a href="#blog">Blog</a>
-        <a href="#connect">Connect</a>
+
+        <a href="#teaching">Teaching</a>
+
+        <a href="#about">About</a>
 
       </nav>
 
@@ -134,65 +871,100 @@
 
 
 
-  <!-- HERO -->
-  <section class="hero" id="home">
+  <!-- =========================================================
+       HERO
+       ========================================================= -->
 
-    <div class="hero-overlay">
+  <section class="phase1-hero" id="home">
 
-      <div class="container hero-grid">
+    <div class="container phase1-hero-inner">
 
 
-        <div class="profile-photo-box">
+      <div class="phase1-hero-content">
 
-          <img
-            src="profile.jpg"
-            alt="Dr. K. Michael Mahesh"
-            class="profile-photo">
+        <div class="hero-eyebrow">
+          Artificial Intelligence · Computer Vision · Deep Learning
+        </div>
+
+
+        <h1>
+          Researching,
+          <span>teaching &amp; building</span>
+          intelligent vision systems.
+        </h1>
+
+
+        <h2>
+          Dr. K. Michael Mahesh
+          <br>
+          Professor • AI Researcher • Ph.D. Supervisor
+        </h2>
+
+
+        <p class="phase1-hero-description">
+
+          Exploring practical and research-driven solutions in
+          Artificial Intelligence, Computer Vision, Deep Learning,
+          Digital Image Processing, Medical AI, ADAS,
+          Generative AI and emerging intelligent systems.
+
+        </p>
+
+
+        <div class="phase1-hero-tags">
+
+          <span>Computer Vision</span>
+          <span>Deep Learning</span>
+          <span>Medical AI</span>
+          <span>OpenCV</span>
+          <span>ADAS</span>
+          <span>Generative AI</span>
+          <span>Agentic AI</span>
 
         </div>
 
 
+        <div class="phase1-hero-buttons">
 
-        <div class="hero-content">
+          <a href="#tutorials" class="btn primary">
+            Explore AI Tutorials
+          </a>
 
-          <p class="hero-tag">
-            Professor | AI Researcher | Computer Vision Expert
-          </p>
+          <a href="#research" class="btn secondary">
+            Research Lab
+          </a>
 
+          <a href="my_cv-2.pdf"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn secondary">
 
-          <h1>Dr. K. Michael Mahesh</h1>
+            Download CV
 
+          </a>
 
-          <h2>
-            Professor • Ph.D. Supervisor
-          </h2>
+        </div>
 
-
-          <p>
-            Deep Learning • Image Processing • Machine Learning •
-            ADAS • Computer Vision • Generative AI
-          </p>
-
-
-          <div class="hero-buttons">
-
-            <a
-              href="#teaching"
-              class="btn primary">
-
-              Teaching Resources
-
-            </a>
+      </div>
 
 
-            <a
-              href="my_cv-2.pdf"
-              target="_blank"
-              class="btn secondary">
+      <div class="phase1-hero-visual">
 
-              Download Resume
+        <div class="phase1-profile-card">
 
-            </a>
+          <img
+            src="profile.jpg"
+            alt="Dr. K. Michael Mahesh">
+
+          <div class="phase1-profile-caption">
+
+            <strong>
+              Professor | AI &amp; Computer Vision
+            </strong>
+
+            <span>
+              Research • Teaching • Mentoring • Innovation
+            </span>
 
           </div>
 
@@ -200,107 +972,6 @@
 
       </div>
 
-    </div>
-
-  </section>
-
-
-
-  <!-- ACADEMIC PROFILE LINKS -->
-  <section class="profile-links-section">
-
-    <div class="container profile-links">
-
-
-      <a
-        href="https://www.linkedin.com/in/michaelmahesh"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="profile-link">
-
-        <span class="link-icon linkedin">in</span>
-
-        <strong>LinkedIn</strong>
-
-        <small>Connect</small>
-
-      </a>
-
-
-      <a
-        href="https://orcid.org/0000-0002-9948-5743"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="profile-link">
-
-        <span class="link-icon orcid">iD</span>
-
-        <strong>ORCID</strong>
-
-        <small>Researcher ID</small>
-
-      </a>
-
-
-      <a
-        href="https://scholar.google.com/citations?user=YxDQyvIAAAAJ&hl=en"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="profile-link">
-
-        <span class="link-icon scholar">G</span>
-
-        <strong>Google Scholar</strong>
-
-        <small>Profile</small>
-
-      </a>
-
-
-      <a
-        href="https://www.scopus.com/authid/detail.uri?authorId=57202852137"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="profile-link">
-
-        <span class="link-icon scopus">S</span>
-
-        <strong>Scopus</strong>
-
-        <small>Profile</small>
-
-      </a>
-
-
-      <a
-        href="https://www.webofscience.com/wos/author/record/AAU-5370-2021"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="profile-link">
-
-        <span class="link-icon wos">W</span>
-
-        <strong>Web of Science</strong>
-
-        <small>Profile</small>
-
-      </a>
-
-
-      <a
-        href="https://github.com/michaelmahesh"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="profile-link">
-
-        <span class="link-icon github">GH</span>
-
-        <strong>GitHub</strong>
-
-        <small>Projects</small>
-
-      </a>
-
 
     </div>
 
@@ -308,147 +979,2222 @@
 
 
 
-  <!-- QUICK HIGHLIGHTS -->
-  <section class="highlights">
+  <!-- =========================================================
+       RESEARCH AT A GLANCE
+       ========================================================= -->
 
-    <div class="container highlights-grid">
+  <section class="phase1-section research-glance">
 
+    <div class="container">
 
-      <div class="college-image-card">
+      <div class="research-glance-grid">
 
-        <img
-          src="college.jpg"
-          alt="Saveetha Engineering College">
+        <div class="research-glance-card">
 
-      </div>
+          <span class="research-glance-number">
+            20+
+          </span>
 
+          <span class="research-glance-label">
+            International Publications
+          </span>
 
-      <div class="highlight-card">
-
-        <span>🎓</span>
-
-        <h3>Ph.D. Supervisor</h3>
-
-        <p>
-          Recognized research supervisor under Anna University, Chennai.
-        </p>
-
-      </div>
+        </div>
 
 
-      <div class="highlight-card">
+        <div class="research-glance-card">
 
-        <span>📘</span>
+          <span class="research-glance-number">
+            06
+          </span>
 
-        <h3>14+ Years</h3>
+          <span class="research-glance-label">
+            Ongoing Ph.D. Scholars
+          </span>
 
-        <p>
-          Academic, Research, Mentoring, and Administrative experience.
-        </p>
-
-      </div>
-
-
-      <div class="highlight-card">
-
-        <span>🏆</span>
-
-        <h3>Awardee</h3>
-
-        <p>
-          Dr. C. V. Raman Achievement Award by IET UK Young Professional Section.
-        </p>
-
-      </div>
+        </div>
 
 
-      <div class="highlight-card">
+        <div class="research-glance-card">
 
-        <span>💡</span>
+          <span class="research-glance-number">
+            01
+          </span>
 
-        <h3>Patent Granted</h3>
+          <span class="research-glance-label">
+            Granted Patent
+          </span>
 
-        <p>
-          IoT-based device to measure Sugar level in Diabetes using Saliva.
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </section>
+        </div>
 
 
+        <div class="research-glance-card">
 
-  <!-- ABOUT / SKILLS / EXPERIENCE / EDUCATION -->
-  <section class="section" id="about">
+          <span class="research-glance-number">
+            14+
+          </span>
 
-    <div class="container info-grid">
-
-
-      <div class="info-card">
-
-        <h2>About Me</h2>
-
-        <p>
-          I am an AI researcher and academician with expertise in Deep Learning,
-          Computer Vision, Machine Learning, Digital Image Processing, and
-          Intelligent Systems.
-        </p>
-
-        <p>
-          I am currently serving as Professor at Saveetha Engineering College,
-          Chennai, and as a recognized Ph.D. Supervisor under Anna University.
-        </p>
-
-      </div>
-
-
-
-      <div class="info-card" id="skills">
-
-        <h2>Skills</h2>
-
-        <div class="skill-tags">
-
-          <span>Python</span>
-          <span>OpenCV</span>
-          <span>PyTorch</span>
-          <span>Keras</span>
-          <span>Scikit-learn</span>
-          <span>Deep Learning</span>
-          <span>Machine Learning</span>
-          <span>Image Processing</span>
-          <span>Computer Vision</span>
-          <span>LangChain</span>
-          <span>LangGraph</span>
+          <span class="research-glance-label">
+            Years Academic Experience
+          </span>
 
         </div>
 
       </div>
 
+    </div>
 
+  </section>
+
+
+
+  <!-- =========================================================
+       FEATURED RESEARCH
+       ========================================================= -->
+
+  <section class="phase1-section">
+
+    <div class="container">
+
+      <div class="phase1-section-heading">
+
+        <div class="eyebrow">
+          Featured Research
+        </div>
+
+        <h2>
+          From Research Idea to Intelligent System
+        </h2>
+
+        <p>
+          Selected research directions connecting deep learning,
+          computer vision and intelligent systems with real-world
+          applications.
+        </p>
+
+      </div>
+
+
+      <div class="featured-research">
+
+
+        <article class="featured-research-main">
+
+          <span class="featured-label">
+            Research Highlight
+          </span>
+
+
+          <h3>
+            Robust Face Alignment at Extreme Head Angles
+          </h3>
+
+
+          <p>
+
+            Exploring high-angle robust face alignment for situations
+            where conventional facial landmark systems can struggle,
+            with emphasis on practical performance and efficient
+            computer-vision deployment.
+
+          </p>
+
+
+          <div class="featured-meta">
+
+            <span>Face Alignment</span>
+            <span>Computer Vision</span>
+            <span>Deep Learning</span>
+            <span>Real-Time AI</span>
+
+          </div>
+
+
+          <a href="#projects" class="btn secondary">
+            Explore Research &amp; Demos
+          </a>
+
+        </article>
+
+
+        <div class="featured-research-side">
+
+
+          <div class="research-side-card">
+
+            <span>🏥</span>
+
+            <h4>
+              Medical AI
+            </h4>
+
+            <p>
+              Deep learning approaches for MRI analysis,
+              brain tumour recognition and biomedical applications.
+            </p>
+
+          </div>
+
+
+          <div class="research-side-card">
+
+            <span>🚗</span>
+
+            <h4>
+              Intelligent Transportation
+            </h4>
+
+            <p>
+              Computer vision, ADAS, road-scene understanding,
+              pedestrian analysis and intelligent driving systems.
+            </p>
+
+          </div>
+
+
+          <div class="research-side-card">
+
+            <span>🎥</span>
+
+            <h4>
+              Vision &amp; Surveillance
+            </h4>
+
+            <p>
+              Video analysis, abnormal-event detection and
+              intelligent visual understanding.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       EXPLORE AI & COMPUTER VISION
+       ========================================================= -->
+
+  <section
+    class="phase1-section phase1-section-alt"
+    id="ai-cv">
+
+    <div class="container">
+
+      <div class="phase1-section-heading">
+
+        <div class="eyebrow">
+          AI Knowledge Hub
+        </div>
+
+        <h2>
+          Explore AI &amp; Computer Vision
+        </h2>
+
+        <p>
+          Practical concepts, research ideas, implementations,
+          experiments and learning resources across modern AI.
+        </p>
+
+      </div>
+
+
+      <div class="topic-grid">
+
+
+        <a href="#tutorials" class="topic-card">
+
+          <div class="topic-icon">
+            👁️
+          </div>
+
+          <h3>
+            Computer Vision
+          </h3>
+
+          <p>
+            Image understanding, object detection,
+            segmentation, tracking, face analysis and
+            modern vision systems.
+          </p>
+
+          <span class="topic-arrow">
+            Explore Vision →
+          </span>
+
+        </a>
+
+
+        <a href="#tutorials" class="topic-card">
+
+          <div class="topic-icon">
+            🧠
+          </div>
+
+          <h3>
+            Deep Learning
+          </h3>
+
+          <p>
+            Neural networks, CNNs, architectures,
+            optimization and practical deep learning
+            applications.
+          </p>
+
+          <span class="topic-arrow">
+            Explore Deep Learning →
+          </span>
+
+        </a>
+
+
+        <a href="#tutorials" class="topic-card">
+
+          <div class="topic-icon">
+            🏥
+          </div>
+
+          <h3>
+            Medical AI
+          </h3>
+
+          <p>
+            Medical image analysis, MRI processing,
+            tumour analysis and intelligent healthcare systems.
+          </p>
+
+          <span class="topic-arrow">
+            Explore Medical AI →
+          </span>
+
+        </a>
+
+
+        <a href="#tutorials" class="topic-card">
+
+          <div class="topic-icon">
+            🖼️
+          </div>
+
+          <h3>
+            Image Processing
+          </h3>
+
+          <p>
+            Image enhancement, filtering, morphology,
+            thresholding, segmentation and OpenCV.
+          </p>
+
+          <span class="topic-arrow">
+            Explore Image Processing →
+          </span>
+
+        </a>
+
+
+        <a href="#tutorials" class="topic-card">
+
+          <div class="topic-icon">
+            ✨
+          </div>
+
+          <h3>
+            Generative AI
+          </h3>
+
+          <p>
+            Generative models, large language models,
+            multimodal AI and practical intelligent applications.
+          </p>
+
+          <span class="topic-arrow">
+            Explore Generative AI →
+          </span>
+
+        </a>
+
+
+        <a href="#tutorials" class="topic-card">
+
+          <div class="topic-icon">
+            🤖
+          </div>
+
+          <h3>
+            Agentic AI
+          </h3>
+
+          <p>
+            AI agents, RAG, LangChain, LangGraph and
+            intelligent multi-step workflows.
+          </p>
+
+          <span class="topic-arrow">
+            Explore Agentic AI →
+          </span>
+
+        </a>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       LATEST TUTORIALS
+       ========================================================= -->
+
+  <section class="phase1-section" id="tutorials">
+
+    <div class="container">
+
+      <div class="phase1-section-heading">
+
+        <div class="eyebrow">
+          Learn by Building
+        </div>
+
+        <h2>
+          Latest Tutorials
+        </h2>
+
+        <p>
+          The beginning of a first-party technical knowledge base
+          for Artificial Intelligence, Computer Vision,
+          Deep Learning and OpenCV.
+        </p>
+
+      </div>
+
+
+      <div class="tutorial-grid">
+
+
+        <article class="tutorial-card">
+
+          <div class="tutorial-card-top">
+
+            <span class="tutorial-category">
+              Computer Vision
+            </span>
+
+          </div>
+
+          <div class="tutorial-card-body">
+
+            <h3>
+              Understanding Face Alignment in Computer Vision
+            </h3>
+
+            <p>
+              Learn the role of facial landmarks, alignment,
+              pose variation and robust face analysis.
+            </p>
+
+            <a href="#" class="tutorial-link">
+              Coming Soon →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <article class="tutorial-card">
+
+          <div class="tutorial-card-top">
+
+            <span class="tutorial-category">
+              Image Processing
+            </span>
+
+          </div>
+
+          <div class="tutorial-card-body">
+
+            <h3>
+              Morphological Image Processing:
+              HIT and FIT Concepts
+            </h3>
+
+            <p>
+              Understand dilation, erosion and morphological
+              operations using intuitive examples and OpenCV.
+            </p>
+
+            <a href="#" class="tutorial-link">
+              Coming Soon →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <article class="tutorial-card">
+
+          <div class="tutorial-card-top">
+
+            <span class="tutorial-category">
+              Deep Learning
+            </span>
+
+          </div>
+
+          <div class="tutorial-card-body">
+
+            <h3>
+              From CNN Fundamentals to Modern Vision Models
+            </h3>
+
+            <p>
+              A practical path from convolution operations
+              to modern deep-learning-based vision systems.
+            </p>
+
+            <a href="#" class="tutorial-link">
+              Coming Soon →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <article class="tutorial-card">
+
+          <div class="tutorial-card-top">
+
+            <span class="tutorial-category">
+              OpenCV
+            </span>
+
+          </div>
+
+          <div class="tutorial-card-body">
+
+            <h3>
+              Practical Computer Vision with Python &amp; OpenCV
+            </h3>
+
+            <p>
+              Build image-processing and computer-vision
+              applications using Python and OpenCV.
+            </p>
+
+            <a href="#" class="tutorial-link">
+              Coming Soon →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <article class="tutorial-card">
+
+          <div class="tutorial-card-top">
+
+            <span class="tutorial-category">
+              Medical AI
+            </span>
+
+          </div>
+
+          <div class="tutorial-card-body">
+
+            <h3>
+              Deep Learning for MRI Image Analysis
+            </h3>
+
+            <p>
+              Explore the concepts behind medical image
+              classification, segmentation and tumour analysis.
+            </p>
+
+            <a href="#" class="tutorial-link">
+              Coming Soon →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <article class="tutorial-card">
+
+          <div class="tutorial-card-top">
+
+            <span class="tutorial-category">
+              Generative AI
+            </span>
+
+          </div>
+
+          <div class="tutorial-card-body">
+
+            <h3>
+              RAG, LLMs and the Foundations of Agentic AI
+            </h3>
+
+            <p>
+              Understand retrieval-augmented generation,
+              LLM workflows and the foundations of AI agents.
+            </p>
+
+            <a href="#" class="tutorial-link">
+              Coming Soon →
+            </a>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+
+      <div class="phase1-center-button">
+
+        <a href="#teaching" class="btn primary">
+          Explore Learning Resources
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       RESEARCH LAB
+       ========================================================= -->
+
+  <section
+    class="phase1-section phase1-section-alt"
+    id="research">
+
+    <div class="container">
+
+      <div class="phase1-section-heading">
+
+        <div class="eyebrow">
+          Research Lab
+        </div>
+
+        <h2>
+          Research Areas
+        </h2>
+
+        <p>
+          Research directions combining Artificial Intelligence,
+          computer vision, deep learning and intelligent systems.
+        </p>
+
+      </div>
+
+
+      <div class="list-grid">
+
+
+        <div class="list-card">
+
+          <h3>
+            Core Research Areas
+          </h3>
+
+          <ul>
+
+            <li>
+              Deep Learning for Medical Imaging
+            </li>
+
+            <li>
+              Brain Tumor Detection using MRI
+            </li>
+
+            <li>
+              Advanced Driver Assistance Systems
+            </li>
+
+            <li>
+              Intelligent Transportation Systems
+            </li>
+
+            <li>
+              Surveillance Video Analysis
+            </li>
+
+            <li>
+              Wearable IoT-based Health Systems
+            </li>
+
+            <li>
+              AI for Healthcare and Biomedical Applications
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div class="research-impact">
+
+          <div>
+            <strong>20+</strong>
+            <span>International Publications</span>
+          </div>
+
+          <div>
+            <strong>1</strong>
+            <span>Granted Patent</span>
+          </div>
+
+          <div>
+            <strong>6</strong>
+            <span>Ongoing Ph.D. Scholars Supervised</span>
+          </div>
+
+          <div>
+            <strong>14+</strong>
+            <span>Years of Experience</span>
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       PROJECTS & DEMOS
+       ========================================================= -->
+
+  <section
+    class="phase1-section"
+    id="projects">
+
+    <div class="container">
+
+      <div class="phase1-section-heading">
+
+        <div class="eyebrow">
+          Build · Experiment · Demonstrate
+        </div>
+
+        <h2>
+          Projects &amp; Demos
+        </h2>
+
+        <p>
+          A growing collection of AI and computer-vision
+          projects connecting research concepts with practical
+          implementation.
+        </p>
+
+      </div>
+
+
+      <div class="project-grid">
+
+
+        <article class="project-card">
+
+          <div class="project-icon">
+            👁️
+          </div>
+
+          <h3>
+            Robust Face Alignment
+          </h3>
+
+          <p>
+            Exploring robust landmark localization under
+            extreme head poses and challenging viewing angles.
+          </p>
+
+          <span class="project-status">
+            Research Demo
+          </span>
+
+        </article>
+
+
+        <article class="project-card">
+
+          <div class="project-icon">
+            🚗
+          </div>
+
+          <h3>
+            ADAS Vision Systems
+          </h3>
+
+          <p>
+            Research and experiments involving road scenes,
+            pedestrian analysis, anomaly detection and
+            intelligent driving assistance.
+          </p>
+
+          <span class="project-status">
+            Research Projects
+          </span>
+
+        </article>
+
+
+        <article class="project-card">
+
+          <div class="project-icon">
+            🧠
+          </div>
+
+          <h3>
+            Medical Image Intelligence
+          </h3>
+
+          <p>
+            Deep-learning-based image analysis for MRI,
+            brain tumour recognition and healthcare applications.
+          </p>
+
+          <span class="project-status">
+            Medical AI
+          </span>
+
+        </article>
+
+
+        <article class="project-card">
+
+          <div class="project-icon">
+            🎥
+          </div>
+
+          <h3>
+            Intelligent Video Analysis
+          </h3>
+
+          <p>
+            Vision-based approaches for surveillance,
+            abnormal-event detection and video understanding.
+          </p>
+
+          <span class="project-status">
+            Computer Vision
+          </span>
+
+        </article>
+
+
+        <article class="project-card">
+
+          <div class="project-icon">
+            ✨
+          </div>
+
+          <h3>
+            Generative AI Experiments
+          </h3>
+
+          <p>
+            Practical exploration of LLMs, RAG, multimodal
+            systems and emerging generative-AI workflows.
+          </p>
+
+          <span class="project-status">
+            Emerging AI
+          </span>
+
+        </article>
+
+
+        <article class="project-card">
+
+          <div class="project-icon">
+            🤖
+          </div>
+
+          <h3>
+            Agentic AI Workflows
+          </h3>
+
+          <p>
+            Experiments with intelligent agents, tools,
+            retrieval and multi-step reasoning workflows.
+          </p>
+
+          <span class="project-status">
+            Coming Soon
+          </span>
+
+        </article>
+
+
+      </div>
+
+
+      <div class="phase1-center-button">
+
+        <a
+          href="https://github.com/michaelmahesh"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn primary">
+
+          View GitHub Projects
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       LEARNING HUB / TEACHING
+       ========================================================= -->
+
+  <section
+    class="phase1-section phase1-section-alt teaching-learning"
+    id="teaching">
+
+    <div class="container">
+
+      <div class="phase1-section-heading">
+
+        <div class="eyebrow">
+          Learning Hub
+        </div>
+
+        <h2>
+          AI &amp; Computer Vision Learning Resources
+        </h2>
+
+        <p>
+          Course materials, lecture notes, practical resources,
+          tutorials and academic learning materials in
+          Artificial Intelligence, Machine Learning,
+          Deep Learning, Computer Vision and Digital Image Processing.
+        </p>
+
+      </div>
+
+
+      <div class="materials-grid">
+
+
+        <!-- DEEP LEARNING -->
+
+        <div class="material-card">
+
+          <div class="material-icon">
+            🤖
+          </div>
+
+          <h3>
+            Deep Learning
+          </h3>
+
+          <p>
+            Lecture materials and practical resources covering
+            neural networks, CNNs, deep learning architectures,
+            and real-world applications.
+          </p>
+
+          <ul class="material-list">
+
+            <li>
+              <a href="materials/deep-learning-introduction.pdf"
+                 target="_blank">
+                📄 Introduction to Deep Learning
+              </a>
+            </li>
+
+            <li>
+              <a href="materials/neural-networks.pdf"
+                 target="_blank">
+                📄 Neural Networks Fundamentals
+              </a>
+            </li>
+
+            <li>
+              <a href="materials/cnn.pdf"
+                 target="_blank">
+                📄 Convolutional Neural Networks
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- IMAGE PROCESSING -->
+
+        <div class="material-card">
+
+          <div class="material-icon">
+            🖼️
+          </div>
+
+          <h3>
+            Digital Image Processing
+          </h3>
+
+          <p>
+            Learning resources covering image representation,
+            enhancement, filtering, segmentation,
+            morphology and OpenCV.
+          </p>
+
+          <ul class="material-list">
+
+            <li>
+              <a href="materials/image-processing-basics.pdf"
+                 target="_blank">
+                📄 Introduction to Image Processing
+              </a>
+            </li>
+
+            <li>
+              <a href="materials/image-thresholding.pdf"
+                 target="_blank">
+                📄 Image Thresholding
+              </a>
+            </li>
+
+            <li>
+              <a href="materials/morphological-operations.pdf"
+                 target="_blank">
+                📄 Morphological Operations
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- MACHINE LEARNING -->
+
+        <div class="material-card">
+
+          <div class="material-icon">
+            🧠
+          </div>
+
+          <h3>
+            Machine Learning
+          </h3>
+
+          <p>
+            Fundamental and advanced materials covering
+            supervised, unsupervised and applied
+            machine-learning techniques.
+          </p>
+
+          <ul class="material-list">
+
+            <li>
+              <a href="materials/ml-introduction.pdf"
+                 target="_blank">
+                📄 Introduction to Machine Learning
+              </a>
+            </li>
+
+            <li>
+              <a href="materials/supervised-learning.pdf"
+                 target="_blank">
+                📄 Supervised Learning
+              </a>
+            </li>
+
+            <li>
+              <a href="materials/unsupervised-learning.pdf"
+                 target="_blank">
+                📄 Unsupervised Learning
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- COMPUTER VISION -->
+
+        <div class="material-card">
+
+          <div class="material-icon">
+            👁️
+          </div>
+
+          <h3>
+            Computer Vision
+          </h3>
+
+          <p>
+            Resources covering feature extraction,
+            object detection, image segmentation,
+            OpenCV and modern vision systems.
+          </p>
+
+          <ul class="material-list">
+
+            <li>
+              <a href="materials/computer-vision-basics.pdf"
+                 target="_blank">
+                📄 Computer Vision Fundamentals
+              </a>
+            </li>
+
+            <li>
+              <a href="materials/object-detection.pdf"
+                 target="_blank">
+                📄 Object Detection
+              </a>
+            </li>
+
+            <li>
+              <a href="materials/image-segmentation.pdf"
+                 target="_blank">
+                📄 Image Segmentation
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- PYTHON -->
+
+        <div class="material-card">
+
+          <div class="material-icon">
+            💻
+          </div>
+
+          <h3>
+            Python Programming
+          </h3>
+
+          <p>
+            Programming resources for Python fundamentals,
+            data analysis, computer vision, machine learning
+            and AI applications.
+          </p>
+
+          <ul class="material-list">
+
+            <li>
+              <a href="materials/python-basics.pdf"
+                 target="_blank">
+                📄 Python Fundamentals
+              </a>
+            </li>
+
+            <li>
+              <a href="materials/python-numpy.pdf"
+                 target="_blank">
+                📄 NumPy and Scientific Computing
+              </a>
+            </li>
+
+            <li>
+              <a href="materials/python-opencv.pdf"
+                 target="_blank">
+                📄 Python with OpenCV
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- GENERATIVE AI -->
+
+        <div class="material-card">
+
+          <div class="material-icon">
+            ✨
+          </div>
+
+          <h3>
+            Generative &amp; Agentic AI
+          </h3>
+
+          <p>
+            Emerging AI learning materials covering
+            Generative AI, Large Language Models,
+            RAG, AI agents and intelligent workflows.
+          </p>
+
+          <ul class="material-list">
+
+            <li>
+              <a href="materials/generative-ai-introduction.pdf"
+                 target="_blank">
+                📄 Introduction to Generative AI
+              </a>
+            </li>
+
+            <li>
+              <a href="materials/llm-rag.pdf"
+                 target="_blank">
+                📄 LLMs and RAG Systems
+              </a>
+            </li>
+
+            <li>
+              <a href="materials/agentic-ai.pdf"
+                 target="_blank">
+                📄 Introduction to Agentic AI
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="teaching-note">
+
+        <strong>
+          📚 Academic Learning Repository
+        </strong>
+
+        <p>
+          Additional lecture notes, practical exercises,
+          tutorials, presentations and course materials
+          will be added progressively.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       SELECTED PUBLICATIONS
+       ========================================================= -->
+
+  <section class="section" id="journals">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <p>
+          Research Publications
+        </p>
+
+        <h2>
+          Selected Publications
+        </h2>
+
+        <p class="section-description">
+          Selected journal and conference publications
+          covering AI, computer vision, medical imaging,
+          ADAS, intelligent systems and related research.
+        </p>
+
+      </div>
+
+
+      <div class="journal-list">
+
+
+        <!-- 1 -->
+
+        <div>
+
+          <span>1</span>
+
+          <p>
+
+            <strong>
+              MICH-Net: A Novel Deep Learning Architecture With African Fire Hawk
+              Optimization for Steering Angle Prediction in an Advanced Driver
+              Assistance System
+            </strong>
+
+            <br>
+
+            <em>
+              IEEE Transactions on Intelligent Transportation Systems, 2025
+            </em>
+
+            <br>
+
+            <b>Quartile:</b> Q1 |
+            <b>SJR:</b> 2.608 |
+            <b>ABDC:</b> A
+
+            <br>
+
+            <b>DOI:</b>
+
+            <a
+              href="https://doi.org/10.1109/TITS.2025.3623324"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              10.1109/TITS.2025.3623324
+
+            </a>
+
+          </p>
+
+        </div>
+
+
+        <!-- 2 -->
+
+        <div>
+
+          <span>2</span>
+
+          <p>
+
+            <strong>
+              Multi-Modal Lung Cancer Detection Using Pyramidal Cascade
+              Neuro-Fuzzy Fractional Network
+            </strong>
+
+            <br>
+
+            <em>
+              Cancer Investigation, 2025
+            </em>
+
+            <br>
+
+            <b>Quartile:</b> Q3 |
+            <b>SJR:</b> 0.495
+
+            <br>
+
+            <b>DOI:</b>
+
+            <a
+              href="https://doi.org/10.1080/07357907.2025.2520610"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              10.1080/07357907.2025.2520610
+
+            </a>
+
+          </p>
+
+        </div>
+
+
+        <!-- 3 -->
+
+        <div>
+
+          <span>3</span>
+
+          <p>
+
+            <strong>
+              PMFHNet: Parallel Maxout Feed Harmonic Network for Road Anomaly
+              Object Detection in ADAS Under Low Light Conditions
+            </strong>
+
+            <br>
+
+            <em>
+              The Imaging Science Journal, 2025/2026
+            </em>
+
+            <br>
+
+            <b>Quartile:</b> Q2 |
+            <b>SJR:</b> 0.321
+
+            <br>
+
+            <b>DOI:</b>
+
+            <a
+              href="https://doi.org/10.1080/13682199.2025.2599711"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              10.1080/13682199.2025.2599711
+
+            </a>
+
+          </p>
+
+        </div>
+
+
+        <!-- 4 -->
+
+        <div>
+
+          <span>4</span>
+
+          <p>
+
+            <strong>
+              Elk Skill Optimizer Enabled Joint Channel Access and Energy
+              Management Algorithm for Dynamic Channel Allocation in WSN
+            </strong>
+
+            <br>
+
+            <em>
+              International Journal of Communication Systems, 2026
+            </em>
+
+            <br>
+
+            <b>Quartile:</b> Q2 |
+            <b>SJR:</b> 0.419
+
+            <br>
+
+            <b>DOI:</b>
+
+            <a
+              href="https://doi.org/10.1002/dac.70421"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              10.1002/dac.70421
+
+            </a>
+
+          </p>
+
+        </div>
+
+
+        <!-- 5 -->
+
+        <div>
+
+          <span>5</span>
+
+          <p>
+
+            <strong>
+              Deep Learning-Based Energy Prediction and Tangent Search
+              Remora Optimization-Based Secure Multi-Path Data Communication
+              Mechanism in WSN
+            </strong>
+
+            <br>
+
+            <em>
+              Network: Computation in Neural Systems, 2025
+            </em>
+
+            <br>
+
+            <b>Quartile:</b> Q4 |
+            <b>SJR:</b> 0.290
+
+            <br>
+
+            <b>DOI:</b>
+
+            <a
+              href="https://doi.org/10.1080/0954898X.2024.2393750"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              10.1080/0954898X.2024.2393750
+
+            </a>
+
+          </p>
+
+        </div>
+
+
+        <!-- 6 -->
+
+        <div>
+
+          <span>6</span>
+
+          <p>
+
+            <strong>
+              Decentralized Control Design for UAV Swarms Communication
+            </strong>
+
+            <br>
+
+            <em>
+              Discover Applied Sciences, 2025
+            </em>
+
+            <br>
+
+            <b>Quartile:</b> Q2 |
+            <b>SJR:</b> 0.573
+
+            <br>
+
+            <b>DOI:</b>
+
+            <a
+              href="https://doi.org/10.1007/s42452-024-06408-w"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              10.1007/s42452-024-06408-w
+
+            </a>
+
+          </p>
+
+        </div>
+
+
+        <!-- 7 -->
+
+        <div>
+
+          <span>7</span>
+
+          <p>
+
+            <strong>
+              HY-LSTM: A New Time Series Deep Learning Architecture for
+              Estimation of Pedestrian Time to Cross in Advanced Driver
+              Assistance System
+            </strong>
+
+            <br>
+
+            <em>
+              Journal of Visual Communication and Image Representation, 2023
+            </em>
+
+            <br>
+
+            <b>Quartile:</b> Q1 |
+            <b>SJR:</b> 0.573
+
+            <br>
+
+            <b>DOI:</b>
+
+            <a
+              href="https://doi.org/10.1016/j.jvcir.2023.103982"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              10.1016/j.jvcir.2023.103982
+
+            </a>
+
+          </p>
+
+        </div>
+
+
+        <!-- 8 -->
+
+        <div>
+
+          <span>8</span>
+
+          <p>
+
+            <strong>
+              DeepDrive: A Braking Decision-Making Approach Using Optimized
+              GAN and Deep CNN for Advanced Driver Assistance Systems
+            </strong>
+
+            <br>
+
+            <em>
+              Engineering Applications of Artificial Intelligence, 2023
+            </em>
+
+            <br>
+
+            <b>Quartile:</b> Q1 |
+            <b>SJR:</b> 1.782
+
+            <br>
+
+            <b>DOI:</b>
+
+            <a
+              href="https://doi.org/10.1016/j.engappai.2023.106111"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              10.1016/j.engappai.2023.106111
+
+            </a>
+
+          </p>
+
+        </div>
+
+
+        <!-- 9 -->
+
+        <div>
+
+          <span>9</span>
+
+          <p>
+
+            <strong>
+              RBorderNet: Rider Border Collie Optimization-Based Deep
+              Convolutional Neural Network for Road Scene Segmentation
+              and Road Intersection Classification
+            </strong>
+
+            <br>
+
+            <em>
+              Digital Signal Processing, 2022
+            </em>
+
+            <br>
+
+            <b>Quartile:</b> Q2 |
+            <b>SJR:</b> 0.704
+
+            <br>
+
+            <b>DOI:</b>
+
+            <a
+              href="https://doi.org/10.1016/j.dsp.2022.103626"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              10.1016/j.dsp.2022.103626
+
+            </a>
+
+          </p>
+
+        </div>
+
+
+        <!-- 10 -->
+
+        <div>
+
+          <span>10</span>
+
+          <p>
+
+            <strong>
+              Detection and Localization of Abnormalities in Surveillance
+              Video Using Timerider-Based Neural Network
+            </strong>
+
+            <br>
+
+            <em>
+              The Computer Journal, 2021
+            </em>
+
+            <br>
+
+            <b>Quartile:</b> Q2 |
+            <b>SJR:</b> 0.441 |
+            <b>ABS:</b> 2
+
+            <br>
+
+            <b>DOI:</b>
+
+            <a
+              href="https://doi.org/10.1093/comjnl/bxab002"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              10.1093/comjnl/bxab002
+
+            </a>
+
+          </p>
+
+        </div>
+
+
+        <!-- 11 -->
+
+        <div>
+
+          <span>11</span>
+
+          <p>
+
+            <strong>
+              DeepJoint Segmentation for the Classification of Severity-Levels
+              of Glioma Tumour Using Multimodal MRI Images
+            </strong>
+
+            <br>
+
+            <em>
+              IET Image Processing, 2020
+            </em>
+
+            <br>
+
+            <b>Quartile:</b> Q2 |
+            <b>SJR:</b> 0.569
+
+            <br>
+
+            <b>DOI:</b>
+
+            <a
+              href="https://doi.org/10.1049/iet-ipr.2018.6682"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              10.1049/iet-ipr.2018.6682
+
+            </a>
+
+          </p>
+
+        </div>
+
+
+        <!-- 12 -->
+
+        <div>
+
+          <span>12</span>
+
+          <p>
+
+            <strong>
+              Multiclassifier for Severity-Level Categorization of Glioma
+              Tumors Using Multimodal Magnetic Resonance Imaging Brain Images
+            </strong>
+
+            <br>
+
+            <em>
+              International Journal of Imaging Systems and Technology, 2020
+            </em>
+
+            <br>
+
+            <b>Quartile:</b> Q2 |
+            <b>SJR:</b> 0.601
+
+            <br>
+
+            <b>DOI:</b>
+
+            <a
+              href="https://doi.org/10.1002/ima.22357"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              10.1002/ima.22357
+
+            </a>
+
+          </p>
+
+        </div>
+
+
+        <!-- 13 -->
+
+        <div>
+
+          <span>13</span>
+
+          <p>
+
+            <strong>
+              Workflow Scheduling Using Improved Moth Swarm Optimization
+              Algorithm in Cloud Computing
+            </strong>
+
+            <br>
+
+            <em>
+              Multimedia Research, 2020
+            </em>
+
+            <br>
+
+            <b>Quartile:</b> Not Available
+
+            <br>
+
+            <b>DOI:</b>
+
+            <a
+              href="https://doi.org/10.46253/j.mr.v3i3.a5"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              10.46253/j.mr.v3i3.a5
+
+            </a>
+
+          </p>
+
+        </div>
+
+
+        <!-- 14 -->
+
+        <div>
+
+          <span>14</span>
+
+          <p>
+
+            <strong>
+              Evolutionary Intelligence for Brain Tumor Recognition from
+              MRI Images: A Critical Study and Review
+            </strong>
+
+            <br>
+
+            <em>
+              Evolutionary Intelligence, 2018
+            </em>
+
+            <br>
+
+            <b>Quartile:</b> Q1 |
+            <b>SJR:</b> 0.700
+
+            <br>
+
+            <b>DOI:</b>
+
+            <a
+              href="https://doi.org/10.1007/s12065-018-0156-2"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              10.1007/s12065-018-0156-2
+
+            </a>
+
+          </p>
+
+        </div>
+
+
+        <!-- 15 -->
+
+        <div>
+
+          <span>15</span>
+
+          <p>
+
+            <strong>
+              Heterogeneous Graph Convolution Cell Attention Network with
+              Skill Optimization Based Jasmine Fragrance Detection
+            </strong>
+
+            <br>
+
+            <em>
+              Book Chapter, Modeling, Simulation and Optimization:
+              Proceedings of CoMSO 2024, 2026
+            </em>
+
+            <br>
+
+            <b>Quartile:</b> Not Applicable
+
+            <br>
+
+            <b>DOI:</b>
+
+            <a
+              href="https://doi.org/10.1007/978-981-95-4161-4_28"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              10.1007/978-981-95-4161-4_28
+
+            </a>
+
+          </p>
+
+        </div>
+
+
+        <!-- 16 -->
+
+        <div>
+
+          <span>16</span>
+
+          <p>
+
+            <strong>
+              Detecting Early-Stage Stress Levels Using EEG and Heart Rate
+              Monitoring with Enhanced Sparse Fire Hawk Graph Probabilistic
+              Spiking Attention Neural Network
+            </strong>
+
+            <br>
+
+            <em>
+              3rd International Conference on Intelligent Data Communication
+              Technologies and Internet of Things, 2025
+            </em>
+
+            <br>
+
+            <b>Quartile:</b> Conference Paper
+
+            <br>
+
+            <b>DOI:</b>
+
+            <a
+              href="https://doi.org/10.1109/IDCIOT64235.2025.10915029"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              10.1109/IDCIOT64235.2025.10915029
+
+            </a>
+
+          </p>
+
+        </div>
+
+
+        <!-- 17 -->
+
+        <div>
+
+          <span>17</span>
+
+          <p>
+
+            <strong>
+              Improving FANET Communication with a QoS Optimized
+              Location-Aided Routing Protocol
+            </strong>
+
+            <br>
+
+            <em>
+              5th International Conference on Smart Electronics and Communication,
+              2024
+            </em>
+
+            <br>
+
+            <b>Quartile:</b> Conference Paper
+
+            <br>
+
+            <b>DOI:</b>
+
+            <a
+              href="https://doi.org/10.1109/ICOSEC61587.2024.10722211"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              10.1109/ICOSEC61587.2024.10722211
+
+            </a>
+
+          </p>
+
+        </div>
+
+
+        <!-- 18 -->
+
+        <div>
+
+          <span>18</span>
+
+          <p>
+
+            <strong>
+              Next-Generation Wearable Antenna: Optimized Multi-Band
+              Performance for Advanced Wireless Systems and Applications
+            </strong>
+
+            <br>
+
+            <em>
+              5th International Conference on Circuits, Control,
+              Communication and Computing, 2024
+            </em>
+
+            <br>
+
+            <b>Quartile:</b> Conference Paper
+
+            <br>
+
+            <b>DOI:</b>
+
+            <a
+              href="https://doi.org/10.1109/I4C62240.2024.10748486"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              10.1109/I4C62240.2024.10748486
+
+            </a>
+
+          </p>
+
+        </div>
+
+
+        <!-- 19 -->
+
+        <div>
+
+          <span>19</span>
+
+          <p>
+
+            <strong>
+              Design and Implementation of a Bio-Inspired Robot Arm:
+              Machine Learning, Robot Vision
+            </strong>
+
+            <br>
+
+            <em>
+              International Conference on New Frontiers in Communication,
+              Automation, Management and Security, 2023
+            </em>
+
+            <br>
+
+            <b>Quartile:</b> Conference Paper
+
+            <br>
+
+            <b>DOI:</b>
+
+            <a
+              href="https://doi.org/10.1109/ICCAMS60113.2023.10526171"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              10.1109/ICCAMS60113.2023.10526171
+
+            </a>
+
+          </p>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="phase1-center-button">
+
+        <a href="#connect" class="btn primary">
+          Research Collaboration
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       ABOUT PROFESSOR
+       ========================================================= -->
+
+  <section
+    class="phase1-section"
+    id="about">
+
+    <div class="container">
+
+
+      <div class="phase1-section-heading">
+
+        <div class="eyebrow">
+          About the Professor
+        </div>
+
+        <h2>
+          Academic Profile
+        </h2>
+
+        <p>
+          Professor, AI researcher, educator and Ph.D. supervisor
+          working across Artificial Intelligence, Computer Vision,
+          Deep Learning and Intelligent Systems.
+        </p>
+
+      </div>
+
+
+      <div class="professor-intro">
+
+
+        <div class="professor-intro-image">
+
+          <img
+            src="profile.jpg"
+            alt="Dr. K. Michael Mahesh">
+
+        </div>
+
+
+        <div class="professor-intro-content">
+
+          <h2>
+            Dr. K. Michael Mahesh
+          </h2>
+
+
+          <p>
+
+            I am an AI researcher and academician with expertise
+            in Deep Learning, Computer Vision, Machine Learning,
+            Digital Image Processing and Intelligent Systems.
+
+          </p>
+
+
+          <p>
+
+            I am currently serving as Professor at Saveetha
+            Engineering College, Chennai, and as a recognized
+            Ph.D. Supervisor under Anna University.
+
+          </p>
+
+
+          <p>
+
+            My academic interests combine research, teaching,
+            student mentoring and practical implementation of
+            emerging Artificial Intelligence technologies.
+
+          </p>
+
+
+          <div class="skill-tags">
+
+            <span>Python</span>
+            <span>OpenCV</span>
+            <span>PyTorch</span>
+            <span>Keras</span>
+            <span>Scikit-learn</span>
+            <span>Deep Learning</span>
+            <span>Machine Learning</span>
+            <span>Image Processing</span>
+            <span>Computer Vision</span>
+            <span>LangChain</span>
+            <span>LangGraph</span>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================================================
+       EXPERIENCE & EDUCATION
+       ========================================================= -->
+
+  <section class="section phase1-section-alt">
+
+    <div class="container info-grid">
+
+
+      <!-- EXPERIENCE -->
 
       <div class="info-card" id="experience">
 
-        <h2>Experience</h2>
+        <h2>
+          Experience
+        </h2>
 
         <div class="timeline">
 
+
           <div>
 
-            <strong>2026 - Present</strong>
+            <strong>
+              2026 - Present
+            </strong>
 
             <p>
               Professor, Saveetha Engineering College
             </p>
 
           </div>
-          
+
+
           <div>
 
-            <strong>2023</strong>
+            <strong>
+              2023
+            </strong>
 
             <p>
               Associate Professor, Saveetha Engineering College
@@ -459,7 +3205,9 @@
 
           <div>
 
-            <strong>2023</strong>
+            <strong>
+              2023
+            </strong>
 
             <p>
               Assistant Professor, SRM IST Ramapuram
@@ -470,7 +3218,9 @@
 
           <div>
 
-            <strong>2023</strong>
+            <strong>
+              2023
+            </strong>
 
             <p>
               Associate Professor, St. Joseph College of Engineering
@@ -481,7 +3231,9 @@
 
           <div>
 
-            <strong>2011 - 2023</strong>
+            <strong>
+              2011 - 2023
+            </strong>
 
             <p>
               Assistant Professor, St. Joseph College of Engineering
@@ -489,22 +3241,29 @@
 
           </div>
 
+
         </div>
 
       </div>
 
 
 
+      <!-- EDUCATION -->
+
       <div class="info-card" id="education">
 
-        <h2>Education</h2>
+        <h2>
+          Education
+        </h2>
 
         <div class="timeline">
 
 
           <div>
 
-            <strong>2021</strong>
+            <strong>
+              2021
+            </strong>
 
             <p>
               Ph.D. - Artificial Intelligence, Deep Learning,
@@ -516,7 +3275,9 @@
 
           <div>
 
-            <strong>2011</strong>
+            <strong>
+              2011
+            </strong>
 
             <p>
               M.E. - Computer and Communication Engineering,
@@ -528,7 +3289,9 @@
 
           <div>
 
-            <strong>2008</strong>
+            <strong>
+              2008
+            </strong>
 
             <p>
               B.E. - Electronics and Communication Engineering,
@@ -549,1093 +3312,136 @@
 
 
 
-  <!-- SUBJECTS TAUGHT -->
-  <section class="section" id="subjects">
+  <!-- =========================================================
+       SUBJECTS / TEACHING AREAS
+       ========================================================= -->
 
-    <div class="container">
-
-
-      <div class="section-title">
-
-        <p>Subjects Taught</p>
-
-        <h2>Teaching Areas</h2>
-
-      </div>
-
-
-
-      <div class="list-grid">
-
-
-        <div class="list-card">
-
-          <h3>Core Subjects</h3>
-
-          <ul>
-
-            <li>Deep Learning and Its Applications</li>
-            <li>Machine Learning</li>
-            <li>Digital Image Processing using OpenCV</li>
-            <li>Computer Vision</li>
-            <li>Python Programming</li>
-            <li>Data Structures & Algorithms</li>
-            <li>Signals and Systems</li>
-            <li>Embedded Systems</li>
-            <li>Digital Electronics</li>
-            <li>Electromagnetic Fields</li>
-            <li>Microprocessor and Microcontroller</li>
-
-          </ul>
-
-        </div>
-
-
-
-        <div class="list-card">
-
-          <h3>Advanced Topics & Research Interests</h3>
-
-          <ul>
-
-            <li>Generative AI</li>
-            <li>Agentic AI</li>
-            <li>LangChain and RAG</li>
-            <li>YOLO Object Detection</li>
-            <li>Medical Image Analysis</li>
-            <li>ADAS Applications</li>
-            <li>Research Paper Writing</li>
-            <li>Scopus / WoS Publication Guidance</li>
-
-          </ul>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- RESEARCH -->
-  <section class="section" id="research">
-
-    <div class="container">
-
-
-      <div class="section-title">
-
-        <p>Research Work</p>
-
-        <h2>Major Research Areas</h2>
-
-      </div>
-
-
-
-      <div class="list-grid">
-
-
-        <div class="list-card">
-
-          <ul>
-
-            <li>Deep Learning for Medical Imaging</li>
-            <li>Brain Tumor Detection using MRI</li>
-            <li>Advanced Driver Assistance Systems</li>
-            <li>Intelligent Transportation Systems</li>
-            <li>Surveillance Video Analysis</li>
-            <li>Wearable IoT-based Health Systems</li>
-            <li>AI for Healthcare and Biomedical Applications</li>
-
-          </ul>
-
-        </div>
-
-
-
-        <div class="research-impact">
-
-
-          <div>
-
-            <strong>20+</strong>
-
-            <span>International Publications</span>
-
-          </div>
-
-
-          <div>
-
-            <strong>1</strong>
-
-            <span>Granted Patent</span>
-
-          </div>
-
-
-          <div>
-
-            <strong>6</strong>
-
-            <span>Ongoing Ph.D. Scholars Supervised</span>
-
-          </div>
-
-
-          <div>
-
-            <strong>14+</strong>
-
-            <span>Years of Experience</span>
-
-          </div>
-
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- PUBLICATIONS -->
-  <section class="section" id="journals">
-
-    <div class="container">
-
-
-      <div class="section-title">
-
-        <p>International Journals</p>
-
-        <h2>Selected Publications</h2>
-
-      </div>
-
-
-
-      <div class="journal-list">
-
-
-        <div>
-          <span>1</span>
-
-          <p>
-            <strong>
-              MICH-Net: A Novel Deep Learning Architecture With African Fire Hawk
-              Optimization for Steering Angle Prediction in an Advanced Driver
-              Assistance System
-            </strong>
-            <br>
-
-            <em>
-              IEEE Transactions on Intelligent Transportation Systems, 2025
-            </em>
-            <br>
-
-            <b>Quartile:</b> Q1 |
-            <b>SJR:</b> 2.608 |
-            <b>ABDC:</b> A
-            <br>
-
-            <b>DOI:</b>
-
-            <a
-              href="https://doi.org/10.1109/TITS.2025.3623324"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              10.1109/TITS.2025.3623324
-
-            </a>
-
-          </p>
-        </div>
-
-
-        <div>
-          <span>2</span>
-
-          <p>
-            <strong>
-              Multi-Modal Lung Cancer Detection Using Pyramidal Cascade
-              Neuro-Fuzzy Fractional Network
-            </strong>
-            <br>
-
-            <em>Cancer Investigation, 2025</em>
-            <br>
-
-            <b>Quartile:</b> Q3 |
-            <b>SJR:</b> 0.495
-            <br>
-
-            <b>DOI:</b>
-
-            <a
-              href="https://doi.org/10.1080/07357907.2025.2520610"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              10.1080/07357907.2025.2520610
-
-            </a>
-
-          </p>
-        </div>
-
-
-        <div>
-          <span>3</span>
-
-          <p>
-            <strong>
-              PMFHNet: Parallel Maxout Feed Harmonic Network for Road Anomaly
-              Object Detection in ADAS Under Low Light Conditions
-            </strong>
-            <br>
-
-            <em>The Imaging Science Journal, 2025/2026</em>
-            <br>
-
-            <b>Quartile:</b> Q2 |
-            <b>SJR:</b> 0.321
-            <br>
-
-            <b>DOI:</b>
-
-            <a
-              href="https://doi.org/10.1080/13682199.2025.2599711"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              10.1080/13682199.2025.2599711
-
-            </a>
-
-          </p>
-        </div>
-
-
-        <div>
-          <span>4</span>
-
-          <p>
-            <strong>
-              Elk Skill Optimizer Enabled Joint Channel Access and Energy
-              Management Algorithm for Dynamic Channel Allocation in WSN
-            </strong>
-            <br>
-
-            <em>International Journal of Communication Systems, 2026</em>
-            <br>
-
-            <b>Quartile:</b> Q2 |
-            <b>SJR:</b> 0.419
-            <br>
-
-            <b>DOI:</b>
-
-            <a
-              href="https://doi.org/10.1002/dac.70421"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              10.1002/dac.70421
-
-            </a>
-
-          </p>
-        </div>
-
-
-        <div>
-          <span>5</span>
-
-          <p>
-            <strong>
-              Deep Learning-Based Energy Prediction and Tangent Search
-              Remora Optimization-Based Secure Multi-Path Data Communication
-              Mechanism in WSN
-            </strong>
-            <br>
-
-            <em>Network: Computation in Neural Systems, 2025</em>
-            <br>
-
-            <b>Quartile:</b> Q4 |
-            <b>SJR:</b> 0.290
-            <br>
-
-            <b>DOI:</b>
-
-            <a
-              href="https://doi.org/10.1080/0954898X.2024.2393750"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              10.1080/0954898X.2024.2393750
-
-            </a>
-
-          </p>
-        </div>
-
-
-        <div>
-          <span>6</span>
-
-          <p>
-            <strong>
-              Decentralized Control Design for UAV Swarms Communication
-            </strong>
-            <br>
-
-            <em>Discover Applied Sciences, 2025</em>
-            <br>
-
-            <b>Quartile:</b> Q2 |
-            <b>SJR:</b> 0.573
-            <br>
-
-            <b>DOI:</b>
-
-            <a
-              href="https://doi.org/10.1007/s42452-024-06408-w"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              10.1007/s42452-024-06408-w
-
-            </a>
-
-          </p>
-        </div>
-
-
-        <div>
-          <span>7</span>
-
-          <p>
-            <strong>
-              HY-LSTM: A New Time Series Deep Learning Architecture for
-              Estimation of Pedestrian Time to Cross in Advanced Driver
-              Assistance System
-            </strong>
-            <br>
-
-            <em>
-              Journal of Visual Communication and Image Representation, 2023
-            </em>
-            <br>
-
-            <b>Quartile:</b> Q1 |
-            <b>SJR:</b> 0.573
-            <br>
-
-            <b>DOI:</b>
-
-            <a
-              href="https://doi.org/10.1016/j.jvcir.2023.103982"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              10.1016/j.jvcir.2023.103982
-
-            </a>
-
-          </p>
-        </div>
-
-
-        <div>
-          <span>8</span>
-
-          <p>
-            <strong>
-              DeepDrive: A Braking Decision-Making Approach Using Optimized
-              GAN and Deep CNN for Advanced Driver Assistance Systems
-            </strong>
-            <br>
-
-            <em>
-              Engineering Applications of Artificial Intelligence, 2023
-            </em>
-            <br>
-
-            <b>Quartile:</b> Q1 |
-            <b>SJR:</b> 1.782
-            <br>
-
-            <b>DOI:</b>
-
-            <a
-              href="https://doi.org/10.1016/j.engappai.2023.106111"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              10.1016/j.engappai.2023.106111
-
-            </a>
-
-          </p>
-        </div>
-
-
-        <div>
-          <span>9</span>
-
-          <p>
-            <strong>
-              RBorderNet: Rider Border Collie Optimization-Based Deep
-              Convolutional Neural Network for Road Scene Segmentation
-              and Road Intersection Classification
-            </strong>
-            <br>
-
-            <em>Digital Signal Processing, 2022</em>
-            <br>
-
-            <b>Quartile:</b> Q2 |
-            <b>SJR:</b> 0.704
-            <br>
-
-            <b>DOI:</b>
-
-            <a
-              href="https://doi.org/10.1016/j.dsp.2022.103626"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              10.1016/j.dsp.2022.103626
-
-            </a>
-
-          </p>
-        </div>
-
-
-        <div>
-          <span>10</span>
-
-          <p>
-            <strong>
-              Detection and Localization of Abnormalities in Surveillance
-              Video Using Timerider-Based Neural Network
-            </strong>
-            <br>
-
-            <em>The Computer Journal, 2021</em>
-            <br>
-
-            <b>Quartile:</b> Q2 |
-            <b>SJR:</b> 0.441 |
-            <b>ABS:</b> 2
-            <br>
-
-            <b>DOI:</b>
-
-            <a
-              href="https://doi.org/10.1093/comjnl/bxab002"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              10.1093/comjnl/bxab002
-
-            </a>
-
-          </p>
-        </div>
-
-
-        <div>
-          <span>11</span>
-
-          <p>
-            <strong>
-              DeepJoint Segmentation for the Classification of Severity-Levels
-              of Glioma Tumour Using Multimodal MRI Images
-            </strong>
-            <br>
-
-            <em>IET Image Processing, 2020</em>
-            <br>
-
-            <b>Quartile:</b> Q2 |
-            <b>SJR:</b> 0.569
-            <br>
-
-            <b>DOI:</b>
-
-            <a
-              href="https://doi.org/10.1049/iet-ipr.2018.6682"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              10.1049/iet-ipr.2018.6682
-
-            </a>
-
-          </p>
-        </div>
-
-
-        <div>
-          <span>12</span>
-
-          <p>
-            <strong>
-              Multiclassifier for Severity-Level Categorization of Glioma
-              Tumors Using Multimodal Magnetic Resonance Imaging Brain Images
-            </strong>
-            <br>
-
-            <em>
-              International Journal of Imaging Systems and Technology, 2020
-            </em>
-            <br>
-
-            <b>Quartile:</b> Q2 |
-            <b>SJR:</b> 0.601
-            <br>
-
-            <b>DOI:</b>
-
-            <a
-              href="https://doi.org/10.1002/ima.22357"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              10.1002/ima.22357
-
-            </a>
-
-          </p>
-        </div>
-
-
-        <div>
-          <span>13</span>
-
-          <p>
-            <strong>
-              Workflow Scheduling Using Improved Moth Swarm Optimization
-              Algorithm in Cloud Computing
-            </strong>
-            <br>
-
-            <em>Multimedia Research, 2020</em>
-            <br>
-
-            <b>Quartile:</b> Not Available
-            <br>
-
-            <b>DOI:</b>
-
-            <a
-              href="https://doi.org/10.46253/j.mr.v3i3.a5"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              10.46253/j.mr.v3i3.a5
-
-            </a>
-
-          </p>
-        </div>
-
-
-        <div>
-          <span>14</span>
-
-          <p>
-            <strong>
-              Evolutionary Intelligence for Brain Tumor Recognition from
-              MRI Images: A Critical Study and Review
-            </strong>
-            <br>
-
-            <em>Evolutionary Intelligence, 2018</em>
-            <br>
-
-            <b>Quartile:</b> Q1 |
-            <b>SJR:</b> 0.700
-            <br>
-
-            <b>DOI:</b>
-
-            <a
-              href="https://doi.org/10.1007/s12065-018-0156-2"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              10.1007/s12065-018-0156-2
-
-            </a>
-
-          </p>
-        </div>
-
-
-        <div>
-          <span>15</span>
-
-          <p>
-            <strong>
-              Heterogeneous Graph Convolution Cell Attention Network with
-              Skill Optimization Based Jasmine Fragrance Detection
-            </strong>
-            <br>
-
-            <em>
-              Book Chapter, Modeling, Simulation and Optimization:
-              Proceedings of CoMSO 2024, 2026
-            </em>
-            <br>
-
-            <b>Quartile:</b> Not Applicable
-            <br>
-
-            <b>DOI:</b>
-
-            <a
-              href="https://doi.org/10.1007/978-981-95-4161-4_28"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              10.1007/978-981-95-4161-4_28
-
-            </a>
-
-          </p>
-        </div>
-
-
-        <div>
-          <span>16</span>
-
-          <p>
-            <strong>
-              Detecting Early-Stage Stress Levels Using EEG and Heart Rate
-              Monitoring with Enhanced Sparse Fire Hawk Graph Probabilistic
-              Spiking Attention Neural Network
-            </strong>
-            <br>
-
-            <em>
-              3rd International Conference on Intelligent Data Communication
-              Technologies and Internet of Things, 2025
-            </em>
-            <br>
-
-            <b>Quartile:</b> Conference Paper
-            <br>
-
-            <b>DOI:</b>
-
-            <a
-              href="https://doi.org/10.1109/IDCIOT64235.2025.10915029"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              10.1109/IDCIOT64235.2025.10915029
-
-            </a>
-
-          </p>
-        </div>
-
-
-        <div>
-          <span>17</span>
-
-          <p>
-            <strong>
-              Improving FANET Communication with a QoS Optimized
-              Location-Aided Routing Protocol
-            </strong>
-            <br>
-
-            <em>
-              5th International Conference on Smart Electronics and Communication,
-              2024
-            </em>
-            <br>
-
-            <b>Quartile:</b> Conference Paper
-            <br>
-
-            <b>DOI:</b>
-
-            <a
-              href="https://doi.org/10.1109/ICOSEC61587.2024.10722211"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              10.1109/ICOSEC61587.2024.10722211
-
-            </a>
-
-          </p>
-        </div>
-
-
-        <div>
-          <span>18</span>
-
-          <p>
-            <strong>
-              Next-Generation Wearable Antenna: Optimized Multi-Band
-              Performance for Advanced Wireless Systems and Applications
-            </strong>
-            <br>
-
-            <em>
-              5th International Conference on Circuits, Control,
-              Communication and Computing, 2024
-            </em>
-            <br>
-
-            <b>Quartile:</b> Conference Paper
-            <br>
-
-            <b>DOI:</b>
-
-            <a
-              href="https://doi.org/10.1109/I4C62240.2024.10748486"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              10.1109/I4C62240.2024.10748486
-
-            </a>
-
-          </p>
-        </div>
-
-
-        <div>
-          <span>19</span>
-
-          <p>
-            <strong>
-              Design and Implementation of a Bio-Inspired Robot Arm:
-              Machine Learning, Robot Vision
-            </strong>
-            <br>
-
-            <em>
-              International Conference on New Frontiers in Communication,
-              Automation, Management and Security, 2023
-            </em>
-            <br>
-
-            <b>Quartile:</b> Conference Paper
-            <br>
-
-            <b>DOI:</b>
-
-            <a
-              href="https://doi.org/10.1109/ICCAMS60113.2023.10526171"
-              target="_blank"
-              rel="noopener noreferrer">
-
-              10.1109/ICCAMS60113.2023.10526171
-
-            </a>
-
-          </p>
-        </div>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- TEACHING & LEARNING RESOURCES -->
   <section
-    class="section teaching-learning"
-    id="teaching">
+    class="section"
+    id="subjects">
 
     <div class="container">
 
 
       <div class="section-title">
-
-        <p>Teaching & Learning</p>
-
-        <h2>Teaching & Learning Resources</h2>
-
-        <p class="section-description">
-          Course materials, lecture notes, practical resources, and academic
-          learning materials in Artificial Intelligence, Machine Learning,
-          Deep Learning, Computer Vision, and Digital Image Processing.
-        </p>
-
-      </div>
-
-
-
-      <div class="materials-grid">
-
-
-        <!-- DEEP LEARNING -->
-        <div class="material-card">
-
-          <div class="material-icon">🤖</div>
-
-          <h3>Deep Learning</h3>
-
-          <p>
-            Lecture materials and practical resources covering neural networks,
-            CNNs, deep learning architectures, and real-world applications.
-          </p>
-
-          <ul class="material-list">
-
-            <li>
-              <a href="materials/deep-learning-introduction.pdf" target="_blank">
-                📄 Introduction to Deep Learning
-              </a>
-            </li>
-
-            <li>
-              <a href="materials/neural-networks.pdf" target="_blank">
-                📄 Neural Networks Fundamentals
-              </a>
-            </li>
-
-            <li>
-              <a href="materials/cnn.pdf" target="_blank">
-                📄 Convolutional Neural Networks
-              </a>
-            </li>
-
-          </ul>
-
-        </div>
-
-
-
-        <!-- DIGITAL IMAGE PROCESSING -->
-        <div class="material-card">
-
-          <div class="material-icon">🖼️</div>
-
-          <h3>Digital Image Processing</h3>
-
-          <p>
-            Learning resources covering image representation, enhancement,
-            filtering, segmentation, morphology, and OpenCV.
-          </p>
-
-          <ul class="material-list">
-
-            <li>
-              <a href="materials/image-processing-basics.pdf" target="_blank">
-                📄 Introduction to Image Processing
-              </a>
-            </li>
-
-            <li>
-              <a href="materials/image-thresholding.pdf" target="_blank">
-                📄 Image Thresholding
-              </a>
-            </li>
-
-            <li>
-              <a href="materials/morphological-operations.pdf" target="_blank">
-                📄 Morphological Operations
-              </a>
-            </li>
-
-          </ul>
-
-        </div>
-
-
-
-        <!-- MACHINE LEARNING -->
-        <div class="material-card">
-
-          <div class="material-icon">🧠</div>
-
-          <h3>Machine Learning</h3>
-
-          <p>
-            Fundamental and advanced materials covering supervised,
-            unsupervised, and applied machine learning techniques.
-          </p>
-
-          <ul class="material-list">
-
-            <li>
-              <a href="materials/ml-introduction.pdf" target="_blank">
-                📄 Introduction to Machine Learning
-              </a>
-            </li>
-
-            <li>
-              <a href="materials/supervised-learning.pdf" target="_blank">
-                📄 Supervised Learning
-              </a>
-            </li>
-
-            <li>
-              <a href="materials/unsupervised-learning.pdf" target="_blank">
-                📄 Unsupervised Learning
-              </a>
-            </li>
-
-          </ul>
-
-        </div>
-
-
-
-        <!-- COMPUTER VISION -->
-        <div class="material-card">
-
-          <div class="material-icon">👁️</div>
-
-          <h3>Computer Vision</h3>
-
-          <p>
-            Resources covering feature extraction, object detection,
-            image segmentation, OpenCV, and modern vision systems.
-          </p>
-
-          <ul class="material-list">
-
-            <li>
-              <a href="materials/computer-vision-basics.pdf" target="_blank">
-                📄 Computer Vision Fundamentals
-              </a>
-            </li>
-
-            <li>
-              <a href="materials/object-detection.pdf" target="_blank">
-                📄 Object Detection
-              </a>
-            </li>
-
-            <li>
-              <a href="materials/image-segmentation.pdf" target="_blank">
-                📄 Image Segmentation
-              </a>
-            </li>
-
-          </ul>
-
-        </div>
-
-
-
-        <!-- PYTHON -->
-        <div class="material-card">
-
-          <div class="material-icon">💻</div>
-
-          <h3>Python Programming</h3>
-
-          <p>
-            Programming resources for Python fundamentals, data analysis,
-            computer vision, machine learning, and AI applications.
-          </p>
-
-          <ul class="material-list">
-
-            <li>
-              <a href="materials/python-basics.pdf" target="_blank">
-                📄 Python Fundamentals
-              </a>
-            </li>
-
-            <li>
-              <a href="materials/python-numpy.pdf" target="_blank">
-                📄 NumPy and Scientific Computing
-              </a>
-            </li>
-
-            <li>
-              <a href="materials/python-opencv.pdf" target="_blank">
-                📄 Python with OpenCV
-              </a>
-            </li>
-
-          </ul>
-
-        </div>
-
-
-
-        <!-- GENERATIVE AI -->
-        <div class="material-card">
-
-          <div class="material-icon">✨</div>
-
-          <h3>Generative & Agentic AI</h3>
-
-          <p>
-            Emerging AI learning materials covering Generative AI,
-            Large Language Models, RAG, AI agents, and intelligent workflows.
-          </p>
-
-          <ul class="material-list">
-
-            <li>
-              <a href="materials/generative-ai-introduction.pdf" target="_blank">
-                📄 Introduction to Generative AI
-              </a>
-            </li>
-
-            <li>
-              <a href="materials/llm-rag.pdf" target="_blank">
-                📄 LLMs and RAG Systems
-              </a>
-            </li>
-
-            <li>
-              <a href="materials/agentic-ai.pdf" target="_blank">
-                📄 Introduction to Agentic AI
-              </a>
-            </li>
-
-          </ul>
-
-        </div>
-
-
-      </div>
-
-
-
-      <div class="teaching-note">
-
-        <strong>
-          📚 Academic Learning Repository
-        </strong>
 
         <p>
-          Additional lecture notes, practical exercises, tutorials,
-          presentations, and course materials will be added progressively.
+          Teaching
         </p>
+
+        <h2>
+          Subjects &amp; Advanced Topics
+        </h2>
 
       </div>
 
+
+      <div class="list-grid">
+
+
+        <div class="list-card">
+
+          <h3>
+            Core Subjects
+          </h3>
+
+          <ul>
+
+            <li>
+              Deep Learning and Its Applications
+            </li>
+
+            <li>
+              Machine Learning
+            </li>
+
+            <li>
+              Digital Image Processing using OpenCV
+            </li>
+
+            <li>
+              Computer Vision
+            </li>
+
+            <li>
+              Python Programming
+            </li>
+
+            <li>
+              Data Structures &amp; Algorithms
+            </li>
+
+            <li>
+              Signals and Systems
+            </li>
+
+            <li>
+              Embedded Systems
+            </li>
+
+            <li>
+              Digital Electronics
+            </li>
+
+            <li>
+              Electromagnetic Fields
+            </li>
+
+            <li>
+              Microprocessor and Microcontroller
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div class="list-card">
+
+          <h3>
+            Advanced Topics &amp; Research Interests
+          </h3>
+
+          <ul>
+
+            <li>
+              Generative AI
+            </li>
+
+            <li>
+              Agentic AI
+            </li>
+
+            <li>
+              LangChain and RAG
+            </li>
+
+            <li>
+              YOLO Object Detection
+            </li>
+
+            <li>
+              Medical Image Analysis
+            </li>
+
+            <li>
+              ADAS Applications
+            </li>
+
+            <li>
+              Research Paper Writing
+            </li>
+
+            <li>
+              Scopus / WoS Publication Guidance
+            </li>
+
+          </ul>
+
+        </div>
+
+
+      </div>
 
     </div>
 
@@ -1643,46 +3449,159 @@
 
 
 
-  <!-- BLOG -->
-  <section class="section" id="blog">
+  <!-- =========================================================
+       ACADEMIC PROFILES
+       ========================================================= -->
+
+  <section
+    class="section phase1-academic-links">
 
     <div class="container">
 
 
       <div class="section-title">
 
-        <p>Medium Articles</p>
-
-        <h2>Latest Blog Posts</h2>
-
-      </div>
-
-
-      <div
-        class="medium-blog-list"
-        id="blogPosts">
-
-        <p class="blog-loading">
-          Loading latest Medium posts...
+        <p>
+          Academic Profiles
         </p>
 
+        <h2>
+          Research &amp; Professional Networks
+        </h2>
+
       </div>
 
 
-      <div class="blog-more">
+      <div class="profile-links">
+
 
         <a
-          href="https://medium.com/@michaelmahesh"
+          href="https://www.linkedin.com/in/michaelmahesh"
           target="_blank"
           rel="noopener noreferrer"
-          class="btn primary">
+          class="profile-link">
 
-          View All Posts on Medium
+          <span class="link-icon linkedin">
+            in
+          </span>
+
+          <strong>
+            LinkedIn
+          </strong>
+
+          <small>
+            Connect
+          </small>
 
         </a>
 
-      </div>
 
+        <a
+          href="https://orcid.org/0000-0002-9948-5743"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="profile-link">
+
+          <span class="link-icon orcid">
+            iD
+          </span>
+
+          <strong>
+            ORCID
+          </strong>
+
+          <small>
+            Researcher ID
+          </small>
+
+        </a>
+
+
+        <a
+          href="https://scholar.google.com/citations?user=YxDQyvIAAAAJ&hl=en"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="profile-link">
+
+          <span class="link-icon scholar">
+            G
+          </span>
+
+          <strong>
+            Google Scholar
+          </strong>
+
+          <small>
+            Profile
+          </small>
+
+        </a>
+
+
+        <a
+          href="https://www.scopus.com/authid/detail.uri?authorId=57202852137"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="profile-link">
+
+          <span class="link-icon scopus">
+            S
+          </span>
+
+          <strong>
+            Scopus
+          </strong>
+
+          <small>
+            Profile
+          </small>
+
+        </a>
+
+
+        <a
+          href="https://www.webofscience.com/wos/author/record/AAU-5370-2021"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="profile-link">
+
+          <span class="link-icon wos">
+            W
+          </span>
+
+          <strong>
+            Web of Science
+          </strong>
+
+          <small>
+            Profile
+          </small>
+
+        </a>
+
+
+        <a
+          href="https://github.com/michaelmahesh"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="profile-link">
+
+          <span class="link-icon github">
+            GH
+          </span>
+
+          <strong>
+            GitHub
+          </strong>
+
+          <small>
+            Projects
+          </small>
+
+        </a>
+
+
+      </div>
 
     </div>
 
@@ -1690,32 +3609,47 @@
 
 
 
-  <!-- CONNECT -->
-  <section class="connect-section" id="connect">
+  <!-- =========================================================
+       CONNECT
+       ========================================================= -->
+
+  <section
+    class="connect-section"
+    id="connect">
 
     <div class="container connect-grid">
 
 
       <div>
 
-        <h2>Let's Connect</h2>
+        <h2>
+          Let's Connect
+        </h2>
 
         <p>
-          Open for collaborations, research partnerships, funded projects,
-          invited talks, workshops, student mentoring, and academic initiatives.
+
+          Open for collaborations, research partnerships,
+          funded projects, invited talks, workshops,
+          student mentoring and academic initiatives.
+
         </p>
 
       </div>
 
 
-
       <div class="contact-details">
 
-        <p>📞 +91 9176009797</p>
+        <p>
+          📞 +91 9176009797
+        </p>
 
-        <p>✉️ michaelmaheshk@gmail.com</p>
+        <p>
+          ✉️ michaelmaheshk@gmail.com
+        </p>
 
-        <p>📍 Chennai, Tamil Nadu, India</p>
+        <p>
+          📍 Chennai, Tamil Nadu, India
+        </p>
 
       </div>
 
@@ -1726,18 +3660,27 @@
 
 
 
-  <!-- FOOTER -->
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+
   <footer>
 
     <p>
+
       © <span id="year"></span>
-      Dr. K. Michael Mahesh. All Rights Reserved.
+      Dr. K. Michael Mahesh.
+      All Rights Reserved.
+
     </p>
 
+
     <p>
+
       <a href="privacy.html">
         Privacy Policy
       </a>
+
     </p>
 
   </footer>
