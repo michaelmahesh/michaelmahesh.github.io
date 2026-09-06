@@ -1,0 +1,2981 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Learning | Dr. K. Michael Mahesh</title>
+
+<meta name="description"
+     content="Teaching materials, courses, tutorials, AI learning resources and research insights by Dr. K. Michael Mahesh.">
+
+  <meta name="author" content="Dr. K. Michael Mahesh">
+
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Google AdSense -->
+
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6687646879167326"
+    crossorigin="anonymous"></script>
+
+  <style>
+
+    :root {
+      --white: #ffffff;
+      --bg: #f7faff;
+      --blue: #1d4ed8;
+      --blue-dark: #173ea5;
+      --blue-soft: #eff6ff;
+
+      --navy: #0f172a;
+      --text: #334155;
+      --muted: #64748b;
+
+      --border: #e2e8f0;
+
+      --cyan: #0891b2;
+      --purple: #7c3aed;
+      --orange: #ea580c;
+      --green: #059669;
+
+      --max-width: 1180px;
+
+      --radius: 18px;
+
+      --shadow:
+        0 12px 35px rgba(15, 23, 42, .06);
+
+      --shadow-hover:
+        0 20px 45px rgba(15, 23, 42, .10);
+    }
+
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+      font-family: "Inter", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    button {
+      font-family: inherit;
+    }
+
+
+    .container {
+      width: min(
+        var(--max-width),
+        calc(100% - 40px)
+      );
+
+      margin: auto;
+    }
+
+
+    /* =========================================================
+       HEADER
+    ========================================================= */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(255, 255, 255, .95);
+
+      backdrop-filter: blur(14px);
+
+      border-bottom:
+        1px solid var(--border);
+
+      transition:
+        box-shadow .25s ease;
+    }
+
+
+    .site-header.scrolled {
+      box-shadow:
+        0 8px 25px rgba(15, 23, 42, .07);
+    }
+
+
+    .nav-container {
+      min-height: 76px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 30px;
+    }
+
+
+    .brand {
+      display: flex;
+
+      align-items: center;
+
+      gap: 12px;
+    }
+
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 12px;
+
+      background: var(--blue);
+
+      color: white;
+
+      font-family: "Space Grotesk", sans-serif;
+
+      font-weight: 700;
+
+      font-size: 16px;
+    }
+
+
+    .brand-copy strong {
+      display: block;
+
+      color: var(--navy);
+
+      font-family: "Space Grotesk", sans-serif;
+
+      font-size: 15px;
+    }
+
+
+    .brand-copy span {
+      display: block;
+
+      color: var(--muted);
+
+      font-size: 11px;
+
+      text-transform: uppercase;
+
+      letter-spacing: .12em;
+    }
+
+
+    .nav-menu {
+      display: flex;
+
+      align-items: center;
+
+      gap: 28px;
+    }
+
+
+    .nav-menu a {
+      position: relative;
+
+      color: #475569;
+
+      font-size: 14px;
+
+      font-weight: 600;
+    }
+
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+      color: var(--blue);
+    }
+
+
+    .nav-menu a.active::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      right: 0;
+
+      bottom: -8px;
+
+      height: 2px;
+
+      background: var(--blue);
+
+      border-radius: 2px;
+    }
+
+
+    .nav-connect {
+      padding: 9px 15px;
+
+      border:
+        1px solid #bfdbfe;
+
+      border-radius: 10px;
+
+      background: var(--blue-soft);
+
+      color: var(--blue) !important;
+    }
+
+
+    .menu-toggle {
+      display: none;
+
+      border: 0;
+
+      background: transparent;
+
+      color: var(--navy);
+
+      font-size: 25px;
+
+      cursor: pointer;
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .learning-hero {
+      padding: 92px 0 78px;
+
+      background:
+        linear-gradient(
+          180deg,
+          #ffffff 0%,
+          #f7faff 100%
+        );
+
+      border-bottom:
+        1px solid var(--border);
+    }
+
+
+    .hero-grid {
+      display: grid;
+
+      grid-template-columns:
+        1.25fr .75fr;
+
+      gap: 70px;
+
+      align-items: center;
+    }
+
+
+    .eyebrow {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      color: var(--blue);
+
+      font-size: 12px;
+
+      font-weight: 700;
+
+      letter-spacing: .14em;
+
+      text-transform: uppercase;
+
+      margin-bottom: 20px;
+    }
+
+
+    .eyebrow::before {
+      content: "";
+
+      width: 26px;
+      height: 2px;
+
+      background: var(--blue);
+
+      border-radius: 2px;
+    }
+
+
+    .learning-hero h1 {
+      font-family: "Space Grotesk", sans-serif;
+
+      color: var(--navy);
+
+      font-size:
+        clamp(43px, 6vw, 72px);
+
+      line-height: 1.02;
+
+      letter-spacing: -.045em;
+
+      margin-bottom: 23px;
+    }
+
+
+    .learning-hero h1 span {
+      color: var(--blue);
+    }
+
+
+    .hero-description {
+      max-width: 720px;
+
+      color: var(--muted);
+
+      font-size: 17px;
+    }
+
+
+    .hero-actions {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+      margin-top: 30px;
+    }
+
+
+    .btn {
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 8px;
+
+      padding: 12px 19px;
+
+      border-radius: 11px;
+
+      font-size: 14px;
+
+      font-weight: 700;
+
+      transition:
+        transform .2s ease,
+        background .2s ease,
+        box-shadow .2s ease;
+    }
+
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+
+    .btn-primary {
+      color: white;
+
+      background: var(--blue);
+
+      box-shadow:
+        0 8px 20px
+        rgba(29, 78, 216, .16);
+    }
+
+
+    .btn-primary:hover {
+      background: var(--blue-dark);
+    }
+
+
+    .btn-secondary {
+      background: white;
+
+      border:
+        1px solid var(--border);
+
+      color: var(--navy);
+    }
+
+
+    /* =========================================================
+       LEARNING SNAPSHOT
+    ========================================================= */
+
+    .learning-snapshot {
+      background: white;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 22px;
+
+      padding: 28px;
+
+      box-shadow: var(--shadow);
+    }
+
+
+    .snapshot-label {
+      color: var(--muted);
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+      letter-spacing: .13em;
+
+      text-transform: uppercase;
+
+      margin-bottom: 5px;
+    }
+
+
+    .snapshot-row {
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      gap: 15px;
+
+      padding: 18px 0;
+
+      border-bottom:
+        1px solid var(--border);
+    }
+
+
+    .snapshot-row:last-child {
+      border-bottom: 0;
+    }
+
+
+    .snapshot-row strong {
+      color: var(--navy);
+
+      font-family:
+        "Space Grotesk", sans-serif;
+
+      font-size: 18px;
+    }
+
+
+    .snapshot-row span {
+      color: var(--muted);
+
+      font-size: 12px;
+    }
+
+
+    /* =========================================================
+       COMMON SECTION
+    ========================================================= */
+
+    .section {
+      padding: 82px 0;
+    }
+
+
+    .section-heading {
+      margin-bottom: 38px;
+    }
+
+
+    .section-kicker {
+      color: var(--blue);
+
+      text-transform: uppercase;
+
+      letter-spacing: .12em;
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+      margin-bottom: 8px;
+    }
+
+
+    .section-heading h2 {
+      color: var(--navy);
+
+      font-family:
+        "Space Grotesk", sans-serif;
+
+      font-size:
+        clamp(31px, 4vw, 45px);
+
+      line-height: 1.12;
+
+      letter-spacing: -.03em;
+    }
+
+
+    .section-heading p {
+      max-width: 720px;
+
+      color: var(--muted);
+
+      margin-top: 10px;
+    }
+
+
+    /* =========================================================
+       COURSE CARDS
+    ========================================================= */
+
+    .course-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 22px;
+    }
+
+
+    .course-card {
+      position: relative;
+
+      overflow: hidden;
+
+      background: white;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 20px;
+
+      padding: 30px;
+
+      box-shadow: var(--shadow);
+
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+    }
+
+
+    .course-card:hover {
+      transform: translateY(-5px);
+
+      box-shadow: var(--shadow-hover);
+
+      border-color: #bfdbfe;
+    }
+
+
+    .course-card::before {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      top: 0;
+
+      width: 4px;
+      height: 100%;
+
+      background: var(--blue);
+    }
+
+
+    .course-card.dip::before {
+      background: var(--cyan);
+    }
+
+
+    .course-top {
+      display: flex;
+
+      align-items: flex-start;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      margin-bottom: 20px;
+    }
+
+
+    .course-icon {
+      width: 52px;
+      height: 52px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 14px;
+
+      background: var(--blue-soft);
+
+      color: var(--blue);
+
+      font-family:
+        "Space Grotesk", sans-serif;
+
+      font-size: 14px;
+
+      font-weight: 700;
+    }
+
+
+    .course-card.dip .course-icon {
+      background: #ecfeff;
+
+      color: var(--cyan);
+    }
+
+
+    .course-code {
+      padding: 5px 8px;
+
+      border-radius: 7px;
+
+      background: #f8fafc;
+
+      border:
+        1px solid var(--border);
+
+      color: var(--muted);
+
+      font-size: 10px;
+
+      font-weight: 700;
+    }
+
+
+    .course-card h3 {
+      color: var(--navy);
+
+      font-family:
+        "Space Grotesk", sans-serif;
+
+      font-size: 24px;
+
+      margin-bottom: 8px;
+    }
+
+
+    .course-card > p {
+      color: var(--muted);
+
+      font-size: 13px;
+
+      margin-bottom: 22px;
+    }
+
+
+    .course-meta {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 7px;
+
+      margin-bottom: 22px;
+    }
+
+
+    .course-meta span {
+      padding: 5px 8px;
+
+      border-radius: 7px;
+
+      background: #f8fafc;
+
+      border:
+        1px solid var(--border);
+
+      color: #475569;
+
+      font-size: 10px;
+
+      font-weight: 600;
+    }
+
+
+    .course-link {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 7px;
+
+      color: var(--blue);
+
+      font-size: 12px;
+
+      font-weight: 700;
+    }
+
+
+    .course-link span {
+      transition:
+        transform .2s ease;
+    }
+
+
+    .course-link:hover span {
+      transform:
+        translateX(4px);
+    }
+
+
+    /* =========================================================
+       UNIT CARDS
+    ========================================================= */
+
+    .units-section {
+      background: white;
+
+      border-top:
+        1px solid var(--border);
+
+      border-bottom:
+        1px solid var(--border);
+    }
+
+
+    .unit-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(5, 1fr);
+
+      gap: 12px;
+    }
+
+
+    .unit-card {
+      position: relative;
+
+      background: var(--bg);
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 15px;
+
+      padding: 20px;
+
+      min-height: 210px;
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+    }
+
+
+    .unit-card:hover {
+      transform: translateY(-4px);
+
+      background: white;
+
+      box-shadow: var(--shadow);
+    }
+
+
+    .unit-number {
+      color: #93c5fd;
+
+      font-family:
+        "Space Grotesk", sans-serif;
+
+      font-size: 28px;
+
+      font-weight: 700;
+
+      margin-bottom: 13px;
+    }
+
+
+    .unit-card h3 {
+      color: var(--navy);
+
+      font-family:
+        "Space Grotesk", sans-serif;
+
+      font-size: 17px;
+
+      line-height: 1.3;
+
+      margin-bottom: 7px;
+    }
+
+
+    .unit-card p {
+      color: var(--muted);
+
+      font-size: 11.5px;
+
+      line-height: 1.6;
+    }
+
+
+    .unit-link {
+      display: inline-block;
+
+      margin-top: 15px;
+
+      color: var(--blue);
+
+      font-size: 11px;
+
+      font-weight: 700;
+    }
+
+
+    /* =========================================================
+       LEARNING RESOURCES
+    ========================================================= */
+
+    .resource-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 16px;
+    }
+
+
+    .resource-card {
+      background: white;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 16px;
+
+      padding: 24px;
+
+      transition:
+        transform .22s ease,
+        box-shadow .22s ease;
+    }
+
+
+    .resource-card:hover {
+      transform: translateY(-4px);
+
+      box-shadow: var(--shadow);
+    }
+
+
+    .resource-icon {
+      width: 43px;
+      height: 43px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 11px;
+
+      background: var(--blue-soft);
+
+      color: var(--blue);
+
+      margin-bottom: 17px;
+    }
+
+
+    .resource-card:nth-child(2)
+    .resource-icon {
+      background: #f5f3ff;
+      color: var(--purple);
+    }
+
+
+    .resource-card:nth-child(3)
+    .resource-icon {
+      background: #ecfdf5;
+      color: var(--green);
+    }
+
+
+    .resource-card:nth-child(4)
+    .resource-icon {
+      background: #fff7ed;
+      color: var(--orange);
+    }
+
+
+    .resource-card h3 {
+      color: var(--navy);
+
+      font-family:
+        "Space Grotesk", sans-serif;
+
+      font-size: 17px;
+
+      margin-bottom: 6px;
+    }
+
+
+    .resource-card p {
+      color: var(--muted);
+
+      font-size: 12px;
+
+      margin-bottom: 13px;
+    }
+
+
+    .resource-link {
+      color: var(--blue);
+
+      font-size: 11px;
+
+      font-weight: 700;
+    }
+
+
+    /* =========================================================
+       TEACHING MATERIALS
+    ========================================================= */
+
+    .material-list {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 16px;
+    }
+
+
+    .material {
+      display: flex;
+
+      align-items: center;
+
+      gap: 15px;
+
+      background: white;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 15px;
+
+      padding: 18px;
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+    }
+
+
+    .material:hover {
+      transform: translateY(-3px);
+
+      box-shadow: var(--shadow);
+    }
+
+
+    .material-icon {
+      width: 42px;
+      height: 42px;
+
+      flex: 0 0 42px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 10px;
+
+      background: var(--blue-soft);
+
+      color: var(--blue);
+
+      font-weight: 700;
+    }
+
+
+    .material h3 {
+      color: var(--navy);
+
+      font-family:
+        "Space Grotesk", sans-serif;
+
+      font-size: 15px;
+
+      margin-bottom: 2px;
+    }
+
+
+    .material p {
+      color: var(--muted);
+
+      font-size: 11px;
+    }
+
+
+    .material-arrow {
+      margin-left: auto;
+
+      color: var(--blue);
+
+      font-weight: 700;
+    }
+
+
+    /* =========================================================
+       LEARNING PHILOSOPHY
+    ========================================================= */
+
+    .philosophy {
+      background: var(--blue-soft);
+
+      border-top:
+        1px solid #dbeafe;
+
+      border-bottom:
+        1px solid #dbeafe;
+    }
+
+
+    .philosophy-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 18px;
+    }
+
+
+    .philosophy-card {
+      background: white;
+
+      border:
+        1px solid #dbeafe;
+
+      border-radius: 17px;
+
+      padding: 26px;
+    }
+
+
+    .philosophy-card strong {
+      display: block;
+
+      color: var(--navy);
+
+      font-family:
+        "Space Grotesk", sans-serif;
+
+      font-size: 19px;
+
+      margin-bottom: 7px;
+    }
+
+
+    .philosophy-card p {
+      color: var(--muted);
+
+      font-size: 12.5px;
+    }
+
+
+    /* =========================================================
+       CTA
+    ========================================================= */
+
+    .learning-cta {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 30px;
+
+      padding: 40px;
+
+      background: white;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 22px;
+
+      box-shadow: var(--shadow);
+    }
+
+
+    .learning-cta h2 {
+      color: var(--navy);
+
+      font-family:
+        "Space Grotesk", sans-serif;
+
+      font-size: 27px;
+
+      margin-bottom: 5px;
+    }
+
+
+    .learning-cta p {
+      color: var(--muted);
+
+      font-size: 13px;
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      background: white;
+
+      border-top:
+        1px solid var(--border);
+
+      padding: 58px 0 22px;
+    }
+
+
+    .footer-grid {
+      display: grid;
+
+      grid-template-columns:
+        1.5fr repeat(3, 1fr);
+
+      gap: 45px;
+
+      padding-bottom: 40px;
+    }
+
+
+    .footer-brand strong {
+      color: var(--navy);
+
+      font-family:
+        "Space Grotesk", sans-serif;
+
+      font-size: 18px;
+    }
+
+
+    .footer-brand p {
+      color: var(--muted);
+
+      font-size: 13px;
+
+      max-width: 300px;
+
+      margin-top: 10px;
+    }
+
+
+    .footer-column h4 {
+      color: var(--navy);
+
+      font-size: 12px;
+
+      text-transform: uppercase;
+
+      letter-spacing: .1em;
+
+      margin-bottom: 14px;
+    }
+
+
+    .footer-column a {
+      display: block;
+
+      color: var(--muted);
+
+      font-size: 13px;
+
+      margin: 7px 0;
+    }
+
+
+    .footer-column a:hover {
+      color: var(--blue);
+    }
+
+
+    .footer-bottom {
+      border-top:
+        1px solid var(--border);
+
+      padding-top: 20px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      color: #94a3b8;
+
+      font-size: 11px;
+    }
+
+
+    /* =========================================================
+       REVEAL
+    ========================================================= */
+
+    .reveal {
+      opacity: 0;
+
+      transform:
+        translateY(18px);
+
+      transition:
+        opacity .6s ease,
+        transform .6s ease;
+    }
+
+
+    .reveal.visible {
+      opacity: 1;
+
+      transform:
+        translateY(0);
+    }
+
+
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 1000px) {
+
+      .unit-grid {
+        grid-template-columns:
+          repeat(3, 1fr);
+      }
+
+      .resource-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+    }
+
+
+    @media (max-width: 900px) {
+
+      .nav-menu {
+        position: absolute;
+
+        top: 76px;
+
+        left: 0;
+        right: 0;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 0;
+
+        padding:
+          12px 20px 20px;
+
+        background: white;
+
+        border-bottom:
+          1px solid var(--border);
+
+        box-shadow:
+          0 15px 30px
+          rgba(15,23,42,.07);
+      }
+
+
+      .nav-menu.open {
+        display: flex;
+      }
+
+
+      .nav-menu a {
+        width: 100%;
+
+        padding: 12px 0;
+      }
+
+
+      .nav-menu a.active::after {
+        display: none;
+      }
+
+
+      .menu-toggle {
+        display: block;
+      }
+
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+      }
+
+
+      .course-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .unit-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+
+      .material-list {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+
+      .philosophy-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .footer-grid {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+    }
+
+
+    @media (max-width: 650px) {
+
+      .container {
+        width:
+          min(
+            100% - 28px,
+            var(--max-width)
+          );
+      }
+
+
+      .learning-hero {
+        padding:
+          65px 0 55px;
+      }
+
+
+      .section {
+        padding:
+          62px 0;
+      }
+
+
+      .unit-grid,
+      .resource-grid,
+      .material-list,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .learning-cta {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 28px;
+      }
+
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+
+    }
+
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+
+      *,
+      *::before,
+      *::after {
+        transition-duration:
+          .01ms !important;
+
+        animation-duration:
+          .01ms !important;
+      }
+
+
+      .reveal {
+        opacity: 1;
+
+        transform: none;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="site-header" id="siteHeader">
+
+  <div class="container nav-container">
+
+```
+<a href="index.html" class="brand">
+
+  <div class="brand-mark">
+    MM
+  </div>
+
+  <div class="brand-copy">
+
+    <strong>
+      MICHAEL MAHESH
+    </strong>
+
+    <span>
+      Professor · Artificial Intelligence
+    </span>
+
+  </div>
+
+</a>
+
+
+<button
+  class="menu-toggle"
+  id="menuToggle"
+  aria-label="Open navigation"
+>
+  ☰
+</button>
+
+
+<nav class="nav-menu" id="navMenu">
+
+  <a href="research.html">
+    Research
+  </a>
+
+  <a href="projects.html">
+    Projects
+  </a>
+
+  <a
+    href="learning.html"
+    class="active"
+  >
+    Learning
+  </a>
+
+  <a href="publications.html">
+    Publications
+  </a>
+
+  <a href="about.html">
+    About
+  </a>
+
+  <a
+    href="contact.html"
+    class="nav-connect"
+  >
+    Connect
+  </a>
+
+</nav>
+```
+
+  </div>
+
+</header>
+
+<main>
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="learning-hero">
+
+  <div class="container hero-grid">
+
+```
+<div class="reveal">
+
+  <div class="eyebrow">
+    Learning
+  </div>
+
+
+  <h1>
+
+    Learn.<br>
+
+    <span>Build. Understand.</span>
+
+  </h1>
+
+
+  <p class="hero-description">
+
+    Teaching materials, course resources, practical examples
+    and research-oriented learning content for Artificial
+    Intelligence, Deep Learning, Computer Vision and
+    Digital Image Processing.
+
+  </p>
+
+
+  <div class="hero-actions">
+
+    <a
+      href="#courses"
+      class="btn btn-primary"
+    >
+      Explore Courses →
+    </a>
+
+
+    <a
+      href="#materials"
+      class="btn btn-secondary"
+    >
+      Teaching Materials
+    </a>
+
+  </div>
+
+</div>
+
+
+<aside class="learning-snapshot reveal">
+
+  <div class="snapshot-label">
+    Learning Hub
+  </div>
+
+
+  <div class="snapshot-row">
+
+    <div>
+      <strong>Deep Learning</strong>
+      <span>5 Units</span>
+    </div>
+
+    <span>
+      60 Periods
+    </span>
+
+  </div>
+
+
+  <div class="snapshot-row">
+
+    <div>
+      <strong>Digital Image Processing</strong>
+      <span>5 Units</span>
+    </div>
+
+    <span>
+      60 Periods
+    </span>
+
+  </div>
+
+
+  <div class="snapshot-row">
+
+    <div>
+      <strong>Medical Imaging</strong>
+      <span>Posters & Resources</span>
+    </div>
+
+    <span>
+      AI
+    </span>
+
+  </div>
+
+
+  <div class="snapshot-row">
+
+    <div>
+      <strong>AI Tutorials</strong>
+      <span>Practical Learning</span>
+    </div>
+
+    <span>
+      Code
+    </span>
+
+  </div>
+
+</aside>
+```
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     COURSES
+========================================================= -->
+
+<section
+  class="section"
+  id="courses"
+>
+
+  <div class="container">
+
+```
+<div class="section-heading reveal">
+
+  <div class="section-kicker">
+    Courses
+  </div>
+
+
+  <h2>
+    Teaching Materials
+  </h2>
+
+
+  <p>
+
+    Structured course resources designed to move from
+    fundamental concepts to practical implementation.
+
+  </p>
+
+</div>
+
+
+<div class="course-grid">
+
+
+  <!-- DEEP LEARNING -->
+
+  <article class="course-card reveal">
+
+    <div class="course-top">
+
+      <div class="course-icon">
+        DL
+      </div>
+
+      <span class="course-code">
+        60 PERIODS
+      </span>
+
+    </div>
+
+
+    <h3>
+      Deep Learning
+    </h3>
+
+
+    <p>
+
+      Neural networks, CNNs, RNNs, LSTMs, unsupervised
+      learning and practical deep learning applications.
+
+    </p>
+
+
+    <div class="course-meta">
+
+      <span>
+        Neural Networks
+      </span>
+
+      <span>
+        CNN
+      </span>
+
+      <span>
+        RNN / LSTM
+      </span>
+
+      <span>
+        GAN
+      </span>
+
+      <span>
+        YOLO
+      </span>
+
+    </div>
+
+
+    <a
+      href="teaching/deep-learning.html"
+      class="course-link"
+    >
+
+      Explore Deep Learning
+
+      <span>→</span>
+
+    </a>
+
+  </article>
+
+
+  <!-- DIGITAL IMAGE PROCESSING -->
+
+  <article
+    class="course-card dip reveal"
+  >
+
+    <div class="course-top">
+
+      <div class="course-icon">
+        DIP
+      </div>
+
+      <span class="course-code">
+        60 PERIODS
+      </span>
+
+    </div>
+
+
+    <h3>
+      Digital Image Processing
+    </h3>
+
+
+    <p>
+
+      Image fundamentals, enhancement, segmentation,
+      morphological processing and image compression.
+
+    </p>
+
+
+    <div class="course-meta">
+
+      <span>
+        Fundamentals
+      </span>
+
+      <span>
+        Enhancement
+      </span>
+
+      <span>
+        Segmentation
+      </span>
+
+      <span>
+        Morphology
+      </span>
+
+      <span>
+        Compression
+      </span>
+
+    </div>
+
+
+    <a
+      href="teaching/digital-image-processing.html"
+      class="course-link"
+    >
+
+      Explore Image Processing
+
+      <span>→</span>
+
+    </a>
+
+  </article>
+
+</div>
+```
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     DEEP LEARNING UNITS
+========================================================= -->
+
+<section class="section units-section">
+
+  <div class="container">
+
+```
+<div class="section-heading reveal">
+
+  <div class="section-kicker">
+    Deep Learning
+  </div>
+
+
+  <h2>
+    Course Roadmap
+  </h2>
+
+
+  <p>
+
+    Five units covering the progression from deep
+    neural network fundamentals to real-world applications.
+
+  </p>
+
+</div>
+
+
+<div class="unit-grid">
+
+
+  <article class="unit-card reveal">
+
+    <div class="unit-number">
+      I
+    </div>
+
+    <h3>
+      Deep Networks
+    </h3>
+
+    <p>
+
+      Neurons, DNNs, activation functions, loss,
+      optimization, backpropagation, regularization
+      and batch normalization.
+
+    </p>
+
+    <a
+      href="teaching/deep-learning.html#unit1"
+      class="unit-link"
+    >
+      View Unit →
+    </a>
+
+  </article>
+
+
+  <article class="unit-card reveal">
+
+    <div class="unit-number">
+      II
+    </div>
+
+    <h3>
+      CNN
+    </h3>
+
+    <p>
+
+      Convolution, pooling, stride, padding,
+      architectures, CIFAR-10, transfer learning
+      and augmentation.
+
+    </p>
+
+    <a
+      href="teaching/deep-learning.html#unit2"
+      class="unit-link"
+    >
+      View Unit →
+    </a>
+
+  </article>
+
+
+  <article class="unit-card reveal">
+
+    <div class="unit-number">
+      III
+    </div>
+
+    <h3>
+      RNN & LSTM
+    </h3>
+
+    <p>
+
+      RNN topologies, training difficulties,
+      bidirectional networks, LSTM, BiLSTM, GRU,
+      embeddings and NER.
+
+    </p>
+
+    <a
+      href="teaching/deep-learning.html#unit3"
+      class="unit-link"
+    >
+      View Unit →
+    </a>
+
+  </article>
+
+
+  <article class="unit-card reveal">
+
+    <div class="unit-number">
+      IV
+    </div>
+
+    <h3>
+      Unsupervised Learning
+    </h3>
+
+    <p>
+
+      Autoencoders, sparse and denoising models,
+      VAE, GAN, RBM and DBM.
+
+    </p>
+
+    <a
+      href="teaching/deep-learning.html#unit4"
+      class="unit-link"
+    >
+      View Unit →
+    </a>
+
+  </article>
+
+
+  <article class="unit-card reveal">
+
+    <div class="unit-number">
+      V
+    </div>
+
+    <h3>
+      Applications
+    </h3>
+
+    <p>
+
+      Segmentation, object detection,
+      Faster R-CNN, YOLO, SSD and deployment.
+
+    </p>
+
+    <a
+      href="teaching/deep-learning.html#unit5"
+      class="unit-link"
+    >
+      View Unit →
+    </a>
+
+  </article>
+
+</div>
+```
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     DIP UNITS
+========================================================= -->
+
+<section class="section">
+
+  <div class="container">
+
+```
+<div class="section-heading reveal">
+
+  <div class="section-kicker">
+    Digital Image Processing
+  </div>
+
+
+  <h2>
+    Image Processing Roadmap
+  </h2>
+
+
+  <p>
+
+    A five-unit progression from image fundamentals
+    to compression and practical image analysis.
+
+  </p>
+
+</div>
+
+
+<div class="unit-grid">
+
+
+  <article class="unit-card reveal">
+
+    <div class="unit-number">
+      I
+    </div>
+
+    <h3>
+      Image Fundamentals
+    </h3>
+
+    <p>
+
+      Image acquisition, sampling, quantization,
+      pixel relationships, RGB, HSI, DFT and DCT.
+
+    </p>
+
+    <a
+      href="teaching/digital-image-processing.html#unit1"
+      class="unit-link"
+    >
+      View Unit →
+    </a>
+
+  </article>
+
+
+  <article class="unit-card reveal">
+
+    <div class="unit-number">
+      II
+    </div>
+
+    <h3>
+      Image Enhancement
+    </h3>
+
+    <p>
+
+      Gray transformations, histograms, spatial
+      filtering, Fourier-domain filtering and
+      color enhancement.
+
+    </p>
+
+    <a
+      href="teaching/digital-image-processing.html#unit2"
+      class="unit-link"
+    >
+      View Unit →
+    </a>
+
+  </article>
+
+
+  <article class="unit-card reveal">
+
+    <div class="unit-number">
+      III
+    </div>
+
+    <h3>
+      Image Segmentation
+    </h3>
+
+    <p>
+
+      Edge detection, Hough transform,
+      thresholding, region methods and watershed.
+
+    </p>
+
+    <a
+      href="teaching/digital-image-processing.html#unit3"
+      class="unit-link"
+    >
+      View Unit →
+    </a>
+
+  </article>
+
+
+  <article class="unit-card reveal">
+
+    <div class="unit-number">
+      IV
+    </div>
+
+    <h3>
+      Morphological Processing
+    </h3>
+
+    <p>
+
+      Erosion, dilation, opening, closing,
+      hit-or-miss, reconstruction and grayscale morphology.
+
+    </p>
+
+    <a
+      href="teaching/digital-image-processing.html#unit4"
+      class="unit-link"
+    >
+      View Unit →
+    </a>
+
+  </article>
+
+
+  <article class="unit-card reveal">
+
+    <div class="unit-number">
+      V
+    </div>
+
+    <h3>
+      Image Compression
+    </h3>
+
+    <p>
+
+      Lossless and lossy compression,
+      Huffman, RLE, arithmetic coding and JPEG.
+
+    </p>
+
+    <a
+      href="teaching/digital-image-processing.html#unit5"
+      class="unit-link"
+    >
+      View Unit →
+    </a>
+
+  </article>
+
+</div>
+```
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     LEARNING RESOURCES
+========================================================= -->
+
+<section class="section units-section">
+
+  <div class="container">
+
+```
+<div class="section-heading reveal">
+
+  <div class="section-kicker">
+    Learning Resources
+  </div>
+
+
+  <h2>
+    Learn by doing.
+  </h2>
+
+
+  <p>
+
+    Practical resources can connect classroom concepts
+    with implementation, experimentation and research.
+
+  </p>
+
+</div>
+
+
+<div class="resource-grid">
+
+
+  <article class="resource-card reveal">
+
+    <div class="resource-icon">
+      &lt;/&gt;
+    </div>
+
+    <h3>
+      Python for AI
+    </h3>
+
+    <p>
+      Python foundations, NumPy, visualization
+      and programming patterns for AI.
+    </p>
+
+    <a
+      href="projects.html"
+      class="resource-link"
+    >
+      Explore →
+    </a>
+
+  </article>
+
+
+  <article class="resource-card reveal">
+
+    <div class="resource-icon">
+      CV
+    </div>
+
+    <h3>
+      Computer Vision
+    </h3>
+
+    <p>
+      OpenCV-based image and video processing
+      examples and experiments.
+    </p>
+
+    <a
+      href="projects.html"
+      class="resource-link"
+    >
+      Explore →
+    </a>
+
+  </article>
+
+
+  <article class="resource-card reveal">
+
+    <div class="resource-icon">
+      AI
+    </div>
+
+    <h3>
+      Deep Learning
+    </h3>
+
+    <p>
+      Neural networks, PyTorch, regression,
+      classification and practical models.
+    </p>
+
+    <a
+      href="projects.html"
+      class="resource-link"
+    >
+      Explore →
+    </a>
+
+  </article>
+
+
+  <article class="resource-card reveal">
+
+    <div class="resource-icon">
+      ✦
+    </div>
+
+    <h3>
+      Research Insights
+    </h3>
+
+    <p>
+      Connect classroom concepts with current
+      research and experimental ideas.
+    </p>
+
+    <a
+      href="research.html"
+      class="resource-link"
+    >
+      Explore →
+    </a>
+
+  </article>
+
+</div>
+```
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     TEACHING MATERIALS
+========================================================= -->
+
+<section
+  class="section"
+  id="materials"
+>
+
+  <div class="container">
+
+```
+<div class="section-heading reveal">
+
+  <div class="section-kicker">
+    Teaching Materials
+  </div>
+
+
+  <h2>
+    A growing academic resource library.
+  </h2>
+
+
+  <p>
+
+    Posters, PDFs, lecture materials, examples and
+    practical resources can be added here as they are created.
+
+  </p>
+
+</div>
+
+
+<div class="material-list">
+
+
+  <a
+    href="teaching/deep-learning.html"
+    class="material reveal"
+  >
+
+    <div class="material-icon">
+      DL
+    </div>
+
+    <div>
+
+      <h3>
+        Deep Learning
+      </h3>
+
+      <p>
+        Units I–V · Lecture Materials
+      </p>
+
+    </div>
+
+    <span class="material-arrow">
+      →
+    </span>
+
+  </a>
+
+
+  <a
+    href="teaching/digital-image-processing.html"
+    class="material reveal"
+  >
+
+    <div class="material-icon">
+      DIP
+    </div>
+
+    <div>
+
+      <h3>
+        Digital Image Processing
+      </h3>
+
+      <p>
+        Units I–V · Lecture Materials
+      </p>
+
+    </div>
+
+    <span class="material-arrow">
+      →
+    </span>
+
+  </a>
+
+
+  <a
+    href="teaching/medical-imaging.html"
+    class="material reveal"
+  >
+
+    <div class="material-icon">
+      MI
+    </div>
+
+    <div>
+
+      <h3>
+        Medical Imaging
+      </h3>
+
+      <p>
+        Posters · Infographics · Resources
+      </p>
+
+    </div>
+
+    <span class="material-arrow">
+      →
+    </span>
+
+  </a>
+
+
+  <a
+    href="teaching/computer-vision.html"
+    class="material reveal"
+  >
+
+    <div class="material-icon">
+      CV
+    </div>
+
+    <div>
+
+      <h3>
+        Computer Vision
+      </h3>
+
+      <p>
+        Concepts · OpenCV · Practical Examples
+      </p>
+
+    </div>
+
+    <span class="material-arrow">
+      →
+    </span>
+
+  </a>
+
+
+  <a
+    href="teaching/python-ai.html"
+    class="material reveal"
+  >
+
+    <div class="material-icon">
+      PY
+    </div>
+
+    <div>
+
+      <h3>
+        Python for AI
+      </h3>
+
+      <p>
+        Programming · Visualization · AI
+      </p>
+
+    </div>
+
+    <span class="material-arrow">
+      →
+    </span>
+
+  </a>
+
+
+  <a
+    href="teaching/research-guidance.html"
+    class="material reveal"
+  >
+
+    <div class="material-icon">
+      RG
+    </div>
+
+    <div>
+
+      <h3>
+        Research Guidance
+      </h3>
+
+      <p>
+        Research · Projects · Student Guidance
+      </p>
+
+    </div>
+
+    <span class="material-arrow">
+      →
+    </span>
+
+  </a>
+
+</div>
+```
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     LEARNING PHILOSOPHY
+========================================================= -->
+
+<section class="section philosophy">
+
+  <div class="container">
+
+```
+<div class="section-heading reveal">
+
+  <div class="section-kicker">
+    Teaching Philosophy
+  </div>
+
+
+  <h2>
+    From concept to capability.
+  </h2>
+
+</div>
+
+
+<div class="philosophy-grid">
+
+
+  <article class="philosophy-card reveal">
+
+    <strong>
+      Understand
+    </strong>
+
+    <p>
+
+      Build strong conceptual foundations before
+      moving into complex models and applications.
+
+    </p>
+
+  </article>
+
+
+  <article class="philosophy-card reveal">
+
+    <strong>
+      Implement
+    </strong>
+
+    <p>
+
+      Reinforce concepts through Python,
+      OpenCV, PyTorch and practical experiments.
+
+    </p>
+
+  </article>
+
+
+  <article class="philosophy-card reveal">
+
+    <strong>
+      Explore
+    </strong>
+
+    <p>
+
+      Encourage students to move beyond prescribed
+      exercises toward projects and research questions.
+
+    </p>
+
+  </article>
+
+</div>
+```
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="section">
+
+  <div class="container">
+
+```
+<div class="learning-cta reveal">
+
+  <div>
+
+    <h2>
+      Keep learning. Keep building.
+    </h2>
+
+    <p>
+      Explore projects and research alongside the teaching materials.
+    </p>
+
+  </div>
+
+
+  <div
+    style="
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    "
+  >
+
+    <a
+      href="projects.html"
+      class="btn btn-primary"
+    >
+      Projects →
+    </a>
+
+    <a
+      href="research.html"
+      class="btn btn-secondary"
+    >
+      Research →
+    </a>
+
+  </div>
+
+</div>
+```
+
+  </div>
+
+</section>
+
+</main>
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+  <div class="container">
+
+```
+<div class="footer-grid">
+
+
+  <div class="footer-brand">
+
+    <strong>
+      Dr. K. Michael Mahesh
+    </strong>
+
+    <p>
+
+      Professor · Artificial Intelligence<br>
+
+      AI Research · Computer Vision · Deep Learning
+
+    </p>
+
+  </div>
+
+
+  <div class="footer-column">
+
+    <h4>
+      Research
+    </h4>
+
+    <a href="research.html">
+      Research Areas
+    </a>
+
+    <a href="publications.html">
+      Publications
+    </a>
+
+    <a href="projects.html">
+      Projects
+    </a>
+
+  </div>
+
+
+  <div class="footer-column">
+
+    <h4>
+      Learning
+    </h4>
+
+    <a href="learning.html">
+      Teaching Materials
+    </a>
+
+    <a href="learning.html#courses">
+      Courses
+    </a>
+
+    <a href="learning.html#materials">
+      Resources
+    </a>
+
+  </div>
+
+
+  <div class="footer-column">
+
+    <h4>
+      Connect
+    </h4>
+
+    <a
+      href="https://www.linkedin.com/in/michaelmahesh"
+      target="_blank"
+      rel="noopener"
+    >
+      LinkedIn
+    </a>
+
+    <a
+      href="https://orcid.org/0000-0002-9948-5743"
+      target="_blank"
+      rel="noopener"
+    >
+      ORCID
+    </a>
+
+    <a
+      href="https://scholar.google.com/citations?user=YxDQyvIAAAAJ&hl=en"
+      target="_blank"
+      rel="noopener"
+    >
+      Google Scholar
+    </a>
+
+    <a
+      href="https://github.com/michaelmahesh"
+      target="_blank"
+      rel="noopener"
+    >
+      GitHub
+    </a>
+
+  </div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+  <span>
+    © <span id="year"></span>
+    Dr. K. Michael Mahesh.
+    All rights reserved.
+  </span>
+
+  <a href="privacy.html">
+    Privacy
+  </a>
+
+</div>
+```
+
+  </div>
+
+</footer>
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+
+  /* Header shadow */
+
+  const header =
+    document.getElementById("siteHeader");
+
+
+  window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 10) {
+
+      header.classList.add("scrolled");
+
+    } else {
+
+      header.classList.remove("scrolled");
+
+    }
+
+  });
+
+
+  /* Mobile navigation */
+
+  const menuToggle =
+    document.getElementById("menuToggle");
+
+  const navMenu =
+    document.getElementById("navMenu");
+
+
+  menuToggle.addEventListener("click", () => {
+
+    navMenu.classList.toggle("open");
+
+  });
+
+
+  document
+    .querySelectorAll(".nav-menu a")
+    .forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        navMenu.classList.remove("open");
+
+      });
+
+    });
+
+
+  /* Scroll reveal */
+
+  const revealItems =
+    document.querySelectorAll(".reveal");
+
+
+  const observer =
+    new IntersectionObserver(
+      entries => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add(
+              "visible"
+            );
+
+            observer.unobserve(
+              entry.target
+            );
+
+          }
+
+        });
+
+      },
+      {
+        threshold: .08
+      }
+    );
+
+
+  revealItems.forEach(item => {
+
+    observer.observe(item);
+
+  });
+
+
+  /* Current year */
+
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+
+  /* Escape key */
+
+  document.addEventListener("keydown", event => {
+
+    if (event.key === "Escape") {
+
+      navMenu.classList.remove("open");
+
+    }
+
+  });
+
+</script>
+
+<!-- Google Analytics -->
+
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-SL2GKJ42ES"
+></script>
+
+<script>
+
+  window.dataLayer =
+    window.dataLayer || [];
+
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+
+  gtag("js", new Date());
+
+
+  gtag(
+    "config",
+    "G-SL2GKJ42ES"
+  );
+
+</script>
+
+</body>
+</html>
