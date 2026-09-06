@@ -4,52 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>About | Dr. K. Michael Mahesh</title>
+  <title>About Me | Dr. K. Michael Mahesh</title>
+  <meta name="description"
+        content="Dr. K. Michael Mahesh — Professor, Artificial Intelligence Researcher, Computer Vision and Deep Learning Researcher.">
 
-  <meta
-    name="description"
-    content="Dr. K. Michael Mahesh — Professor of Artificial Intelligence, researcher, educator and builder working across AI, Deep Learning, Computer Vision, Medical AI and Intelligent Systems."
-  >
-
-  <meta name="theme-color" content="#1d4ed8">
-
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
   <style>
-
     :root {
+      --white: #ffffff;
+      --bg: #f7faff;
       --blue: #1d4ed8;
-      --blue-dark: #173b9f;
+      --blue-dark: #173ea5;
       --blue-soft: #eff6ff;
-
+      --navy: #0f172a;
+      --text: #334155;
+      --muted: #64748b;
+      --border: #e2e8f0;
       --cyan: #0891b2;
       --purple: #7c3aed;
-      --orange: #ea580c;
       --green: #059669;
-
-      --navy: #0f172a;
-      --text: #1e293b;
-      --muted: #64748b;
-
-      --background: #f7faff;
-      --white: #ffffff;
-
-      --border: #e2e8f0;
-
-      --shadow:
-        0 12px 35px rgba(15, 23, 42, 0.07);
-
-      --shadow-hover:
-        0 18px 45px rgba(29, 78, 216, 0.12);
-
-      --radius: 20px;
-
+      --orange: #ea580c;
+      --shadow: 0 12px 35px rgba(15, 23, 42, 0.07);
+      --shadow-hover: 0 18px 45px rgba(15, 23, 42, 0.11);
+      --radius: 18px;
       --max-width: 1180px;
     }
 
@@ -64,18 +46,11 @@
     }
 
     body {
-      font-family:
-        Inter,
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
-
-      background: var(--background);
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
       color: var(--text);
-
-      line-height: 1.65;
+      line-height: 1.7;
+      overflow-x: hidden;
     }
 
     a {
@@ -89,245 +64,208 @@
     }
 
     .container {
-      width: min(
-        var(--max-width),
-        calc(100% - 36px)
-      );
-
+      width: min(var(--max-width), calc(100% - 40px));
       margin: auto;
     }
 
-
-    /* =========================================================
+    /* =========================
        HEADER
-    ========================================================= */
+    ========================== */
 
-    .site-header {
-      position: sticky;
+    header {
+      position: fixed;
       top: 0;
+      left: 0;
+      right: 0;
       z-index: 1000;
-
       background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+      transition: box-shadow .3s ease;
+    }
 
-      border-bottom:
-        1px solid rgba(226,232,240,0.9);
-
-      backdrop-filter: blur(14px);
+    header.scrolled {
+      box-shadow: 0 8px 25px rgba(15,23,42,.07);
     }
 
     .nav {
-      min-height: 76px;
-
+      height: 76px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-
-      gap: 24px;
     }
 
     .brand {
       font-weight: 800;
-      letter-spacing: .08em;
+      font-size: 1.05rem;
+      letter-spacing: .04em;
       color: var(--navy);
+      white-space: nowrap;
     }
 
-    .brand small {
+    .brand span {
       display: block;
-
-      margin-top: -2px;
-
-      color: var(--muted);
-
       font-size: .68rem;
       font-weight: 600;
-
+      color: var(--blue);
       letter-spacing: .08em;
+      margin-top: -2px;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-
-      gap: 6px;
-
-      list-style: none;
+      gap: 26px;
     }
 
     .nav-links a {
-      display: block;
-
-      padding: 10px 13px;
-
-      border-radius: 10px;
-
-      color: #475569;
-
-      font-size: .9rem;
+      font-size: .88rem;
       font-weight: 600;
-
-      transition: .2s ease;
+      color: var(--muted);
+      position: relative;
+      padding: 8px 0;
+      transition: color .25s ease;
     }
 
     .nav-links a:hover,
     .nav-links a.active {
       color: var(--blue);
-
-      background: var(--blue-soft);
     }
 
-    .nav-cta {
-      color: #fff !important;
-
-      background: var(--blue) !important;
-
-      padding:
-        10px 16px !important;
+    .nav-links a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 2px;
+      border-radius: 4px;
+      background: var(--blue);
     }
 
-    .nav-cta:hover {
-      background:
-        var(--blue-dark) !important;
+    .nav-connect {
+      padding: 9px 16px !important;
+      border-radius: 10px;
+      background: var(--blue);
+      color: white !important;
+    }
+
+    .nav-connect:hover {
+      background: var(--blue-dark);
     }
 
     .menu-btn {
       display: none;
-
       border: 0;
-
-      background: var(--blue-soft);
-
-      color: var(--blue);
-
-      width: 42px;
-      height: 42px;
-
-      border-radius: 10px;
-
-      font-size: 1.25rem;
-
+      background: transparent;
+      font-size: 1.5rem;
       cursor: pointer;
+      color: var(--navy);
     }
 
+    /* =========================
+       PAGE
+    ========================== */
 
-    /* =========================================================
+    main {
+      padding-top: 76px;
+    }
+
+    section {
+      padding: 85px 0;
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin-bottom: 42px;
+    }
+
+    .eyebrow {
+      font-size: .75rem;
+      text-transform: uppercase;
+      letter-spacing: .13em;
+      font-weight: 800;
+      color: var(--blue);
+      margin-bottom: 9px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--navy);
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 3vw, 2.45rem);
+      margin-bottom: 14px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    /* =========================
        HERO
-    ========================================================= */
+    ========================== */
 
     .hero {
-      padding:
-        78px 0 58px;
-
+      padding: 90px 0 75px;
       background:
-        radial-gradient(
-          circle at 90% 15%,
-          rgba(29,78,216,.08),
-          transparent 28%
-        ),
-
         linear-gradient(
           180deg,
           #ffffff 0%,
-          var(--background) 100%
+          #f7faff 100%
         );
     }
 
     .hero-grid {
       display: grid;
-
-      grid-template-columns:
-        1.15fr .85fr;
-
-      gap: 60px;
-
+      grid-template-columns: 1.1fr .9fr;
+      gap: 70px;
       align-items: center;
     }
 
-    .eyebrow {
-      display: inline-flex;
+    .hero-title {
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      letter-spacing: -.045em;
+      margin-bottom: 18px;
+    }
 
-      align-items: center;
-
-      gap: 8px;
-
+    .hero-title span {
       color: var(--blue);
+    }
 
-      font-size: .78rem;
-
-      font-weight: 800;
-
-      letter-spacing: .12em;
-
-      text-transform: uppercase;
-
+    .hero-subtitle {
+      font-size: 1.12rem;
+      font-weight: 600;
+      color: var(--text);
       margin-bottom: 18px;
     }
 
-    .eyebrow::before {
-      content: "";
-
-      width: 28px;
-      height: 2px;
-
-      background: var(--blue);
-
-      border-radius: 10px;
-    }
-
-    h1 {
-      color: var(--navy);
-
-      font-size:
-        clamp(
-          2.5rem,
-          5vw,
-          4.5rem
-        );
-
-      line-height: 1.02;
-
-      letter-spacing: -.055em;
-
-      margin-bottom: 18px;
-    }
-
-    .hero-lead {
-      max-width: 680px;
-
-      color: #475569;
-
-      font-size: 1.08rem;
+    .hero-description {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 1rem;
     }
 
     .hero-actions {
       display: flex;
-
-      gap: 12px;
-
       flex-wrap: wrap;
-
+      gap: 12px;
       margin-top: 28px;
     }
 
     .btn {
       display: inline-flex;
-
       align-items: center;
-
       justify-content: center;
-
       gap: 8px;
-
-      padding: 12px 18px;
-
-      border-radius: 12px;
-
+      padding: 12px 19px;
+      border-radius: 11px;
+      border: 1px solid var(--border);
       font-weight: 700;
-
       font-size: .9rem;
-
-      border:
-        1px solid var(--border);
-
       transition:
         transform .2s ease,
         box-shadow .2s ease,
@@ -335,691 +273,553 @@
     }
 
     .btn:hover {
-      transform:
-        translateY(-2px);
-
-      box-shadow:
-        var(--shadow);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
     }
 
     .btn-primary {
       background: var(--blue);
-
-      color: #fff;
-
-      border-color:
-        var(--blue);
+      color: white;
+      border-color: var(--blue);
     }
 
     .btn-primary:hover {
-      background:
-        var(--blue-dark);
+      background: var(--blue-dark);
     }
 
-    .btn-secondary {
-      background: #fff;
-
+    .btn-light {
+      background: white;
       color: var(--navy);
-    }
-
-    .hero-photo-wrap {
-      position: relative;
-
-      justify-self: end;
-
-      width:
-        min(390px,100%);
     }
 
     .hero-photo {
-      aspect-ratio: 4 / 5;
-
-      object-fit: cover;
-
-      border-radius: 28px;
-
-      border:
-        8px solid #fff;
-
-      box-shadow:
-        0 25px 70px
-        rgba(15,23,42,.14);
-
-      background: #eaf2ff;
+      position: relative;
+      max-width: 410px;
+      margin-left: auto;
     }
 
-    .photo-tag {
+    .hero-photo::before {
+      content: "";
       position: absolute;
-
-      left: -24px;
-
-      bottom: 26px;
-
-      background: #fff;
-
-      border:
-        1px solid var(--border);
-
-      box-shadow:
-        var(--shadow);
-
-      border-radius: 16px;
-
-      padding:
-        14px 18px;
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      background: var(--blue-soft);
+      right: -35px;
+      top: -35px;
+      z-index: 0;
     }
 
-    .photo-tag strong {
-      display: block;
-
-      color: var(--navy);
-
-      font-size: .9rem;
+    .hero-photo-card {
+      position: relative;
+      z-index: 1;
+      background: white;
+      padding: 12px;
+      border-radius: 25px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
     }
 
-    .photo-tag span {
-      font-size: .76rem;
-
-      color: var(--muted);
+    .hero-photo-card img {
+      width: 100%;
+      aspect-ratio: 4/4.7;
+      object-fit: cover;
+      border-radius: 18px;
     }
 
-
-    /* =========================================================
-       SECTIONS
-    ========================================================= */
-
-    section {
-      padding: 74px 0;
-    }
-
-    .section-head {
-      max-width: 720px;
-
-      margin-bottom: 34px;
-    }
-
-    .section-kicker {
-      color: var(--blue);
-
-      font-size: .75rem;
-
-      font-weight: 800;
-
-      letter-spacing: .12em;
-
-      text-transform: uppercase;
-
-      margin-bottom: 8px;
-    }
-
-    h2 {
-      color: var(--navy);
-
-      font-size:
-        clamp(
-          1.8rem,
-          3vw,
-          2.6rem
-        );
-
-      line-height: 1.15;
-
-      letter-spacing: -.035em;
-    }
-
-    .section-head p {
-      color: var(--muted);
-
-      margin-top: 10px;
-    }
-
-
-    /* =========================================================
-       PROFILE
-    ========================================================= */
+    /* =========================
+       PROFILE CARDS
+    ========================== */
 
     .profile-grid {
       display: grid;
-
-      grid-template-columns:
-        repeat(4,1fr);
-
-      gap: 16px;
-    }
-
-    .profile-card,
-    .research-card,
-    .cert-card,
-    .profile-link,
-    .timeline-item,
-    .philosophy,
-    .stat {
-      background: #fff;
-
-      border:
-        1px solid var(--border);
-
-      border-radius:
-        var(--radius);
-
-      box-shadow:
-        var(--shadow);
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
     }
 
     .profile-card {
-      padding: 24px;
-
-      transition: .25s ease;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 25px;
+      box-shadow: 0 5px 20px rgba(15,23,42,.035);
+      transition: transform .25s ease, box-shadow .25s ease;
     }
 
-    .profile-card:hover,
-    .research-card:hover,
-    .cert-card:hover,
-    .profile-link:hover {
-      transform:
-        translateY(-4px);
-
-      box-shadow:
-        var(--shadow-hover);
+    .profile-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
     }
 
-    .icon {
+    .profile-icon {
       width: 44px;
       height: 44px;
-
-      border-radius: 13px;
-
       display: grid;
-
       place-items: center;
-
-      font-size: 1.2rem;
-
-      margin-bottom: 18px;
-
-      background:
-        var(--blue-soft);
-
+      border-radius: 12px;
+      background: var(--blue-soft);
       color: var(--blue);
+      font-size: 1.2rem;
+      margin-bottom: 18px;
     }
 
-    .profile-card:nth-child(2) .icon {
-      background: #ecfeff;
-      color: var(--cyan);
-    }
-
-    .profile-card:nth-child(3) .icon {
-      background: #f5f3ff;
-      color: var(--purple);
-    }
-
-    .profile-card:nth-child(4) .icon {
-      background: #fff7ed;
-      color: var(--orange);
-    }
-
-    .profile-card h3,
-    .research-card h3,
-    .cert-card h3 {
+    .profile-card h3 {
       font-size: 1rem;
-
-      color: var(--navy);
-
-      margin-bottom: 6px;
+      margin-bottom: 7px;
     }
 
-    .profile-card p,
-    .research-card p,
-    .cert-card p {
-      font-size: .88rem;
-
+    .profile-card p {
+      font-size: .86rem;
       color: var(--muted);
     }
 
+    /* =========================
+       JOURNEY
+    ========================== */
 
-    /* =========================================================
-       TIMELINE
-    ========================================================= */
+    .journey {
+      background: white;
+    }
 
     .timeline {
       position: relative;
-
-      display: grid;
-
-      gap: 18px;
+      max-width: 900px;
+      margin: auto;
     }
 
     .timeline::before {
       content: "";
-
       position: absolute;
-
-      left: 17px;
-
-      top: 18px;
-
-      bottom: 18px;
-
+      left: 10px;
+      top: 5px;
+      bottom: 5px;
       width: 2px;
-
-      background: #dbeafe;
+      background: var(--border);
     }
 
     .timeline-item {
       position: relative;
+      padding-left: 42px;
+      padding-bottom: 34px;
+    }
 
-      padding:
-        22px 24px 22px 58px;
+    .timeline-item:last-child {
+      padding-bottom: 0;
     }
 
     .timeline-dot {
       position: absolute;
-
-      left: 10px;
-
-      top: 25px;
-
+      left: 3px;
+      top: 5px;
       width: 16px;
       height: 16px;
-
       border-radius: 50%;
-
       background: var(--blue);
-
-      border:
-        4px solid #dbeafe;
+      border: 4px solid var(--blue-soft);
     }
 
     .timeline-year {
       color: var(--blue);
-
-      font-size: .78rem;
-
       font-weight: 800;
-
-      letter-spacing: .06em;
-
-      text-transform: uppercase;
+      font-size: .82rem;
+      margin-bottom: 3px;
     }
 
     .timeline-item h3 {
-      color: var(--navy);
-
-      margin: 4px 0;
+      font-size: 1.05rem;
+      margin-bottom: 4px;
     }
 
     .timeline-item p {
       color: var(--muted);
-
       font-size: .9rem;
     }
 
-
-    /* =========================================================
-       RESEARCH
-    ========================================================= */
+    /* =========================
+       RESEARCH IDENTITY
+    ========================== */
 
     .research-grid {
       display: grid;
-
-      grid-template-columns:
-        repeat(3,1fr);
-
+      grid-template-columns: repeat(3, 1fr);
       gap: 18px;
     }
 
     .research-card {
-      padding: 24px;
-
-      transition: .25s ease;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 25px;
+      transition: transform .25s ease, box-shadow .25s ease;
     }
 
-    .research-card .icon {
-      margin-bottom: 14px;
+    .research-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
     }
 
+    .research-card h3 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
 
-    /* =========================================================
+    .research-card p {
+      color: var(--muted);
+      font-size: .86rem;
+    }
+
+    .research-card.blue {
+      border-top: 3px solid var(--blue);
+    }
+
+    .research-card.cyan {
+      border-top: 3px solid var(--cyan);
+    }
+
+    .research-card.green {
+      border-top: 3px solid var(--green);
+    }
+
+    .research-card.purple {
+      border-top: 3px solid var(--purple);
+    }
+
+    .research-card.orange {
+      border-top: 3px solid var(--orange);
+    }
+
+    /* =========================
        STATS
-    ========================================================= */
+    ========================== */
 
     .stats {
-      display: grid;
-
-      grid-template-columns:
-        repeat(4,1fr);
-
-      gap: 14px;
-
-      margin-top: 26px;
+      background: var(--blue);
+      color: white;
     }
 
-    .stat {
-      padding: 22px;
-
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
       text-align: center;
     }
 
     .stat strong {
       display: block;
-
-      color: var(--blue);
-
-      font-size: 1.8rem;
-
-      line-height: 1.1;
+      font-size: 2rem;
+      line-height: 1;
+      margin-bottom: 8px;
     }
 
     .stat span {
-      display: block;
-
-      color: var(--muted);
-
-      font-size: .78rem;
-
-      margin-top: 6px;
+      font-size: .8rem;
+      opacity: .88;
     }
 
+    /* =========================
+       TEACHING
+    ========================== */
 
-    /* =========================================================
+    .teaching-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .info-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: 0 5px 20px rgba(15,23,42,.035);
+    }
+
+    .info-card h3 {
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+    }
+
+    .info-card p {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .info-list {
+      list-style: none;
+      margin-top: 17px;
+    }
+
+    .info-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: .88rem;
+      color: var(--text);
+    }
+
+    .info-list li:last-child {
+      border-bottom: 0;
+    }
+
+    .info-list li::before {
+      content: "→";
+      color: var(--blue);
+      font-weight: 800;
+      margin-right: 9px;
+    }
+
+    /* =========================
        CERTIFICATIONS
-    ========================================================= */
+    ========================== */
+
+    .cert-section {
+      background: white;
+    }
+
+    .cert-group {
+      margin-bottom: 45px;
+    }
+
+    .cert-group:last-child {
+      margin-bottom: 0;
+    }
+
+    .cert-group-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .cert-group-title h3 {
+      font-size: 1.15rem;
+    }
+
+    .cert-group-title span {
+      font-size: .73rem;
+      font-weight: 700;
+      color: var(--blue);
+      background: var(--blue-soft);
+      padding: 5px 9px;
+      border-radius: 20px;
+    }
 
     .cert-grid {
       display: grid;
-
-      grid-template-columns:
-        repeat(3,1fr);
-
+      grid-template-columns: repeat(3, 1fr);
       gap: 18px;
     }
 
+    .cert-grid.single {
+      grid-template-columns: minmax(0, 1fr);
+      max-width: 600px;
+    }
+
     .cert-card {
-      padding: 24px;
-
-      transition: .25s ease;
-
-      display: flex;
-
-      flex-direction: column;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 23px;
+      transition: transform .25s ease, box-shadow .25s ease;
     }
 
-    .cert-logo {
-      width: 52px;
-      height: 52px;
-
-      border-radius: 14px;
-
-      background: #111;
-
-      color: #fff;
-
-      display: grid;
-
-      place-items: center;
-
-      font-weight: 800;
-
-      font-size: .8rem;
-
-      margin-bottom: 18px;
+    .cert-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
     }
 
-    .cert-meta {
-      display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 7px;
-
-      margin:
-        14px 0 18px;
-    }
-
-    .pill {
-      display: inline-flex;
-
-      padding:
-        5px 9px;
-
-      border-radius: 999px;
-
-      background:
-        var(--blue-soft);
-
+    .cert-platform {
       color: var(--blue);
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
 
+    .cert-card h4 {
+      color: var(--navy);
+      font-size: .98rem;
+      line-height: 1.45;
+      margin-bottom: 12px;
+    }
+
+    .cert-card p {
+      color: var(--muted);
+      font-size: .8rem;
+      margin-bottom: 4px;
+    }
+
+    .cert-card .cert-date {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .cert-card .cert-id {
+      margin-top: 10px;
       font-size: .7rem;
-
-      font-weight: 700;
+      word-break: break-all;
+      color: #94a3b8;
     }
 
     .cert-link {
-      margin-top: auto;
-
+      display: inline-flex;
+      margin-top: 14px;
+      font-size: .78rem;
+      font-weight: 700;
       color: var(--blue);
-
-      font-size: .82rem;
-
-      font-weight: 800;
-
-      padding-top: 18px;
     }
 
     .cert-link:hover {
       text-decoration: underline;
     }
 
-
-    /* =========================================================
+    /* =========================
        ACADEMIC PROFILES
-    ========================================================= */
+    ========================== */
 
-    .profiles-grid {
+    .profiles {
       display: grid;
-
-      grid-template-columns:
-        repeat(3,1fr);
-
-      gap: 14px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
     }
 
-    .profile-link {
-      padding: 18px 20px;
-
-      transition: .25s ease;
-    }
-
-    .profile-link strong {
-      display: block;
-
+    .academic-link {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      font-weight: 700;
+      font-size: .88rem;
       color: var(--navy);
-
-      font-size: .9rem;
+      transition: transform .2s ease, border-color .2s ease;
     }
 
-    .profile-link span {
+    .academic-link:hover {
+      transform: translateY(-3px);
+      border-color: #bfdbfe;
+    }
+
+    .academic-link span {
       display: block;
-
       color: var(--muted);
-
-      font-size: .76rem;
-
+      font-size: .74rem;
+      font-weight: 500;
       margin-top: 3px;
     }
 
-    .profile-link::after {
-      content: "↗";
-
-      float: right;
-
-      margin-top: -30px;
-
-      color: var(--blue);
-
-      font-weight: 800;
-    }
-
-
-    /* =========================================================
+    /* =========================
        PHILOSOPHY
-    ========================================================= */
+    ========================== */
 
     .philosophy {
-      padding: 38px;
-
-      border-left:
-        4px solid var(--blue);
+      text-align: center;
+      background: var(--blue-soft);
     }
 
-    .philosophy p {
+    .quote {
+      max-width: 820px;
+      margin: auto;
+      font-size: clamp(1.35rem, 2.5vw, 2rem);
+      font-weight: 700;
       color: var(--navy);
-
-      font-size:
-        clamp(
-          1.25rem,
-          2.5vw,
-          1.8rem
-        );
-
-      font-weight: 600;
-
-      letter-spacing: -.02em;
+      line-height: 1.45;
     }
 
-    .philosophy span {
-      display: block;
-
-      color: var(--muted);
-
-      font-size: .82rem;
-
-      margin-top: 15px;
+    .quote span {
+      color: var(--blue);
     }
 
-
-    /* =========================================================
+    /* =========================
        CTA
-    ========================================================= */
+    ========================== */
 
     .cta {
-      padding: 54px;
-
-      border-radius: 28px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #eff6ff,
-          #ffffff
-        );
-
-      border:
-        1px solid #dbeafe;
-
       text-align: center;
     }
 
-    .cta p {
+    .cta-box {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 55px 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .cta-box h2 {
+      margin-bottom: 10px;
+    }
+
+    .cta-box p {
       max-width: 650px;
-
-      margin:
-        12px auto 24px;
-
+      margin: 0 auto 23px;
       color: var(--muted);
     }
 
-
-    /* =========================================================
+    /* =========================
        FOOTER
-    ========================================================= */
+    ========================== */
 
     footer {
-      margin-top: 30px;
-
-      background: #fff;
-
-      border-top:
-        1px solid var(--border);
+      background: white;
+      border-top: 1px solid var(--border);
+      padding: 55px 0 25px;
     }
 
     .footer-grid {
       display: grid;
-
-      grid-template-columns:
-        1.5fr 1fr 1fr 1fr;
-
-      gap: 34px;
-
-      padding:
-        50px 0 35px;
-    }
-
-    footer h3 {
-      font-size: .8rem;
-
-      color: var(--navy);
-
-      text-transform: uppercase;
-
-      letter-spacing: .08em;
-
-      margin-bottom: 14px;
-    }
-
-    footer p,
-    footer a {
-      font-size: .82rem;
-
-      color: var(--muted);
-    }
-
-    footer a {
-      display: block;
-
-      margin: 7px 0;
-    }
-
-    footer a:hover {
-      color: var(--blue);
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 35px;
     }
 
     .footer-brand {
       font-weight: 800;
-
+      font-size: 1rem;
       color: var(--navy);
+      margin-bottom: 12px;
+    }
 
-      letter-spacing: .08em;
+    .footer-about {
+      color: var(--muted);
+      font-size: .82rem;
+      max-width: 350px;
+    }
+
+    .footer-column h4 {
+      font-size: .82rem;
+      margin-bottom: 13px;
+      color: var(--navy);
+    }
+
+    .footer-column a {
+      display: block;
+      color: var(--muted);
+      font-size: .78rem;
+      margin-bottom: 7px;
+      transition: color .2s ease;
+    }
+
+    .footer-column a:hover {
+      color: var(--blue);
     }
 
     .footer-bottom {
-      border-top:
-        1px solid var(--border);
-
-      padding: 18px 0;
-
+      border-top: 1px solid var(--border);
+      margin-top: 35px;
+      padding-top: 20px;
       display: flex;
-
       justify-content: space-between;
-
-      gap: 16px;
-
-      color: var(--muted);
-
-      font-size: .75rem;
+      gap: 20px;
+      color: #94a3b8;
+      font-size: .72rem;
     }
 
-
-    /* =========================================================
-       SCROLL REVEAL
-    ========================================================= */
+    /* =========================
+       REVEAL
+    ========================== */
 
     .reveal {
       opacity: 0;
-
-      transform:
-        translateY(18px);
-
+      transform: translateY(18px);
       transition:
         opacity .65s ease,
         transform .65s ease;
@@ -1027,161 +827,122 @@
 
     .reveal.visible {
       opacity: 1;
-
-      transform: none;
+      transform: translateY(0);
     }
 
+    /* =========================
+       RESPONSIVE
+    ========================== */
 
-    /* =========================================================
-       TABLET
-    ========================================================= */
+    @media (max-width: 950px) {
 
-    @media (max-width: 980px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
 
-      .nav-links {
-        display: none;
+      .hero-photo {
+        margin: auto;
+      }
+
+      .profile-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .research-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .cert-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 35px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1.5fr 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+
+      .container {
+        width: min(100% - 28px, var(--max-width));
+      }
+
+      .nav {
+        height: 68px;
+      }
+
+      main {
+        padding-top: 68px;
       }
 
       .menu-btn {
         display: block;
       }
 
+      .nav-links {
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px 20px 18px;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 15px 30px rgba(15,23,42,.07);
+      }
+
       .nav-links.open {
         display: flex;
-
-        position: absolute;
-
-        top: 76px;
-
-        left: 18px;
-        right: 18px;
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        padding: 12px;
-
-        background: #fff;
-
-        border:
-          1px solid var(--border);
-
-        border-radius: 16px;
-
-        box-shadow:
-          var(--shadow);
       }
 
-      .nav-links.open a {
-        padding: 12px 14px;
+      .nav-links a {
+        padding: 12px 0;
       }
 
-      .hero-grid {
-        grid-template-columns: 1fr;
-
-        gap: 38px;
+      .nav-links a.active::after {
+        display: none;
       }
 
-      .hero-photo-wrap {
-        justify-self: start;
-
-        width:
-          min(360px,100%);
-      }
-
-      .profile-grid {
-        grid-template-columns:
-          repeat(2,1fr);
-      }
-
-      .research-grid {
-        grid-template-columns:
-          repeat(2,1fr);
-      }
-
-      .cert-grid {
-        grid-template-columns:
-          repeat(2,1fr);
-      }
-
-      .stats {
-        grid-template-columns:
-          repeat(2,1fr);
-      }
-
-      .footer-grid {
-        grid-template-columns:
-          repeat(2,1fr);
-      }
-    }
-
-
-    /* =========================================================
-       MOBILE
-    ========================================================= */
-
-    @media (max-width: 650px) {
-
-      .container {
-        width:
-          min(
-            var(--max-width),
-            calc(100% - 28px)
-          );
-      }
-
-      .nav {
-        min-height: 68px;
-      }
-
-      .nav-links.open {
-        top: 68px;
-
-        left: 14px;
-        right: 14px;
-      }
-
-      .hero {
-        padding:
-          54px 0 42px;
+      .nav-connect {
+        text-align: center;
+        margin-top: 8px;
       }
 
       section {
-        padding:
-          54px 0;
+        padding: 65px 0;
       }
 
-      h1 {
-        font-size: 2.65rem;
+      .hero {
+        padding: 65px 0;
       }
 
-      .photo-tag {
-        left: 12px;
+      .hero-title {
+        font-size: 2.6rem;
       }
 
       .profile-grid,
       .research-grid,
       .cert-grid,
-      .profiles-grid {
+      .profiles,
+      .teaching-grid {
         grid-template-columns: 1fr;
       }
 
-      .stats {
-        grid-template-columns:
-          1fr 1fr;
-      }
-
-      .cta {
-        padding:
-          34px 22px;
+      .stats-grid {
+        grid-template-columns: 1fr 1fr;
       }
 
       .footer-grid {
-        grid-template-columns:
-          1fr 1fr;
-
-        gap: 25px;
+        grid-template-columns: 1fr 1fr;
       }
 
       .footer-bottom {
@@ -1189,10 +950,24 @@
       }
     }
 
+    @media (max-width: 480px) {
 
-    /* =========================================================
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* =========================
        REDUCED MOTION
-    ========================================================= */
+    ========================== */
 
     @media (prefers-reduced-motion: reduce) {
 
@@ -1203,167 +978,105 @@
       *,
       *::before,
       *::after {
-        animation-duration:
-          .01ms !important;
-
-        animation-iteration-count:
-          1 !important;
-
-        transition-duration:
-          .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
       }
 
       .reveal {
         opacity: 1;
-
         transform: none;
       }
     }
-
   </style>
 </head>
 
-
 <body>
 
-
-  <!-- =======================================================
+  <!-- =========================
        HEADER
-  ======================================================== -->
+  ========================== -->
 
-  <header class="site-header">
+  <header id="siteHeader">
 
     <div class="container nav">
 
-      <a
-        class="brand"
-        href="index.html"
-      >
+      <a href="index.html" class="brand">
         MICHAEL MAHESH
-
-        <small>
-          PROFESSOR · ARTIFICIAL INTELLIGENCE
-        </small>
+        <span>PROFESSOR · ARTIFICIAL INTELLIGENCE</span>
       </a>
 
-
-      <button
-        class="menu-btn"
-        id="menuBtn"
-        aria-label="Open navigation"
-        aria-expanded="false"
-      >
+      <button class="menu-btn"
+              id="menuBtn"
+              aria-label="Open navigation">
         ☰
       </button>
 
+      <nav class="nav-links" id="navLinks">
 
-      <ul
-        class="nav-links"
-        id="navLinks"
-      >
+        <a href="research.html">Research</a>
 
-        <li>
-          <a href="research.html">
-            Research
-          </a>
-        </li>
+        <a href="projects.html">Projects</a>
 
-        <li>
-          <a href="projects.html">
-            Projects
-          </a>
-        </li>
+        <a href="learning.html">Learning</a>
 
-        <li>
-          <a href="learning.html">
-            Learning
-          </a>
-        </li>
+        <a href="publications.html">Publications</a>
 
-        <li>
-          <a href="publications.html">
-            Publications
-          </a>
-        </li>
+        <a href="about.html" class="active">About</a>
 
-        <li>
-          <a
-            class="active"
-            href="about.html"
-          >
-            About
-          </a>
-        </li>
+        <a href="contact.html" class="nav-connect">
+          Connect
+        </a>
 
-        <li>
-          <a
-            class="nav-cta"
-            href="connect.html"
-          >
-            Connect
-          </a>
-        </li>
-
-      </ul>
+      </nav>
 
     </div>
 
   </header>
 
 
-
   <main>
 
-
-    <!-- =====================================================
+    <!-- =========================
          HERO
-    ====================================================== -->
+    ========================== -->
 
     <section class="hero">
 
       <div class="container hero-grid">
 
-
         <div class="reveal">
 
           <div class="eyebrow">
-            Professor · Artificial Intelligence
+            PROFESSOR · ARTIFICIAL INTELLIGENCE
           </div>
 
-
-          <h1>
-            Dr. K. Michael Mahesh
+          <h1 class="hero-title">
+            Dr. K. Michael <span>Mahesh</span>
           </h1>
 
-
-          <p class="hero-lead">
-
-            Professor, AI researcher, educator and builder
-            working across Artificial Intelligence,
-            Deep Learning, Computer Vision,
-            Medical AI, Image Processing and
-            Intelligent Systems.
-
+          <p class="hero-subtitle">
+            Professor · AI Researcher · Computer Vision Researcher
           </p>
 
+          <p class="hero-description">
+            I work at the intersection of Artificial Intelligence,
+            Deep Learning, Computer Vision, Medical AI and Intelligent
+            Systems — with a strong focus on research, teaching,
+            experimentation and practical innovation.
+          </p>
 
           <div class="hero-actions">
 
-            <a
-              class="btn btn-primary"
-              href="research.html"
-            >
+            <a href="research.html" class="btn btn-primary">
               Explore Research →
             </a>
 
-
-            <a
-              class="btn btn-secondary"
-              href="my_cv-2.pdf"
-              target="_blank"
-              rel="noopener"
-            >
-              View CV ↗
+            <a href="my_cv-2.pdf"
+               class="btn btn-light"
+               target="_blank"
+               rel="noopener">
+              View CV
             </a>
 
           </div>
@@ -1371,147 +1084,107 @@
         </div>
 
 
+        <div class="hero-photo reveal">
 
-        <div class="hero-photo-wrap reveal">
+          <div class="hero-photo-card">
 
-          <img
-            class="hero-photo"
-            src="profile.jpg"
-            alt="Dr. K. Michael Mahesh"
-          >
-
-
-          <div class="photo-tag">
-
-            <strong>
-              Research · Build · Teach · Share
-            </strong>
-
-            <span>
-              AI · Vision · Medical Imaging · Intelligent Systems
-            </span>
+            <img
+              src="profile.jpg"
+              alt="Dr. K. Michael Mahesh"
+              loading="eager">
 
           </div>
 
         </div>
-
 
       </div>
 
     </section>
 
 
-
-    <!-- =====================================================
+    <!-- =========================
          PROFILE
-    ====================================================== -->
+    ========================== -->
 
     <section>
 
       <div class="container">
 
+        <div class="section-heading reveal">
 
-        <div class="section-head reveal">
-
-          <div class="section-kicker">
-            Profile
+          <div class="eyebrow">
+            PROFILE
           </div>
 
           <h2>
-            Four things that define my work.
+            Research. Teaching. Mentoring. Building.
           </h2>
 
           <p>
-            Academic depth, research curiosity,
-            practical development and
-            student-focused learning.
+            My academic work combines research, education and
+            technology development with an emphasis on solving
+            meaningful real-world problems.
           </p>
 
         </div>
-
 
 
         <div class="profile-grid">
 
-
           <article class="profile-card reveal">
 
-            <div class="icon">
-              🎓
-            </div>
+            <div class="profile-icon">🎓</div>
 
-            <h3>
-              Professor
-            </h3>
+            <h3>Professor</h3>
 
             <p>
-              Teaching AI and computing subjects
-              while connecting concepts with
-              practical implementation.
+              Teaching Artificial Intelligence, Deep Learning,
+              Computer Vision and Digital Image Processing.
             </p>
 
           </article>
 
 
-
           <article class="profile-card reveal">
 
-            <div class="icon">
-              🔬
-            </div>
+            <div class="profile-icon">🔬</div>
 
-            <h3>
-              Researcher
-            </h3>
+            <h3>Researcher</h3>
 
             <p>
-              Exploring AI, deep learning,
-              computer vision, medical imaging
-              and intelligent systems.
+              Research across AI, medical imaging, ADAS,
+              computer vision and intelligent systems.
             </p>
 
           </article>
 
 
-
           <article class="profile-card reveal">
 
-            <div class="icon">
-              🧭
-            </div>
+            <div class="profile-icon">🧭</div>
 
-            <h3>
-              Mentor
-            </h3>
+            <h3>Mentor</h3>
 
             <p>
-              Guiding students and researchers
-              from fundamentals and experiments
-              toward meaningful projects.
+              Guiding students and researchers in technical
+              learning, projects and research development.
             </p>
 
           </article>
 
 
-
           <article class="profile-card reveal">
 
-            <div class="icon">
-              ⚙️
-            </div>
+            <div class="profile-icon">⚙️</div>
 
-            <h3>
-              Builder
-            </h3>
+            <h3>Builder</h3>
 
             <p>
-              Turning ideas into working prototypes,
-              teaching resources, research
-              implementations and tools.
+              Turning ideas into experiments, prototypes,
+              educational resources and practical AI systems.
             </p>
 
           </article>
-
 
         </div>
 
@@ -1520,37 +1193,32 @@
     </section>
 
 
-
-    <!-- =====================================================
+    <!-- =========================
          ACADEMIC JOURNEY
-    ====================================================== -->
+    ========================== -->
 
-    <section>
+    <section class="journey">
 
       <div class="container">
 
+        <div class="section-heading reveal">
 
-        <div class="section-head reveal">
-
-          <div class="section-kicker">
-            Academic Journey
+          <div class="eyebrow">
+            ACADEMIC JOURNEY
           </div>
 
           <h2>
-            From engineering fundamentals
-            to AI research.
+            A journey built around learning and research.
           </h2>
 
         </div>
 
 
-
         <div class="timeline">
 
+          <div class="timeline-item reveal">
 
-          <article class="timeline-item reveal">
-
-            <span class="timeline-dot"></span>
+            <div class="timeline-dot"></div>
 
             <div class="timeline-year">
               2008
@@ -1561,18 +1229,16 @@
             </h3>
 
             <p>
-              Completed B.E. and built the
-              engineering foundation for a career
-              in computing and technology.
+              B.E. — Engineering foundation and beginning
+              of the academic journey.
             </p>
 
-          </article>
+          </div>
 
 
+          <div class="timeline-item reveal">
 
-          <article class="timeline-item reveal">
-
-            <span class="timeline-dot"></span>
+            <div class="timeline-dot"></div>
 
             <div class="timeline-year">
               2011
@@ -1583,18 +1249,15 @@
             </h3>
 
             <p>
-              Advanced study in computing and
-              technology, strengthening the
-              academic and technical foundation.
+              M.E. — Advanced technical and engineering studies.
             </p>
 
-          </article>
+          </div>
 
 
+          <div class="timeline-item reveal">
 
-          <article class="timeline-item reveal">
-
-            <span class="timeline-dot"></span>
+            <div class="timeline-dot"></div>
 
             <div class="timeline-year">
               2021
@@ -1605,21 +1268,19 @@
             </h3>
 
             <p>
-              Completed doctoral research and
-              continued developing a research
-              identity around AI and intelligent systems.
+              Doctoral research leading into deeper work in
+              Artificial Intelligence and intelligent systems.
             </p>
 
-          </article>
+          </div>
 
 
+          <div class="timeline-item reveal">
 
-          <article class="timeline-item reveal">
-
-            <span class="timeline-dot"></span>
+            <div class="timeline-dot"></div>
 
             <div class="timeline-year">
-              Present
+              PRESENT
             </div>
 
             <h3>
@@ -1627,13 +1288,11 @@
             </h3>
 
             <p>
-              Teaching, mentoring, publishing,
-              building research prototypes and
-              exploring new AI applications.
+              Teaching, research, mentoring, publishing and
+              developing AI-based projects and learning resources.
             </p>
 
-          </article>
-
+          </div>
 
         </div>
 
@@ -1642,219 +1301,81 @@
     </section>
 
 
-
-    <!-- =====================================================
+    <!-- =========================
          RESEARCH IDENTITY
-    ====================================================== -->
+    ========================== -->
 
     <section>
 
       <div class="container">
 
+        <div class="section-heading reveal">
 
-        <div class="section-head reveal">
-
-          <div class="section-kicker">
-            Research Identity
+          <div class="eyebrow">
+            RESEARCH IDENTITY
           </div>
 
           <h2>
-            Where AI meets real-world problems.
+            Areas where I explore, experiment and build.
           </h2>
 
-          <p>
-            My work spans foundational methods,
-            visual intelligence, healthcare and
-            intelligent transportation.
-          </p>
-
         </div>
-
 
 
         <div class="research-grid">
 
-
-          <article class="research-card reveal">
-
-            <div class="icon">
-              🤖
-            </div>
-
-            <h3>
-              Artificial Intelligence
-            </h3>
-
+          <article class="research-card blue reveal">
+            <h3>Artificial Intelligence</h3>
             <p>
-              AI methods, optimization,
-              intelligent systems and
-              applied problem solving.
+              Machine learning, intelligent algorithms and
+              AI-driven problem solving.
             </p>
-
           </article>
 
 
-
-          <article class="research-card reveal">
-
-            <div class="icon">
-              🧠
-            </div>
-
-            <h3>
-              Deep Learning
-            </h3>
-
+          <article class="research-card purple reveal">
+            <h3>Deep Learning</h3>
             <p>
-              Neural architectures,
-              representation learning,
-              CNNs, RNNs and modern AI models.
+              Neural architectures, optimization and
+              deep learning applications.
             </p>
-
           </article>
 
 
-
-          <article class="research-card reveal">
-
-            <div class="icon">
-              👁️
-            </div>
-
-            <h3>
-              Computer Vision
-            </h3>
-
+          <article class="research-card cyan reveal">
+            <h3>Computer Vision</h3>
             <p>
-              Image understanding,
-              detection, segmentation,
-              recognition and visual intelligence.
+              Image understanding, object detection,
+              segmentation and visual intelligence.
             </p>
-
           </article>
 
 
-
-          <article class="research-card reveal">
-
-            <div class="icon">
-              🏥
-            </div>
-
-            <h3>
-              Medical AI
-            </h3>
-
+          <article class="research-card green reveal">
+            <h3>Medical AI</h3>
             <p>
-              Medical image analysis and
-              AI approaches for imaging
-              and healthcare research.
+              Medical imaging, disease analysis and
+              intelligent healthcare applications.
             </p>
-
           </article>
 
 
-
-          <article class="research-card reveal">
-
-            <div class="icon">
-              🚗
-            </div>
-
-            <h3>
-              ADAS & Intelligent Transportation
-            </h3>
-
+          <article class="research-card orange reveal">
+            <h3>ADAS & Intelligent Transportation</h3>
             <p>
-              Vision-based intelligence,
-              road understanding, prediction
-              and decision support.
+              Computer vision and AI approaches for
+              intelligent transportation systems.
             </p>
-
           </article>
 
 
-
-          <article class="research-card reveal">
-
-            <div class="icon">
-              ✨
-            </div>
-
-            <h3>
-              Generative & Emerging AI
-            </h3>
-
+          <article class="research-card blue reveal">
+            <h3>Generative & Emerging AI</h3>
             <p>
-              Generative AI, foundation-model
-              ideas and emerging approaches
-              to intelligent applications.
+              Generative AI, foundation models, AI agents
+              and emerging intelligent technologies.
             </p>
-
           </article>
-
-
-        </div>
-
-
-
-        <div class="stats">
-
-
-          <div class="stat reveal">
-
-            <strong>
-              15+
-            </strong>
-
-            <span>
-              Years Teaching
-            </span>
-
-          </div>
-
-
-
-          <div class="stat reveal">
-
-            <strong>
-              5+
-            </strong>
-
-            <span>
-              Years Post-PhD Research
-            </span>
-
-          </div>
-
-
-
-          <div class="stat reveal">
-
-            <strong>
-              6
-            </strong>
-
-            <span>
-              Scholars Guided
-            </span>
-
-          </div>
-
-
-
-          <div class="stat reveal">
-
-            <strong>
-              AI
-            </strong>
-
-            <span>
-              Primary Research Domain
-            </span>
-
-          </div>
-
 
         </div>
 
@@ -1863,92 +1384,116 @@
     </section>
 
 
+    <!-- =========================
+         STATS
+    ========================== -->
 
-    <!-- =====================================================
-         TEACHING
-    ====================================================== -->
+    <section class="stats">
+
+      <div class="container stats-grid">
+
+        <div class="stat reveal">
+          <strong>15+</strong>
+          <span>Years of Teaching</span>
+        </div>
+
+        <div class="stat reveal">
+          <strong>5+</strong>
+          <span>Years Post-PhD Research</span>
+        </div>
+
+        <div class="stat reveal">
+          <strong>6</strong>
+          <span>Research Scholars</span>
+        </div>
+
+        <div class="stat reveal">
+          <strong>AI</strong>
+          <span>Primary Research Domain</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         TEACHING & SUPERVISION
+    ========================== -->
 
     <section>
 
       <div class="container">
 
+        <div class="section-heading reveal">
 
-        <div class="section-head reveal">
-
-          <div class="section-kicker">
-            Teaching & Supervision
+          <div class="eyebrow">
+            TEACHING & SUPERVISION
           </div>
 
           <h2>
-            Teaching is part of the research journey.
+            Making complex technology easier to understand.
           </h2>
 
           <p>
-            I focus on making technical subjects
-            understandable, implementable and
-            connected to real research and
-            engineering problems.
+            Teaching is not separate from research. It is another
+            way of exploring ideas, questioning assumptions and
+            helping the next generation build technical confidence.
           </p>
 
         </div>
 
 
+        <div class="teaching-grid">
 
-        <div class="profiles-grid">
+          <article class="info-card reveal">
 
+            <h3>
+              Teaching Areas
+            </h3>
 
-          <a
-            class="profile-link reveal"
-            href="learning.html"
-          >
+            <p>
+              Core subjects and technical areas covered through
+              lectures, demonstrations, experiments and projects.
+            </p>
 
-            <strong>
-              Teaching Materials
-            </strong>
+            <ul class="info-list">
 
-            <span>
-              Courses, units, posters,
-              notes and practical resources.
-            </span>
+              <li>Artificial Intelligence</li>
+              <li>Machine Learning</li>
+              <li>Deep Learning</li>
+              <li>Computer Vision</li>
+              <li>Digital Image Processing</li>
+              <li>Python for AI</li>
 
-          </a>
+            </ul>
 
-
-
-          <a
-            class="profile-link reveal"
-            href="learning.html#tutorials"
-          >
-
-            <strong>
-              AI Tutorials
-            </strong>
-
-            <span>
-              Concepts explained through
-              practical examples and code.
-            </span>
-
-          </a>
+          </article>
 
 
+          <article class="info-card reveal">
 
-          <a
-            class="profile-link reveal"
-            href="learning.html#guidance"
-          >
+            <h3>
+              Student & Research Guidance
+            </h3>
 
-            <strong>
-              Student Guidance
-            </strong>
+            <p>
+              Supporting students and researchers from problem
+              identification through implementation and validation.
+            </p>
 
-            <span>
-              Project, research and learning
-              direction for students.
-            </span>
+            <ul class="info-list">
 
-          </a>
+              <li>Research problem identification</li>
+              <li>Literature analysis</li>
+              <li>AI model development</li>
+              <li>Computer vision projects</li>
+              <li>Experimental evaluation</li>
+              <li>Research publication guidance</li>
 
+            </ul>
+
+          </article>
 
         </div>
 
@@ -1957,185 +1502,214 @@
     </section>
 
 
+    <!-- =========================
+         CERTIFICATIONS
+    ========================== -->
 
-    <!-- =====================================================
-         OPEN CV CERTIFICATIONS
-    ====================================================== -->
-
-    <section id="certifications">
+    <section class="cert-section">
 
       <div class="container">
 
+        <div class="section-heading reveal">
 
-        <div class="section-head reveal">
-
-          <div class="section-kicker">
-            Professional Learning
+          <div class="eyebrow">
+            PROFESSIONAL LEARNING
           </div>
 
           <h2>
-            OpenCV University certifications.
+            Continuous learning beyond the classroom.
           </h2>
 
           <p>
-            Selected completed OpenCV University
-            courses. Certificate scores are
-            intentionally not displayed.
+            Selected professional certifications and structured
+            learning experiences in computer vision, deep learning
+            and emerging AI technologies.
           </p>
 
         </div>
 
 
+        <!-- OPEN CV UNIVERSITY -->
 
-        <div class="cert-grid">
+        <div class="cert-group">
 
-
-          <!-- CERTIFICATE 1 -->
-
-          <article class="cert-card reveal">
-
-            <div class="cert-logo">
-              CV
-            </div>
+          <div class="cert-group-title reveal">
 
             <h3>
-              Mastering OpenCV with Python
+              OpenCV University
             </h3>
 
-            <p>
-              OpenCV University · United States
-            </p>
+            <span>
+              3 CERTIFICATES
+            </span>
 
-            <div class="cert-meta">
+          </div>
 
-              <span class="pill">
+
+          <div class="cert-grid">
+
+
+            <!-- CERTIFICATE 1 -->
+
+            <article class="cert-card reveal">
+
+              <div class="cert-platform">
+                OpenCV University · United States
+              </div>
+
+              <h4>
+                Mastering OpenCV with Python
+              </h4>
+
+              <p class="cert-date">
+                Issued December 15, 2024
+              </p>
+
+              <p>
                 Certificate of Completion
-              </span>
+              </p>
 
-              <span class="pill">
-                Dec 15, 2024
-              </span>
+              <p class="cert-id">
+                ID: 7c8fabcdad524462a6186ebf2c77e13d
+              </p>
 
-            </div>
+              <a
+                class="cert-link"
+                href="https://courses.opencv.org/certificates/7c8fabcdad524462a6186ebf2c77e13d"
+                target="_blank"
+                rel="noopener">
+                Verify Certificate →
+              </a>
 
-            <p>
-              <strong>
-                Certificate ID:
-              </strong>
-
-              7c8fabcdad524462a6186ebf2c77e13d
-            </p>
-
-            <a
-              class="cert-link"
-              href="https://courses.opencv.org/certificates/7c8fabcdad524462a6186ebf2c77e13d"
-              target="_blank"
-              rel="noopener"
-            >
-              Verify Certificate ↗
-            </a>
-
-          </article>
+            </article>
 
 
+            <!-- CERTIFICATE 2 -->
 
-          <!-- CERTIFICATE 2 -->
+            <article class="cert-card reveal">
 
-          <article class="cert-card reveal">
+              <div class="cert-platform">
+                OpenCV University · United States
+              </div>
 
-            <div class="cert-logo">
-              AI
-            </div>
+              <h4>
+                AI Art Generation for Everyone
+                [DALLE, MidJourney & Stable Diffusion]
+              </h4>
 
-            <h3>
-              AI Art Generation for Everyone
-              [DALLE, MidJourney & Stable Diffusion]
-            </h3>
+              <p class="cert-date">
+                Issued November 2, 2024
+              </p>
 
-            <p>
-              OpenCV University · United States
-            </p>
-
-            <div class="cert-meta">
-
-              <span class="pill">
+              <p>
                 Certificate of Excellence
-              </span>
+              </p>
 
-              <span class="pill">
-                Nov 2, 2024
-              </span>
+              <p class="cert-id">
+                ID: 7d3eb6a7c635414ab6059e8e4103f540
+              </p>
 
-            </div>
+              <a
+                class="cert-link"
+                href="https://courses.opencv.org/certificates/7d3eb6a7c635414ab6059e8e4103f540"
+                target="_blank"
+                rel="noopener">
+                Verify Certificate →
+              </a>
 
-            <p>
-              <strong>
-                Certificate ID:
-              </strong>
-
-              7d3eb6a7c635414ab6059e8e4103f540
-            </p>
-
-            <a
-              class="cert-link"
-              href="https://courses.opencv.org/certificates/7d3eb6a7c635414ab6059e8e4103f540"
-              target="_blank"
-              rel="noopener"
-            >
-              Verify Certificate ↗
-            </a>
-
-          </article>
+            </article>
 
 
+            <!-- CERTIFICATE 3 -->
 
-          <!-- CERTIFICATE 3 -->
+            <article class="cert-card reveal">
 
-          <article class="cert-card reveal">
+              <div class="cert-platform">
+                OpenCV University · United States
+              </div>
 
-            <div class="cert-logo">
-              DL
-            </div>
+              <h4>
+                Deep Learning with PyTorch 2.X
+              </h4>
+
+              <p class="cert-date">
+                Issued May 4, 2025
+              </p>
+
+              <p>
+                Certificate of Completion
+              </p>
+
+              <p class="cert-id">
+                ID: 116ddef6fa27476fb9635263a487d070
+              </p>
+
+              <a
+                class="cert-link"
+                href="https://courses.opencv.org/certificates/116ddef6fa27476fb9635263a487d070"
+                target="_blank"
+                rel="noopener">
+                Verify Certificate →
+              </a>
+
+            </article>
+
+          </div>
+
+        </div>
+
+
+        <!-- UDEMY -->
+
+        <div class="cert-group">
+
+          <div class="cert-group-title reveal">
 
             <h3>
-              Deep Learning with PyTorch 2.X
+              Professional Learning
             </h3>
 
-            <p>
-              OpenCV University · United States
-            </p>
+            <span>
+              UDEMY
+            </span>
 
-            <div class="cert-meta">
+          </div>
 
-              <span class="pill">
-                Certificate of Completion
-              </span>
 
-              <span class="pill">
-                May 4, 2025
-              </span>
+          <div class="cert-grid single">
 
-            </div>
+            <article class="cert-card reveal">
 
-            <p>
-              <strong>
-                Certificate ID:
-              </strong>
+              <div class="cert-platform">
+                Udemy
+              </div>
 
-              116ddef6fa27476fb9635263a487d070
-            </p>
+              <h4>
+                Complete Computer Vision Bootcamp
+                With PyTorch & TensorFlow
+              </h4>
 
-            <a
-              class="cert-link"
-              href="https://courses.opencv.org/certificates/116ddef6fa27476fb9635263a487d070"
-              target="_blank"
-              rel="noopener"
-            >
-              Verify Certificate ↗
-            </a>
+              <p class="cert-date">
+                Completed February 27, 2026
+              </p>
 
-          </article>
+              <p>
+                Certificate of Completion · 59.5 total hours
+              </p>
 
+              <p>
+                Instructors: Krish Naik, Sourangshu Pal,
+                Monal Kumar, KRISHAI Technologies Private Limited
+              </p>
+
+              <p class="cert-id">
+                Certificate No:
+                UC-15cff819-7967-4d17-acc7-cc051c30bffc
+              </p>
+
+            </article>
+
+          </div>
 
         </div>
 
@@ -2144,153 +1718,118 @@
     </section>
 
 
-
-    <!-- =====================================================
+    <!-- =========================
          ACADEMIC PROFILES
-    ====================================================== -->
+    ========================== -->
 
     <section>
 
       <div class="container">
 
+        <div class="section-heading reveal">
 
-        <div class="section-head reveal">
-
-          <div class="section-kicker">
-            Academic Profiles
+          <div class="eyebrow">
+            ACADEMIC PROFILES
           </div>
 
           <h2>
-            Find the research record
-            across academic platforms.
+            Find my research and professional work.
           </h2>
 
         </div>
 
 
-
-        <div class="profiles-grid">
-
+        <div class="profiles">
 
           <a
-            class="profile-link reveal"
+            class="academic-link reveal"
             href="https://scholar.google.com/citations?user=YxDQyvIAAAAJ&hl=en"
             target="_blank"
-            rel="noopener"
-          >
+            rel="noopener">
 
-            <strong>
-              Google Scholar
-            </strong>
+            Google Scholar
 
             <span>
-              Publications, citations and
-              research profile
+              Publications & citations
             </span>
 
           </a>
 
 
-
           <a
-            class="profile-link reveal"
+            class="academic-link reveal"
             href="https://orcid.org/0000-0002-9948-5743"
             target="_blank"
-            rel="noopener"
-          >
+            rel="noopener">
 
-            <strong>
-              ORCID
-            </strong>
+            ORCID
 
             <span>
-              Researcher identifier and
-              scholarly record
+              Researcher identifier
             </span>
 
           </a>
 
 
-
           <a
-            class="profile-link reveal"
+            class="academic-link reveal"
             href="https://www.scopus.com/authid/detail.uri?authorId=57202852137"
             target="_blank"
-            rel="noopener"
-          >
+            rel="noopener">
 
-            <strong>
-              Scopus
-            </strong>
+            Scopus
 
             <span>
-              Indexed publications and
-              author profile
+              Author profile
             </span>
 
           </a>
 
 
-
           <a
-            class="profile-link reveal"
+            class="academic-link reveal"
             href="https://www.webofscience.com/wos/author/record/AAU-5370-2021"
             target="_blank"
-            rel="noopener"
-          >
+            rel="noopener">
 
-            <strong>
-              Web of Science
-            </strong>
+            Web of Science
 
             <span>
-              Researcher profile and
-              indexed work
+              Research profile
             </span>
 
           </a>
 
 
-
           <a
-            class="profile-link reveal"
+            class="academic-link reveal"
             href="https://github.com/michaelmahesh"
             target="_blank"
-            rel="noopener"
-          >
+            rel="noopener">
 
-            <strong>
-              GitHub
-            </strong>
+            GitHub
 
             <span>
-              Projects, implementations
-              and teaching code
+              Projects & implementations
             </span>
 
           </a>
 
 
-
           <a
-            class="profile-link reveal"
+            class="academic-link reveal"
             href="https://www.linkedin.com/in/michaelmahesh"
             target="_blank"
-            rel="noopener"
-          >
+            rel="noopener">
 
-            <strong>
-              LinkedIn
-            </strong>
+            LinkedIn
 
             <span>
               Professional profile
-              and updates
             </span>
 
           </a>
 
-
         </div>
 
       </div>
@@ -2298,26 +1837,20 @@
     </section>
 
 
-
-    <!-- =====================================================
+    <!-- =========================
          PHILOSOPHY
-    ====================================================== -->
+    ========================== -->
 
-    <section>
+    <section class="philosophy">
 
       <div class="container">
 
-        <div class="philosophy reveal">
+        <div class="quote reveal">
 
-          <p>
-            “The goal is not only to understand AI,
-            but to make it understandable,
-            buildable and useful.”
-          </p>
-
-          <span>
-            — Teaching & Research Philosophy
-          </span>
+          “Learn deeply.
+          <span>Research honestly.</span>
+          Build something useful.
+          Share what you discover.”
 
         </div>
 
@@ -2326,57 +1859,49 @@
     </section>
 
 
-
-    <!-- =====================================================
+    <!-- =========================
          CTA
-    ====================================================== -->
+    ========================== -->
 
-    <section>
+    <section class="cta">
 
       <div class="container">
 
-        <div class="cta reveal">
+        <div class="cta-box reveal">
 
-          <div class="section-kicker">
-            Explore Further
+          <div class="eyebrow">
+            EXPLORE MORE
           </div>
 
           <h2>
-            Research. Projects. Learning.
+            Interested in my research and work?
           </h2>
 
           <p>
-            Explore the research work,
-            technical projects, publications
-            and teaching resources behind
-            this academic journey.
+            Explore research themes, projects, publications and
+            learning resources developed around Artificial Intelligence,
+            Computer Vision and Deep Learning.
           </p>
 
-
-          <div
-            class="hero-actions"
-            style="justify-content:center"
-          >
+          <div class="hero-actions"
+               style="justify-content:center;">
 
             <a
-              class="btn btn-primary"
               href="research.html"
-            >
-              Research →
+              class="btn btn-primary">
+              Explore Research →
             </a>
 
             <a
-              class="btn btn-secondary"
               href="projects.html"
-            >
-              Projects →
+              class="btn btn-light">
+              View Projects →
             </a>
 
             <a
-              class="btn btn-secondary"
-              href="learning.html"
-            >
-              Learning →
+              href="publications.html"
+              class="btn btn-light">
+              Publications →
             </a>
 
           </div>
@@ -2386,244 +1911,179 @@
       </div>
 
     </section>
-
 
   </main>
 
 
-
-  <!-- =======================================================
+  <!-- =========================
        FOOTER
-  ======================================================== -->
+  ========================== -->
 
   <footer>
 
-    <div class="container footer-grid">
+    <div class="container">
 
+      <div class="footer-grid">
 
-      <div>
+        <div>
 
-        <div class="footer-brand">
-          MICHAEL MAHESH
+          <div class="footer-brand">
+            MICHAEL MAHESH
+          </div>
+
+          <p class="footer-about">
+            Professor and Artificial Intelligence researcher
+            working across AI, Deep Learning, Computer Vision,
+            Medical AI and Intelligent Systems.
+          </p>
+
         </div>
 
-        <p style="margin-top:10px;max-width:330px;">
 
+        <div class="footer-column">
+
+          <h4>Explore</h4>
+
+          <a href="research.html">Research</a>
+          <a href="projects.html">Projects</a>
+          <a href="learning.html">Learning</a>
+          <a href="publications.html">Publications</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>Academic</h4>
+
+          <a href="about.html">About Me</a>
+          <a href="my_cv-2.pdf" target="_blank">CV</a>
+          <a href="https://scholar.google.com/citations?user=YxDQyvIAAAAJ&hl=en"
+             target="_blank">
+            Google Scholar
+          </a>
+          <a href="https://orcid.org/0000-0002-9948-5743"
+             target="_blank">
+            ORCID
+          </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>Connect</h4>
+
+          <a href="https://github.com/michaelmahesh"
+             target="_blank">
+            GitHub
+          </a>
+
+          <a href="https://www.linkedin.com/in/michaelmahesh"
+             target="_blank">
+            LinkedIn
+          </a>
+
+          <a href="mailto:michaelmaheshk@gmail.com">
+            Email
+          </a>
+
+          <a href="contact.html">
+            Contact
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © <span id="year"></span> Dr. K. Michael Mahesh
+        </span>
+
+        <span>
           Professor · Artificial Intelligence
-          <br>
-
-          Research · Build · Teach · Share
-
-        </p>
+        </span>
 
       </div>
-
-
-
-      <div>
-
-        <h3>
-          Explore
-        </h3>
-
-        <a href="research.html">
-          Research
-        </a>
-
-        <a href="projects.html">
-          Projects
-        </a>
-
-        <a href="learning.html">
-          Learning
-        </a>
-
-        <a href="publications.html">
-          Publications
-        </a>
-
-      </div>
-
-
-
-      <div>
-
-        <h3>
-          Academic
-        </h3>
-
-        <a href="about.html">
-          About Me
-        </a>
-
-        <a href="about.html#certifications">
-          Certifications
-        </a>
-
-        <a
-          href="my_cv-2.pdf"
-          target="_blank"
-          rel="noopener"
-        >
-          CV
-        </a>
-
-        <a href="connect.html">
-          Connect
-        </a>
-
-      </div>
-
-
-
-      <div>
-
-        <h3>
-          Online
-        </h3>
-
-        <a
-          href="https://github.com/michaelmahesh"
-          target="_blank"
-          rel="noopener"
-        >
-          GitHub
-        </a>
-
-        <a
-          href="https://www.linkedin.com/in/michaelmahesh"
-          target="_blank"
-          rel="noopener"
-        >
-          LinkedIn
-        </a>
-
-        <a
-          href="https://orcid.org/0000-0002-9948-5743"
-          target="_blank"
-          rel="noopener"
-        >
-          ORCID
-        </a>
-
-        <a href="mailto:michaelmaheshk@gmail.com">
-          Email
-        </a>
-
-      </div>
-
-
-    </div>
-
-
-
-    <div class="container footer-bottom">
-
-      <span>
-        ©
-        <span id="year"></span>
-        Dr. K. Michael Mahesh.
-        All rights reserved.
-      </span>
-
-      <span>
-        Chennai, Tamil Nadu, India
-      </span>
 
     </div>
 
   </footer>
 
 
-
-  <!-- =======================================================
+  <!-- =========================
        JAVASCRIPT
-  ======================================================== -->
+  ========================== -->
 
   <script>
 
+    /* Header shadow */
+
+    const header = document.getElementById("siteHeader");
+
+    window.addEventListener("scroll", () => {
+
+      if (window.scrollY > 10) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+
+    });
+
+
     /* Mobile navigation */
 
-    const menuBtn =
-      document.getElementById("menuBtn");
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
 
-    const navLinks =
-      document.getElementById("navLinks");
+    menuBtn.addEventListener("click", () => {
 
+      navLinks.classList.toggle("open");
 
-    menuBtn.addEventListener(
-      "click",
-      () => {
+      menuBtn.textContent =
+        navLinks.classList.contains("open")
+          ? "×"
+          : "☰";
 
-        const open =
-          navLinks.classList.toggle("open");
-
-        menuBtn.setAttribute(
-          "aria-expanded",
-          String(open)
-        );
-
-        menuBtn.textContent =
-          open ? "×" : "☰";
-
-      }
-    );
+    });
 
 
-    navLinks
-      .querySelectorAll("a")
-      .forEach(link => {
+    /* Close mobile menu after click */
 
-        link.addEventListener(
-          "click",
-          () => {
+    document.querySelectorAll(".nav-links a").forEach(link => {
 
-            navLinks.classList.remove("open");
+      link.addEventListener("click", () => {
 
-            menuBtn.setAttribute(
-              "aria-expanded",
-              "false"
-            );
-
-            menuBtn.textContent = "☰";
-
-          }
-        );
+        navLinks.classList.remove("open");
+        menuBtn.textContent = "☰";
 
       });
 
+    });
 
 
     /* Scroll reveal */
 
-    const revealItems =
+    const revealElements =
       document.querySelectorAll(".reveal");
 
-
-    if (
-      "IntersectionObserver" in window &&
-      !window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches
-    ) {
+    if ("IntersectionObserver" in window) {
 
       const observer =
         new IntersectionObserver(
-          (entries, obs) => {
+          entries => {
 
             entries.forEach(entry => {
 
-              if (
-                entry.isIntersecting
-              ) {
+              if (entry.isIntersecting) {
 
-                entry.target
-                  .classList
-                  .add("visible");
+                entry.target.classList.add("visible");
 
-                obs.unobserve(
-                  entry.target
-                );
+                observer.unobserve(entry.target);
 
               }
 
@@ -2635,42 +2095,25 @@
           }
         );
 
-
-      revealItems.forEach(
-        item => observer.observe(item)
-      );
+      revealElements.forEach(element => {
+        observer.observe(element);
+      });
 
     } else {
 
-      revealItems.forEach(
-        item =>
-          item.classList.add("visible")
-      );
+      revealElements.forEach(element => {
+        element.classList.add("visible");
+      });
 
     }
 
 
-
     /* Current year */
 
-    document.getElementById("year")
-      .textContent =
+    document.getElementById("year").textContent =
       new Date().getFullYear();
 
   </script>
-
-
-  <!--
-    IMPORTANT:
-
-    Keep your existing Google Analytics
-    and Google AdSense snippets here if
-    they already exist in your current website.
-
-    Do not replace your existing IDs with
-    invented values.
-  -->
-
 
 </body>
 </html>
