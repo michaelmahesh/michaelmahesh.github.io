@@ -1,66 +1,77 @@
-/* =========================================================
-   Dr. K. Michael Mahesh — AI & Computer Vision Platform
-   Phase 1 — Main JavaScript
-   ========================================================= */
+/* ============================================================
+   Dr. K. Michael Mahesh
+   Premium Light AI Research Website
+   Interactive JavaScript
+============================================================ */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* =====================================================
-       1. CURRENT YEAR
-       ===================================================== */
+    /* ---------------------------------------------------------
+       CURRENT YEAR
+    --------------------------------------------------------- */
 
-    const yearElements = document.querySelectorAll("[data-year], #current-year");
-
-    yearElements.forEach((element) => {
-        element.textContent = new Date().getFullYear();
+    document.querySelectorAll("[data-year], #current-year").forEach(el => {
+        el.textContent = new Date().getFullYear();
     });
 
 
-    /* =====================================================
-       2. MOBILE NAVIGATION
-       ===================================================== */
+    /* ---------------------------------------------------------
+       MOBILE NAVIGATION
+    --------------------------------------------------------- */
 
-    const menuBtn = document.querySelector(".menu-btn");
-    const navLinks = document.querySelector(".nav-links");
+    const menuBtn =
+        document.querySelector(".menu-btn") ||
+        document.querySelector(".menu-toggle");
 
-    if (menuBtn && navLinks) {
+    const nav =
+        document.querySelector(".nav-links") ||
+        document.querySelector(".nav-menu");
+
+    if (menuBtn && nav) {
 
         menuBtn.addEventListener("click", () => {
 
-            const isOpen = navLinks.classList.toggle("show");
+            const open = nav.classList.toggle("show");
 
-            menuBtn.classList.toggle("active", isOpen);
-            menuBtn.setAttribute("aria-expanded", isOpen);
+            menuBtn.classList.toggle("active", open);
+
+            menuBtn.setAttribute(
+                "aria-expanded",
+                String(open)
+            );
 
         });
 
 
-        // Close menu after clicking a navigation link
-        navLinks.querySelectorAll("a").forEach((link) => {
+        nav.querySelectorAll("a").forEach(link => {
 
             link.addEventListener("click", () => {
 
-                navLinks.classList.remove("show");
+                nav.classList.remove("show");
+                nav.classList.remove("open");
+
                 menuBtn.classList.remove("active");
-                menuBtn.setAttribute("aria-expanded", "false");
+
+                menuBtn.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
 
             });
 
         });
 
 
-        // Close menu when clicking outside
-        document.addEventListener("click", (event) => {
+        document.addEventListener("click", event => {
 
             if (
-                navLinks.classList.contains("show") &&
-                !navLinks.contains(event.target) &&
+                nav.classList.contains("show") &&
+                !nav.contains(event.target) &&
                 !menuBtn.contains(event.target)
             ) {
 
-                navLinks.classList.remove("show");
+                nav.classList.remove("show");
                 menuBtn.classList.remove("active");
-                menuBtn.setAttribute("aria-expanded", "false");
 
             }
 
@@ -69,102 +80,38 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    /* =====================================================
-       3. ACTIVE NAVIGATION LINK
-       ===================================================== */
+    /* ---------------------------------------------------------
+       SMOOTH SCROLL
+    --------------------------------------------------------- */
 
-    const sections = document.querySelectorAll("section[id]");
-    const navigationLinks = document.querySelectorAll(
-        '.nav-links a[href^="#"]'
-    );
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
 
-    if (sections.length && navigationLinks.length) {
+        link.addEventListener("click", event => {
 
-        const updateActiveNavigation = () => {
+            const id = link.getAttribute("href");
 
-            const scrollPosition = window.scrollY + 140;
+            if (!id || id === "#") return;
 
-            let currentSection = "";
+            const target = document.querySelector(id);
 
-            sections.forEach((section) => {
-
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.offsetHeight;
-
-                if (
-                    scrollPosition >= sectionTop &&
-                    scrollPosition < sectionTop + sectionHeight
-                ) {
-                    currentSection = section.getAttribute("id");
-                }
-
-            });
-
-            navigationLinks.forEach((link) => {
-
-                link.classList.remove("active");
-
-                const href = link.getAttribute("href");
-
-                if (href === `#${currentSection}`) {
-                    link.classList.add("active");
-                }
-
-            });
-
-        };
-
-        window.addEventListener(
-            "scroll",
-            updateActiveNavigation,
-            { passive: true }
-        );
-
-        updateActiveNavigation();
-
-    }
-
-
-    /* =====================================================
-       4. SMOOTH SCROLL
-       ===================================================== */
-
-    document.querySelectorAll('a[href^="#"]').forEach((link) => {
-
-        link.addEventListener("click", (event) => {
-
-            const targetId = link.getAttribute("href");
-
-            if (
-                !targetId ||
-                targetId === "#" ||
-                targetId.length < 2
-            ) {
-                return;
-            }
-
-            const target = document.querySelector(targetId);
-
-            if (!target) {
-                return;
-            }
+            if (!target) return;
 
             event.preventDefault();
 
-            const navbar = document.querySelector(".navbar");
+            const header =
+                document.querySelector(".site-header") ||
+                document.querySelector(".navbar");
 
-            const navbarHeight = navbar
-                ? navbar.offsetHeight
-                : 0;
+            const offset =
+                header ? header.offsetHeight + 20 : 20;
 
-            const targetPosition =
+            const position =
                 target.getBoundingClientRect().top +
                 window.scrollY -
-                navbarHeight -
-                20;
+                offset;
 
             window.scrollTo({
-                top: targetPosition,
+                top: position,
                 behavior: "smooth"
             });
 
@@ -173,252 +120,524 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    /* =====================================================
-       5. SCROLL REVEAL ANIMATION
-       ===================================================== */
+    /* ---------------------------------------------------------
+       NAVBAR SCROLL EFFECT
+    --------------------------------------------------------- */
 
-    const revealElements = document.querySelectorAll(
-        `
-        .reveal,
-        .section-header,
-        .stat-card,
-        .research-stat,
-        .topic-card,
-        .article-card,
-        .tutorial-card,
-        .research-card,
-        .project-card,
-        .learning-card,
-        .publication-card,
-        .profile-card,
-        .about-card,
-        .code-card,
-        .method-box,
-        .result-box,
-        .note-box,
-        .warning-box
-        `
-    );
+    const header =
+        document.querySelector(".site-header") ||
+        document.querySelector(".navbar");
 
-    if ("IntersectionObserver" in window && revealElements.length) {
+    const updateHeader = () => {
 
-        const revealObserver = new IntersectionObserver(
-            (entries, observer) => {
+        if (!header) return;
 
-                entries.forEach((entry) => {
-
-                    if (entry.isIntersecting) {
-
-                        entry.target.classList.add("visible");
-
-                        observer.unobserve(entry.target);
-
-                    }
-
-                });
-
-            },
-            {
-                threshold: 0.08,
-                rootMargin: "0px 0px -40px 0px"
-            }
+        header.classList.toggle(
+            "scrolled",
+            window.scrollY > 30
         );
-
-        revealElements.forEach((element, index) => {
-
-            element.classList.add("reveal");
-
-            // Small stagger effect
-            const delay = Math.min(index % 6, 5) * 70;
-
-            element.style.setProperty(
-                "--reveal-delay",
-                `${delay}ms`
-            );
-
-            revealObserver.observe(element);
-
-        });
-
-    } else {
-
-        revealElements.forEach((element) => {
-            element.classList.add("visible");
-        });
-
-    }
-
-
-    /* =====================================================
-       6. NAVBAR SHADOW ON SCROLL
-       ===================================================== */
-
-    const navbar = document.querySelector(".navbar");
-
-    if (navbar) {
-
-        const updateNavbar = () => {
-
-            if (window.scrollY > 20) {
-                navbar.classList.add("scrolled");
-            } else {
-                navbar.classList.remove("scrolled");
-            }
-
-        };
-
-        window.addEventListener(
-            "scroll",
-            updateNavbar,
-            { passive: true }
-        );
-
-        updateNavbar();
-
-    }
-
-
-    /* =====================================================
-       7. BACK TO TOP BUTTON
-       ===================================================== */
-
-    let backToTop = document.querySelector(".back-to-top");
-
-    if (!backToTop) {
-
-        backToTop = document.createElement("button");
-
-        backToTop.className = "back-to-top";
-        backToTop.type = "button";
-        backToTop.setAttribute(
-            "aria-label",
-            "Back to top"
-        );
-
-        backToTop.innerHTML = "↑";
-
-        document.body.appendChild(backToTop);
-
-    }
-
-    const updateBackToTop = () => {
-
-        if (window.scrollY > 600) {
-            backToTop.classList.add("show");
-        } else {
-            backToTop.classList.remove("show");
-        }
 
     };
 
     window.addEventListener(
         "scroll",
-        updateBackToTop,
+        updateHeader,
         { passive: true }
     );
 
-    backToTop.addEventListener("click", () => {
+    updateHeader();
 
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+
+    /* ---------------------------------------------------------
+       SCROLL REVEAL
+    --------------------------------------------------------- */
+
+    const revealElements = document.querySelectorAll(`
+        section,
+        .section-header,
+        .domain-card,
+        .article-card,
+        .project-card,
+        .learning-item,
+        .resource-card,
+        .publication-item,
+        .metric-item,
+        .academic-panel,
+        .contact-item
+    `);
+
+    if (
+        "IntersectionObserver" in window &&
+        revealElements.length
+    ) {
+
+        const observer =
+            new IntersectionObserver(
+                (entries, obs) => {
+
+                    entries.forEach(entry => {
+
+                        if (!entry.isIntersecting) return;
+
+                        entry.target.classList.add(
+                            "is-visible"
+                        );
+
+                        obs.unobserve(entry.target);
+
+                    });
+
+                },
+                {
+                    threshold: 0.08,
+                    rootMargin: "0px 0px -60px 0px"
+                }
+            );
+
+        revealElements.forEach((element, index) => {
+
+            element.classList.add("reveal");
+
+            element.style.setProperty(
+                "--delay",
+                `${Math.min(index % 6, 5) * 70}ms`
+            );
+
+            observer.observe(element);
+
         });
+
+    } else {
+
+        revealElements.forEach(element => {
+            element.classList.add("is-visible");
+        });
+
+    }
+
+
+    /* ---------------------------------------------------------
+       ACTIVE NAVIGATION
+    --------------------------------------------------------- */
+
+    const sections =
+        document.querySelectorAll("section[id]");
+
+    const navLinks =
+        document.querySelectorAll(
+            'a[href^="#"]'
+        );
+
+    if (sections.length && navLinks.length) {
+
+        const updateActiveNav = () => {
+
+            const scrollPosition =
+                window.scrollY + 180;
+
+            let current = "";
+
+            sections.forEach(section => {
+
+                const top = section.offsetTop;
+                const height = section.offsetHeight;
+
+                if (
+                    scrollPosition >= top &&
+                    scrollPosition < top + height
+                ) {
+
+                    current =
+                        section.getAttribute("id");
+
+                }
+
+            });
+
+
+            navLinks.forEach(link => {
+
+                const href =
+                    link.getAttribute("href");
+
+                link.classList.toggle(
+                    "active",
+                    href === `#${current}`
+                );
+
+            });
+
+        };
+
+
+        window.addEventListener(
+            "scroll",
+            updateActiveNav,
+            { passive: true }
+        );
+
+        updateActiveNav();
+
+    }
+
+
+    /* ---------------------------------------------------------
+       ANIMATED COUNTERS
+    --------------------------------------------------------- */
+
+    const counters =
+        document.querySelectorAll(
+            "[data-count]"
+        );
+
+    if (
+        "IntersectionObserver" in window &&
+        counters.length
+    ) {
+
+        const counterObserver =
+            new IntersectionObserver(
+                entries => {
+
+                    entries.forEach(entry => {
+
+                        if (!entry.isIntersecting) return;
+
+                        const element =
+                            entry.target;
+
+                        const target =
+                            parseInt(
+                                element.dataset.count,
+                                10
+                            );
+
+                        if (Number.isNaN(target)) return;
+
+                        animateCounter(
+                            element,
+                            target
+                        );
+
+                        counterObserver.unobserve(
+                            element
+                        );
+
+                    });
+
+                },
+                {
+                    threshold: 0.7
+                }
+            );
+
+
+        counters.forEach(counter => {
+            counterObserver.observe(counter);
+        });
+
+    }
+
+
+    function animateCounter(element, target) {
+
+        const duration = 1000;
+        const start = performance.now();
+
+        const update = currentTime => {
+
+            const progress =
+                Math.min(
+                    (currentTime - start) / duration,
+                    1
+                );
+
+            const eased =
+                1 - Math.pow(1 - progress, 3);
+
+            const value =
+                Math.floor(target * eased);
+
+            element.textContent = value;
+
+            if (progress < 1) {
+
+                requestAnimationFrame(update);
+
+            } else {
+
+                element.textContent = target;
+
+            }
+
+        };
+
+        requestAnimationFrame(update);
+
+    }
+
+
+    /* ---------------------------------------------------------
+       CARD TILT — VERY SUBTLE
+    --------------------------------------------------------- */
+
+    const interactiveCards =
+        document.querySelectorAll(`
+            .domain-card,
+            .project-card,
+            .resource-card,
+            .article-card
+        `);
+
+    interactiveCards.forEach(card => {
+
+        card.addEventListener(
+            "mousemove",
+            event => {
+
+                if (
+                    window.matchMedia(
+                        "(prefers-reduced-motion: reduce)"
+                    ).matches
+                ) return;
+
+                const rect =
+                    card.getBoundingClientRect();
+
+                const x =
+                    event.clientX - rect.left;
+
+                const y =
+                    event.clientY - rect.top;
+
+                const rotateX =
+                    ((y / rect.height) - 0.5) * -2;
+
+                const rotateY =
+                    ((x / rect.width) - 0.5) * 2;
+
+                card.style.transform =
+                    `translateY(-5px)
+                     rotateX(${rotateX}deg)
+                     rotateY(${rotateY}deg)`;
+
+            }
+        );
+
+
+        card.addEventListener(
+            "mouseleave",
+            () => {
+
+                card.style.transform = "";
+
+            }
+        );
 
     });
 
 
-    /* =====================================================
-       8. COPY CODE BUTTONS
-       ===================================================== */
+    /* ---------------------------------------------------------
+       BUTTON PRESS MICRO INTERACTION
+    --------------------------------------------------------- */
 
-    document.querySelectorAll(".code-block").forEach((codeBlock) => {
+    document
+        .querySelectorAll(
+            "a, button"
+        )
+        .forEach(element => {
 
-        const wrapper = codeBlock.closest(".code-card") || codeBlock.parentElement;
+            element.addEventListener(
+                "mousedown",
+                () => {
 
-        if (!wrapper) {
-            return;
-        }
+                    element.classList.add(
+                        "pressed"
+                    );
 
-        if (wrapper.querySelector(".copy-code-btn")) {
-            return;
-        }
-
-        const button = document.createElement("button");
-
-        button.className = "copy-code-btn";
-        button.type = "button";
-        button.textContent = "Copy";
-
-        wrapper.style.position = "relative";
-
-        wrapper.appendChild(button);
-
-        button.addEventListener("click", async () => {
-
-            const code = codeBlock.innerText;
-
-            try {
-
-                await navigator.clipboard.writeText(code);
-
-                button.textContent = "Copied!";
-
-                setTimeout(() => {
-                    button.textContent = "Copy";
-                }, 1800);
-
-            } catch (error) {
-
-                // Fallback for older browsers
-                const textarea =
-                    document.createElement("textarea");
-
-                textarea.value = code;
-                textarea.style.position = "fixed";
-                textarea.style.opacity = "0";
-
-                document.body.appendChild(textarea);
-
-                textarea.select();
-
-                try {
-                    document.execCommand("copy");
-                    button.textContent = "Copied!";
-                } catch (copyError) {
-                    button.textContent = "Select & Copy";
                 }
+            );
 
-                document.body.removeChild(textarea);
 
-                setTimeout(() => {
-                    button.textContent = "Copy";
-                }, 1800);
+            element.addEventListener(
+                "mouseup",
+                () => {
+
+                    element.classList.remove(
+                        "pressed"
+                    );
+
+                }
+            );
+
+
+            element.addEventListener(
+                "mouseleave",
+                () => {
+
+                    element.classList.remove(
+                        "pressed"
+                    );
+
+                }
+            );
+
+        });
+
+
+    /* ---------------------------------------------------------
+       FLASH NEWS ROTATION
+    --------------------------------------------------------- */
+
+    const flashItems =
+        document.querySelectorAll(
+            "[data-flash-news]"
+        );
+
+    if (flashItems.length > 1) {
+
+        let current = 0;
+
+        flashItems.forEach(
+            (item, index) => {
+
+                item.classList.toggle(
+                    "active",
+                    index === 0
+                );
+
+            }
+        );
+
+
+        setInterval(() => {
+
+            flashItems[current]
+                .classList.remove("active");
+
+            current =
+                (current + 1) %
+                flashItems.length;
+
+            flashItems[current]
+                .classList.add("active");
+
+        }, 4500);
+
+    }
+
+
+    /* ---------------------------------------------------------
+       IMAGE LAZY LOADING
+    --------------------------------------------------------- */
+
+    document
+        .querySelectorAll("img")
+        .forEach(image => {
+
+            if (!image.hasAttribute("loading")) {
+
+                image.setAttribute(
+                    "loading",
+                    "lazy"
+                );
+
+            }
+
+            if (!image.hasAttribute("decoding")) {
+
+                image.setAttribute(
+                    "decoding",
+                    "async"
+                );
 
             }
 
         });
 
-    });
+
+    /* ---------------------------------------------------------
+       BACK TO TOP
+    --------------------------------------------------------- */
+
+    let backTop =
+        document.querySelector(
+            ".back-to-top"
+        );
+
+    if (!backTop) {
+
+        backTop =
+            document.createElement(
+                "button"
+            );
+
+        backTop.className =
+            "back-to-top";
+
+        backTop.type =
+            "button";
+
+        backTop.setAttribute(
+            "aria-label",
+            "Back to top"
+        );
+
+        backTop.innerHTML =
+            "↑";
+
+        document.body.appendChild(
+            backTop
+        );
+
+    }
 
 
-    /* =====================================================
-       9. EXTERNAL LINKS
-       ===================================================== */
+    window.addEventListener(
+        "scroll",
+        () => {
+
+            backTop.classList.toggle(
+                "show",
+                window.scrollY > 600
+            );
+
+        },
+        { passive: true }
+    );
+
+
+    backTop.addEventListener(
+        "click",
+        () => {
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+    );
+
+
+    /* ---------------------------------------------------------
+       EXTERNAL LINKS
+    --------------------------------------------------------- */
 
     document
-        .querySelectorAll('a[href^="http"]')
-        .forEach((link) => {
-
-            const currentHost = window.location.hostname;
+        .querySelectorAll(
+            'a[href^="http"]'
+        )
+        .forEach(link => {
 
             try {
 
-                const linkHost =
-                    new URL(link.href).hostname;
+                const url =
+                    new URL(link.href);
 
                 if (
-                    linkHost &&
-                    linkHost !== currentHost
+                    url.hostname !==
+                    window.location.hostname
                 ) {
 
                     link.setAttribute(
@@ -434,313 +653,43 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
             } catch (error) {
-                // Ignore invalid URLs
-            }
 
-        });
-
-
-    /* =====================================================
-       10. IMAGE LAZY LOADING
-       ===================================================== */
-
-    document
-        .querySelectorAll("img")
-        .forEach((image) => {
-
-            if (!image.hasAttribute("loading")) {
-                image.setAttribute(
-                    "loading",
-                    "lazy"
-                );
-            }
-
-            if (!image.hasAttribute("decoding")) {
-                image.setAttribute(
-                    "decoding",
-                    "async"
-                );
-            }
-
-        });
-
-
-    /* =====================================================
-       11. CARD KEYBOARD ACCESSIBILITY
-       ===================================================== */
-
-    document
-        .querySelectorAll(
-            ".topic-card, .article-card, .project-card, .learning-card"
-        )
-        .forEach((card) => {
-
-            if (card.tagName.toLowerCase() === "a") {
-
-                card.addEventListener("keydown", (event) => {
-
-                    if (
-                        event.key === "Enter" ||
-                        event.key === " "
-                    ) {
-
-                        event.preventDefault();
-                        card.click();
-
-                    }
-
-                });
+                // Ignore invalid links
 
             }
 
         });
 
 
-    /* =====================================================
-       12. EXTERNAL ARTICLE FILTER
-       ===================================================== */
-
-    const articleFilter = document.querySelector(
-        "#article-filter"
-    );
-
-    const articleCards = document.querySelectorAll(
-        "[data-category]"
-    );
-
-    if (articleFilter && articleCards.length) {
-
-        articleFilter.addEventListener(
-            "change",
-            () => {
-
-                const selected =
-                    articleFilter.value;
-
-                articleCards.forEach((card) => {
-
-                    const category =
-                        card.dataset.category;
-
-                    if (
-                        selected === "all" ||
-                        category === selected
-                    ) {
-
-                        card.style.display = "";
-
-                    } else {
-
-                        card.style.display = "none";
-
-                    }
-
-                });
-
-            }
-        );
-
-    }
-
-
-    /* =====================================================
-       13. SIMPLE SEARCH
-       ===================================================== */
-
-    const searchInput = document.querySelector(
-        "#site-search"
-    );
-
-    const searchableItems = document.querySelectorAll(
-        `
-        .topic-card,
-        .article-card,
-        .tutorial-card,
-        .research-card,
-        .project-card,
-        .publication-card
-        `
-    );
-
-    if (searchInput && searchableItems.length) {
-
-        searchInput.addEventListener(
-            "input",
-            () => {
-
-                const query =
-                    searchInput.value
-                        .trim()
-                        .toLowerCase();
-
-                searchableItems.forEach((item) => {
-
-                    const text =
-                        item.textContent
-                            .toLowerCase();
-
-                    if (
-                        !query ||
-                        text.includes(query)
-                    ) {
-
-                        item.style.display = "";
-
-                    } else {
-
-                        item.style.display = "none";
-
-                    }
-
-                });
-
-            }
-        );
-
-    }
-
-
-    /* =====================================================
-       14. PUBLICATION YEAR FILTER
-       ===================================================== */
-
-    const publicationFilter =
-        document.querySelector(
-            "#publication-year"
-        );
-
-    const publicationItems =
-        document.querySelectorAll(
-            "[data-publication-year]"
-        );
+    /* ---------------------------------------------------------
+       REDUCED MOTION
+    --------------------------------------------------------- */
 
     if (
-        publicationFilter &&
-        publicationItems.length
-    ) {
-
-        publicationFilter.addEventListener(
-            "change",
-            () => {
-
-                const selected =
-                    publicationFilter.value;
-
-                publicationItems.forEach((item) => {
-
-                    const year =
-                        item.dataset.publicationYear;
-
-                    if (
-                        selected === "all" ||
-                        year === selected
-                    ) {
-
-                        item.style.display = "";
-
-                    } else {
-
-                        item.style.display = "none";
-
-                    }
-
-                });
-
-            }
-        );
-
-    }
-
-
-    /* =====================================================
-       15. RESEARCH TAG INTERACTION
-       ===================================================== */
-
-    document
-        .querySelectorAll(".research-tag")
-        .forEach((tag) => {
-
-            tag.addEventListener("click", () => {
-
-                const value =
-                    tag.dataset.tag;
-
-                if (!value) {
-                    return;
-                }
-
-                const search =
-                    document.querySelector(
-                        "#site-search"
-                    );
-
-                if (search) {
-
-                    search.value = value;
-
-                    search.dispatchEvent(
-                        new Event("input")
-                    );
-
-                    search.scrollIntoView({
-                        behavior: "smooth",
-                        block: "center"
-                    });
-
-                }
-
-            });
-
-        });
-
-
-    /* =====================================================
-       16. YEAR IN PUBLICATIONS
-       ===================================================== */
-
-    document
-        .querySelectorAll("[data-auto-year]")
-        .forEach((element) => {
-
-            const year =
-                element.dataset.autoYear;
-
-            if (year) {
-                element.textContent = year;
-            }
-
-        });
-
-
-    /* =====================================================
-       17. REDUCE MOTION SUPPORT
-       ===================================================== */
-
-    const prefersReducedMotion =
         window.matchMedia(
             "(prefers-reduced-motion: reduce)"
-        );
+        ).matches
+    ) {
 
-    if (prefersReducedMotion.matches) {
-
-        document.documentElement.classList.add(
-            "reduce-motion"
-        );
+        document.documentElement
+            .classList.add(
+                "reduce-motion"
+            );
 
     }
 
 
-    /* =====================================================
-       18. CONSOLE BRANDING
-       ===================================================== */
+    /* ---------------------------------------------------------
+       CONSOLE MESSAGE
+    --------------------------------------------------------- */
 
     console.log(
         "%cDr. K. Michael Mahesh",
-        "font-size:18px;font-weight:bold;"
+        "font-size:18px;font-weight:700;"
     );
 
     console.log(
-        "%cArtificial Intelligence • Computer Vision • Deep Learning",
+        "%cAI • Deep Learning • Computer Vision",
         "font-size:13px;"
     );
 
