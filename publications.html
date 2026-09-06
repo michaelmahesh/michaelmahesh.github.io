@@ -1,0 +1,3322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Publications | Dr. K. Michael Mahesh</title>
+
+<meta name="description"
+      content="Research publications of Dr. K. Michael Mahesh in Artificial Intelligence, Deep Learning, Computer Vision, Medical Imaging, ADAS and Intelligent Systems.">
+
+<meta name="author" content="Dr. K. Michael Mahesh">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet">
+
+
+<style>
+
+:root{
+  --white:#ffffff;
+  --bg:#f7faff;
+  --soft:#eff6ff;
+  --blue:#1d4ed8;
+  --blue-dark:#173ea5;
+  --blue-light:#dbeafe;
+  --navy:#0f172a;
+  --text:#1e293b;
+  --muted:#64748b;
+  --border:#e2e8f0;
+
+  --green:#059669;
+  --green-soft:#ecfdf5;
+  --green-border:#bbf7d0;
+
+  --purple:#7c3aed;
+  --purple-soft:#faf5ff;
+  --purple-border:#e9d5ff;
+
+  --orange:#ea580c;
+  --orange-soft:#fff7ed;
+  --orange-border:#fed7aa;
+
+  --max-width:1180px;
+
+  --radius:18px;
+
+  --shadow:
+    0 8px 30px rgba(15,23,42,.055);
+
+  --shadow-hover:
+    0 18px 45px rgba(29,78,216,.11);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"Inter",sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button,
+input,
+select{
+  font:inherit;
+}
+
+.container{
+  width:min(var(--max-width),calc(100% - 40px));
+  margin:auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+
+  height:76px;
+
+  background:rgba(255,255,255,.97);
+
+  border-bottom:1px solid var(--border);
+
+  backdrop-filter:blur(12px);
+}
+
+.nav-container{
+  height:100%;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  min-width:220px;
+}
+
+.brand-mark{
+  width:40px;
+  height:40px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:12px;
+
+  background:var(--blue);
+  color:white;
+
+  font-size:14px;
+  font-weight:800;
+}
+
+.brand-copy strong{
+  display:block;
+
+  color:var(--navy);
+
+  font-size:14px;
+  letter-spacing:.02em;
+}
+
+.brand-copy span{
+  display:block;
+
+  color:var(--muted);
+
+  font-size:11px;
+  margin-top:-2px;
+}
+
+.nav-menu{
+  display:flex;
+  align-items:center;
+
+  gap:6px;
+
+  list-style:none;
+}
+
+.nav-menu a{
+  display:block;
+
+  padding:9px 13px;
+
+  border-radius:9px;
+
+  color:var(--muted);
+
+  font-size:13px;
+  font-weight:600;
+
+  transition:.2s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active{
+  color:var(--blue);
+  background:var(--soft);
+}
+
+.nav-connect{
+  margin-left:8px;
+
+  background:var(--blue)!important;
+  color:white!important;
+}
+
+.nav-connect:hover{
+  background:var(--blue-dark)!important;
+}
+
+.menu-toggle{
+  display:none;
+
+  width:42px;
+  height:42px;
+
+  border:1px solid var(--border);
+
+  border-radius:10px;
+
+  background:white;
+
+  cursor:pointer;
+}
+
+.menu-toggle span{
+  display:block;
+
+  width:20px;
+  height:2px;
+
+  margin:4px auto;
+
+  background:var(--navy);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.page-hero{
+  padding:88px 0 65px;
+
+  background:
+    radial-gradient(
+      circle at 85% 25%,
+      rgba(219,234,254,.75),
+      transparent 28%
+    ),
+    linear-gradient(
+      to bottom,
+      #ffffff,
+      var(--bg)
+    );
+
+  border-bottom:1px solid var(--border);
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+
+  padding:7px 12px;
+
+  border-radius:999px;
+
+  background:var(--soft);
+
+  border:1px solid var(--blue-light);
+
+  color:var(--blue);
+
+  font-size:11px;
+  font-weight:800;
+
+  letter-spacing:.08em;
+
+  text-transform:uppercase;
+}
+
+.eyebrow::before{
+  content:"";
+
+  width:7px;
+  height:7px;
+
+  border-radius:50%;
+
+  background:var(--blue);
+}
+
+.page-hero h1{
+  max-width:850px;
+
+  margin-top:20px;
+
+  color:var(--navy);
+
+  font-size:clamp(38px,5vw,62px);
+
+  line-height:1.06;
+
+  letter-spacing:-.045em;
+}
+
+.page-hero h1 span{
+  color:var(--blue);
+}
+
+.page-hero p{
+  max-width:740px;
+
+  margin-top:20px;
+
+  color:var(--muted);
+
+  font-size:17px;
+}
+
+.hero-meta{
+  display:flex;
+  flex-wrap:wrap;
+
+  gap:10px;
+
+  margin-top:28px;
+}
+
+.meta-pill{
+  padding:9px 13px;
+
+  border-radius:10px;
+
+  background:white;
+
+  border:1px solid var(--border);
+
+  color:var(--text);
+
+  font-size:12px;
+  font-weight:600;
+
+  box-shadow:
+    0 3px 12px rgba(15,23,42,.03);
+}
+
+
+/* =========================================================
+   PUBLICATION AREA
+========================================================= */
+
+.publication-area{
+  padding:60px 0 90px;
+}
+
+.controls{
+  display:grid;
+
+  grid-template-columns:1fr 180px;
+
+  gap:14px;
+
+  margin-bottom:35px;
+}
+
+.search-box{
+  position:relative;
+}
+
+.search-box svg{
+  position:absolute;
+
+  width:18px;
+  height:18px;
+
+  left:16px;
+  top:50%;
+
+  transform:translateY(-50%);
+
+  color:var(--muted);
+}
+
+.search-box input,
+.year-filter{
+  width:100%;
+  height:50px;
+
+  border:1px solid var(--border);
+
+  background:white;
+
+  border-radius:12px;
+
+  outline:none;
+
+  color:var(--text);
+
+  transition:.2s ease;
+}
+
+.search-box input{
+  padding:0 16px 0 46px;
+}
+
+.year-filter{
+  padding:0 14px;
+
+  cursor:pointer;
+}
+
+.search-box input:focus,
+.year-filter:focus{
+  border-color:var(--blue);
+
+  box-shadow:
+    0 0 0 4px rgba(29,78,216,.08);
+}
+
+.publication-count{
+  margin-bottom:20px;
+
+  color:var(--muted);
+
+  font-size:13px;
+  font-weight:600;
+}
+
+
+/* =========================================================
+   PUBLICATION CARD
+========================================================= */
+
+.publication-list{
+  display:grid;
+  gap:16px;
+}
+
+.publication-card{
+
+  position:relative;
+
+  display:grid;
+
+  grid-template-columns:82px 1fr auto;
+
+  gap:24px;
+
+  align-items:start;
+
+  padding:27px 28px;
+
+  background:white;
+
+  border:1px solid var(--border);
+
+  border-radius:var(--radius);
+
+  box-shadow:
+    0 5px 18px rgba(15,23,42,.035);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    border-color .25s ease;
+
+  overflow:hidden;
+}
+
+.publication-card::before{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  top:0;
+  bottom:0;
+
+  width:3px;
+
+  background:var(--blue);
+
+  transform:scaleY(0);
+
+  transform-origin:center;
+
+  transition:.25s ease;
+}
+
+.publication-card:hover{
+
+  transform:translateY(-3px);
+
+  box-shadow:var(--shadow-hover);
+
+  border-color:var(--blue-light);
+}
+
+.publication-card:hover::before{
+  transform:scaleY(1);
+}
+
+.publication-year{
+
+  color:var(--blue);
+
+  font-size:25px;
+
+  font-weight:800;
+
+  letter-spacing:-.04em;
+
+  line-height:1;
+
+  padding-top:3px;
+}
+
+.publication-title{
+
+  color:var(--navy);
+
+  font-size:17px;
+
+  font-weight:750;
+
+  line-height:1.42;
+
+  margin-bottom:9px;
+}
+
+.publication-journal{
+
+  color:var(--text);
+
+  font-size:13px;
+
+  font-weight:700;
+
+  margin-bottom:5px;
+}
+
+
+/* =========================================================
+   PUBLISHER
+========================================================= */
+
+.publication-publisher{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:7px;
+
+  margin-bottom:14px;
+}
+
+.publisher-label{
+
+  color:#94a3b8;
+
+  font-size:10px;
+
+  font-weight:700;
+
+  text-transform:uppercase;
+
+  letter-spacing:.06em;
+}
+
+.publisher-name{
+
+  color:var(--blue);
+
+  font-size:12px;
+
+  font-weight:700;
+}
+
+.publication-metrics{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:7px;
+}
+
+.metric{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  min-height:27px;
+
+  padding:4px 9px;
+
+  border-radius:7px;
+
+  background:#f8fafc;
+
+  border:1px solid var(--border);
+
+  color:var(--muted);
+
+  font-size:10.5px;
+
+  font-weight:700;
+}
+
+.metric.quartile{
+
+  background:var(--soft);
+
+  border-color:var(--blue-light);
+
+  color:var(--blue);
+}
+
+.metric.snip{
+
+  background:var(--green-soft);
+
+  border-color:var(--green-border);
+
+  color:var(--green);
+}
+
+.metric.abdc{
+
+  background:var(--purple-soft);
+
+  border-color:var(--purple-border);
+
+  color:var(--purple);
+}
+
+.metric.type{
+
+  background:var(--orange-soft);
+
+  border-color:var(--orange-border);
+
+  color:var(--orange);
+}
+
+
+/* =========================================================
+   DOI
+========================================================= */
+
+.doi-link{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:6px;
+
+  white-space:nowrap;
+
+  color:var(--blue);
+
+  border:1px solid var(--blue-light);
+
+  background:var(--soft);
+
+  border-radius:9px;
+
+  padding:9px 12px;
+
+  font-size:11px;
+
+  font-weight:800;
+
+  transition:.2s ease;
+}
+
+.doi-link:hover{
+
+  background:var(--blue);
+
+  border-color:var(--blue);
+
+  color:white;
+
+  transform:translateX(2px);
+}
+
+.doi-link svg{
+
+  width:13px;
+  height:13px;
+}
+
+
+/* =========================================================
+   NO RESULTS
+========================================================= */
+
+.no-results{
+
+  display:none;
+
+  padding:55px 25px;
+
+  text-align:center;
+
+  background:white;
+
+  border:1px solid var(--border);
+
+  border-radius:var(--radius);
+
+  color:var(--muted);
+}
+
+.no-results strong{
+
+  display:block;
+
+  color:var(--navy);
+
+  margin-bottom:6px;
+}
+
+
+/* =========================================================
+   METRIC NOTE
+========================================================= */
+
+.metric-note{
+
+  margin-top:30px;
+
+  padding:17px 19px;
+
+  background:var(--soft);
+
+  border:1px solid var(--blue-light);
+
+  border-radius:12px;
+
+  color:#475569;
+
+  font-size:11px;
+
+  line-height:1.6;
+}
+
+.metric-note strong{
+  color:var(--navy);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer{
+
+  background:white;
+
+  border-top:1px solid var(--border);
+}
+
+.footer-main{
+
+  padding:55px 0 42px;
+
+  display:grid;
+
+  grid-template-columns:
+    1.6fr
+    1fr
+    1fr
+    1fr;
+
+  gap:45px;
+}
+
+.footer-brand h3{
+
+  color:var(--navy);
+
+  font-size:18px;
+
+  margin-bottom:8px;
+}
+
+.footer-brand p{
+
+  max-width:320px;
+
+  color:var(--muted);
+
+  font-size:12px;
+
+  line-height:1.7;
+}
+
+.footer-column h4{
+
+  color:var(--navy);
+
+  font-size:12px;
+
+  margin-bottom:13px;
+}
+
+.footer-column a{
+
+  display:block;
+
+  color:var(--muted);
+
+  font-size:12px;
+
+  margin-bottom:8px;
+
+  transition:.2s ease;
+}
+
+.footer-column a:hover{
+  color:var(--blue);
+}
+
+.footer-bottom{
+
+  border-top:1px solid var(--border);
+
+  padding:18px 0;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  gap:20px;
+
+  color:var(--muted);
+
+  font-size:10.5px;
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+.reveal{
+
+  opacity:0;
+
+  transition:opacity .65s ease;
+}
+
+.reveal.visible{
+  opacity:1;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:900px){
+
+  .nav-menu{
+
+    position:absolute;
+
+    top:76px;
+
+    left:20px;
+    right:20px;
+
+    display:none;
+
+    flex-direction:column;
+
+    align-items:stretch;
+
+    padding:12px;
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    box-shadow:var(--shadow);
+  }
+
+  .nav-menu.open{
+    display:flex;
+  }
+
+  .nav-menu a{
+    width:100%;
+  }
+
+  .nav-connect{
+    margin-left:0;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .publication-card{
+
+    grid-template-columns:
+      65px
+      1fr;
+  }
+
+  .doi-link{
+
+    grid-column:2;
+
+    width:fit-content;
+  }
+
+  .footer-main{
+
+    grid-template-columns:
+      1.5fr
+      1fr
+      1fr;
+  }
+}
+
+
+@media(max-width:650px){
+
+  .container{
+
+    width:
+      min(
+        calc(100% - 28px),
+        var(--max-width)
+      );
+  }
+
+  .site-header{
+    height:68px;
+  }
+
+  .brand-copy span{
+    display:none;
+  }
+
+  .brand-mark{
+
+    width:37px;
+    height:37px;
+  }
+
+  .nav-menu{
+
+    top:68px;
+
+    left:14px;
+    right:14px;
+  }
+
+  .page-hero{
+
+    padding:60px 0 45px;
+  }
+
+  .page-hero p{
+    font-size:15px;
+  }
+
+  .publication-area{
+
+    padding:42px 0 65px;
+  }
+
+  .controls{
+
+    grid-template-columns:1fr;
+  }
+
+  .publication-card{
+
+    grid-template-columns:1fr;
+
+    gap:12px;
+
+    padding:22px;
+  }
+
+  .publication-year{
+    font-size:21px;
+  }
+
+  .publication-title{
+    font-size:15px;
+  }
+
+  .doi-link{
+    grid-column:auto;
+  }
+
+  .footer-main{
+
+    grid-template-columns:
+      1fr
+      1fr;
+
+    gap:30px;
+  }
+
+  .footer-brand{
+    grid-column:1 / -1;
+  }
+
+  .footer-bottom{
+
+    flex-direction:column;
+
+    gap:7px;
+  }
+}
+
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  *,
+  *::before,
+  *::after{
+
+    transition-duration:.01ms!important;
+
+    animation-duration:.01ms!important;
+  }
+
+  .reveal{
+    opacity:1;
+  }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="site-header">
+
+  <div class="container nav-container">
+
+    <a href="index.html" class="brand">
+
+      <div class="brand-mark">
+        MM
+      </div>
+
+      <div class="brand-copy">
+
+        <strong>
+          MICHAEL MAHESH
+        </strong>
+
+        <span>
+          Professor · Artificial Intelligence
+        </span>
+
+      </div>
+
+    </a>
+
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open navigation"
+      aria-expanded="false">
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+
+    <nav>
+
+      <ul class="nav-menu" id="navMenu">
+
+        <li>
+          <a href="research.html">
+            Research
+          </a>
+        </li>
+
+        <li>
+          <a href="projects.html">
+            Projects
+          </a>
+        </li>
+
+        <li>
+          <a href="learning.html">
+            Learning
+          </a>
+        </li>
+
+        <li>
+          <a href="publications.html"
+             class="active">
+            Publications
+          </a>
+        </li>
+
+        <li>
+          <a href="about.html">
+            About
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html#connect"
+             class="nav-connect">
+            Connect
+          </a>
+        </li>
+
+      </ul>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="page-hero">
+
+  <div class="container reveal">
+
+    <span class="eyebrow">
+      Research Publications
+    </span>
+
+
+    <h1>
+      Research that moves
+      <br>
+      <span>ideas forward.</span>
+    </h1>
+
+
+    <p>
+      Research contributions spanning Artificial Intelligence,
+      Deep Learning, Computer Vision, Medical Imaging,
+      ADAS, Intelligent Systems and emerging AI applications.
+    </p>
+
+
+    <div class="hero-meta">
+
+      <span class="meta-pill">
+        AI & Deep Learning
+      </span>
+
+      <span class="meta-pill">
+        Computer Vision
+      </span>
+
+      <span class="meta-pill">
+        Medical AI
+      </span>
+
+      <span class="meta-pill">
+        ADAS
+      </span>
+
+      <span class="meta-pill">
+        Intelligent Systems
+      </span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PUBLICATIONS
+========================================================= -->
+
+<section class="publication-area">
+
+<div class="container">
+
+
+<!-- SEARCH -->
+
+<div class="controls reveal">
+
+
+  <div class="search-box">
+
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round">
+
+      <circle
+        cx="11"
+        cy="11"
+        r="7">
+      </circle>
+
+      <line
+        x1="20"
+        y1="20"
+        x2="16.65"
+        y2="16.65">
+      </line>
+
+    </svg>
+
+
+    <input
+      type="search"
+      id="publicationSearch"
+      placeholder="Search publications, journals, publishers..."
+      aria-label="Search publications">
+
+  </div>
+
+
+  <select
+    id="yearFilter"
+    class="year-filter"
+    aria-label="Filter by year">
+
+    <option value="all">
+      All Years
+    </option>
+
+    <option value="2026">2026</option>
+    <option value="2025">2025</option>
+    <option value="2024">2024</option>
+    <option value="2023">2023</option>
+    <option value="2022">2022</option>
+    <option value="2021">2021</option>
+    <option value="2020">2020</option>
+    <option value="2019">2019</option>
+    <option value="2018">2018</option>
+
+  </select>
+
+</div>
+
+
+<div
+  class="publication-count"
+  id="publicationCount">
+
+  Showing 19 publications
+
+</div>
+
+
+<div
+  class="publication-list"
+  id="publicationList">
+
+
+<!-- =======================================================
+     2026
+======================================================= -->
+
+<article
+  class="publication-card reveal"
+  data-year="2026"
+  data-search="elk skill optimizer joint channel access energy management dynamic channel allocation wsn international journal communication systems wiley">
+
+
+  <div class="publication-year">
+    2026
+  </div>
+
+
+  <div>
+
+    <h2 class="publication-title">
+
+      Elk Skill Optimizer Enabled Joint Channel Access and
+      Energy Management Algorithm for Dynamic Channel
+      Allocation in WSN
+
+    </h2>
+
+
+    <div class="publication-journal">
+      International Journal of Communication Systems
+    </div>
+
+
+    <div class="publication-publisher">
+
+      <span class="publisher-label">
+        Publisher
+      </span>
+
+      <strong class="publisher-name">
+        Wiley
+      </strong>
+
+    </div>
+
+
+    <div class="publication-metrics">
+
+      <span class="metric quartile">
+        Q2
+      </span>
+
+      <span class="metric">
+        SJR 0.419
+      </span>
+
+      <span class="metric snip">
+        SNIP 0.643
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <a
+    class="doi-link"
+    href="https://doi.org/10.1002/dac.70421"
+    target="_blank"
+    rel="noopener noreferrer">
+
+    DOI
+
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2">
+
+      <path d="M7 17L17 7"></path>
+      <path d="M7 7h10v10"></path>
+
+    </svg>
+
+  </a>
+
+</article>
+
+
+
+<article
+  class="publication-card reveal"
+  data-year="2026"
+  data-search="heterogeneous graph convolution cell attention network skill optimization jasmine fragrance detection comso springer book chapter">
+
+
+  <div class="publication-year">
+    2026
+  </div>
+
+
+  <div>
+
+    <h2 class="publication-title">
+
+      Heterogeneous Graph Convolution Cell Attention Network
+      with Skill Optimization Based Jasmine Fragrance Detection
+
+    </h2>
+
+
+    <div class="publication-journal">
+
+      Modeling, Simulation and Optimization:
+      Proceedings of CoMSO 2024
+
+    </div>
+
+
+    <div class="publication-publisher">
+
+      <span class="publisher-label">
+        Publisher
+      </span>
+
+      <strong class="publisher-name">
+        Springer Nature
+      </strong>
+
+    </div>
+
+
+    <div class="publication-metrics">
+
+      <span class="metric type">
+        Book Chapter
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <a
+    class="doi-link"
+    href="https://doi.org/10.1007/978-981-95-4161-4_28"
+    target="_blank"
+    rel="noopener noreferrer">
+
+    DOI
+
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2">
+
+      <path d="M7 17L17 7"></path>
+      <path d="M7 7h10v10"></path>
+
+    </svg>
+
+  </a>
+
+</article>
+
+
+
+<!-- =======================================================
+     2025
+======================================================= -->
+
+<article
+  class="publication-card reveal"
+  data-year="2025"
+  data-search="mich net african fire hawk optimization steering angle prediction adas ieee transactions intelligent transportation systems ieee">
+
+
+  <div class="publication-year">
+    2025
+  </div>
+
+
+  <div>
+
+    <h2 class="publication-title">
+
+      MICH-Net: Novel Deep Learning Architecture with
+      African Fire Hawk Optimization for Steering Angle
+      Prediction in ADAS
+
+    </h2>
+
+
+    <div class="publication-journal">
+
+      IEEE Transactions on Intelligent Transportation Systems
+
+    </div>
+
+
+    <div class="publication-publisher">
+
+      <span class="publisher-label">
+        Publisher
+      </span>
+
+      <strong class="publisher-name">
+        IEEE
+      </strong>
+
+    </div>
+
+
+    <div class="publication-metrics">
+
+      <span class="metric quartile">
+        Q1
+      </span>
+
+      <span class="metric">
+        SJR 2.608
+      </span>
+
+      <span class="metric snip">
+        SNIP 2.758
+      </span>
+
+      <span class="metric abdc">
+        ABDC A
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <a
+    class="doi-link"
+    href="https://doi.org/10.1109/TITS.2025.3623324"
+    target="_blank"
+    rel="noopener noreferrer">
+
+    DOI
+
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2">
+
+      <path d="M7 17L17 7"></path>
+      <path d="M7 7h10v10"></path>
+
+    </svg>
+
+  </a>
+
+</article>
+
+
+
+<article
+  class="publication-card reveal"
+  data-year="2025"
+  data-search="multi modal lung cancer detection pyramidal cascade neuro fuzzy fractional network cancer investigation taylor francis">
+
+
+  <div class="publication-year">
+    2025
+  </div>
+
+
+  <div>
+
+    <h2 class="publication-title">
+
+      Multi-Modal Lung Cancer Detection Using Pyramidal
+      Cascade Neuro-Fuzzy Fractional Network
+
+    </h2>
+
+
+    <div class="publication-journal">
+      Cancer Investigation
+    </div>
+
+
+    <div class="publication-publisher">
+
+      <span class="publisher-label">
+        Publisher
+      </span>
+
+      <strong class="publisher-name">
+        Taylor & Francis
+      </strong>
+
+    </div>
+
+
+    <div class="publication-metrics">
+
+      <span class="metric quartile">
+        Q3
+      </span>
+
+      <span class="metric">
+        SJR 0.495
+      </span>
+
+      <span class="metric snip">
+        SNIP 0.415
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <a
+    class="doi-link"
+    href="https://doi.org/10.1080/07357907.2025.2520610"
+    target="_blank"
+    rel="noopener noreferrer">
+
+    DOI
+
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2">
+
+      <path d="M7 17L17 7"></path>
+      <path d="M7 7h10v10"></path>
+
+    </svg>
+
+  </a>
+
+</article>
+
+
+
+<article
+  class="publication-card reveal"
+  data-year="2025"
+  data-search="pmfhnet parallel maxout feed harmonic network road anomaly object detection adas low light imaging science journal taylor francis">
+
+
+  <div class="publication-year">
+    2025
+  </div>
+
+
+  <div>
+
+    <h2 class="publication-title">
+
+      PMFHNet: Parallel Maxout Feed Harmonic Network for
+      Road Anomaly Object Detection in ADAS Under
+      Low Light Conditions
+
+    </h2>
+
+
+    <div class="publication-journal">
+      The Imaging Science Journal
+    </div>
+
+
+    <div class="publication-publisher">
+
+      <span class="publisher-label">
+        Publisher
+      </span>
+
+      <strong class="publisher-name">
+        Taylor & Francis
+      </strong>
+
+    </div>
+
+
+    <div class="publication-metrics">
+
+      <span class="metric quartile">
+        Q2
+      </span>
+
+      <span class="metric">
+        SJR 0.321
+      </span>
+
+      <span class="metric snip">
+        SNIP 0.422
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <a
+    class="doi-link"
+    href="https://doi.org/10.1080/13682199.2025.2599711"
+    target="_blank"
+    rel="noopener noreferrer">
+
+    DOI
+
+    <svg viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="2">
+
+      <path d="M7 17L17 7"></path>
+      <path d="M7 7h10v10"></path>
+
+    </svg>
+
+  </a>
+
+</article>
+
+
+
+<article
+  class="publication-card reveal"
+  data-year="2025"
+  data-search="deep learning energy prediction tangent search remora optimization secure multi path data communication wsn network computation neural systems taylor francis">
+
+
+  <div class="publication-year">
+    2025
+  </div>
+
+
+  <div>
+
+    <h2 class="publication-title">
+
+      Deep Learning-Based Energy Prediction and Tangent
+      Search Remora Optimization-Based Secure Multi-Path
+      Data Communication Mechanism in WSN
+
+    </h2>
+
+
+    <div class="publication-journal">
+      Network: Computation in Neural Systems
+    </div>
+
+
+    <div class="publication-publisher">
+
+      <span class="publisher-label">
+        Publisher
+      </span>
+
+      <strong class="publisher-name">
+        Taylor & Francis
+      </strong>
+
+    </div>
+
+
+    <div class="publication-metrics">
+
+      <span class="metric quartile">
+        Q4
+      </span>
+
+      <span class="metric">
+        SJR 0.290
+      </span>
+
+      <span class="metric snip">
+        SNIP 0.510
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <a
+    class="doi-link"
+    href="https://doi.org/10.1080/0954898X.2024.2393750"
+    target="_blank"
+    rel="noopener noreferrer">
+
+    DOI
+
+    <svg viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="2">
+
+      <path d="M7 17L17 7"></path>
+      <path d="M7 7h10v10"></path>
+
+    </svg>
+
+  </a>
+
+</article>
+
+
+
+<article
+  class="publication-card reveal"
+  data-year="2025"
+  data-search="decentralized control design uav swarms communication discover applied sciences springer">
+
+
+  <div class="publication-year">
+    2025
+  </div>
+
+
+  <div>
+
+    <h2 class="publication-title">
+
+      Decentralized Control Design for UAV Swarms Communication
+
+    </h2>
+
+
+    <div class="publication-journal">
+      Discover Applied Sciences
+    </div>
+
+
+    <div class="publication-publisher">
+
+      <span class="publisher-label">
+        Publisher
+      </span>
+
+      <strong class="publisher-name">
+        Springer Nature
+      </strong>
+
+    </div>
+
+
+    <div class="publication-metrics">
+
+      <span class="metric quartile">
+        Q2
+      </span>
+
+      <span class="metric">
+        SJR 0.573
+      </span>
+
+      <span class="metric snip">
+        SNIP 0.990
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <a
+    class="doi-link"
+    href="https://doi.org/10.1007/s42452-024-06408-w"
+    target="_blank"
+    rel="noopener noreferrer">
+
+    DOI
+
+    <svg viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="2">
+
+      <path d="M7 17L17 7"></path>
+      <path d="M7 7h10v10"></path>
+
+    </svg>
+
+  </a>
+
+</article>
+
+
+
+<article
+  class="publication-card reveal"
+  data-year="2025"
+  data-search="stress eeg heart rate fire hawk graph probabilistic spiking attention neural network idciot ieee conference">
+
+
+  <div class="publication-year">
+    2025
+  </div>
+
+
+  <div>
+
+    <h2 class="publication-title">
+
+      Detecting Early-Stage Stress Levels Using EEG and
+      Heart Rate Monitoring with Enhanced Sparse Fire Hawk
+      Graph Probabilistic Spiking Attention Neural Network
+
+    </h2>
+
+
+    <div class="publication-journal">
+      IEEE IDCIoT Conference
+    </div>
+
+
+    <div class="publication-publisher">
+
+      <span class="publisher-label">
+        Publisher
+      </span>
+
+      <strong class="publisher-name">
+        IEEE
+      </strong>
+
+    </div>
+
+
+    <div class="publication-metrics">
+
+      <span class="metric type">
+        Conference Paper
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <a
+    class="doi-link"
+    href="https://doi.org/10.1109/IDCIOT64235.2025.10915029"
+    target="_blank"
+    rel="noopener noreferrer">
+
+    DOI
+
+    <svg viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="2">
+
+      <path d="M7 17L17 7"></path>
+      <path d="M7 7h10v10"></path>
+
+    </svg>
+
+  </a>
+
+</article>
+
+
+
+<!-- =======================================================
+     2024
+======================================================= -->
+
+<article
+  class="publication-card reveal"
+  data-year="2024"
+  data-search="fanet communication qos optimized location aided routing protocol ieee icosec ieee">
+
+
+  <div class="publication-year">
+    2024
+  </div>
+
+
+  <div>
+
+    <h2 class="publication-title">
+
+      Improving FANET Communication with a QoS Optimized
+      Location-Aided Routing Protocol
+
+    </h2>
+
+
+    <div class="publication-journal">
+      IEEE ICOSEC Conference
+    </div>
+
+
+    <div class="publication-publisher">
+
+      <span class="publisher-label">
+        Publisher
+      </span>
+
+      <strong class="publisher-name">
+        IEEE
+      </strong>
+
+    </div>
+
+
+    <div class="publication-metrics">
+
+      <span class="metric type">
+        Conference Paper
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <a
+    class="doi-link"
+    href="https://doi.org/10.1109/ICOSEC61587.2024.10722211"
+    target="_blank"
+    rel="noopener noreferrer">
+
+    DOI
+
+    <svg viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="2">
+
+      <path d="M7 17L17 7"></path>
+      <path d="M7 7h10v10"></path>
+
+    </svg>
+
+  </a>
+
+</article>
+
+
+
+<article
+  class="publication-card reveal"
+  data-year="2024"
+  data-search="wearable antenna optimized multi band wireless systems applications ieee i4c ieee">
+
+
+  <div class="publication-year">
+    2024
+  </div>
+
+
+  <div>
+
+    <h2 class="publication-title">
+
+      Next-Generation Wearable Antenna: Optimized
+      Multi-Band Performance for Advanced Wireless Systems
+      and Applications
+
+    </h2>
+
+
+    <div class="publication-journal">
+      IEEE I4C Conference
+    </div>
+
+
+    <div class="publication-publisher">
+
+      <span class="publisher-label">
+        Publisher
+      </span>
+
+      <strong class="publisher-name">
+        IEEE
+      </strong>
+
+    </div>
+
+
+    <div class="publication-metrics">
+
+      <span class="metric type">
+        Conference Paper
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <a
+    class="doi-link"
+    href="https://doi.org/10.1109/I4C62240.2024.10748486"
+    target="_blank"
+    rel="noopener noreferrer">
+
+    DOI
+
+    <svg viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="2">
+
+      <path d="M7 17L17 7"></path>
+      <path d="M7 7h10v10"></path>
+
+    </svg>
+
+  </a>
+
+</article>
+
+
+
+<!-- =======================================================
+     2023
+======================================================= -->
+
+<article
+  class="publication-card reveal"
+  data-year="2023"
+  data-search="hy lstm time series deep learning pedestrian cross adas journal visual communication image representation elsevier">
+
+
+  <div class="publication-year">
+    2023
+  </div>
+
+
+  <div>
+
+    <h2 class="publication-title">
+
+      HY-LSTM: New Time Series Deep Learning Architecture
+      for Estimation of Pedestrian Time to Cross in ADAS
+
+    </h2>
+
+
+    <div class="publication-journal">
+
+      Journal of Visual Communication and Image Representation
+
+    </div>
+
+
+    <div class="publication-publisher">
+
+      <span class="publisher-label">
+        Publisher
+      </span>
+
+      <strong class="publisher-name">
+        Elsevier
+      </strong>
+
+    </div>
+
+
+    <div class="publication-metrics">
+
+      <span class="metric quartile">
+        Q1
+      </span>
+
+      <span class="metric">
+        SJR 0.573
+      </span>
+
+      <span class="metric snip">
+        SNIP 0.919
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <a
+    class="doi-link"
+    href="https://doi.org/10.1016/j.jvcir.2023.103982"
+    target="_blank"
+    rel="noopener noreferrer">
+
+    DOI
+
+    <svg viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="2">
+
+      <path d="M7 17L17 7"></path>
+      <path d="M7 7h10v10"></path>
+
+    </svg>
+
+  </a>
+
+</article>
+
+
+
+<article
+  class="publication-card reveal"
+  data-year="2023"
+  data-search="deepdrive braking decision optimized gan deep cnn adas engineering applications artificial intelligence elsevier">
+
+
+  <div class="publication-year">
+    2023
+  </div>
+
+
+  <div>
+
+    <h2 class="publication-title">
+
+      DeepDrive: Braking Decision-Making Approach Using
+      Optimized GAN and Deep CNN for ADAS
+
+    </h2>
+
+
+    <div class="publication-journal">
+
+      Engineering Applications of Artificial Intelligence
+
+    </div>
+
+
+    <div class="publication-publisher">
+
+      <span class="publisher-label">
+        Publisher
+      </span>
+
+      <strong class="publisher-name">
+        Elsevier
+      </strong>
+
+    </div>
+
+
+    <div class="publication-metrics">
+
+      <span class="metric quartile">
+        Q1
+      </span>
+
+      <span class="metric">
+        SJR 1.782
+      </span>
+
+      <span class="metric snip">
+        SNIP 2.067
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <a
+    class="doi-link"
+    href="https://doi.org/10.1016/j.engappai.2023.106111"
+    target="_blank"
+    rel="noopener noreferrer">
+
+    DOI
+
+    <svg viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="2">
+
+      <path d="M7 17L17 7"></path>
+      <path d="M7 7h10v10"></path>
+
+    </svg>
+
+  </a>
+
+</article>
+
+
+
+<article
+  class="publication-card reveal"
+  data-year="2023"
+  data-search="bio inspired robot arm machine learning robot vision ieee iccams ieee">
+
+
+  <div class="publication-year">
+    2023
+  </div>
+
+
+  <div>
+
+    <h2 class="publication-title">
+
+      Design and Implementation of a Bio-Inspired Robot Arm:
+      Machine Learning, Robot Vision
+
+    </h2>
+
+
+    <div class="publication-journal">
+      IEEE ICCAMS Conference
+    </div>
+
+
+    <div class="publication-publisher">
+
+      <span class="publisher-label">
+        Publisher
+      </span>
+
+      <strong class="publisher-name">
+        IEEE
+      </strong>
+
+    </div>
+
+
+    <div class="publication-metrics">
+
+      <span class="metric type">
+        Conference Paper
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <a
+    class="doi-link"
+    href="https://doi.org/10.1109/ICCAMS60113.2023.10526171"
+    target="_blank"
+    rel="noopener noreferrer">
+
+    DOI
+
+    <svg viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="2">
+
+      <path d="M7 17L17 7"></path>
+      <path d="M7 7h10v10"></path>
+
+    </svg>
+
+  </a>
+
+</article>
+
+
+
+<!-- =======================================================
+     2022
+======================================================= -->
+
+<article
+  class="publication-card reveal"
+  data-year="2022"
+  data-search="rbordernet rider border collie optimization deep cnn road scene segmentation road intersection classification digital signal processing elsevier">
+
+
+  <div class="publication-year">
+    2022
+  </div>
+
+
+  <div>
+
+    <h2 class="publication-title">
+
+      RBorderNet: Rider Border Collie Optimization-Based
+      Deep CNN for Road Scene Segmentation and Road
+      Intersection Classification
+
+    </h2>
+
+
+    <div class="publication-journal">
+      Digital Signal Processing
+    </div>
+
+
+    <div class="publication-publisher">
+
+      <span class="publisher-label">
+        Publisher
+      </span>
+
+      <strong class="publisher-name">
+        Elsevier
+      </strong>
+
+    </div>
+
+
+    <div class="publication-metrics">
+
+      <span class="metric quartile">
+        Q2
+      </span>
+
+      <span class="metric">
+        SJR 0.704
+      </span>
+
+      <span class="metric snip">
+        SNIP 1.195
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <a
+    class="doi-link"
+    href="https://doi.org/10.1016/j.dsp.2022.103626"
+    target="_blank"
+    rel="noopener noreferrer">
+
+    DOI
+
+    <svg viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="2">
+
+      <path d="M7 17L17 7"></path>
+      <path d="M7 7h10v10"></path>
+
+    </svg>
+
+  </a>
+
+</article>
+
+
+
+<!-- =======================================================
+     2021
+======================================================= -->
+
+<article
+  class="publication-card reveal"
+  data-year="2021"
+  data-search="detection localization abnormalities surveillance video timerider neural network computer journal oxford university press">
+
+
+  <div class="publication-year">
+    2021
+  </div>
+
+
+  <div>
+
+    <h2 class="publication-title">
+
+      Detection and Localization of Abnormalities in
+      Surveillance Video Using Timerider-Based Neural Network
+
+    </h2>
+
+
+    <div class="publication-journal">
+      The Computer Journal
+    </div>
+
+
+    <div class="publication-publisher">
+
+      <span class="publisher-label">
+        Publisher
+      </span>
+
+      <strong class="publisher-name">
+        Oxford University Press
+      </strong>
+
+    </div>
+
+
+    <div class="publication-metrics">
+
+      <span class="metric quartile">
+        Q2
+      </span>
+
+      <span class="metric">
+        SJR 0.441
+      </span>
+
+      <span class="metric snip">
+        SNIP 0.880
+      </span>
+
+      <span class="metric abdc">
+        ABS 2
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <a
+    class="doi-link"
+    href="https://doi.org/10.1093/comjnl/bxab002"
+    target="_blank"
+    rel="noopener noreferrer">
+
+    DOI
+
+    <svg viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="2">
+
+      <path d="M7 17L17 7"></path>
+      <path d="M7 7h10v10"></path>
+
+    </svg>
+
+  </a>
+
+</article>
+
+
+
+<!-- =======================================================
+     2020
+======================================================= -->
+
+<article
+  class="publication-card reveal"
+  data-year="2020"
+  data-search="deepjoint segmentation glioma tumour multimodal mri iet image processing wiley">
+
+
+  <div class="publication-year">
+    2020
+  </div>
+
+
+  <div>
+
+    <h2 class="publication-title">
+
+      DeepJoint Segmentation for Classification of
+      Severity-Levels of Glioma Tumour Using Multimodal MRI Images
+
+    </h2>
+
+
+    <div class="publication-journal">
+      IET Image Processing
+    </div>
+
+
+    <div class="publication-publisher">
+
+      <span class="publisher-label">
+        Publisher
+      </span>
+
+      <strong class="publisher-name">
+        Wiley / IET
+      </strong>
+
+    </div>
+
+
+    <div class="publication-metrics">
+
+      <span class="metric quartile">
+        Q2
+      </span>
+
+      <span class="metric">
+        SJR 0.569
+      </span>
+
+      <span class="metric snip">
+        SNIP 1.167
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <a
+    class="doi-link"
+    href="https://doi.org/10.1049/iet-ipr.2018.6682"
+    target="_blank"
+    rel="noopener noreferrer">
+
+    DOI
+
+    <svg viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="2">
+
+      <path d="M7 17L17 7"></path>
+      <path d="M7 7h10v10"></path>
+
+    </svg>
+
+  </a>
+
+</article>
+
+
+
+<article
+  class="publication-card reveal"
+  data-year="2020"
+  data-search="multiclassifier severity level glioma tumors multimodal mri brain images international journal imaging systems technology wiley">
+
+
+  <div class="publication-year">
+    2020
+  </div>
+
+
+  <div>
+
+    <h2 class="publication-title">
+
+      Multiclassifier for Severity-Level Categorization of
+      Glioma Tumors Using Multimodal MRI Brain Images
+
+    </h2>
+
+
+    <div class="publication-journal">
+
+      International Journal of Imaging Systems and Technology
+
+    </div>
+
+
+    <div class="publication-publisher">
+
+      <span class="publisher-label">
+        Publisher
+      </span>
+
+      <strong class="publisher-name">
+        Wiley
+      </strong>
+
+    </div>
+
+
+    <div class="publication-metrics">
+
+      <span class="metric quartile">
+        Q2
+      </span>
+
+      <span class="metric">
+        SJR 0.601
+      </span>
+
+      <span class="metric snip">
+        SNIP 0.838
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <a
+    class="doi-link"
+    href="https://doi.org/10.1002/ima.22357"
+    target="_blank"
+    rel="noopener noreferrer">
+
+    DOI
+
+    <svg viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="2">
+
+      <path d="M7 17L17 7"></path>
+      <path d="M7 7h10v10"></path>
+
+    </svg>
+
+  </a>
+
+</article>
+
+
+
+<article
+  class="publication-card reveal"
+  data-year="2020"
+  data-search="workflow scheduling moth swarm optimization cloud computing multimedia research">
+
+
+  <div class="publication-year">
+    2020
+  </div>
+
+
+  <div>
+
+    <h2 class="publication-title">
+
+      Workflow Scheduling Using Improved Moth Swarm
+      Optimization Algorithm in Cloud Computing
+
+    </h2>
+
+
+    <div class="publication-journal">
+      Multimedia Research
+    </div>
+
+
+    <div class="publication-publisher">
+
+      <span class="publisher-label">
+        Publisher
+      </span>
+
+      <strong class="publisher-name">
+        Multimedia Research
+      </strong>
+
+    </div>
+
+
+    <div class="publication-metrics">
+
+      <span class="metric type">
+        Research Article
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <a
+    class="doi-link"
+    href="https://doi.org/10.46253/j.mr.v3i3.a5"
+    target="_blank"
+    rel="noopener noreferrer">
+
+    DOI
+
+    <svg viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="2">
+
+      <path d="M7 17L17 7"></path>
+      <path d="M7 7h10v10"></path>
+
+    </svg>
+
+  </a>
+
+</article>
+
+
+
+<!-- =======================================================
+     2018
+======================================================= -->
+
+<article
+  class="publication-card reveal"
+  data-year="2018"
+  data-search="evolutionary intelligence brain tumor recognition mri critical study review springer">
+
+
+  <div class="publication-year">
+    2018
+  </div>
+
+
+  <div>
+
+    <h2 class="publication-title">
+
+      Evolutionary Intelligence for Brain Tumor Recognition
+      from MRI Images: A Critical Study and Review
+
+    </h2>
+
+
+    <div class="publication-journal">
+      Evolutionary Intelligence
+    </div>
+
+
+    <div class="publication-publisher">
+
+      <span class="publisher-label">
+        Publisher
+      </span>
+
+      <strong class="publisher-name">
+        Springer Nature
+      </strong>
+
+    </div>
+
+
+    <div class="publication-metrics">
+
+      <span class="metric quartile">
+        Q1
+      </span>
+
+      <span class="metric">
+        SJR 0.700
+      </span>
+
+      <span class="metric snip">
+        SNIP 0.543
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <a
+    class="doi-link"
+    href="https://doi.org/10.1007/s12065-018-0156-2"
+    target="_blank"
+    rel="noopener noreferrer">
+
+    DOI
+
+    <svg viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="2">
+
+      <path d="M7 17L17 7"></path>
+      <path d="M7 7h10v10"></path>
+
+    </svg>
+
+  </a>
+
+</article>
+
+
+</div>
+
+
+<!-- NO RESULTS -->
+
+<div
+  class="no-results"
+  id="noResults">
+
+  <strong>
+    No publications found
+  </strong>
+
+  Try another keyword or publication year.
+
+</div>
+
+
+<!-- METRIC NOTE -->
+
+<div class="metric-note">
+
+  <strong>Publication metrics:</strong>
+  Journal-level indicators such as SJR and SNIP are shown
+  where available. Conference papers and book chapters remain
+  part of the publication record, but no SNIP field is displayed
+  where a journal-level SNIP does not apply.
+
+</div>
+
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+<div class="container footer-main">
+
+
+<div class="footer-brand">
+
+  <h3>
+    Dr. K. Michael Mahesh
+  </h3>
+
+  <p>
+    Professor and AI researcher working across Artificial
+    Intelligence, Deep Learning, Computer Vision,
+    Medical Imaging, ADAS and intelligent systems.
+  </p>
+
+</div>
+
+
+<div class="footer-column">
+
+  <h4>
+    Explore
+  </h4>
+
+  <a href="research.html">
+    Research
+  </a>
+
+  <a href="projects.html">
+    Projects
+  </a>
+
+  <a href="learning.html">
+    Learning
+  </a>
+
+  <a href="publications.html">
+    Publications
+  </a>
+
+</div>
+
+
+<div class="footer-column">
+
+  <h4>
+    Academic
+  </h4>
+
+  <a href="about.html">
+    About Me
+  </a>
+
+  <a href="learning.html">
+    Teaching Materials
+  </a>
+
+  <a
+    href="https://scholar.google.com/citations?user=YxDQyvIAAAAJ&hl=en"
+    target="_blank"
+    rel="noopener noreferrer">
+
+    Google Scholar
+
+  </a>
+
+  <a
+    href="https://orcid.org/0000-0002-9948-5743"
+    target="_blank"
+    rel="noopener noreferrer">
+
+    ORCID
+
+  </a>
+
+</div>
+
+
+<div class="footer-column">
+
+  <h4>
+    Connect
+  </h4>
+
+  <a
+    href="https://github.com/michaelmahesh"
+    target="_blank"
+    rel="noopener noreferrer">
+
+    GitHub
+
+  </a>
+
+  <a
+    href="https://www.linkedin.com/in/michaelmahesh"
+    target="_blank"
+    rel="noopener noreferrer">
+
+    LinkedIn
+
+  </a>
+
+  <a href="mailto:michaelmaheshk@gmail.com">
+    Email
+  </a>
+
+  <a href="privacy.html">
+    Privacy
+  </a>
+
+</div>
+
+
+</div>
+
+
+<div class="container footer-bottom">
+
+  <span>
+    © <span id="currentYear"></span>
+    Dr. K. Michael Mahesh. All rights reserved.
+  </span>
+
+  <span>
+    Artificial Intelligence · Research · Teaching · Innovation
+  </span>
+
+</div>
+
+</footer>
+
+
+
+<script>
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const menuToggle =
+  document.getElementById("menuToggle");
+
+const navMenu =
+  document.getElementById("navMenu");
+
+
+if(menuToggle && navMenu){
+
+  menuToggle.addEventListener(
+    "click",
+    () => {
+
+      const open =
+        navMenu.classList.toggle("open");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        open ? "true" : "false"
+      );
+
+    }
+  );
+
+
+  navMenu
+    .querySelectorAll("a")
+    .forEach(link => {
+
+      link.addEventListener(
+        "click",
+        () => {
+
+          navMenu.classList.remove("open");
+
+          menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        }
+      );
+
+    });
+
+
+  document.addEventListener(
+    "click",
+    event => {
+
+      if(
+        !navMenu.contains(event.target) &&
+        !menuToggle.contains(event.target)
+      ){
+
+        navMenu.classList.remove("open");
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+      }
+
+    }
+  );
+
+}
+
+
+/* =========================================================
+   SEARCH + YEAR FILTER
+========================================================= */
+
+const searchInput =
+  document.getElementById(
+    "publicationSearch"
+  );
+
+const yearFilter =
+  document.getElementById(
+    "yearFilter"
+  );
+
+const publicationCards =
+  Array.from(
+    document.querySelectorAll(
+      ".publication-card"
+    )
+  );
+
+const publicationCount =
+  document.getElementById(
+    "publicationCount"
+  );
+
+const noResults =
+  document.getElementById(
+    "noResults"
+  );
+
+
+function filterPublications(){
+
+  const searchTerm =
+    searchInput.value
+      .trim()
+      .toLowerCase();
+
+  const selectedYear =
+    yearFilter.value;
+
+  let visibleCount = 0;
+
+
+  publicationCards.forEach(card => {
+
+    const text =
+      card.dataset.search
+        .toLowerCase();
+
+    const year =
+      card.dataset.year;
+
+
+    const matchesSearch =
+      !searchTerm ||
+      text.includes(searchTerm);
+
+
+    const matchesYear =
+      selectedYear === "all" ||
+      year === selectedYear;
+
+
+    const show =
+      matchesSearch &&
+      matchesYear;
+
+
+    card.style.display =
+      show ? "grid" : "none";
+
+
+    if(show){
+      visibleCount++;
+    }
+
+  });
+
+
+  publicationCount.textContent =
+    `Showing ${visibleCount} publication${visibleCount === 1 ? "" : "s"}`;
+
+
+  noResults.style.display =
+    visibleCount === 0
+      ? "block"
+      : "none";
+
+}
+
+
+searchInput.addEventListener(
+  "input",
+  filterPublications
+);
+
+
+yearFilter.addEventListener(
+  "change",
+  filterPublications
+);
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const revealElements =
+  document.querySelectorAll(".reveal");
+
+
+const reducedMotion =
+  window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+
+if(
+  "IntersectionObserver" in window &&
+  !reducedMotion
+){
+
+  const observer =
+    new IntersectionObserver(
+      entries => {
+
+        entries.forEach(entry => {
+
+          if(entry.isIntersecting){
+
+            entry.target
+              .classList
+              .add("visible");
+
+            observer.unobserve(
+              entry.target
+            );
+
+          }
+
+        });
+
+      },
+      {
+        threshold:.08
+      }
+    );
+
+
+  revealElements.forEach(
+    element =>
+      observer.observe(element)
+  );
+
+}
+else{
+
+  revealElements.forEach(
+    element =>
+      element.classList.add("visible")
+  );
+
+}
+
+
+/* =========================================================
+   YEAR
+========================================================= */
+
+document.getElementById(
+  "currentYear"
+).textContent =
+  new Date().getFullYear();
+
+
+/* =========================================================
+   ESCAPE
+========================================================= */
+
+document.addEventListener(
+  "keydown",
+  event => {
+
+    if(event.key === "Escape"){
+
+      navMenu?.classList.remove(
+        "open"
+      );
+
+      menuToggle?.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+    }
+
+  }
+);
+
+</script>
+
+</body>
+</html>
