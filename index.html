@@ -1,1978 +1,2616 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Dr. K. Michael Mahesh | Professor · Artificial Intelligence</title>
+  <meta charset="UTF-8">
 
-<meta name="description" content="Official academic website of Dr. K. Michael Mahesh — Professor, AI Researcher, Computer Vision specialist and Ph.D. Supervisor.">
-<meta name="keywords" content="Dr Michael Mahesh, Artificial Intelligence, Computer Vision, Deep Learning, Machine Learning, Image Processing, Generative AI, Medical AI, ADAS, Professor">
-<meta name="author" content="Dr. K. Michael Mahesh">
-<meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
 
-<link rel="canonical" href="https://michaelmahesh.github.io/">
+  <meta
+    name="description"
+    content="Dr. K. Michael Mahesh — Professor, Artificial Intelligence researcher, Computer Vision, Deep Learning, Medical AI and intelligent systems."
+  >
 
-<meta property="og:title" content="Dr. K. Michael Mahesh | Professor · Artificial Intelligence">
-<meta property="og:description" content="Professor, AI Researcher and Computer Vision specialist working across Deep Learning, Medical AI, Image Processing, Generative AI and Intelligent Systems.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://michaelmahesh.github.io/">
-<meta property="og:image" content="https://michaelmahesh.github.io/profile.jpg">
+  <meta name="author" content="Dr. K. Michael Mahesh">
 
-<meta name="theme-color" content="#FFFFFF">
+  <title>Dr. K. Michael Mahesh | Professor · Artificial Intelligence</title>
 
-<link rel="icon" type="image/jpeg" href="profile.jpg">
+  <script async
+     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6687646879167326"
+     crossorigin="anonymous"></script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SL2GKJ42ES"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SL2GKJ42ES');
+   </script>
 
-<!-- Google AdSense -->
-<script async
-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6687646879167326"
-crossorigin="anonymous"></script>
 
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SL2GKJ42ES"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-SL2GKJ42ES');
-</script>
+  <style>
 
+    /* =========================================================
+       DESIGN TOKENS
+       ========================================================= */
 
-<style>
+    :root {
 
-/* =========================================================
-   ROOT
-========================================================= */
+      --white: #ffffff;
 
-:root{
-    --white:#ffffff;
-    --background:#f7faff;
-    --blue:#1d4ed8;
-    --blue-light:#eff6ff;
-    --navy:#0f172a;
-    --text:#334155;
-    --muted:#64748b;
-    --border:#e2e8f0;
+      --background: #f7faff;
+      --surface: #ffffff;
+      --surface-soft: #f8fbff;
 
-    --purple:#7c3aed;
-    --orange:#ea580c;
-    --green:#059669;
-    --cyan:#0891b2;
+      --blue: #1d4ed8;
+      --blue-dark: #173ea5;
+      --blue-light: #3b82f6;
 
-    --shadow:0 12px 34px rgba(15,23,42,.055);
+      --blue-soft: #eff6ff;
+      --blue-border: #dbeafe;
 
-    --max-width:1220px;
-}
+      --navy: #0f172a;
+      --text: #334155;
+      --muted: #64748b;
 
+      --border: #e2e8f0;
 
-/* =========================================================
-   RESET
-========================================================= */
+      --cyan: #0891b2;
+      --purple: #7c3aed;
+      --orange: #ea580c;
+      --green: #059669;
 
-*{
-    box-sizing:border-box;
-}
+      --radius: 18px;
 
-html{
-    scroll-behavior:smooth;
-}
+      --shadow:
+        0 10px 30px rgba(15, 23, 42, 0.06);
 
-body{
-    margin:0;
-    background:var(--white);
-    color:var(--text);
-    font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-    line-height:1.65;
-}
+      --shadow-hover:
+        0 18px 42px rgba(15, 23, 42, 0.10);
 
-a{
-    color:inherit;
-    text-decoration:none;
-}
+      --max-width: 1180px;
 
-img{
-    display:block;
-    max-width:100%;
-}
+      --header-height: 76px;
+      --ticker-height: 38px;
 
-.container{
-    width:min(var(--max-width),calc(100% - 40px));
-    margin:auto;
-}
-
-
-/* =========================================================
-   HEADER
-========================================================= */
-
-.site-header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-
-    background:rgba(255,255,255,.96);
-
-    backdrop-filter:blur(14px);
-
-    border-bottom:1px solid var(--border);
-}
-
-.nav{
-    height:74px;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    gap:24px;
-}
-
-
-/* Brand */
-
-.brand{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.brand-mark{
-    width:40px;
-    height:40px;
-
-    display:grid;
-    place-items:center;
-
-    border-radius:11px;
-
-    background:var(--blue);
-    color:#ffffff;
-
-    font-weight:800;
-    font-size:14px;
-}
-
-.brand-copy strong{
-    display:block;
-
-    font-family:"Space Grotesk",sans-serif;
-
-    color:var(--navy);
-
-    font-size:16px;
-    line-height:1.1;
-}
-
-.brand-copy span{
-    display:block;
-
-    margin-top:4px;
-
-    color:var(--muted);
-
-    font-size:10px;
-    font-weight:700;
-
-    letter-spacing:.1em;
-}
-
-
-/* Navigation */
-
-.nav-links{
-    display:flex;
-    align-items:center;
-    gap:25px;
-}
-
-.nav-links a{
-    font-size:14px;
-    font-weight:600;
-
-    color:#475569;
-
-    transition:
-        color .2s ease,
-        transform .2s ease;
-}
-
-.nav-links a:hover{
-    color:var(--blue);
-}
-
-.nav-links .nav-cta{
-    padding:9px 14px;
-
-    border-radius:10px;
-
-    background:var(--blue);
-
-    color:#ffffff;
-}
-
-.nav-links .nav-cta:hover{
-    color:#ffffff;
-    transform:translateY(-1px);
-}
-
-
-/* Mobile menu */
-
-.menu-toggle{
-    display:none;
-
-    border:0;
-    background:none;
-
-    font-size:25px;
-
-    color:var(--navy);
-
-    cursor:pointer;
-}
-
-
-/* =========================================================
-   WHAT'S NEW
-========================================================= */
-
-.whats-new{
-    overflow:hidden;
-
-    border-bottom:1px solid var(--border);
-
-    background:var(--blue-light);
-}
-
-.news-track{
-    display:flex;
-
-    width:max-content;
-
-    animation:
-        news-scroll 32s linear infinite;
-}
-
-.news-line{
-    min-height:38px;
-
-    display:flex;
-    align-items:center;
-
-    gap:34px;
-
-    padding-right:34px;
-
-    white-space:nowrap;
-
-    color:#31507c;
-
-    font-size:12px;
-    font-weight:600;
-}
-
-.news-line b{
-    color:var(--blue);
-
-    font-size:10px;
-
-    letter-spacing:.08em;
-}
-
-.news-dot{
-    width:4px;
-    height:4px;
-
-    display:inline-block;
-
-    border-radius:50%;
-
-    background:#93c5fd;
-}
-
-@keyframes news-scroll{
-
-    from{
-        transform:translateX(0);
+      --total-top-space: 114px;
     }
 
-    to{
-        transform:translateX(-50%);
+
+    /* =========================================================
+       RESET
+       ========================================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-}
+
+    html {
+      scroll-behavior: smooth;
+    }
 
 
-/* =========================================================
-   HERO
-========================================================= */
+    body {
 
-.hero{
-    background:
-        linear-gradient(
-            180deg,
-            #ffffff 0%,
-            #f7faff 100%
+      padding-top: var(--total-top-space);
+
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      background: var(--background);
+
+      color: var(--text);
+
+      line-height: 1.6;
+
+      overflow-x: hidden;
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    button {
+      font: inherit;
+    }
+
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+
+    .container {
+
+      width:
+        min(
+          var(--max-width),
+          calc(100% - 40px)
         );
 
-    padding:76px 0 72px;
-
-    border-bottom:1px solid var(--border);
-}
-
-.hero-grid{
-    display:grid;
-
-    grid-template-columns:1.08fr .92fr;
-
-    align-items:center;
-
-    gap:70px;
-}
+      margin-inline: auto;
+    }
 
 
-/* Eyebrow */
+    /* =========================================================
+       FIXED HEADER
+       ========================================================= */
 
-.eyebrow{
-    display:inline-flex;
+    .site-header {
 
-    align-items:center;
+      position: fixed;
 
-    gap:8px;
+      top: 0;
+      left: 0;
+      right: 0;
 
-    color:var(--blue);
+      z-index: 2000;
 
-    font-size:12px;
+      height: var(--header-height);
 
-    font-weight:800;
+      background:
+        rgba(255, 255, 255, 0.97);
 
-    letter-spacing:.11em;
+      border-bottom:
+        1px solid var(--border);
 
-    text-transform:uppercase;
-}
+      backdrop-filter:
+        blur(14px);
 
-.eyebrow i{
-    width:7px;
-    height:7px;
-
-    border-radius:50%;
-
-    background:var(--blue);
-
-    display:inline-block;
-}
+      -webkit-backdrop-filter:
+        blur(14px);
+    }
 
 
-/* Main heading */
+    .nav {
 
-h1{
-    margin:15px 0 18px;
+      height: var(--header-height);
 
-    max-width:760px;
+      display: flex;
 
-    font-family:"Space Grotesk",sans-serif;
+      align-items: center;
 
-    color:var(--navy);
+      justify-content: space-between;
 
-    font-size:clamp(
-        42px,
-        5.3vw,
-        72px
-    );
-
-    line-height:1.02;
-
-    letter-spacing:-.045em;
-}
-
-.hero-lead{
-    max-width:650px;
-
-    margin:0;
-
-    color:var(--muted);
-
-    font-size:17px;
-
-    line-height:1.75;
-}
-
-.hero-role{
-    margin-top:20px;
-
-    color:var(--text);
-
-    font-weight:700;
-}
-
-.hero-tagline{
-    margin-top:8px;
-
-    color:var(--blue);
-
-    font-weight:700;
-}
+      gap: 30px;
+    }
 
 
-/* Buttons */
+    /* =========================================================
+       BRAND
+       ========================================================= */
 
-.actions{
-    display:flex;
+    .brand {
 
-    flex-wrap:wrap;
+      display: flex;
 
-    gap:12px;
+      align-items: center;
 
-    margin-top:28px;
-}
+      gap: 12px;
 
-.btn{
-    display:inline-flex;
+      min-width: max-content;
+    }
 
-    align-items:center;
-    justify-content:center;
 
-    gap:8px;
+    .brand-mark {
 
-    padding:12px 17px;
+      width: 42px;
+      height: 42px;
 
-    border:1px solid var(--border);
+      display: grid;
 
-    border-radius:11px;
+      place-items: center;
 
-    font-size:13px;
+      border-radius: 12px;
 
-    font-weight:700;
+      background: var(--blue);
 
-    transition:
+      color: var(--white);
+
+      font-size: 12px;
+
+      font-weight: 800;
+
+      letter-spacing: -0.04em;
+
+      box-shadow:
+        0 6px 16px rgba(29, 78, 216, 0.15);
+    }
+
+
+    .brand-name {
+
+      color: var(--navy);
+
+      font-size: 15px;
+
+      font-weight: 800;
+
+      letter-spacing: 0.08em;
+    }
+
+
+    .brand-role {
+
+      color: var(--muted);
+
+      font-size: 11px;
+
+      margin-top: -2px;
+    }
+
+
+    /* =========================================================
+       NAVIGATION
+       ========================================================= */
+
+    .nav-links {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 4px;
+    }
+
+
+    .nav-links a {
+
+      position: relative;
+
+      padding: 9px 12px;
+
+      color: var(--muted);
+
+      font-size: 14px;
+
+      font-weight: 600;
+
+      border-radius: 9px;
+
+      transition:
+        color .2s ease,
+        background .2s ease;
+    }
+
+
+    .nav-links a:hover,
+    .nav-links a.active {
+
+      color: var(--blue);
+
+      background: var(--blue-soft);
+    }
+
+
+    .nav-connect {
+
+      margin-left: 8px;
+
+      padding:
+        10px 16px !important;
+
+      background:
+        var(--blue) !important;
+
+      color:
+        var(--white) !important;
+    }
+
+
+    .nav-connect:hover {
+
+      background:
+        var(--blue-dark) !important;
+    }
+
+
+    /* =========================================================
+       MOBILE MENU BUTTON
+       ========================================================= */
+
+    .menu-toggle {
+
+      display: none;
+
+      width: 42px;
+      height: 42px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 10px;
+
+      background: var(--white);
+
+      color: var(--navy);
+
+      cursor: pointer;
+
+      font-size: 20px;
+
+      line-height: 1;
+
+      transition:
+        background .2s ease,
+        border-color .2s ease;
+    }
+
+
+    .menu-toggle:hover {
+
+      background:
+        var(--blue-soft);
+
+      border-color:
+        var(--blue-border);
+    }
+
+
+    /* =========================================================
+       WHAT'S NEW — FIXED TICKER
+       ========================================================= */
+
+    .whats-new {
+
+      position: fixed;
+
+      top: var(--header-height);
+
+      left: 0;
+      right: 0;
+
+      z-index: 1900;
+
+      height: var(--ticker-height);
+
+      display: flex;
+
+      align-items: center;
+
+      overflow: hidden;
+
+      background:
+        var(--navy);
+
+      color: var(--white);
+
+      border-bottom:
+        1px solid rgba(255,255,255,.08);
+    }
+
+
+    .whats-new-inner {
+
+      display: flex;
+
+      align-items: center;
+
+      min-width: max-content;
+
+      width: max-content;
+
+      will-change: transform;
+
+      animation:
+        ticker-scroll 32s linear infinite;
+    }
+
+
+    .whats-label {
+
+      display: flex;
+
+      align-items: center;
+
+      height: var(--ticker-height);
+
+      padding-right: 25px;
+
+      color:
+        #bfdbfe;
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      letter-spacing: .15em;
+
+      white-space: nowrap;
+    }
+
+
+    .ticker-items {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 28px;
+
+      white-space: nowrap;
+    }
+
+
+    .ticker-item {
+
+      color:
+        #e2e8f0;
+
+      font-size: 12px;
+
+      white-space: nowrap;
+    }
+
+
+    .ticker-item::after {
+
+      content: "→";
+
+      margin-left: 28px;
+
+      color:
+        #60a5fa;
+    }
+
+
+    @keyframes ticker-scroll {
+
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+
+    .whats-new:hover .whats-new-inner {
+
+      animation-play-state:
+        paused;
+    }
+
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+
+    .hero {
+
+      position: relative;
+
+      padding:
+        88px 0 82px;
+
+      background:
+
+        radial-gradient(
+          circle at 80% 25%,
+          rgba(219, 234, 254, .72),
+          transparent 32%
+        ),
+
+        var(--white);
+
+      border-bottom:
+        1px solid var(--border);
+
+      overflow: hidden;
+    }
+
+
+    .hero::before {
+
+      content: "";
+
+      position: absolute;
+
+      width: 340px;
+      height: 340px;
+
+      right: -180px;
+      top: 120px;
+
+      border:
+        1px solid rgba(59,130,246,.10);
+
+      border-radius: 50%;
+    }
+
+
+    .hero-grid {
+
+      position: relative;
+
+      display: grid;
+
+      grid-template-columns:
+        1.05fr .95fr;
+
+      align-items: center;
+
+      gap: 70px;
+    }
+
+
+    .eyebrow {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 9px;
+
+      padding:
+        7px 11px;
+
+      background:
+        var(--blue-soft);
+
+      color:
+        var(--blue);
+
+      border:
+        1px solid var(--blue-border);
+
+      border-radius:
+        999px;
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      letter-spacing: .12em;
+
+      text-transform:
+        uppercase;
+    }
+
+
+    .eyebrow-dot {
+
+      width: 7px;
+      height: 7px;
+
+      background:
+        var(--blue);
+
+      border-radius:
+        50%;
+
+      box-shadow:
+        0 0 0 4px rgba(29,78,216,.08);
+    }
+
+
+    .hero h1 {
+
+      margin-top: 22px;
+
+      color:
+        var(--navy);
+
+      font-size:
+        clamp(42px, 6vw, 70px);
+
+      line-height:
+        1.02;
+
+      letter-spacing:
+        -0.055em;
+    }
+
+
+    .hero h1 span {
+
+      color:
+        var(--blue);
+    }
+
+
+    .hero-subtitle {
+
+      margin-top: 20px;
+
+      color:
+        var(--text);
+
+      font-size: 20px;
+
+      font-weight: 500;
+    }
+
+
+    .hero-description {
+
+      max-width: 650px;
+
+      margin-top: 18px;
+
+      color:
+        var(--muted);
+
+      font-size: 16px;
+    }
+
+
+    .hero-actions {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+
+      margin-top: 30px;
+    }
+
+
+    /* =========================================================
+       BUTTONS
+       ========================================================= */
+
+    .button {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 9px;
+
+      padding:
+        12px 18px;
+
+      border-radius:
+        11px;
+
+      font-size: 14px;
+
+      font-weight: 750;
+
+      transition:
         transform .2s ease,
         box-shadow .2s ease,
-        background .2s ease;
-}
-
-.btn:hover{
-    transform:translateY(-2px);
-
-    box-shadow:
-        0 8px 20px rgba(15,23,42,.08);
-}
-
-.btn-primary{
-    background:var(--blue);
-
-    border-color:var(--blue);
-
-    color:#ffffff;
-}
-
-.btn-secondary{
-    background:#ffffff;
-
-    color:var(--navy);
-}
-
-
-/* Hero image */
-
-.hero-visual{
-    display:flex;
-
-    justify-content:center;
-}
-
-.photo-frame{
-    position:relative;
-
-    width:min(410px,100%);
-
-    padding:10px;
-
-    background:#ffffff;
-
-    border:1px solid var(--border);
-
-    border-radius:24px;
-
-    box-shadow:var(--shadow);
-
-    animation:
-        hero-photo-in .7s ease both;
-}
-
-.photo-frame img{
-    width:100%;
-
-    aspect-ratio:4 / 5;
-
-    object-fit:cover;
-
-    border-radius:17px;
-
-    background:var(--blue-light);
-}
-
-.photo-label{
-    position:absolute;
-
-    left:24px;
-    bottom:24px;
-
-    padding:9px 12px;
-
-    background:rgba(255,255,255,.95);
-
-    border:1px solid var(--border);
-
-    border-radius:11px;
-
-    box-shadow:
-        0 8px 24px rgba(15,23,42,.08);
-}
-
-.photo-label strong{
-    display:block;
-
-    color:var(--navy);
-
-    font-size:12px;
-}
-
-.photo-label span{
-    display:block;
-
-    margin-top:2px;
-
-    color:var(--muted);
-
-    font-size:10px;
-}
-
-@keyframes hero-photo-in{
-
-    from{
-        opacity:0;
-        transform:translateY(12px);
+        background .2s ease,
+        border-color .2s ease;
     }
 
-    to{
-        opacity:1;
-        transform:none;
+
+    .button:hover {
+
+      transform:
+        translateY(-2px);
     }
 
-}
+
+    .button-primary {
+
+      background:
+        var(--blue);
+
+      color:
+        var(--white);
+
+      box-shadow:
+        0 8px 20px rgba(29,78,216,.18);
+    }
 
 
-/* =========================================================
-   SECTIONS
-========================================================= */
+    .button-primary:hover {
 
-.section{
-    padding:82px 0;
-}
+      background:
+        var(--blue-dark);
 
-.section-soft{
-    background:var(--background);
-}
-
-.section-head{
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:end;
-
-    gap:30px;
-
-    margin-bottom:30px;
-}
-
-.kicker{
-    color:var(--blue);
-
-    font-size:11px;
-
-    font-weight:800;
-
-    letter-spacing:.12em;
-
-    text-transform:uppercase;
-}
-
-h2{
-    margin:6px 0 0;
-
-    font-family:"Space Grotesk",sans-serif;
-
-    color:var(--navy);
-
-    font-size:clamp(
-        30px,
-        3.5vw,
-        44px
-    );
-
-    line-height:1.1;
-
-    letter-spacing:-.035em;
-}
-
-.section-intro{
-    max-width:600px;
-
-    margin:9px 0 0;
-
-    color:var(--muted);
-
-    font-size:14px;
-}
-
-.view-all{
-    white-space:nowrap;
-
-    color:var(--blue);
-
-    font-size:13px;
-
-    font-weight:800;
-
-    transition:
-        transform .2s ease;
-}
-
-.view-all:hover{
-    transform:translateX(3px);
-}
+      box-shadow:
+        0 12px 25px rgba(29,78,216,.22);
+    }
 
 
-/* =========================================================
-   EXPLORE TOPICS
-========================================================= */
+    .button-secondary {
 
-.topic-grid{
-    display:grid;
+      background:
+        var(--white);
 
-    grid-template-columns:
-        repeat(3,1fr);
+      color:
+        var(--navy);
 
-    gap:14px;
-}
+      border:
+        1px solid var(--border);
+    }
 
-.topic-card{
-    position:relative;
 
-    min-height:145px;
+    .button-secondary:hover {
 
-    padding:21px;
+      border-color:
+        #bfdbfe;
 
-    background:#ffffff;
+      background:
+        var(--blue-soft);
+    }
 
-    border:1px solid var(--border);
 
-    border-radius:15px;
+    /* =========================================================
+       HERO PHOTO
+       ========================================================= */
 
-    transition:
-        transform .22s ease,
-        box-shadow .22s ease,
-        border-color .22s ease;
-}
+    .hero-visual {
 
-.topic-card:hover{
-    transform:translateY(-4px);
+      position: relative;
 
-    box-shadow:var(--shadow);
+      max-width: 430px;
 
-    border-color:#bfdbfe;
-}
+      margin-left: auto;
+    }
 
-.topic-icon{
-    display:block;
 
-    margin-bottom:14px;
+    .profile-frame {
 
-    font-size:21px;
-}
+      position: relative;
 
-.topic-card h3{
-    margin:0;
+      padding: 12px;
 
-    color:var(--navy);
+      background:
+        var(--white);
 
-    font-family:"Space Grotesk",sans-serif;
+      border:
+        1px solid var(--border);
 
-    font-size:17px;
-}
+      border-radius:
+        28px;
 
-.topic-card p{
-    margin:5px 0 0;
+      box-shadow:
+        var(--shadow);
+    }
 
-    color:var(--muted);
 
-    font-size:12px;
+    .profile-frame::before {
 
-    line-height:1.55;
-}
+      content: "";
 
-.topic-arrow{
-    position:absolute;
+      position: absolute;
 
-    right:18px;
-    top:18px;
+      inset: -12px;
 
-    color:#94a3b8;
+      border:
+        1px solid var(--blue-border);
 
-    font-size:14px;
+      border-radius:
+        34px;
 
-    transition:
+      z-index: -1;
+    }
+
+
+    .profile-image {
+
+      width: 100%;
+
+      aspect-ratio:
+        4 / 5;
+
+      object-fit:
+        cover;
+
+      object-position:
+        center top;
+
+      border-radius:
+        19px;
+    }
+
+
+    .profile-caption {
+
+      position: absolute;
+
+      left: 28px;
+      right: 28px;
+      bottom: 28px;
+
+      padding:
+        13px 15px;
+
+      background:
+        rgba(255,255,255,.94);
+
+      border:
+        1px solid rgba(226,232,240,.9);
+
+      border-radius:
+        13px;
+
+      backdrop-filter:
+        blur(10px);
+    }
+
+
+    .profile-caption strong {
+
+      display: block;
+
+      color:
+        var(--navy);
+
+      font-size:
+        13px;
+    }
+
+
+    .profile-caption span {
+
+      color:
+        var(--muted);
+
+      font-size:
+        11px;
+    }
+
+
+    /* =========================================================
+       SECTIONS
+       ========================================================= */
+
+    .section {
+
+      padding:
+        82px 0;
+    }
+
+
+    .section-white {
+
+      background:
+        var(--white);
+    }
+
+
+    .section-header {
+
+      display: flex;
+
+      align-items: end;
+
+      justify-content: space-between;
+
+      gap: 30px;
+
+      margin-bottom: 34px;
+    }
+
+
+    .section-kicker {
+
+      color:
+        var(--blue);
+
+      font-size:
+        11px;
+
+      font-weight:
+        800;
+
+      letter-spacing:
+        .15em;
+
+      text-transform:
+        uppercase;
+    }
+
+
+    .section-title {
+
+      margin-top: 6px;
+
+      color:
+        var(--navy);
+
+      font-size:
+        clamp(27px, 4vw, 38px);
+
+      line-height:
+        1.15;
+
+      letter-spacing:
+        -.035em;
+    }
+
+
+    .section-description {
+
+      max-width:
+        550px;
+
+      margin-top:
+        10px;
+
+      color:
+        var(--muted);
+
+      font-size:
+        14px;
+    }
+
+
+    .section-link {
+
+      color:
+        var(--blue);
+
+      font-size:
+        13px;
+
+      font-weight:
+        750;
+
+      white-space:
+        nowrap;
+    }
+
+
+    .section-link:hover {
+
+      text-decoration:
+        underline;
+    }
+
+
+    /* =========================================================
+       TOPICS
+       ========================================================= */
+
+    .topics-grid {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap:
+        14px;
+    }
+
+
+    .topic-card {
+
+      position: relative;
+
+      padding:
+        22px;
+
+      background:
+        var(--white);
+
+      border:
+        1px solid var(--border);
+
+      border-radius:
+        var(--radius);
+
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+    }
+
+
+    .topic-card:hover {
+
+      transform:
+        translateY(-4px);
+
+      box-shadow:
+        var(--shadow-hover);
+
+      border-color:
+        #bfdbfe;
+    }
+
+
+    .topic-icon {
+
+      width: 40px;
+      height: 40px;
+
+      display: grid;
+
+      place-items: center;
+
+      margin-bottom:
+        16px;
+
+      background:
+        var(--blue-soft);
+
+      border-radius:
+        11px;
+
+      color:
+        var(--blue);
+
+      font-size:
+        18px;
+    }
+
+
+    .topic-card:nth-child(2) .topic-icon,
+    .topic-card:nth-child(3) .topic-icon {
+
+      color:
+        var(--purple);
+
+      background:
+        #f5f3ff;
+    }
+
+
+    .topic-card:nth-child(7) .topic-icon,
+    .topic-card:nth-child(10) .topic-icon {
+
+      color:
+        var(--cyan);
+
+      background:
+        #ecfeff;
+    }
+
+
+    .topic-card:nth-child(9) .topic-icon {
+
+      color:
+        var(--green);
+
+      background:
+        #ecfdf5;
+    }
+
+
+    .topic-card:nth-child(12) .topic-icon {
+
+      color:
+        var(--orange);
+
+      background:
+        #fff7ed;
+    }
+
+
+    .topic-card h3 {
+
+      color:
+        var(--navy);
+
+      font-size:
+        15px;
+    }
+
+
+    .topic-card p {
+
+      margin-top:
+        5px;
+
+      color:
+        var(--muted);
+
+      font-size:
+        12px;
+
+      line-height:
+        1.55;
+    }
+
+
+    .topic-arrow {
+
+      position: absolute;
+
+      top: 21px;
+      right: 21px;
+
+      color:
+        #94a3b8;
+
+      font-size:
+        16px;
+
+      transition:
         transform .2s ease,
         color .2s ease;
-}
+    }
 
-.topic-card:hover .topic-arrow{
-    transform:
+
+    .topic-card:hover .topic-arrow {
+
+      color:
+        var(--blue);
+
+      transform:
         translate(2px,-2px);
+    }
 
-    color:var(--blue);
-}
 
+    /* =========================================================
+       PROJECT LAB
+       ========================================================= */
 
-/* Category accent colors */
+    .project-grid {
 
-.topic-card[data-accent="purple"] .topic-icon{
-    color:var(--purple);
-}
+      display:
+        grid;
 
-.topic-card[data-accent="green"] .topic-icon{
-    color:var(--green);
-}
+      grid-template-columns:
+        repeat(3, 1fr);
 
-.topic-card[data-accent="orange"] .topic-icon{
-    color:var(--orange);
-}
+      gap:
+        18px;
+    }
 
-.topic-card[data-accent="cyan"] .topic-icon{
-    color:var(--cyan);
-}
 
+    .project-card {
 
-/* =========================================================
-   PROJECT LAB
-========================================================= */
+      display:
+        flex;
 
-.project-grid{
-    display:grid;
+      flex-direction:
+        column;
 
-    grid-template-columns:
-        repeat(3,1fr);
+      min-height:
+        270px;
 
-    gap:18px;
-}
+      padding:
+        23px;
 
-.project-card{
-    padding:23px;
+      background:
+        var(--white);
 
-    background:#ffffff;
+      border:
+        1px solid var(--border);
 
-    border:1px solid var(--border);
+      border-radius:
+        var(--radius);
 
-    border-radius:17px;
+      box-shadow:
+        0 5px 20px rgba(15,23,42,.035);
 
-    box-shadow:
-        0 5px 18px rgba(15,23,42,.025);
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+    }
 
-    transition:
-        transform .22s ease,
-        box-shadow .22s ease;
-}
 
-.project-card:hover{
-    transform:translateY(-4px);
+    .project-card:hover {
 
-    box-shadow:var(--shadow);
-}
+      transform:
+        translateY(-5px);
 
-.project-meta{
-    display:flex;
+      box-shadow:
+        var(--shadow-hover);
 
-    justify-content:space-between;
+      border-color:
+        #bfdbfe;
+    }
 
-    align-items:center;
 
-    gap:10px;
+    .project-label {
 
-    margin-bottom:22px;
-}
+      color:
+        var(--blue);
 
-.project-number{
-    color:#94a3b8;
+      font-size:
+        10px;
 
-    font-size:11px;
+      font-weight:
+        800;
 
-    font-weight:800;
+      letter-spacing:
+        .12em;
 
-    letter-spacing:.08em;
-}
+      text-transform:
+        uppercase;
+    }
 
-.project-type{
-    padding:5px 8px;
 
-    border-radius:999px;
+    .project-card h3 {
 
-    background:var(--blue-light);
+      margin-top:
+        11px;
 
-    color:var(--blue);
+      color:
+        var(--navy);
 
-    font-size:10px;
+      font-size:
+        19px;
+    }
 
-    font-weight:800;
-}
 
-.project-card h3{
-    margin:0 0 8px;
+    .project-card p {
 
-    color:var(--navy);
+      margin-top:
+        9px;
 
-    font-family:"Space Grotesk",sans-serif;
+      color:
+        var(--muted);
 
-    font-size:21px;
-}
+      font-size:
+        13px;
 
-.project-card p{
-    margin:0 0 20px;
+      line-height:
+        1.6;
+    }
 
-    color:var(--muted);
 
-    font-size:13px;
+    .project-tags {
 
-    line-height:1.65;
-}
+      display:
+        flex;
 
-.project-link{
-    color:var(--blue);
+      flex-wrap:
+        wrap;
 
-    font-size:12px;
+      gap:
+        6px;
 
-    font-weight:800;
-}
+      margin-top:
+        17px;
+    }
 
 
-/* =========================================================
-   PUBLICATIONS
-========================================================= */
+    .project-tag {
 
-.publication-list{
-    border-top:1px solid var(--border);
-}
+      padding:
+        5px 8px;
 
-.publication{
-    display:grid;
+      border-radius:
+        7px;
 
-    grid-template-columns:
-        90px 1fr auto;
+      background:
+        var(--blue-soft);
 
-    gap:24px;
+      color:
+        var(--blue);
 
-    align-items:start;
+      font-size:
+        10px;
 
-    padding:25px 0;
+      font-weight:
+        700;
+    }
 
-    border-bottom:1px solid var(--border);
-}
 
-.publication-year{
-    color:var(--blue);
+    .project-link {
 
-    font-size:12px;
+      margin-top:
+        auto;
 
-    font-weight:800;
-}
+      padding-top:
+        22px;
 
-.publication h3{
-    margin:0;
+      color:
+        var(--blue);
 
-    color:var(--navy);
+      font-size:
+        12px;
 
-    font-size:16px;
+      font-weight:
+        750;
+    }
 
-    line-height:1.45;
-}
 
-.publication p{
-    margin:6px 0 0;
+    /* =========================================================
+       PUBLICATIONS
+       ========================================================= */
 
-    color:var(--muted);
+    .publication-list {
 
-    font-size:12px;
-}
+      border-top:
+        1px solid var(--border);
+    }
 
-.publication a{
-    white-space:nowrap;
 
-    color:var(--blue);
+    .publication {
 
-    font-size:12px;
+      display:
+        grid;
 
-    font-weight:800;
+      grid-template-columns:
+        80px 1fr auto;
 
-    transition:
-        transform .2s ease;
-}
+      gap:
+        25px;
 
-.publication a:hover{
-    transform:translateX(3px);
-}
+      align-items:
+        start;
 
+      padding:
+        25px 0;
 
-/* =========================================================
-   FOOTER
-========================================================= */
+      border-bottom:
+        1px solid var(--border);
 
-.footer{
-    background:#f7faff;
+      transition:
+        padding-left .2s ease;
+    }
 
-    border-top:1px solid var(--border);
 
-    padding:58px 0 24px;
-}
+    .publication:hover {
 
-.footer-grid{
-    display:grid;
+      padding-left:
+        8px;
+    }
 
-    grid-template-columns:
-        1.35fr 1fr 1fr 1fr;
 
-    gap:44px;
-}
+    .publication-year {
 
-.footer-brand h3{
-    margin:0;
+      color:
+        var(--blue);
 
-    color:var(--navy);
+      font-size:
+        13px;
 
-    font-family:"Space Grotesk",sans-serif;
+      font-weight:
+        800;
+    }
 
-    font-size:21px;
-}
 
-.footer-brand p{
-    max-width:330px;
+    .publication h3 {
 
-    margin:11px 0 0;
+      color:
+        var(--navy);
 
-    color:var(--muted);
+      font-size:
+        15px;
 
-    font-size:13px;
-}
+      line-height:
+        1.45;
+    }
 
-.footer-tagline{
-    margin-top:17px !important;
 
-    color:var(--blue) !important;
+    .publication-meta {
 
-    font-weight:700;
-}
+      margin-top:
+        6px;
 
-.footer-col h4{
-    margin:0 0 13px;
+      color:
+        var(--muted);
 
-    color:var(--navy);
+      font-size:
+        12px;
+    }
 
-    font-family:"Space Grotesk",sans-serif;
 
-    font-size:14px;
-}
+    .publication-badge {
 
-.footer-col a{
-    display:block;
+      padding:
+        5px 8px;
 
-    margin:8px 0;
+      background:
+        var(--blue-soft);
 
-    color:var(--muted);
+      color:
+        var(--blue);
 
-    font-size:12px;
+      border-radius:
+        6px;
 
-    transition:
-        color .2s ease,
-        transform .2s ease;
-}
+      font-size:
+        10px;
 
-.footer-col a:hover{
-    color:var(--blue);
+      font-weight:
+        800;
 
-    transform:translateX(2px);
-}
+      white-space:
+        nowrap;
+    }
 
-.footer-bottom{
-    display:flex;
 
-    justify-content:space-between;
+    /* =========================================================
+       FOOTER
+       ========================================================= */
 
-    gap:20px;
+    .footer {
 
-    margin-top:42px;
+      background:
+        var(--white);
 
-    padding-top:18px;
+      border-top:
+        1px solid var(--border);
 
-    border-top:1px solid var(--border);
+      padding:
+        55px 0 22px;
+    }
 
-    color:#94a3b8;
 
-    font-size:11px;
-}
+    .footer-grid {
 
-.footer-bottom a{
-    color:var(--blue);
-}
+      display:
+        grid;
 
+      grid-template-columns:
+        1.6fr 1fr 1fr 1fr;
 
-/* =========================================================
-   SCROLL REVEAL
-========================================================= */
+      gap:
+        45px;
+    }
 
-.reveal{
-    opacity:0;
 
-    transform:translateY(14px);
+    .footer-brand {
 
-    transition:
-        opacity .55s ease,
-        transform .55s ease;
-}
+      color:
+        var(--navy);
 
-.reveal.visible{
-    opacity:1;
+      font-size:
+        18px;
 
-    transform:none;
-}
+      font-weight:
+        800;
+    }
 
 
-/* =========================================================
-   ACCESSIBILITY
-========================================================= */
+    .footer-intro {
 
-:focus-visible{
-    outline:
-        3px solid rgba(37,99,235,.25);
+      max-width:
+        310px;
 
-    outline-offset:3px;
+      margin-top:
+        10px;
 
-    border-radius:5px;
-}
+      color:
+        var(--muted);
 
+      font-size:
+        12px;
+    }
 
-/* =========================================================
-   MOBILE
-========================================================= */
 
-@media(max-width:900px){
+    .footer-heading {
 
-    .nav-links{
-        position:absolute;
+      color:
+        var(--navy);
 
-        left:20px;
-        right:20px;
-        top:70px;
+      font-size:
+        12px;
 
-        display:none;
+      font-weight:
+        800;
 
-        flex-direction:column;
+      margin-bottom:
+        12px;
+    }
 
-        align-items:stretch;
 
-        gap:4px;
+    .footer-links {
 
-        padding:12px;
+      display:
+        grid;
 
-        background:#ffffff;
+      gap:
+        7px;
+    }
 
-        border:1px solid var(--border);
 
-        border-radius:14px;
+    .footer-links a {
+
+      color:
+        var(--muted);
+
+      font-size:
+        12px;
+
+      transition:
+        color .2s ease;
+    }
+
+
+    .footer-links a:hover {
+
+      color:
+        var(--blue);
+    }
+
+
+    .footer-bottom {
+
+      display:
+        flex;
+
+      justify-content:
+        space-between;
+
+      gap:
+        20px;
+
+      margin-top:
+        45px;
+
+      padding-top:
+        18px;
+
+      border-top:
+        1px solid var(--border);
+
+      color:
+        var(--muted);
+
+      font-size:
+        11px;
+    }
+
+
+    /* =========================================================
+       SCROLL REVEAL
+       IMPORTANT:
+       NO translateY.
+       This prevents the page from visually moving upward.
+       ========================================================= */
+
+    .reveal {
+
+      opacity:
+        0;
+
+      transition:
+        opacity .55s ease;
+    }
+
+
+    .reveal.visible {
+
+      opacity:
+        1;
+    }
+
+
+    /* =========================================================
+       RESPONSIVE — TABLET
+       ========================================================= */
+
+    @media (max-width: 900px) {
+
+      .nav-links {
+
+        position: fixed;
+
+        top:
+          var(--total-top-space);
+
+        left:
+          20px;
+
+        right:
+          20px;
+
+        display:
+          none;
+
+        flex-direction:
+          column;
+
+        align-items:
+          stretch;
+
+        padding:
+          12px;
+
+        background:
+          var(--white);
+
+        border:
+          1px solid var(--border);
+
+        border-radius:
+          14px;
 
         box-shadow:
-            0 15px 35px rgba(15,23,42,.08);
-    }
+          var(--shadow);
+      }
 
-    .nav-links.open{
-        display:flex;
-    }
 
-    .nav-links a{
-        padding:10px 12px;
-    }
+      .nav-links.open {
 
-    .menu-toggle{
-        display:block;
-    }
+        display:
+          flex;
+      }
 
-    .hero-grid{
-        grid-template-columns:1fr;
 
-        gap:42px;
-    }
+      .nav-links a {
 
-    .hero-copy{
-        text-align:left;
-    }
+        padding:
+          12px;
+      }
 
-    .hero-visual{
-        justify-content:flex-start;
-    }
 
-    .photo-frame{
-        width:min(360px,100%);
-    }
+      .nav-connect {
 
-    .topic-grid{
+        margin-left:
+          0;
+
+        text-align:
+          center;
+      }
+
+
+      .menu-toggle {
+
+        display:
+          block;
+      }
+
+
+      .hero-grid {
+
         grid-template-columns:
-            repeat(2,1fr);
-    }
+          1fr;
 
-    .project-grid{
-        grid-template-columns:1fr;
-    }
+        gap:
+          50px;
+      }
 
-    .footer-grid{
+
+      .hero-visual {
+
+        margin-inline:
+          auto;
+      }
+
+
+      .topics-grid,
+      .project-grid {
+
         grid-template-columns:
-            repeat(2,1fr);
+          repeat(2, 1fr);
+      }
 
-        gap:34px;
+
+      .footer-grid {
+
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
     }
 
-}
+
+    /* =========================================================
+       RESPONSIVE — MOBILE
+       ========================================================= */
+
+    @media (max-width: 620px) {
+
+      :root {
+
+        --header-height:
+          68px;
+
+        --ticker-height:
+          38px;
+
+        --total-top-space:
+          106px;
+      }
 
 
-@media(max-width:600px){
+      .container {
 
-    .container{
-        width:min(
-            var(--max-width),
-            calc(100% - 28px)
-        );
-    }
+        width:
+          min(
+            100% - 28px,
+            var(--max-width)
+          );
+      }
 
-    .nav{
-        height:68px;
-    }
 
-    .hero{
-        padding:54px 0 55px;
-    }
+      .site-header {
 
-    h1{
-        font-size:43px;
-    }
+        height:
+          var(--header-height);
+      }
 
-    .hero-lead{
-        font-size:15px;
-    }
 
-    .section{
-        padding:62px 0;
-    }
+      .nav {
 
-    .section-head{
-        display:block;
-    }
+        height:
+          var(--header-height);
+      }
 
-    .section-head .view-all{
-        display:inline-block;
 
-        margin-top:14px;
-    }
+      .whats-new {
 
-    .topic-grid{
-        grid-template-columns:1fr;
+        top:
+          var(--header-height);
 
-        gap:12px;
-    }
+        height:
+          var(--ticker-height);
+      }
 
-    .topic-card{
-        min-height:auto;
-    }
 
-    .publication{
-        grid-template-columns:1fr;
+      .nav-links {
 
-        gap:8px;
-    }
+        top:
+          var(--total-top-space);
 
-    .publication a{
-        display:inline-block;
+        left:
+          14px;
 
-        margin-top:5px;
-    }
+        right:
+          14px;
+      }
 
-    .footer{
-        padding:44px 0 20px;
-    }
 
-    .footer-grid{
-        grid-template-columns:1fr 1fr;
+      .brand-name {
 
-        gap:30px 22px;
-    }
+        font-size:
+          13px;
+      }
 
-    .footer-brand{
+
+      .brand-role {
+
+        font-size:
+          10px;
+      }
+
+
+      .brand-mark {
+
+        width:
+          38px;
+
+        height:
+          38px;
+      }
+
+
+      .hero {
+
+        padding:
+          60px 0;
+      }
+
+
+      .hero h1 {
+
+        font-size:
+          43px;
+      }
+
+
+      .hero-subtitle {
+
+        font-size:
+          17px;
+      }
+
+
+      .hero-description {
+
+        font-size:
+          14px;
+      }
+
+
+      .section {
+
+        padding:
+          60px 0;
+      }
+
+
+      .section-header {
+
+        display:
+          block;
+      }
+
+
+      .section-link {
+
+        display:
+          inline-block;
+
+        margin-top:
+          15px;
+      }
+
+
+      .topics-grid,
+      .project-grid {
+
+        grid-template-columns:
+          1fr;
+      }
+
+
+      .publication {
+
+        grid-template-columns:
+          55px 1fr;
+
+        gap:
+          15px;
+      }
+
+
+      .publication-badge {
+
         grid-column:
-            1 / -1;
+          2;
+
+        width:
+          max-content;
+      }
+
+
+      .footer-grid {
+
+        grid-template-columns:
+          1fr 1fr;
+
+        gap:
+          30px 20px;
+      }
+
+
+      .footer-grid > :first-child {
+
+        grid-column:
+          1 / -1;
+      }
+
+
+      .footer-bottom {
+
+        display:
+          block;
+      }
+
+
+      .footer-bottom span {
+
+        display:
+          block;
+
+        margin-top:
+          5px;
+      }
+
     }
 
-    .footer-bottom{
-        flex-direction:column;
 
-        gap:6px;
+    /* =========================================================
+       REDUCED MOTION
+       ========================================================= */
 
-        margin-top:30px;
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+
+        scroll-behavior:
+          auto;
+      }
+
+
+      *,
+      *::before,
+      *::after {
+
+        animation-duration:
+          .01ms !important;
+
+        animation-iteration-count:
+          1 !important;
+
+        transition-duration:
+          .01ms !important;
+      }
+
+
+      .reveal {
+
+        opacity:
+          1;
+      }
+
     }
 
-}
+  </style>
 
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
-
-@media(prefers-reduced-motion:reduce){
-
-    html{
-        scroll-behavior:auto;
-    }
-
-    *,
-    *::before,
-    *::after{
-        animation-duration:.01ms !important;
-        animation-iteration-count:1 !important;
-        transition-duration:.01ms !important;
-    }
-
-    .reveal{
-        opacity:1;
-
-        transform:none;
-    }
-
-}
-
-</style>
 </head>
 
 
 <body>
 
 
-<!-- ======================================================
-     HEADER
-====================================================== -->
+  <!-- =========================================================
+       HEADER
+       ========================================================= -->
 
-<header class="site-header">
+  <header class="site-header">
 
     <div class="container nav">
 
-        <a href="index.html" class="brand">
 
-            <div class="brand-mark">
-                MK
-            </div>
+      <a href="index.html" class="brand">
 
-            <div class="brand-copy">
+        <div class="brand-mark">
+          MM
+        </div>
 
-                <strong>
-                    MICHAEL MAHESH
-                </strong>
+        <div>
 
-                <span>
-                    PROFESSOR · ARTIFICIAL INTELLIGENCE
-                </span>
+          <div class="brand-name">
+            MICHAEL MAHESH
+          </div>
 
-            </div>
+          <div class="brand-role">
+            Professor · Artificial Intelligence
+          </div>
+
+        </div>
+
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        type="button">
+
+        ☰
+
+      </button>
+
+
+      <nav
+        class="nav-links"
+        id="navLinks"
+        aria-label="Main navigation">
+
+        <a href="research.html">
+          Research
+        </a>
+
+        <a href="projects.html">
+          Projects
+        </a>
+
+        <a href="learning.html">
+          Learning
+        </a>
+
+        <a href="publications.html">
+          Publications
+        </a>
+
+        <a href="about.html">
+          About
+        </a>
+
+        <a
+          href="connect.html"
+          class="nav-connect">
+
+          Connect
 
         </a>
 
+      </nav>
 
-        <button
-            class="menu-toggle"
-            id="menuToggle"
-            aria-label="Open navigation"
-            aria-expanded="false"
-            aria-controls="navMenu">
+    </div>
 
-            ☰
-
-        </button>
+  </header>
 
 
-        <nav
-            class="nav-links"
-            id="navMenu"
-            aria-label="Primary navigation">
+  <!-- =========================================================
+       WHAT'S NEW
+       FIXED BELOW HEADER
+       ========================================================= -->
 
-            <a href="research.html">
-                Research
-            </a>
+  <div
+    class="whats-new"
+    aria-label="What's New">
 
-            <a href="projects.html">
-                Projects
-            </a>
+    <div class="whats-new-inner">
 
-            <a href="learning.html">
-                Learning
-            </a>
 
-            <a href="publications.html">
-                Publications
-            </a>
+      <div class="whats-label">
+        WHAT'S NEW
+      </div>
 
-            <a href="about.html">
-                About
-            </a>
+
+      <div class="ticker-items">
+
+
+        <span class="ticker-item">
+          New Project
+        </span>
+
+
+        <span class="ticker-item">
+          New Teaching Material
+        </span>
+
+
+        <span class="ticker-item">
+          New Discovery
+        </span>
+
+
+        <span class="ticker-item">
+          Student Guidance
+        </span>
+
+
+        <span class="ticker-item">
+          New Publication
+        </span>
+
+
+        <span class="ticker-item">
+          Announcement
+        </span>
+
+
+        <!-- Duplicate sequence for continuous ticker -->
+
+
+        <span class="ticker-item">
+          New Project
+        </span>
+
+
+        <span class="ticker-item">
+          New Teaching Material
+        </span>
+
+
+        <span class="ticker-item">
+          New Discovery
+        </span>
+
+
+        <span class="ticker-item">
+          Student Guidance
+        </span>
+
+
+        <span class="ticker-item">
+          New Publication
+        </span>
+
+
+        <span class="ticker-item">
+          Announcement
+        </span>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================================
+       MAIN CONTENT
+       ========================================================= -->
+
+  <main>
+
+
+    <!-- =======================================================
+         HERO
+         ======================================================= -->
+
+    <section class="hero">
+
+      <div class="container hero-grid">
+
+
+        <div class="hero-content reveal">
+
+
+          <div class="eyebrow">
+
+            <span class="eyebrow-dot"></span>
+
+            Professor · Artificial Intelligence
+
+          </div>
+
+
+          <h1>
+
+            Dr. K.<br>
+
+            Michael
+            <span>Mahesh</span>
+
+          </h1>
+
+
+          <div class="hero-subtitle">
+
+            Professor · AI Researcher · Computer Vision
+
+          </div>
+
+
+          <p class="hero-description">
+
+            Researching and building intelligent systems across
+            Artificial Intelligence, Deep Learning, Computer Vision,
+            Medical AI, Image Processing and intelligent applications.
+
+          </p>
+
+
+          <div class="hero-actions">
+
 
             <a
-                href="contact.html"
-                class="nav-cta">
+              href="research.html"
+              class="button button-primary">
 
-                Connect
+              Explore Research →
 
             </a>
 
-        </nav>
 
-    </div>
+            <a
+              href="projects.html"
+              class="button button-secondary">
 
-</header>
+              View Projects →
 
+            </a>
 
-<!-- ======================================================
-     WHAT'S NEW
-====================================================== -->
 
-<div class="whats-new">
+          </div>
 
-    <div class="news-track">
-
-        <div class="news-line">
-
-            <b>WHAT'S NEW</b>
-
-            <span class="news-dot"></span>
-
-            <span>
-                New Project
-            </span>
-
-            <span class="news-dot"></span>
-
-            <span>
-                New Teaching Material
-            </span>
-
-            <span class="news-dot"></span>
-
-            <span>
-                New Discovery
-            </span>
-
-            <span class="news-dot"></span>
-
-            <span>
-                New Publication
-            </span>
-
-            <span class="news-dot"></span>
-
-            <span>
-                Student Guidance
-            </span>
-
-            <span class="news-dot"></span>
-
-            <span>
-                New Innovation
-            </span>
-
-            <span class="news-dot"></span>
-
-            <span>
-                Announcement
-            </span>
-
-        </div>
-
-
-        <!-- Duplicate for seamless ticker -->
-
-        <div class="news-line" aria-hidden="true">
-
-            <b>WHAT'S NEW</b>
-
-            <span class="news-dot"></span>
-
-            <span>
-                New Project
-            </span>
-
-            <span class="news-dot"></span>
-
-            <span>
-                New Teaching Material
-            </span>
-
-            <span class="news-dot"></span>
-
-            <span>
-                New Discovery
-            </span>
-
-            <span class="news-dot"></span>
-
-            <span>
-                New Publication
-            </span>
-
-            <span class="news-dot"></span>
-
-            <span>
-                Student Guidance
-            </span>
-
-            <span class="news-dot"></span>
-
-            <span>
-                New Innovation
-            </span>
-
-            <span class="news-dot"></span>
-
-            <span>
-                Announcement
-            </span>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- ======================================================
-     MAIN
-====================================================== -->
-
-<main>
-
-
-<!-- ======================================================
-     HERO
-====================================================== -->
-
-<section class="hero">
-
-    <div class="container hero-grid">
-
-
-        <div class="reveal">
-
-            <div class="eyebrow">
-
-                <i></i>
-
-                Professor · Artificial Intelligence
-
-            </div>
-
-
-            <h1>
-                Building intelligent
-                vision systems.
-            </h1>
-
-
-            <p class="hero-lead">
-
-                Research, teaching and applied work across
-                Artificial Intelligence, Deep Learning,
-                Computer Vision, Medical Image Analysis,
-                Generative AI and intelligent systems.
-
-            </p>
-
-
-            <div class="hero-role">
-
-                Dr. K. Michael Mahesh · Professor ·
-                AI Researcher · Ph.D. Supervisor
-
-            </div>
-
-
-            <div class="hero-tagline">
-
-                Research · Build · Teach · Share
-
-            </div>
-
-
-            <div class="actions">
-
-                <a
-                    class="btn btn-primary"
-                    href="research.html">
-
-                    Explore Research →
-
-                </a>
-
-
-                <a
-                    class="btn btn-secondary"
-                    href="projects.html">
-
-                    View Projects →
-
-                </a>
-
-            </div>
 
         </div>
 
 
         <div class="hero-visual reveal">
 
-            <div class="photo-frame">
 
-                <img
-                    src="profile.jpg"
-                    alt="Dr. K. Michael Mahesh"
-                    loading="eager">
-
-                <div class="photo-label">
-
-                    <strong>
-                        AI · Computer Vision
-                    </strong>
-
-                    <span>
-                        Professor & Researcher
-                    </span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
+          <div class="profile-frame">
 
 
-<!-- ======================================================
-     EXPLORE TOPICS
-====================================================== -->
-
-<section class="section" id="topics">
-
-    <div class="container">
+            <img
+              src="profile.jpg"
+              alt="Dr. K. Michael Mahesh"
+              class="profile-image"
+              loading="eager">
 
 
-        <div class="section-head reveal">
+            <div class="profile-caption">
 
-            <div>
+              <strong>
+                Research · Build · Teach · Share
+              </strong>
 
-                <div class="kicker">
-                    Explore Topics
-                </div>
-
-                <h2>
-                    From foundations to advanced AI.
-                </h2>
-
-                <p class="section-intro">
-
-                    Explore the subjects, technologies and
-                    research directions that shape my teaching
-                    and technical work.
-
-                </p>
+              <span>
+                Artificial Intelligence &amp; Computer Vision
+              </span>
 
             </div>
+
+
+          </div>
+
 
         </div>
 
 
-        <div class="topic-grid">
+      </div>
 
+    </section>
 
-            <!-- 01 -->
 
-            <a
-                class="topic-card reveal"
-                href="learning.html">
+    <!-- =======================================================
+         EXPLORE TOPICS
+         ======================================================= -->
 
-                <span class="topic-icon">
-                    🐍
-                </span>
+    <section class="section">
 
-                <span class="topic-arrow">
-                    ↗
-                </span>
 
-                <h3>
-                    Python
-                </h3>
+      <div class="container">
 
-                <p>
-                    Programming foundations for AI,
-                    data and automation.
-                </p>
 
-            </a>
+        <div class="section-header reveal">
 
 
-            <!-- 02 -->
+          <div>
 
-            <a
-                class="topic-card reveal"
-                href="learning.html">
 
-                <span class="topic-icon">
-                    🤖
-                </span>
-
-                <span class="topic-arrow">
-                    ↗
-                </span>
-
-                <h3>
-                    Machine Learning
-                </h3>
-
-                <p>
-                    Algorithms, models and practical
-                    AI applications.
-                </p>
-
-            </a>
-
-
-            <!-- 03 -->
-
-            <a
-                class="topic-card reveal"
-                data-accent="purple"
-                href="learning.html">
-
-                <span class="topic-icon">
-                    🧠
-                </span>
-
-                <span class="topic-arrow">
-                    ↗
-                </span>
-
-                <h3>
-                    Deep Learning
-                </h3>
-
-                <p>
-                    Neural networks, architectures
-                    and model development.
-                </p>
-
-            </a>
-
-
-            <!-- 04 -->
-
-            <a
-                class="topic-card reveal"
-                href="learning.html">
-
-                <span class="topic-icon">
-                    📊
-                </span>
-
-                <span class="topic-arrow">
-                    ↗
-                </span>
-
-                <h3>
-                    Data Science
-                </h3>
-
-                <p>
-                    Analysis, visualization and
-                    data-driven intelligence.
-                </p>
-
-            </a>
-
-
-            <!-- 05 -->
-
-            <a
-                class="topic-card reveal"
-                data-accent="cyan"
-                href="learning.html">
-
-                <span class="topic-icon">
-                    🖼
-                </span>
-
-                <span class="topic-arrow">
-                    ↗
-                </span>
-
-                <h3>
-                    Image Processing
-                </h3>
-
-                <p>
-                    Pixels, enhancement, filtering
-                    and segmentation.
-                </p>
-
-            </a>
-
-
-            <!-- 06 -->
-
-            <a
-                class="topic-card reveal"
-                data-accent="cyan"
-                href="research.html">
-
-                <span class="topic-icon">
-                    👁
-                </span>
-
-                <span class="topic-arrow">
-                    ↗
-                </span>
-
-                <h3>
-                    Computer Vision
-                </h3>
-
-                <p>
-                    Image understanding and
-                    visual intelligence.
-                </p>
-
-            </a>
-
-
-            <!-- 07 -->
-
-            <a
-                class="topic-card reveal"
-                href="research.html">
-
-                <span class="topic-icon">
-                    🎯
-                </span>
-
-                <span class="topic-arrow">
-                    ↗
-                </span>
-
-                <h3>
-                    Object Detection
-                </h3>
-
-                <p>
-                    Detection, recognition and
-                    real-time tracking.
-                </p>
-
-            </a>
-
-
-            <!-- 08 -->
-
-            <a
-                class="topic-card reveal"
-                data-accent="purple"
-                href="learning.html">
-
-                <span class="topic-icon">
-                    ✨
-                </span>
-
-                <span class="topic-arrow">
-                    ↗
-                </span>
-
-                <h3>
-                    Generative AI
-                </h3>
-
-                <p>
-                    LLMs, RAG, agents and practical
-                    AI applications.
-                </p>
-
-            </a>
-
-
-            <!-- 09 -->
-
-            <a
-                class="topic-card reveal"
-                data-accent="green"
-                href="research.html">
-
-                <span class="topic-icon">
-                    🏥
-                </span>
-
-                <span class="topic-arrow">
-                    ↗
-                </span>
-
-                <h3>
-                    Medical AI
-                </h3>
-
-                <p>
-                    Medical imaging, analysis
-                    and healthcare AI.
-                </p>
-
-            </a>
-
-
-            <!-- 10 -->
-
-            <a
-                class="topic-card reveal"
-                data-accent="orange"
-                href="research.html">
-
-                <span class="topic-icon">
-                    🚗
-                </span>
-
-                <span class="topic-arrow">
-                    ↗
-                </span>
-
-                <h3>
-                    ADAS & Intelligent Systems
-                </h3>
-
-                <p>
-                    AI for intelligent transportation
-                    and automation.
-                </p>
-
-            </a>
-
-
-            <!-- 11 -->
-
-            <a
-                class="topic-card reveal"
-                href="learning.html">
-
-                <span class="topic-icon">
-                    🎓
-                </span>
-
-                <span class="topic-arrow">
-                    ↗
-                </span>
-
-                <h3>
-                    AI Education
-                </h3>
-
-                <p>
-                    Teaching, learning resources
-                    and student guidance.
-                </p>
-
-            </a>
-
-
-            <!-- 12 -->
-
-            <a
-                class="topic-card reveal"
-                data-accent="orange"
-                href="research.html">
-
-                <span class="topic-icon">
-                    🔬
-                </span>
-
-                <span class="topic-arrow">
-                    ↗
-                </span>
-
-                <h3>
-                    Research & Innovation
-                </h3>
-
-                <p>
-                    New ideas, discoveries and
-                    technical inventions.
-                </p>
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ======================================================
-     PROJECT LAB
-====================================================== -->
-
-<section
-    class="section section-soft"
-    id="projects">
-
-    <div class="container">
-
-
-        <div class="section-head reveal">
-
-            <div>
-
-                <div class="kicker">
-                    Project Lab
-                </div>
-
-                <h2>
-                    Selected work.
-                </h2>
-
-                <p class="section-intro">
-
-                    A small selection from the broader
-                    project and open-source portfolio.
-
-                </p>
-
+            <div class="section-kicker">
+              Explore
             </div>
 
 
-            <a
-                class="view-all"
-                href="projects.html">
+            <h2 class="section-title">
+              Topics I Work With
+            </h2>
 
-                View All Projects →
 
-            </a>
+            <p class="section-description">
+
+              A broad learning and research map covering the
+              technologies, methods and application areas behind
+              my teaching and research.
+
+            </p>
+
+
+          </div>
+
+
+          <a
+            href="learning.html"
+            class="section-link">
+
+            Explore Learning →
+
+          </a>
+
+
+        </div>
+
+
+        <div class="topics-grid">
+
+
+          <a
+            href="learning.html#python"
+            class="topic-card reveal">
+
+            <div class="topic-icon">
+              🐍
+            </div>
+
+            <h3>
+              Python
+            </h3>
+
+            <p>
+              Programming for AI, data analysis and intelligent applications.
+            </p>
+
+            <span class="topic-arrow">
+              ↗
+            </span>
+
+          </a>
+
+
+          <a
+            href="learning.html#machine-learning"
+            class="topic-card reveal">
+
+            <div class="topic-icon">
+              🤖
+            </div>
+
+            <h3>
+              Machine Learning
+            </h3>
+
+            <p>
+              ML algorithms, models, optimization and practical applications.
+            </p>
+
+            <span class="topic-arrow">
+              ↗
+            </span>
+
+          </a>
+
+
+          <a
+            href="learning.html#deep-learning"
+            class="topic-card reveal">
+
+            <div class="topic-icon">
+              🧠
+            </div>
+
+            <h3>
+              Deep Learning
+            </h3>
+
+            <p>
+              Neural networks, architectures, training and intelligent models.
+            </p>
+
+            <span class="topic-arrow">
+              ↗
+            </span>
+
+          </a>
+
+
+          <a
+            href="learning.html#data-science"
+            class="topic-card reveal">
+
+            <div class="topic-icon">
+              📊
+            </div>
+
+            <h3>
+              Data Science
+            </h3>
+
+            <p>
+              Data analysis, visualization and data-driven intelligence.
+            </p>
+
+            <span class="topic-arrow">
+              ↗
+            </span>
+
+          </a>
+
+
+          <a
+            href="learning.html#image-processing"
+            class="topic-card reveal">
+
+            <div class="topic-icon">
+              🖼
+            </div>
+
+            <h3>
+              Image Processing
+            </h3>
+
+            <p>
+              Pixels, enhancement, filtering, segmentation and transformations.
+            </p>
+
+            <span class="topic-arrow">
+              ↗
+            </span>
+
+          </a>
+
+
+          <a
+            href="research.html#computer-vision"
+            class="topic-card reveal">
+
+            <div class="topic-icon">
+              👁
+            </div>
+
+            <h3>
+              Computer Vision
+            </h3>
+
+            <p>
+              Image understanding, visual recognition and intelligent perception.
+            </p>
+
+            <span class="topic-arrow">
+              ↗
+            </span>
+
+          </a>
+
+
+          <a
+            href="research.html#object-detection"
+            class="topic-card reveal">
+
+            <div class="topic-icon">
+              🎯
+            </div>
+
+            <h3>
+              Object Detection
+            </h3>
+
+            <p>
+              Detection, recognition, localization and visual tracking.
+            </p>
+
+            <span class="topic-arrow">
+              ↗
+            </span>
+
+          </a>
+
+
+          <a
+            href="research.html#generative-ai"
+            class="topic-card reveal">
+
+            <div class="topic-icon">
+              ✨
+            </div>
+
+            <h3>
+              Generative AI
+            </h3>
+
+            <p>
+              LLMs, RAG, agents and emerging generative AI applications.
+            </p>
+
+            <span class="topic-arrow">
+              ↗
+            </span>
+
+          </a>
+
+
+          <a
+            href="research.html#medical-ai"
+            class="topic-card reveal">
+
+            <div class="topic-icon">
+              🏥
+            </div>
+
+            <h3>
+              Medical AI
+            </h3>
+
+            <p>
+              Medical imaging, healthcare intelligence and biomedical applications.
+            </p>
+
+            <span class="topic-arrow">
+              ↗
+            </span>
+
+          </a>
+
+
+          <a
+            href="research.html#adas"
+            class="topic-card reveal">
+
+            <div class="topic-icon">
+              🚗
+            </div>
+
+            <h3>
+              ADAS &amp; Intelligent Systems
+            </h3>
+
+            <p>
+              Intelligent transportation, perception and decision systems.
+            </p>
+
+            <span class="topic-arrow">
+              ↗
+            </span>
+
+          </a>
+
+
+          <a
+            href="learning.html#education"
+            class="topic-card reveal">
+
+            <div class="topic-icon">
+              🎓
+            </div>
+
+            <h3>
+              AI Education
+            </h3>
+
+            <p>
+              Teaching, learning resources, student guidance and technical training.
+            </p>
+
+            <span class="topic-arrow">
+              ↗
+            </span>
+
+          </a>
+
+
+          <a
+            href="research.html#innovation"
+            class="topic-card reveal">
+
+            <div class="topic-icon">
+              🔬
+            </div>
+
+            <h3>
+              Research &amp; Innovation
+            </h3>
+
+            <p>
+              New ideas, technical discoveries, inventions and research directions.
+            </p>
+
+            <span class="topic-arrow">
+              ↗
+            </span>
+
+          </a>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =======================================================
+         PROJECT LAB
+         ======================================================= -->
+
+    <section class="section section-white">
+
+
+      <div class="container">
+
+
+        <div class="section-header reveal">
+
+
+          <div>
+
+
+            <div class="section-kicker">
+              Project Lab
+            </div>
+
+
+            <h2 class="section-title">
+              Selected Projects
+            </h2>
+
+
+            <p class="section-description">
+
+              A small selection of research and technical projects.
+              The complete repository collection lives on the Projects page.
+
+            </p>
+
+
+          </div>
+
+
+          <a
+            href="projects.html"
+            class="section-link">
+
+            View All Projects →
+
+          </a>
+
 
         </div>
 
@@ -1980,178 +2618,221 @@ h2{
         <div class="project-grid">
 
 
-            <!-- Project 01 -->
+          <!-- PROJECT 01 -->
 
-            <article class="project-card reveal">
-
-                <div class="project-meta">
-
-                    <span class="project-number">
-                        01
-                    </span>
-
-                    <span class="project-type">
-                        Research
-                    </span>
-
-                </div>
+          <article class="project-card reveal">
 
 
-                <h3>
-                    GeoSentinel
-                </h3>
+            <div class="project-label">
+              Research · Environmental AI
+            </div>
 
 
-                <p>
-
-                    Explainable foundation model for
-                    multi-temporal environmental change
-                    detection using satellite imagery.
-
-                </p>
+            <h3>
+              GeoSentinel
+            </h3>
 
 
-                <a
-                    class="project-link"
-                    href="https://github.com/michaelmahesh/GeoSentinel"
-                    target="_blank"
-                    rel="noopener">
+            <p>
 
-                    Explore Project →
+              Explainable foundation model for multi-temporal
+              environmental change detection using satellite imagery.
 
-                </a>
-
-            </article>
+            </p>
 
 
-            <!-- Project 02 -->
+            <div class="project-tags">
 
-            <article class="project-card reveal">
+              <span class="project-tag">
+                AI
+              </span>
 
-                <div class="project-meta">
+              <span class="project-tag">
+                Foundation Models
+              </span>
 
-                    <span class="project-number">
-                        02
-                    </span>
+              <span class="project-tag">
+                Remote Sensing
+              </span>
 
-                    <span class="project-type">
-                        Medical AI
-                    </span>
-
-                </div>
-
-
-                <h3>
-                    TAQB-V4
-                </h3>
+            </div>
 
 
-                <p>
+            <a
+              href="https://github.com/michaelmahesh/GeoSentinel"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link">
 
-                    Hybrid quantum–classical residual
-                    fusion framework for multi-class
-                    blood cell classification using
-                    microscopic images.
+              View Project →
 
-                </p>
-
-
-                <a
-                    class="project-link"
-                    href="https://github.com/michaelmahesh/TAQB-V4"
-                    target="_blank"
-                    rel="noopener">
-
-                    Explore Project →
-
-                </a>
-
-            </article>
+            </a>
 
 
-            <!-- Project 03 -->
-
-            <article class="project-card reveal">
-
-                <div class="project-meta">
-
-                    <span class="project-number">
-                        03
-                    </span>
-
-                    <span class="project-type">
-                        Computer Vision
-                    </span>
-
-                </div>
+          </article>
 
 
-                <h3>
-                    YOLOv8 Camera
-                </h3>
+          <!-- PROJECT 02 -->
+
+          <article class="project-card reveal">
 
 
-                <p>
-
-                    Real-time object detection using
-                    a laptop camera with a practical
-                    computer vision workflow.
-
-                </p>
+            <div class="project-label">
+              Research · Medical AI
+            </div>
 
 
-                <a
-                    class="project-link"
-                    href="https://github.com/michaelmahesh/YOLOv8-Laptop-Camera-Object-Detection"
-                    target="_blank"
-                    rel="noopener">
+            <h3>
+              TAQB-V4
+            </h3>
 
-                    Explore Project →
 
-                </a>
+            <p>
 
-            </article>
+              Hybrid quantum-classical residual fusion framework
+              for multi-class blood cell classification using
+              microscopic images.
+
+            </p>
+
+
+            <div class="project-tags">
+
+              <span class="project-tag">
+                Computer Vision
+              </span>
+
+              <span class="project-tag">
+                Medical AI
+              </span>
+
+              <span class="project-tag">
+                Quantum ML
+              </span>
+
+            </div>
+
+
+            <a
+              href="https://github.com/michaelmahesh/TAQB-V4"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link">
+
+              View Project →
+
+            </a>
+
+
+          </article>
+
+
+          <!-- PROJECT 03 -->
+
+          <article class="project-card reveal">
+
+
+            <div class="project-label">
+              Computer Vision
+            </div>
+
+
+            <h3>
+              YOLOv8 Camera Detection
+            </h3>
+
+
+            <p>
+
+              Real-time object detection using YOLOv8 with
+              laptop camera input and computer vision processing.
+
+            </p>
+
+
+            <div class="project-tags">
+
+              <span class="project-tag">
+                YOLOv8
+              </span>
+
+              <span class="project-tag">
+                OpenCV
+              </span>
+
+              <span class="project-tag">
+                Python
+              </span>
+
+            </div>
+
+
+            <a
+              href="https://github.com/michaelmahesh/YOLOv8-Laptop-Camera-Object-Detection"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link">
+
+              View Project →
+
+            </a>
+
+
+          </article>
 
 
         </div>
 
-    </div>
+      </div>
 
-</section>
-
-
-<!-- ======================================================
-     PUBLICATIONS
-====================================================== -->
-
-<section
-    class="section"
-    id="publications">
-
-    <div class="container">
+    </section>
 
 
-        <div class="section-head reveal">
+    <!-- =======================================================
+         SELECTED PUBLICATIONS
+         ======================================================= -->
 
-            <div>
+    <section class="section">
 
-                <div class="kicker">
-                    Publications
-                </div>
 
-                <h2>
-                    Selected research.
-                </h2>
+      <div class="container">
 
-                <p class="section-intro">
 
-                    Selected peer-reviewed work across
-                    AI, computer vision, medical imaging
-                    and intelligent systems.
+        <div class="section-header reveal">
 
-                </p>
 
+          <div>
+
+
+            <div class="section-kicker">
+              Research Output
             </div>
+
+
+            <h2 class="section-title">
+              Selected Publications
+            </h2>
+
+
+            <p class="section-description">
+
+              Selected research contributions across ADAS,
+              medical imaging, computer vision and intelligent systems.
+
+            </p>
+
+
+          </div>
+
+
+          <a
+            href="publications.html"
+            class="section-link">
+
+            View All Publications →
+
+          </a>
+
 
         </div>
 
@@ -2159,475 +2840,701 @@ h2{
         <div class="publication-list">
 
 
-            <!-- Publication 01 -->
+          <!-- PUBLICATION 01 -->
 
-            <article class="publication reveal">
+          <article class="publication reveal">
 
-                <div class="publication-year">
-                    2025
-                </div>
 
-                <div>
+            <div class="publication-year">
+              2025
+            </div>
 
-                    <h3>
 
-                        MICH-Net: Novel Deep Learning
-                        Architecture with African Fire Hawk
-                        Optimization for Steering Angle
-                        Prediction in ADAS
+            <div>
 
-                    </h3>
+              <h3>
 
-                    <p>
+                MICH-Net: Novel Deep Learning Architecture with
+                African Fire Hawk Optimization for Steering Angle
+                Prediction in ADAS
 
-                        IEEE Transactions on Intelligent
-                        Transportation Systems · Q1
+              </h3>
 
-                    </p>
 
-                </div>
+              <div class="publication-meta">
 
+                IEEE Transactions on Intelligent Transportation Systems
 
-                <a
-                    href="https://doi.org/10.1109/TITS.2025.3623324"
-                    target="_blank"
-                    rel="noopener">
+              </div>
 
-                    Read Paper →
+            </div>
 
-                </a>
 
-            </article>
+            <div class="publication-badge">
+              Q1
+            </div>
 
 
-            <!-- Publication 02 -->
+          </article>
 
-            <article class="publication reveal">
 
-                <div class="publication-year">
-                    2025
-                </div>
+          <!-- PUBLICATION 02 -->
 
-                <div>
+          <article class="publication reveal">
 
-                    <h3>
 
-                        Multi-Modal Lung Cancer Detection
-                        Using Pyramidal Cascade Neuro-Fuzzy
-                        Fractional Network
+            <div class="publication-year">
+              2025
+            </div>
 
-                    </h3>
 
-                    <p>
+            <div>
 
-                        Cancer Investigation · Q3
+              <h3>
 
-                    </p>
+                Multi-Modal Lung Cancer Detection Using Pyramidal
+                Cascade Neuro-Fuzzy Fractional Network
 
-                </div>
+              </h3>
 
 
-                <a
-                    href="https://doi.org/10.1080/07357907.2025.2520610"
-                    target="_blank"
-                    rel="noopener">
+              <div class="publication-meta">
 
-                    Read Paper →
+                Cancer Investigation
 
-                </a>
+              </div>
 
-            </article>
+            </div>
 
 
-            <!-- Publication 03 -->
+            <div class="publication-badge">
+              Q3
+            </div>
 
-            <article class="publication reveal">
 
-                <div class="publication-year">
-                    2025
-                </div>
+          </article>
 
-                <div>
 
-                    <h3>
+          <!-- PUBLICATION 03 -->
 
-                        PMFHNet: Parallel Maxout Feed
-                        Harmonic Network for Road Anomaly
-                        Object Detection in ADAS Under
-                        Low Light Conditions
+          <article class="publication reveal">
 
-                    </h3>
 
-                    <p>
+            <div class="publication-year">
+              2025
+            </div>
 
-                        The Imaging Science Journal · Q2
 
-                    </p>
+            <div>
 
-                </div>
+              <h3>
 
+                PMFHNet: Parallel Maxout Feed Harmonic Network for
+                Road Anomaly Object Detection in ADAS Under
+                Low Light Conditions
 
-                <a
-                    href="https://doi.org/10.1080/13682199.2025.2599711"
-                    target="_blank"
-                    rel="noopener">
+              </h3>
 
-                    Read Paper →
 
-                </a>
+              <div class="publication-meta">
 
-            </article>
+                Imaging Science Journal
 
+              </div>
 
-            <!-- Publication 04 -->
+            </div>
 
-            <article class="publication reveal">
 
-                <div class="publication-year">
-                    2023
-                </div>
+            <div class="publication-badge">
+              Q2
+            </div>
 
-                <div>
 
-                    <h3>
+          </article>
 
-                        DeepDrive: Braking Decision-Making
-                        Approach Using Optimized GAN and
-                        Deep CNN for ADAS
 
-                    </h3>
+          <!-- PUBLICATION 04 -->
 
-                    <p>
+          <article class="publication reveal">
 
-                        Engineering Applications of
-                        Artificial Intelligence · Q1
 
-                    </p>
+            <div class="publication-year">
+              2023
+            </div>
 
-                </div>
 
+            <div>
 
-                <a
-                    href="https://doi.org/10.1016/j.engappai.2023.106111"
-                    target="_blank"
-                    rel="noopener">
+              <h3>
 
-                    Read Paper →
+                DeepDrive: Braking Decision-Making Approach Using
+                Optimized GAN and Deep CNN for ADAS
 
-                </a>
+              </h3>
 
-            </article>
+
+              <div class="publication-meta">
+
+                Engineering Applications of Artificial Intelligence
+
+              </div>
+
+            </div>
+
+
+            <div class="publication-badge">
+              Q1
+            </div>
+
+
+          </article>
+
+
+          <!-- PUBLICATION 05 -->
+
+          <article class="publication reveal">
+
+
+            <div class="publication-year">
+              2020
+            </div>
+
+
+            <div>
+
+              <h3>
+
+                DeepJoint Segmentation for Classification of
+                Severity-Levels of Glioma Tumour Using
+                Multimodal MRI Images
+
+              </h3>
+
+
+              <div class="publication-meta">
+
+                IET Image Processing
+
+              </div>
+
+            </div>
+
+
+            <div class="publication-badge">
+              Q2
+            </div>
+
+
+          </article>
 
 
         </div>
 
+      </div>
 
-        <div style="margin-top:22px">
-
-            <a
-                class="view-all"
-                href="publications.html">
-
-                View All Publications →
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
+    </section>
 
 
-</main>
+  </main>
 
 
-<!-- ======================================================
-     FOOTER
-====================================================== -->
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
 
-<footer class="footer">
+  <footer class="footer">
+
 
     <div class="container">
 
 
-        <div class="footer-grid">
+      <div class="footer-grid">
 
 
-            <!-- Identity -->
+        <!-- IDENTITY -->
 
-            <div class="footer-brand">
-
-                <h3>
-                    MICHAEL MAHESH
-                </h3>
-
-                <p>
-                    Professor · Artificial Intelligence
-                </p>
-
-                <p class="footer-tagline">
-                    Research · Build · Teach · Share
-                </p>
-
-            </div>
+        <div>
 
 
-            <!-- Research -->
-
-            <div class="footer-col">
-
-                <h4>
-                    Research
-                </h4>
-
-                <a href="research.html">
-                    Deep Learning
-                </a>
-
-                <a href="research.html">
-                    Computer Vision
-                </a>
-
-                <a href="research.html">
-                    Medical AI
-                </a>
-
-                <a href="publications.html">
-                    Publications
-                </a>
-
-            </div>
+          <div class="footer-brand">
+            Dr. K. Michael Mahesh
+          </div>
 
 
-            <!-- Learning -->
+          <p class="footer-intro">
 
-            <div class="footer-col">
+            Professor and researcher working across Artificial
+            Intelligence, Deep Learning, Computer Vision,
+            Medical AI and intelligent systems.
 
-                <h4>
-                    Learning
-                </h4>
-
-                <a href="learning.html">
-                    Tutorials
-                </a>
-
-                <a href="learning.html">
-                    Teaching Materials
-                </a>
-
-                <a href="projects.html">
-                    Projects
-                </a>
-
-                <a href="learning.html">
-                    Research Insights
-                </a>
-
-            </div>
-
-
-            <!-- Connect -->
-
-            <div class="footer-col">
-
-                <h4>
-                    Connect
-                </h4>
-
-                <a
-                    href="https://github.com/michaelmahesh"
-                    target="_blank"
-                    rel="noopener">
-
-                    GitHub
-
-                </a>
-
-                <a
-                    href="https://www.linkedin.com/in/michaelmahesh"
-                    target="_blank"
-                    rel="noopener">
-
-                    LinkedIn
-
-                </a>
-
-                <a
-                    href="https://scholar.google.com/citations?user=YxDQyvIAAAAJ&hl=en"
-                    target="_blank"
-                    rel="noopener">
-
-                    Google Scholar
-
-                </a>
-
-                <a href="mailto:michaelmaheshk@gmail.com">
-
-                    Email
-
-                </a>
-
-            </div>
+          </p>
 
 
         </div>
 
 
-        <div class="footer-bottom">
+        <!-- EXPLORE -->
 
-            <span>
-                © 2026 Dr. K. Michael Mahesh
-            </span>
+        <div>
 
-            <span>
 
-                Chennai, Tamil Nadu, India ·
+          <div class="footer-heading">
+            Explore
+          </div>
 
-                <a href="privacy.html">
-                    Privacy
-                </a>
 
-            </span>
+          <div class="footer-links">
+
+            <a href="research.html">
+              Research
+            </a>
+
+            <a href="projects.html">
+              Projects
+            </a>
+
+            <a href="learning.html">
+              Learning
+            </a>
+
+            <a href="publications.html">
+              Publications
+            </a>
+
+          </div>
+
 
         </div>
+
+
+        <!-- ACADEMIC -->
+
+        <div>
+
+
+          <div class="footer-heading">
+            Academic
+          </div>
+
+
+          <div class="footer-links">
+
+            <a href="about.html">
+              About
+            </a>
+
+            <a href="connect.html">
+              Connect
+            </a>
+
+            <a
+              href="https://orcid.org/0000-0002-9948-5743"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              ORCID
+
+            </a>
+
+            <a
+              href="https://scholar.google.com/citations?user=YxDQyvIAAAAJ&hl=en"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              Google Scholar
+
+            </a>
+
+          </div>
+
+
+        </div>
+
+
+        <!-- CONNECT -->
+
+        <div>
+
+
+          <div class="footer-heading">
+            Connect
+          </div>
+
+
+          <div class="footer-links">
+
+            <a
+              href="https://github.com/michaelmahesh"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              GitHub
+
+            </a>
+
+
+            <a
+              href="https://www.linkedin.com/in/michaelmahesh"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              LinkedIn
+
+            </a>
+
+
+            <a href="mailto:michaelmaheshk@gmail.com">
+              Email
+            </a>
+
+
+            <a href="privacy.html">
+              Privacy
+            </a>
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+
+        <span>
+
+          ©
+          <span id="year"></span>
+          Dr. K. Michael Mahesh.
+          All rights reserved.
+
+        </span>
+
+
+        <span>
+
+          Artificial Intelligence · Research · Teaching · Innovation
+
+        </span>
+
+
+      </div>
 
 
     </div>
 
-</footer>
+  </footer>
 
 
-<!-- ======================================================
-     JAVASCRIPT
-====================================================== -->
+  <!-- =========================================================
+       JAVASCRIPT
+       ========================================================= -->
 
-<script>
+  <script>
 
-/* =========================================================
-   MOBILE NAVIGATION
-========================================================= */
+    /* =========================================================
+       MOBILE NAVIGATION
+       ========================================================= */
 
-const menuToggle =
-    document.getElementById("menuToggle");
+    const menuToggle =
+      document.getElementById("menuToggle");
 
-const navMenu =
-    document.getElementById("navMenu");
+    const navLinks =
+      document.getElementById("navLinks");
 
 
-menuToggle?.addEventListener(
-    "click",
-    () => {
+    if (menuToggle && navLinks) {
 
-        const isOpen =
-            navMenu.classList.toggle("open");
 
-        menuToggle.setAttribute(
+      menuToggle.addEventListener(
+        "click",
+        () => {
+
+          const isOpen =
+            navLinks.classList.toggle("open");
+
+
+          menuToggle.setAttribute(
             "aria-expanded",
             String(isOpen)
-        );
-
-    }
-);
+          );
 
 
-/* Close mobile menu after click */
+          menuToggle.setAttribute(
+            "aria-label",
+            isOpen
+              ? "Close navigation"
+              : "Open navigation"
+          );
 
-navMenu
-    ?.querySelectorAll("a")
-    .forEach(link => {
 
-        link.addEventListener(
+          menuToggle.textContent =
+            isOpen
+              ? "×"
+              : "☰";
+
+        }
+      );
+
+
+      navLinks
+        .querySelectorAll("a")
+        .forEach(link => {
+
+          link.addEventListener(
             "click",
             () => {
 
-                navMenu.classList.remove("open");
+              navLinks.classList.remove(
+                "open"
+              );
 
-                menuToggle?.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
+
+              menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+              );
+
+
+              menuToggle.setAttribute(
+                "aria-label",
+                "Open navigation"
+              );
+
+
+              menuToggle.textContent =
+                "☰";
 
             }
+          );
+
+        });
+
+    }
+
+
+    /* =========================================================
+       SCROLL REVEAL
+       ONLY OPACITY — NO POSITION MOVEMENT
+       ========================================================= */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+
+    if (
+      "IntersectionObserver"
+      in window
+    ) {
+
+
+      const revealObserver =
+        new IntersectionObserver(
+          entries => {
+
+            entries.forEach(entry => {
+
+              if (
+                entry.isIntersecting
+              ) {
+
+                entry.target.classList.add(
+                  "visible"
+                );
+
+
+                revealObserver.unobserve(
+                  entry.target
+                );
+
+              }
+
+            });
+
+          },
+          {
+            threshold: 0.10
+          }
         );
 
-    });
 
+      revealElements.forEach(
+        element => {
 
-/* =========================================================
-   SCROLL REVEAL
-========================================================= */
+          revealObserver.observe(
+            element
+          );
 
-const revealObserver =
-    new IntersectionObserver(
-        entries => {
-
-            entries.forEach(
-                entry => {
-
-                    if(
-                        entry.isIntersecting
-                    ){
-
-                        entry.target.classList.add(
-                            "visible"
-                        );
-
-                        revealObserver.unobserve(
-                            entry.target
-                        );
-
-                    }
-
-                }
-            );
-
-        },
-        {
-            threshold:.12
         }
+      );
+
+
+    } else {
+
+      /* Fallback for older browsers */
+
+      revealElements.forEach(
+        element => {
+
+          element.classList.add(
+            "visible"
+          );
+
+        }
+      );
+
+    }
+
+
+    /* =========================================================
+       CURRENT YEAR
+       ========================================================= */
+
+    const yearElement =
+      document.getElementById("year");
+
+
+    if (yearElement) {
+
+      yearElement.textContent =
+        new Date().getFullYear();
+
+    }
+
+
+    /* =========================================================
+       ACTIVE NAVIGATION
+       ========================================================= */
+
+    const currentPage =
+      window.location.pathname
+        .split("/")
+        .pop() || "index.html";
+
+
+    document
+      .querySelectorAll(".nav-links a")
+      .forEach(link => {
+
+        const href =
+          link.getAttribute("href");
+
+
+        if (
+          href === currentPage
+        ) {
+
+          link.classList.add(
+            "active"
+          );
+
+        }
+
+      });
+
+
+    /* =========================================================
+       ESCAPE KEY CLOSES MOBILE MENU
+       ========================================================= */
+
+    document.addEventListener(
+      "keydown",
+      event => {
+
+        if (
+          event.key === "Escape"
+          &&
+          navLinks
+        ) {
+
+          navLinks.classList.remove(
+            "open"
+          );
+
+
+          menuToggle?.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+
+          menuToggle?.setAttribute(
+            "aria-label",
+            "Open navigation"
+          );
+
+
+          if (menuToggle) {
+
+            menuToggle.textContent =
+              "☰";
+
+          }
+
+        }
+
+      }
     );
 
 
-document
-    .querySelectorAll(".reveal")
-    .forEach(element => {
+    /* =========================================================
+       CLOSE MOBILE MENU WHEN CLICKING OUTSIDE
+       ========================================================= */
 
-        revealObserver.observe(
-            element
-        );
+    document.addEventListener(
+      "click",
+      event => {
 
-    });
+        if (
+          !navLinks ||
+          !menuToggle
+        ) {
+          return;
+        }
 
 
-/* =========================================================
-   PAUSE TICKER WHEN USER HOVERS
-========================================================= */
+        const clickedInsideNav =
+          navLinks.contains(event.target);
 
-const ticker =
-    document.querySelector(".news-track");
 
-ticker?.addEventListener(
-    "mouseenter",
-    () => {
+        const clickedButton =
+          menuToggle.contains(event.target);
 
-        ticker.style.animationPlayState =
-            "paused";
 
-    }
-);
+        if (
+          !clickedInsideNav &&
+          !clickedButton
+        ) {
 
-ticker?.addEventListener(
-    "mouseleave",
-    () => {
+          navLinks.classList.remove(
+            "open"
+          );
 
-        ticker.style.animationPlayState =
-            "running";
 
-    }
-);
+          menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+          );
 
-</script>
+
+          menuToggle.setAttribute(
+            "aria-label",
+            "Open navigation"
+          );
+
+
+          menuToggle.textContent =
+            "☰";
+
+        }
+
+      }
+    );
+
+  </script>
 
 
 </body>
