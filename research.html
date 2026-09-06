@@ -1,0 +1,1761 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Research | Dr. K. Michael Mahesh</title>
+  <meta name="description" content="Research portfolio of Dr. K. Michael Mahesh covering Artificial Intelligence, Deep Learning, Computer Vision, Medical AI, Image Processing and ADAS.">
+  <meta name="author" content="Dr. K. Michael Mahesh">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Google AdSense -->
+
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6687646879167326"
+    crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --white:#fff;
+      --bg:#f7faff;
+      --blue:#1d4ed8;
+      --blue-dark:#173ea5;
+      --blue-soft:#eff6ff;
+      --navy:#0f172a;
+      --text:#334155;
+      --muted:#64748b;
+      --border:#e2e8f0;
+      --cyan:#0891b2;
+      --purple:#7c3aed;
+      --orange:#ea580c;
+      --green:#059669;
+      --max-width:1180px;
+      --radius:18px;
+      --shadow:0 12px 35px rgba(15,23,42,.06);
+      --shadow-hover:0 20px 45px rgba(15,23,42,.10);
+    }
+
+    * {
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    html {
+      scroll-behavior:smooth;
+    }
+
+    body {
+      font-family:"Inter",sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.7;
+    }
+
+    a {
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .container {
+      width:min(var(--max-width),calc(100% - 40px));
+      margin:auto;
+    }
+
+    /* HEADER */
+
+    .site-header {
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(255,255,255,.95);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--border);
+      transition:box-shadow .25s ease;
+    }
+
+    .site-header.scrolled {
+      box-shadow:0 8px 25px rgba(15,23,42,.07);
+    }
+
+    .nav-container {
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
+    }
+
+    .brand {
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .brand-mark {
+      width:42px;
+      height:42px;
+      display:grid;
+      place-items:center;
+      border-radius:12px;
+      background:var(--blue);
+      color:white;
+      font-family:"Space Grotesk",sans-serif;
+      font-weight:700;
+      font-size:16px;
+    }
+
+    .brand-copy strong {
+      display:block;
+      color:var(--navy);
+      font-family:"Space Grotesk",sans-serif;
+      font-size:15px;
+    }
+
+    .brand-copy span {
+      display:block;
+      color:var(--muted);
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+    }
+
+    .nav-menu {
+      display:flex;
+      align-items:center;
+      gap:28px;
+    }
+
+    .nav-menu a {
+      position:relative;
+      color:#475569;
+      font-size:14px;
+      font-weight:600;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+      color:var(--blue);
+    }
+
+    .nav-menu a.active::after {
+      content:"";
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:-8px;
+      height:2px;
+      background:var(--blue);
+      border-radius:2px;
+    }
+
+    .nav-connect {
+      padding:9px 15px;
+      border:1px solid #bfdbfe;
+      border-radius:10px;
+      background:var(--blue-soft);
+      color:var(--blue)!important;
+    }
+
+    .menu-toggle {
+      display:none;
+      border:0;
+      background:none;
+      font-size:25px;
+      cursor:pointer;
+      color:var(--navy);
+    }
+
+    /* HERO */
+
+    .research-hero {
+      padding:92px 0 78px;
+      background:linear-gradient(180deg,#fff 0%,#f7faff 100%);
+      border-bottom:1px solid var(--border);
+    }
+
+    .hero-grid {
+      display:grid;
+      grid-template-columns:1.35fr .65fr;
+      gap:70px;
+      align-items:center;
+    }
+
+    .eyebrow {
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      color:var(--blue);
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      margin-bottom:20px;
+    }
+
+    .eyebrow::before {
+      content:"";
+      width:26px;
+      height:2px;
+      background:var(--blue);
+      border-radius:2px;
+    }
+
+    .research-hero h1 {
+      font-family:"Space Grotesk",sans-serif;
+      color:var(--navy);
+      font-size:clamp(43px,6vw,72px);
+      line-height:1.02;
+      letter-spacing:-.045em;
+      margin-bottom:23px;
+    }
+
+    .research-hero h1 span {
+      color:var(--blue);
+    }
+
+    .hero-description {
+      max-width:720px;
+      color:var(--muted);
+      font-size:17px;
+    }
+
+    .hero-actions {
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:30px;
+    }
+
+    .btn {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:12px 19px;
+      border-radius:11px;
+      font-size:14px;
+      font-weight:700;
+      transition:transform .2s ease,background .2s ease,box-shadow .2s ease;
+    }
+
+    .btn:hover {
+      transform:translateY(-2px);
+    }
+
+    .btn-primary {
+      color:#fff;
+      background:var(--blue);
+      box-shadow:0 8px 20px rgba(29,78,216,.16);
+    }
+
+    .btn-primary:hover {
+      background:var(--blue-dark);
+    }
+
+    .btn-secondary {
+      background:#fff;
+      border:1px solid var(--border);
+      color:var(--navy);
+    }
+
+    /* RESEARCH SNAPSHOT */
+
+    .research-snapshot {
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+
+    .snapshot-label {
+      color:var(--muted);
+      font-size:11px;
+      font-weight:700;
+      letter-spacing:.13em;
+      text-transform:uppercase;
+    }
+
+    .snapshot-item {
+      padding:19px 0;
+      border-bottom:1px solid var(--border);
+    }
+
+    .snapshot-item:last-child {
+      border-bottom:0;
+      padding-bottom:0;
+    }
+
+    .snapshot-item strong {
+      display:block;
+      color:var(--navy);
+      font-family:"Space Grotesk",sans-serif;
+      font-size:25px;
+    }
+
+    .snapshot-item span {
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    /* COMMON SECTION */
+
+    .section {
+      padding:82px 0;
+    }
+
+    .section-heading {
+      margin-bottom:38px;
+    }
+
+    .section-kicker {
+      color:var(--blue);
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      font-size:11px;
+      font-weight:700;
+      margin-bottom:8px;
+    }
+
+    .section-heading h2 {
+      color:var(--navy);
+      font-family:"Space Grotesk",sans-serif;
+      font-size:clamp(31px,4vw,45px);
+      line-height:1.12;
+      letter-spacing:-.03em;
+    }
+
+    .section-heading p {
+      max-width:720px;
+      color:var(--muted);
+      margin-top:10px;
+    }
+
+    /* RESEARCH DOMAINS */
+
+    .domain-grid {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .domain-card {
+      position:relative;
+      overflow:hidden;
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:27px;
+      min-height:210px;
+      transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+    }
+
+    .domain-card:hover {
+      transform:translateY(-5px);
+      box-shadow:var(--shadow-hover);
+      border-color:#bfdbfe;
+    }
+
+    .domain-card::before {
+      content:"";
+      position:absolute;
+      left:0;
+      top:0;
+      width:3px;
+      height:100%;
+      background:var(--blue);
+    }
+
+    .domain-card:nth-child(2)::before {
+      background:var(--cyan);
+    }
+
+    .domain-card:nth-child(3)::before {
+      background:var(--purple);
+    }
+
+    .domain-card:nth-child(4)::before {
+      background:var(--green);
+    }
+
+    .domain-card:nth-child(5)::before {
+      background:var(--orange);
+    }
+
+    .domain-card:nth-child(6)::before {
+      background:#2563eb;
+    }
+
+    .domain-icon {
+      width:45px;
+      height:45px;
+      display:grid;
+      place-items:center;
+      border-radius:12px;
+      background:var(--blue-soft);
+      color:var(--blue);
+      margin-bottom:19px;
+      font-size:20px;
+    }
+
+    .domain-card:nth-child(2) .domain-icon {
+      background:#ecfeff;
+      color:var(--cyan);
+    }
+
+    .domain-card:nth-child(3) .domain-icon {
+      background:#f5f3ff;
+      color:var(--purple);
+    }
+
+    .domain-card:nth-child(4) .domain-icon {
+      background:#ecfdf5;
+      color:var(--green);
+    }
+
+    .domain-card:nth-child(5) .domain-icon {
+      background:#fff7ed;
+      color:var(--orange);
+    }
+
+    .domain-card h3 {
+      color:var(--navy);
+      font-family:"Space Grotesk",sans-serif;
+      font-size:20px;
+      margin-bottom:8px;
+    }
+
+    .domain-card p {
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* RESEARCH PIPELINE */
+
+    .pipeline {
+      background:#fff;
+      border-top:1px solid var(--border);
+      border-bottom:1px solid var(--border);
+    }
+
+    .pipeline-grid {
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:0;
+    }
+
+    .pipeline-step {
+      position:relative;
+      padding:34px 25px;
+      border-right:1px solid var(--border);
+    }
+
+    .pipeline-step:last-child {
+      border-right:0;
+    }
+
+    .pipeline-number {
+      color:#93c5fd;
+      font-family:"Space Grotesk",sans-serif;
+      font-size:30px;
+      font-weight:700;
+      margin-bottom:12px;
+    }
+
+    .pipeline-step h3 {
+      color:var(--navy);
+      font-family:"Space Grotesk",sans-serif;
+      font-size:17px;
+      margin-bottom:7px;
+    }
+
+    .pipeline-step p {
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    /* FEATURED RESEARCH */
+
+    .featured-research {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+    }
+
+    .research-card {
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:30px;
+      box-shadow:var(--shadow);
+      transition:transform .25s ease,box-shadow .25s ease;
+    }
+
+    .research-card:hover {
+      transform:translateY(-5px);
+      box-shadow:var(--shadow-hover);
+    }
+
+    .research-card-label {
+      display:inline-block;
+      padding:5px 9px;
+      border-radius:7px;
+      background:var(--blue-soft);
+      color:var(--blue);
+      font-size:10px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      margin-bottom:17px;
+    }
+
+    .research-card h3 {
+      color:var(--navy);
+      font-family:"Space Grotesk",sans-serif;
+      font-size:22px;
+      line-height:1.3;
+      margin-bottom:12px;
+    }
+
+    .research-card p {
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .research-card-meta {
+      display:flex;
+      flex-wrap:wrap;
+      gap:7px;
+      margin:20px 0;
+    }
+
+    .meta-tag {
+      padding:5px 8px;
+      border:1px solid var(--border);
+      border-radius:7px;
+      color:#475569;
+      font-size:10px;
+      background:#f8fafc;
+    }
+
+    .doi-link {
+      color:var(--blue);
+      font-size:12px;
+      font-weight:700;
+    }
+
+    /* TIMELINE */
+
+    .timeline {
+      position:relative;
+      border-left:2px solid #dbeafe;
+      margin-left:12px;
+    }
+
+    .timeline-item {
+      position:relative;
+      padding:0 0 38px 35px;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom:0;
+    }
+
+    .timeline-item::before {
+      content:"";
+      position:absolute;
+      left:-7px;
+      top:5px;
+      width:12px;
+      height:12px;
+      border-radius:50%;
+      background:var(--blue);
+      border:3px solid var(--bg);
+      box-shadow:0 0 0 1px #bfdbfe;
+    }
+
+    .timeline-year {
+      color:var(--blue);
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.08em;
+      margin-bottom:5px;
+    }
+
+    .timeline-item h3 {
+      color:var(--navy);
+      font-family:"Space Grotesk",sans-serif;
+      font-size:18px;
+      margin-bottom:5px;
+    }
+
+    .timeline-item p {
+      color:var(--muted);
+      font-size:13px;
+      max-width:800px;
+    }
+
+    /* RESEARCH PRINCIPLES */
+
+    .principles {
+      background:var(--blue-soft);
+      border-top:1px solid #dbeafe;
+      border-bottom:1px solid #dbeafe;
+    }
+
+    .principle-grid {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .principle {
+      background:#fff;
+      border:1px solid #dbeafe;
+      border-radius:16px;
+      padding:25px;
+    }
+
+    .principle strong {
+      display:block;
+      color:var(--navy);
+      font-family:"Space Grotesk",sans-serif;
+      font-size:18px;
+      margin-bottom:7px;
+    }
+
+    .principle p {
+      color:var(--muted);
+      font-size:12.5px;
+    }
+
+    /* CTA */
+
+    .research-cta {
+      padding:42px;
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
+      box-shadow:var(--shadow);
+    }
+
+    .research-cta h2 {
+      color:var(--navy);
+      font-family:"Space Grotesk",sans-serif;
+      font-size:27px;
+      margin-bottom:5px;
+    }
+
+    .research-cta p {
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background:#fff;
+      border-top:1px solid var(--border);
+      padding:58px 0 22px;
+    }
+
+    .footer-grid {
+      display:grid;
+      grid-template-columns:1.5fr repeat(3,1fr);
+      gap:45px;
+      padding-bottom:40px;
+    }
+
+    .footer-brand strong {
+      color:var(--navy);
+      font-family:"Space Grotesk",sans-serif;
+      font-size:18px;
+    }
+
+    .footer-brand p {
+      color:var(--muted);
+      font-size:13px;
+      max-width:300px;
+      margin-top:10px;
+    }
+
+    .footer-column h4 {
+      color:var(--navy);
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.1em;
+      margin-bottom:14px;
+    }
+
+    .footer-column a {
+      display:block;
+      color:var(--muted);
+      font-size:13px;
+      margin:7px 0;
+    }
+
+    .footer-column a:hover {
+      color:var(--blue);
+    }
+
+    .footer-bottom {
+      border-top:1px solid var(--border);
+      padding-top:20px;
+      display:flex;
+      justify-content:space-between;
+      color:#94a3b8;
+      font-size:11px;
+    }
+
+    /* REVEAL */
+
+    .reveal {
+      opacity:0;
+      transform:translateY(18px);
+      transition:opacity .6s ease,transform .6s ease;
+    }
+
+    .reveal.visible {
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:900px) {
+
+      .nav-menu {
+        position:absolute;
+        top:76px;
+        left:0;
+        right:0;
+        display:none;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:0;
+        padding:12px 20px 20px;
+        background:#fff;
+        border-bottom:1px solid var(--border);
+        box-shadow:0 15px 30px rgba(15,23,42,.07);
+      }
+
+      .nav-menu.open {
+        display:flex;
+      }
+
+      .nav-menu a {
+        width:100%;
+        padding:12px 0;
+      }
+
+      .nav-menu a.active::after {
+        display:none;
+      }
+
+      .menu-toggle {
+        display:block;
+      }
+
+      .hero-grid {
+        grid-template-columns:1fr;
+        gap:35px;
+      }
+
+      .domain-grid {
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .pipeline-grid {
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .pipeline-step:nth-child(2) {
+        border-right:0;
+      }
+
+      .pipeline-step:nth-child(-n+2) {
+        border-bottom:1px solid var(--border);
+      }
+
+      .featured-research {
+        grid-template-columns:1fr;
+      }
+
+      .principle-grid {
+        grid-template-columns:1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
+    @media(max-width:650px) {
+
+      .container {
+        width:min(100% - 28px,var(--max-width));
+      }
+
+      .research-hero {
+        padding:65px 0 55px;
+      }
+
+      .section {
+        padding:62px 0;
+      }
+
+      .domain-grid,
+      .pipeline-grid,
+      .footer-grid {
+        grid-template-columns:1fr;
+      }
+
+      .pipeline-step {
+        border-right:0;
+        border-bottom:1px solid var(--border);
+      }
+
+      .pipeline-step:last-child {
+        border-bottom:0;
+      }
+
+      .research-cta {
+        padding:28px;
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .footer-bottom {
+        flex-direction:column;
+        gap:8px;
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+
+      html {
+        scroll-behavior:auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration:.01ms!important;
+        animation-duration:.01ms!important;
+      }
+
+      .reveal {
+        opacity:1;
+        transform:none;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+<header class="site-header" id="siteHeader">
+
+  <div class="container nav-container">
+
+```
+<a href="index.html" class="brand">
+
+  <div class="brand-mark">MM</div>
+
+  <div class="brand-copy">
+    <strong>MICHAEL MAHESH</strong>
+    <span>Professor · Artificial Intelligence</span>
+  </div>
+
+</a>
+
+<button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+  ☰
+</button>
+
+<nav class="nav-menu" id="navMenu">
+
+  <a href="research.html" class="active">Research</a>
+  <a href="projects.html">Projects</a>
+  <a href="learning.html">Learning</a>
+  <a href="publications.html">Publications</a>
+  <a href="about.html">About</a>
+  <a href="contact.html" class="nav-connect">Connect</a>
+
+</nav>
+```
+
+  </div>
+
+</header>
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="research-hero">
+
+```
+<div class="container hero-grid">
+
+  <div class="reveal">
+
+    <div class="eyebrow">
+      Research
+    </div>
+
+    <h1>
+      Researching<br>
+      <span>intelligent systems.</span>
+    </h1>
+
+    <p class="hero-description">
+      My research explores Artificial Intelligence, Machine Learning,
+      Deep Learning, Computer Vision, Digital Image Processing,
+      Medical AI and Advanced Driver Assistance Systems.
+    </p>
+
+    <div class="hero-actions">
+
+      <a class="btn btn-primary" href="publications.html">
+        View Publications →
+      </a>
+
+      <a class="btn btn-secondary" href="projects.html">
+        Research Projects
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <aside class="research-snapshot reveal">
+
+    <div class="snapshot-label">
+      Research Snapshot
+    </div>
+
+    <div class="snapshot-item">
+      <strong>AI + Vision</strong>
+      <span>Core research direction</span>
+    </div>
+
+    <div class="snapshot-item">
+      <strong>Medical AI</strong>
+      <span>Imaging and intelligent diagnosis</span>
+    </div>
+
+    <div class="snapshot-item">
+      <strong>ADAS</strong>
+      <span>Intelligent transportation systems</span>
+    </div>
+
+    <div class="snapshot-item">
+      <strong>Deep Learning</strong>
+      <span>Architectures and applications</span>
+    </div>
+
+  </aside>
+
+</div>
+```
+
+  </section>
+
+  <!-- RESEARCH DOMAINS -->
+
+  <section class="section">
+
+```
+<div class="container">
+
+  <div class="section-heading reveal">
+
+    <div class="section-kicker">
+      Research Areas
+    </div>
+
+    <h2>
+      Where research meets application.
+    </h2>
+
+    <p>
+      Research interests connect computational intelligence with
+      real-world visual, medical, transportation and intelligent-system
+      problems.
+    </p>
+
+  </div>
+
+
+  <div class="domain-grid">
+
+    <article class="domain-card reveal">
+
+      <div class="domain-icon">AI</div>
+
+      <h3>Artificial Intelligence</h3>
+
+      <p>
+        Intelligent computational approaches for solving
+        complex engineering and real-world problems.
+      </p>
+
+    </article>
+
+
+    <article class="domain-card reveal">
+
+      <div class="domain-icon">CV</div>
+
+      <h3>Computer Vision</h3>
+
+      <p>
+        Image understanding, object detection, segmentation,
+        recognition and visual intelligence.
+      </p>
+
+    </article>
+
+
+    <article class="domain-card reveal">
+
+      <div class="domain-icon">DL</div>
+
+      <h3>Deep Learning</h3>
+
+      <p>
+        Deep neural architectures, optimization and
+        application-oriented learning systems.
+      </p>
+
+    </article>
+
+
+    <article class="domain-card reveal">
+
+      <div class="domain-icon">MI</div>
+
+      <h3>Medical AI</h3>
+
+      <p>
+        Medical image analysis, tumour segmentation,
+        classification and intelligent diagnostic support.
+      </p>
+
+    </article>
+
+
+    <article class="domain-card reveal">
+
+      <div class="domain-icon">IP</div>
+
+      <h3>Digital Image Processing</h3>
+
+      <p>
+        Image enhancement, segmentation, transformations,
+        feature extraction and visual analysis.
+      </p>
+
+    </article>
+
+
+    <article class="domain-card reveal">
+
+      <div class="domain-icon">AD</div>
+
+      <h3>ADAS & Intelligent Systems</h3>
+
+      <p>
+        Intelligent transportation research involving
+        steering prediction, pedestrian analysis and braking decisions.
+      </p>
+
+    </article>
+
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <!-- RESEARCH PIPELINE -->
+
+  <section class="pipeline">
+
+```
+<div class="container">
+
+  <div class="pipeline-grid">
+
+    <div class="pipeline-step reveal">
+
+      <div class="pipeline-number">01</div>
+
+      <h3>Problem</h3>
+
+      <p>
+        Identify a meaningful engineering,
+        medical or real-world challenge.
+      </p>
+
+    </div>
+
+
+    <div class="pipeline-step reveal">
+
+      <div class="pipeline-number">02</div>
+
+      <h3>Model</h3>
+
+      <p>
+        Design or adapt computational and
+        deep learning approaches.
+      </p>
+
+    </div>
+
+
+    <div class="pipeline-step reveal">
+
+      <div class="pipeline-number">03</div>
+
+      <h3>Experiment</h3>
+
+      <p>
+        Evaluate models through datasets,
+        experiments and comparative analysis.
+      </p>
+
+    </div>
+
+
+    <div class="pipeline-step reveal">
+
+      <div class="pipeline-number">04</div>
+
+      <h3>Impact</h3>
+
+      <p>
+        Translate research outcomes into
+        useful systems, publications and knowledge.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <!-- FEATURED RESEARCH -->
+
+  <section class="section">
+
+```
+<div class="container">
+
+  <div class="section-heading reveal">
+
+    <div class="section-kicker">
+      Selected Research
+    </div>
+
+    <h2>
+      Recent directions.
+    </h2>
+
+    <p>
+      Selected research themes demonstrating the connection between
+      deep learning, computer vision, medical intelligence and ADAS.
+    </p>
+
+  </div>
+
+
+  <div class="featured-research">
+
+
+    <article class="research-card reveal">
+
+      <span class="research-card-label">
+        ADAS · Deep Learning
+      </span>
+
+      <h3>
+        MICH-Net: Steering Angle Prediction for ADAS
+      </h3>
+
+      <p>
+        A deep learning architecture with African Fire Hawk
+        Optimization for steering angle prediction in
+        Advanced Driver Assistance Systems.
+      </p>
+
+      <div class="research-card-meta">
+        <span class="meta-tag">Deep Learning</span>
+        <span class="meta-tag">ADAS</span>
+        <span class="meta-tag">Steering Prediction</span>
+        <span class="meta-tag">Optimization</span>
+      </div>
+
+      <a
+        class="doi-link"
+        href="https://doi.org/10.1109/TITS.2025.3623324"
+        target="_blank"
+        rel="noopener"
+      >
+        View Publication →
+      </a>
+
+    </article>
+
+
+    <article class="research-card reveal">
+
+      <span class="research-card-label">
+        Medical AI
+      </span>
+
+      <h3>
+        Multi-Modal Lung Cancer Detection
+      </h3>
+
+      <p>
+        Research on multi-modal lung cancer detection using
+        a pyramidal cascade neuro-fuzzy fractional network.
+      </p>
+
+      <div class="research-card-meta">
+        <span class="meta-tag">Medical Imaging</span>
+        <span class="meta-tag">Deep Learning</span>
+        <span class="meta-tag">Classification</span>
+        <span class="meta-tag">AI</span>
+      </div>
+
+      <a
+        class="doi-link"
+        href="https://doi.org/10.1080/07357907.2025.2520610"
+        target="_blank"
+        rel="noopener"
+      >
+        View Publication →
+      </a>
+
+    </article>
+
+
+    <article class="research-card reveal">
+
+      <span class="research-card-label">
+        Computer Vision · ADAS
+      </span>
+
+      <h3>
+        PMFHNet for Road Anomaly Detection
+      </h3>
+
+      <p>
+        Parallel Maxout Feed Harmonic Network research
+        addressing road anomaly object detection in ADAS
+        under low-light conditions.
+      </p>
+
+      <div class="research-card-meta">
+        <span class="meta-tag">Object Detection</span>
+        <span class="meta-tag">Low Light</span>
+        <span class="meta-tag">ADAS</span>
+        <span class="meta-tag">Computer Vision</span>
+      </div>
+
+      <a
+        class="doi-link"
+        href="https://doi.org/10.1080/13682199.2025.2599711"
+        target="_blank"
+        rel="noopener"
+      >
+        View Publication →
+      </a>
+
+    </article>
+
+
+    <article class="research-card reveal">
+
+      <span class="research-card-label">
+        Medical Imaging
+      </span>
+
+      <h3>
+        Deep Learning for Glioma Analysis
+      </h3>
+
+      <p>
+        Earlier research focused on multimodal MRI,
+        glioma segmentation and severity-level classification.
+      </p>
+
+      <div class="research-card-meta">
+        <span class="meta-tag">MRI</span>
+        <span class="meta-tag">Segmentation</span>
+        <span class="meta-tag">Brain Tumour</span>
+        <span class="meta-tag">Deep Learning</span>
+      </div>
+
+      <a
+        class="doi-link"
+        href="https://doi.org/10.1049/iet-ipr.2018.6682"
+        target="_blank"
+        rel="noopener"
+      >
+        View Publication →
+      </a>
+
+    </article>
+
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <!-- RESEARCH EVOLUTION -->
+
+  <section class="section">
+
+```
+<div class="container">
+
+  <div class="section-heading reveal">
+
+    <div class="section-kicker">
+      Research Evolution
+    </div>
+
+    <h2>
+      From medical imaging to intelligent systems.
+    </h2>
+
+    <p>
+      The research portfolio has developed across multiple
+      application domains while maintaining a strong foundation
+      in AI, deep learning and visual intelligence.
+    </p>
+
+  </div>
+
+
+  <div class="timeline">
+
+    <div class="timeline-item reveal">
+
+      <div class="timeline-year">
+        2018–2020
+      </div>
+
+      <h3>
+        Medical Image Intelligence
+      </h3>
+
+      <p>
+        Research involving brain tumour recognition,
+        multimodal MRI analysis, segmentation and
+        severity-level classification.
+      </p>
+
+    </div>
+
+
+    <div class="timeline-item reveal">
+
+      <div class="timeline-year">
+        2021–2022
+      </div>
+
+      <h3>
+        Video Analytics & Road Scene Understanding
+      </h3>
+
+      <p>
+        Research expanded into surveillance-video anomaly
+        detection, road scene segmentation and road
+        intersection classification.
+      </p>
+
+    </div>
+
+
+    <div class="timeline-item reveal">
+
+      <div class="timeline-year">
+        2023–2024
+      </div>
+
+      <h3>
+        ADAS & Intelligent Transportation
+      </h3>
+
+      <p>
+        Research included braking decision-making,
+        pedestrian crossing-time estimation and
+        intelligent transportation applications.
+      </p>
+
+    </div>
+
+
+    <div class="timeline-item reveal">
+
+      <div class="timeline-year">
+        2025–2026
+      </div>
+
+      <h3>
+        Multidisciplinary AI Systems
+      </h3>
+
+      <p>
+        Recent work spans ADAS, medical AI, road anomaly
+        detection, wireless intelligent systems and
+        emerging AI architectures.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <!-- PRINCIPLES -->
+
+  <section class="section principles">
+
+```
+<div class="container">
+
+  <div class="section-heading reveal">
+
+    <div class="section-kicker">
+      Research Philosophy
+    </div>
+
+    <h2>
+      Research should move beyond the paper.
+    </h2>
+
+  </div>
+
+
+  <div class="principle-grid">
+
+    <div class="principle reveal">
+
+      <strong>Research</strong>
+
+      <p>
+        Develop meaningful technical ideas supported
+        by systematic experimentation and analysis.
+      </p>
+
+    </div>
+
+
+    <div class="principle reveal">
+
+      <strong>Build</strong>
+
+      <p>
+        Convert research concepts into working prototypes,
+        implementations and reproducible experiments.
+      </p>
+
+    </div>
+
+
+    <div class="principle reveal">
+
+      <strong>Share</strong>
+
+      <p>
+        Make knowledge accessible through publications,
+        teaching materials, projects and open-source work.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <!-- CTA -->
+
+  <section class="section">
+
+```
+<div class="container">
+
+  <div class="research-cta reveal">
+
+    <div>
+
+      <h2>
+        Explore the research output.
+      </h2>
+
+      <p>
+        Browse publications, projects and academic profiles.
+      </p>
+
+    </div>
+
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
+
+      <a class="btn btn-primary" href="publications.html">
+        Publications →
+      </a>
+
+      <a class="btn btn-secondary" href="projects.html">
+        Projects →
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+```
+
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container">
+
+```
+<div class="footer-grid">
+
+  <div class="footer-brand">
+
+    <strong>Dr. K. Michael Mahesh</strong>
+
+    <p>
+      Professor · Artificial Intelligence<br>
+      AI Research · Computer Vision · Deep Learning
+    </p>
+
+  </div>
+
+
+  <div class="footer-column">
+
+    <h4>Research</h4>
+
+    <a href="research.html">Research Areas</a>
+    <a href="publications.html">Publications</a>
+    <a href="projects.html">Projects</a>
+
+  </div>
+
+
+  <div class="footer-column">
+
+    <h4>Learning</h4>
+
+    <a href="learning.html">Teaching Materials</a>
+    <a href="learning.html">Tutorials</a>
+    <a href="learning.html">Research Insights</a>
+
+  </div>
+
+
+  <div class="footer-column">
+
+    <h4>Connect</h4>
+
+    <a
+      href="https://www.linkedin.com/in/michaelmahesh"
+      target="_blank"
+      rel="noopener"
+    >
+      LinkedIn
+    </a>
+
+    <a
+      href="https://orcid.org/0000-0002-9948-5743"
+      target="_blank"
+      rel="noopener"
+    >
+      ORCID
+    </a>
+
+    <a
+      href="https://scholar.google.com/citations?user=YxDQyvIAAAAJ&hl=en"
+      target="_blank"
+      rel="noopener"
+    >
+      Google Scholar
+    </a>
+
+    <a
+      href="https://github.com/michaelmahesh"
+      target="_blank"
+      rel="noopener"
+    >
+      GitHub
+    </a>
+
+  </div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+  <span>
+    © <span id="year"></span> Dr. K. Michael Mahesh. All rights reserved.
+  </span>
+
+  <a href="privacy.html">
+    Privacy
+  </a>
+
+</div>
+```
+
+  </div>
+
+</footer>
+
+<script>
+
+  /* Header */
+
+  const header = document.getElementById("siteHeader");
+
+  window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 10) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+
+  });
+
+
+  /* Mobile menu */
+
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.getElementById("navMenu");
+
+  menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
+  });
+
+
+  document.querySelectorAll(".nav-menu a").forEach(link => {
+
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("open");
+    });
+
+  });
+
+
+  /* Reveal */
+
+  const revealItems =
+    document.querySelectorAll(".reveal");
+
+  const observer =
+    new IntersectionObserver(
+      entries => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add("visible");
+
+            observer.unobserve(entry.target);
+
+          }
+
+        });
+
+      },
+      {
+        threshold:.08
+      }
+    );
+
+  revealItems.forEach(item => {
+    observer.observe(item);
+  });
+
+
+  /* Year */
+
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+
+  /* Escape */
+
+  document.addEventListener("keydown", event => {
+
+    if (event.key === "Escape") {
+      navMenu.classList.remove("open");
+    }
+
+  });
+
+</script>
+
+<!-- Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SL2GKJ42ES"></script>
+
+<script>
+
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag(){
+    dataLayer.push(arguments);
+  }
+
+  gtag("js", new Date());
+  gtag("config","G-SL2GKJ42ES");
+
+</script>
+
+</body>
+</html>
