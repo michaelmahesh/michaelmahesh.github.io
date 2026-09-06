@@ -2,73 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Projects by Dr. K. Michael Mahesh — Artificial Intelligence, Deep Learning, Computer Vision, Medical AI and Image Processing."
+  >
+
+  <meta name="theme-color" content="#ffffff">
 
   <title>Projects | Dr. K. Michael Mahesh</title>
 
-  <meta name="description"
-        content="AI, Deep Learning, Computer Vision, Digital Image Processing, Python and intelligent systems projects by Dr. K. Michael Mahesh.">
-
-  <meta name="theme-color" content="#1D4ED8">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
-        rel="stylesheet">
-
-  <!-- Google AdSense -->
-  <script async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6687646879167326"
-          crossorigin="anonymous"></script>
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SL2GKJ42ES"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-SL2GKJ42ES');
-  </script>
-
   <style>
-
     :root {
+      --white: #ffffff;
+      --bg: #f7faff;
+      --bg-soft: #eff6ff;
+
       --blue: #1d4ed8;
-      --blue-dark: #173ea8;
-      --blue-soft: #eff6ff;
+      --blue-dark: #1e40af;
+      --blue-light: #dbeafe;
 
       --navy: #0f172a;
       --text: #334155;
       --muted: #64748b;
 
-      --white: #ffffff;
-      --bg: #f7faff;
-
       --border: #e2e8f0;
-      --border-blue: #bfdbfe;
 
-      --green: #059669;
-      --orange: #ea580c;
+      --green: #16a34a;
       --purple: #7c3aed;
+      --orange: #ea580c;
       --cyan: #0891b2;
 
       --shadow-sm:
-        0 4px 16px rgba(15, 23, 42, .05);
+        0 4px 18px rgba(15, 23, 42, 0.05);
 
       --shadow-md:
-        0 14px 40px rgba(15, 23, 42, .08);
+        0 12px 35px rgba(15, 23, 42, 0.08);
 
-      --radius: 18px;
+      --radius-sm: 12px;
+      --radius-md: 18px;
       --radius-lg: 26px;
 
-      --max: 1180px;
+      --max-width: 1180px;
     }
 
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     html {
@@ -76,17 +59,18 @@
     }
 
     body {
-      font-family: "Inter", sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
 
-    body,
-    button,
-    input {
-      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
     }
 
     a {
@@ -94,13 +78,15 @@
       text-decoration: none;
     }
 
-    button {
-      border: 0;
+    button,
+    input,
+    select {
+      font: inherit;
     }
 
-    .container {
-      width: min(calc(100% - 40px), var(--max));
-      margin: auto;
+    img {
+      max-width: 100%;
+      display: block;
     }
 
     /* =========================================
@@ -112,51 +98,50 @@
       top: 0;
       z-index: 1000;
 
-      background: rgba(255,255,255,.94);
-      backdrop-filter: blur(16px);
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
 
-      border-bottom: 1px solid rgba(226,232,240,.9);
-
-      transition: box-shadow .25s ease;
-    }
-
-    .site-header.scrolled {
-      box-shadow: var(--shadow-sm);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
     }
 
     .nav-container {
+      max-width: var(--max-width);
       min-height: 76px;
+
+      margin: 0 auto;
+      padding: 0 24px;
 
       display: flex;
       align-items: center;
       justify-content: space-between;
-
-      gap: 25px;
+      gap: 30px;
     }
 
     .brand {
       display: flex;
       align-items: center;
       gap: 12px;
-
       flex-shrink: 0;
     }
 
     .brand-mark {
-      width: 40px;
-      height: 40px;
+      width: 42px;
+      height: 42px;
+
+      border-radius: 12px;
 
       display: grid;
       place-items: center;
 
-      border-radius: 12px;
-
-      color: white;
       background: var(--blue);
+      color: white;
 
-      font-family: "Space Grotesk", sans-serif;
-      font-weight: 700;
-      font-size: 13px;
+      font-size: 15px;
+      font-weight: 800;
+
+      box-shadow:
+        0 6px 16px rgba(29, 78, 216, 0.18);
     }
 
     .brand-copy strong {
@@ -164,69 +149,75 @@
 
       color: var(--navy);
 
-      font-family: "Space Grotesk", sans-serif;
-
       font-size: 15px;
-      letter-spacing: -.02em;
+      font-weight: 800;
+      letter-spacing: 0.03em;
     }
 
     .brand-copy span {
       display: block;
 
+      margin-top: 1px;
+
       color: var(--muted);
 
-      font-size: 10px;
-
-      letter-spacing: .08em;
-      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 0.04em;
     }
 
     .nav-menu {
       display: flex;
       align-items: center;
-      gap: 4px;
+      gap: 5px;
     }
 
     .nav-menu a {
+      position: relative;
+
       padding: 9px 13px;
 
-      color: var(--muted);
+      color: var(--text);
 
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 600;
 
       border-radius: 9px;
 
       transition:
-        color .2s ease,
-        background .2s ease;
+        color 0.2s ease,
+        background 0.2s ease;
     }
 
-    .nav-menu a:hover,
+    .nav-menu a:hover {
+      color: var(--blue);
+      background: var(--bg-soft);
+    }
+
     .nav-menu a.active {
       color: var(--blue);
-      background: var(--blue-soft);
+      background: var(--bg-soft);
     }
 
-    .nav-menu .nav-connect {
-      color: white;
-      background: var(--blue);
+    .connect-btn {
+      background: var(--blue) !important;
+      color: white !important;
+      padding: 9px 16px !important;
     }
 
-    .nav-menu .nav-connect:hover {
-      color: white;
-      background: var(--blue-dark);
+    .connect-btn:hover {
+      background: var(--blue-dark) !important;
     }
 
     .menu-toggle {
       display: none;
 
-      color: var(--navy);
+      border: 0;
       background: transparent;
 
-      font-size: 24px;
-
       cursor: pointer;
+
+      font-size: 26px;
+      color: var(--navy);
     }
 
     /* =========================================
@@ -235,8 +226,9 @@
 
     .projects-hero {
       position: relative;
+      overflow: hidden;
 
-      padding: 90px 0 70px;
+      padding: 86px 24px 72px;
 
       background:
         linear-gradient(
@@ -245,39 +237,22 @@
           #f7faff 100%
         );
 
-      overflow: hidden;
+      border-bottom: 1px solid var(--border);
     }
 
-    .hero-grid {
-      position: absolute;
-      inset: 0;
-
-      background-image:
-        linear-gradient(
-          rgba(29,78,216,.035) 1px,
-          transparent 1px
-        ),
-        linear-gradient(
-          90deg,
-          rgba(29,78,216,.035) 1px,
-          transparent 1px
-        );
-
-      background-size: 44px 44px;
-
-      mask-image:
-        linear-gradient(
-          to bottom,
-          black,
-          transparent
-        );
-    }
-
-    .projects-hero-content {
+    .hero-inner {
       position: relative;
-      z-index: 1;
+      z-index: 2;
 
-      max-width: 850px;
+      max-width: var(--max-width);
+
+      margin: 0 auto;
+
+      display: grid;
+      grid-template-columns: 1.4fr 0.6fr;
+
+      align-items: center;
+      gap: 60px;
     }
 
     .eyebrow {
@@ -285,42 +260,40 @@
       align-items: center;
       gap: 8px;
 
-      margin-bottom: 20px;
-      padding: 7px 12px;
-
-      border: 1px solid var(--border-blue);
-      border-radius: 999px;
-
-      background: var(--blue-soft);
+      margin-bottom: 17px;
 
       color: var(--blue);
 
-      font-size: 10px;
+      font-size: 12px;
       font-weight: 800;
 
-      letter-spacing: .11em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
     }
 
-    .eyebrow-dot {
-      width: 7px;
-      height: 7px;
+    .eyebrow::before {
+      content: "";
 
-      border-radius: 50%;
+      width: 25px;
+      height: 2px;
 
       background: var(--blue);
+
+      border-radius: 99px;
     }
 
     .projects-hero h1 {
-      color: var(--navy);
+      max-width: 780px;
 
-      font-family: "Space Grotesk", sans-serif;
+      color: var(--navy);
 
       font-size: clamp(42px, 6vw, 70px);
 
-      line-height: 1.03;
+      line-height: 1.02;
 
-      letter-spacing: -.055em;
+      letter-spacing: -0.045em;
+
+      margin-bottom: 22px;
     }
 
     .projects-hero h1 span {
@@ -328,452 +301,514 @@
     }
 
     .hero-description {
-      max-width: 720px;
-
-      margin-top: 23px;
+      max-width: 680px;
 
       color: var(--muted);
 
       font-size: 17px;
+      line-height: 1.8;
     }
 
-    .hero-stats {
+    .hero-links {
+      margin-top: 30px;
+
       display: flex;
       flex-wrap: wrap;
-
       gap: 12px;
+    }
 
-      margin-top: 30px;
+    .primary-btn,
+    .secondary-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+
+      min-height: 45px;
+
+      padding: 0 18px;
+
+      border-radius: 10px;
+
+      font-size: 14px;
+      font-weight: 700;
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+    }
+
+    .primary-btn {
+      background: var(--blue);
+      color: white;
+
+      box-shadow:
+        0 8px 18px rgba(29, 78, 216, 0.16);
+    }
+
+    .secondary-btn {
+      background: white;
+
+      color: var(--navy);
+
+      border: 1px solid var(--border);
+    }
+
+    .primary-btn:hover,
+    .secondary-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
     }
 
     .hero-stat {
-      padding: 13px 17px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .repo-count-card {
+      width: 230px;
+
+      padding: 30px;
 
       background: white;
 
       border: 1px solid var(--border);
 
-      border-radius: 12px;
+      border-radius: var(--radius-lg);
 
       box-shadow: var(--shadow-sm);
+
+      text-align: center;
     }
 
-    .hero-stat strong {
-      display: block;
+    .repo-count-number {
+      color: var(--blue);
 
-      color: var(--navy);
+      font-size: 52px;
+      font-weight: 800;
 
-      font-family: "Space Grotesk", sans-serif;
-
-      font-size: 20px;
       line-height: 1;
     }
 
-    .hero-stat span {
-      display: block;
+    .repo-count-label {
+      margin-top: 10px;
 
-      margin-top: 4px;
+      color: var(--navy);
+
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .repo-count-small {
+      margin-top: 5px;
 
       color: var(--muted);
 
-      font-size: 10px;
-
-      text-transform: uppercase;
-      letter-spacing: .07em;
+      font-size: 12px;
     }
 
     /* =========================================
-       SECTION
+       MAIN
     ========================================= */
 
-    .section {
-      padding: 80px 0;
+    main {
+      max-width: var(--max-width);
+
+      margin: 0 auto;
+
+      padding: 72px 24px 90px;
     }
 
-    .section-header {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-
-      gap: 30px;
-
-      margin-bottom: 35px;
+    .section-heading {
+      margin-bottom: 30px;
     }
 
     .section-label {
-      margin-bottom: 8px;
-
       color: var(--blue);
 
-      font-size: 10px;
+      font-size: 11px;
       font-weight: 800;
 
-      letter-spacing: .13em;
+      letter-spacing: 0.13em;
       text-transform: uppercase;
+
+      margin-bottom: 8px;
     }
 
-    .section-title {
+    .section-heading h2 {
       color: var(--navy);
 
-      font-family: "Space Grotesk", sans-serif;
+      font-size: 30px;
+      line-height: 1.2;
 
-      font-size: clamp(28px, 4vw, 40px);
-
-      line-height: 1.1;
-
-      letter-spacing: -.035em;
+      letter-spacing: -0.025em;
     }
 
-    .section-description {
-      max-width: 520px;
+    .section-heading p {
+      max-width: 650px;
+
+      margin-top: 10px;
 
       color: var(--muted);
 
-      font-size: 13px;
+      font-size: 15px;
     }
 
     /* =========================================
        FEATURED PROJECTS
     ========================================= */
 
-    .featured-section {
-      background: white;
-
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
     .featured-grid {
       display: grid;
 
       grid-template-columns:
-        repeat(3, 1fr);
+        repeat(3, minmax(0, 1fr));
 
-      gap: 18px;
+      gap: 20px;
+
+      margin-bottom: 90px;
     }
 
     .featured-card {
       position: relative;
+      overflow: hidden;
 
-      padding: 28px;
+      padding: 25px;
 
-      min-height: 300px;
+      min-height: 250px;
+
+      background: white;
+
+      border: 1px solid var(--border);
+
+      border-radius: var(--radius-md);
+
+      box-shadow: var(--shadow-sm);
 
       display: flex;
       flex-direction: column;
 
-      background: var(--bg);
-
-      border: 1px solid var(--border);
-
-      border-radius: var(--radius-lg);
-
       transition:
-        transform .25s ease,
-        box-shadow .25s ease,
-        border-color .25s ease;
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
     }
 
     .featured-card:hover {
       transform: translateY(-5px);
 
-      border-color: var(--border-blue);
-
       box-shadow: var(--shadow-md);
+
+      border-color: #bfdbfe;
     }
 
-    .project-label {
+    .featured-card::after {
+      content: "";
+
+      position: absolute;
+
+      right: -35px;
+      bottom: -35px;
+
+      width: 120px;
+      height: 120px;
+
+      border-radius: 50%;
+
+      background: var(--bg-soft);
+
+      z-index: 0;
+    }
+
+    .featured-top {
+      position: relative;
+      z-index: 1;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
 
-      gap: 15px;
+      gap: 12px;
     }
 
-    .project-category {
+    .project-type {
       display: inline-flex;
 
       padding: 5px 9px;
 
       border-radius: 999px;
 
-      background: var(--blue-soft);
+      background: var(--bg-soft);
 
       color: var(--blue);
 
-      font-size: 9px;
+      font-size: 10px;
       font-weight: 800;
 
       text-transform: uppercase;
-      letter-spacing: .08em;
+      letter-spacing: 0.07em;
     }
 
-    .project-number {
+    .project-index {
       color: #94a3b8;
 
-      font-family: "Space Grotesk";
-
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 700;
     }
 
     .featured-card h3 {
-      margin-top: 22px;
+      position: relative;
+      z-index: 1;
+
+      margin-top: 20px;
 
       color: var(--navy);
 
-      font-family: "Space Grotesk";
+      font-size: 20px;
 
-      font-size: 23px;
-
-      line-height: 1.18;
-
-      letter-spacing: -.025em;
+      line-height: 1.3;
     }
 
     .featured-card p {
+      position: relative;
+      z-index: 1;
+
       margin-top: 11px;
 
       color: var(--muted);
 
       font-size: 13px;
+
+      line-height: 1.7;
     }
 
-    .tech-tags {
+    .featured-footer {
+      position: relative;
+      z-index: 1;
+
+      margin-top: auto;
+      padding-top: 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .featured-tags {
       display: flex;
       flex-wrap: wrap;
-
       gap: 6px;
-
-      margin-top: 18px;
     }
 
-    .tech-tag {
+    .featured-tag {
       padding: 4px 7px;
-
-      color: var(--text);
-
-      background: white;
 
       border: 1px solid var(--border);
 
       border-radius: 6px;
 
-      font-size: 9px;
+      color: var(--text);
+
+      font-size: 10px;
       font-weight: 600;
-    }
-
-    .project-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      margin-top: auto;
-      padding-top: 22px;
     }
 
     .project-link {
       color: var(--blue);
 
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 800;
+
+      white-space: nowrap;
     }
 
-    .project-status {
-      color: var(--muted);
-
-      font-size: 9px;
-      font-weight: 600;
+    .project-link:hover {
+      color: var(--blue-dark);
     }
 
     /* =========================================
-       FILTERS
+       REPOSITORY TOOLBAR
     ========================================= */
 
-    .repository-section {
-      padding-top: 75px;
+    .all-projects-section {
+      scroll-margin-top: 100px;
     }
 
-    .filter-bar {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
+    .toolbar {
+      display: grid;
 
-      gap: 9px;
+      grid-template-columns: 1fr auto;
 
-      margin-bottom: 28px;
-    }
+      gap: 14px;
 
-    .filter-btn {
-      padding: 9px 13px;
-
-      color: var(--muted);
-
-      background: white;
-
-      border: 1px solid var(--border);
-
-      border-radius: 9px;
-
-      font-size: 11px;
-      font-weight: 700;
-
-      cursor: pointer;
-
-      transition:
-        color .2s ease,
-        background .2s ease,
-        border-color .2s ease;
-    }
-
-    .filter-btn:hover {
-      color: var(--blue);
-
-      border-color: var(--border-blue);
-    }
-
-    .filter-btn.active {
-      color: white;
-
-      background: var(--blue);
-
-      border-color: var(--blue);
+      margin-bottom: 25px;
     }
 
     .search-box {
       position: relative;
-
-      margin-left: auto;
     }
 
     .search-box input {
-      width: 220px;
+      width: 100%;
 
-      padding: 10px 13px 10px 35px;
+      height: 48px;
 
-      color: var(--navy);
+      padding: 0 17px 0 45px;
 
       background: white;
 
       border: 1px solid var(--border);
 
-      border-radius: 9px;
+      border-radius: 11px;
 
       outline: none;
 
-      font-size: 11px;
+      color: var(--navy);
+
+      font-size: 14px;
+
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
     }
 
     .search-box input:focus {
-      border-color: var(--border-blue);
+      border-color: #93c5fd;
 
       box-shadow:
-        0 0 0 3px var(--blue-soft);
+        0 0 0 4px rgba(59, 130, 246, 0.08);
     }
 
     .search-icon {
       position: absolute;
 
-      left: 12px;
+      left: 16px;
       top: 50%;
 
       transform: translateY(-50%);
 
       color: var(--muted);
 
-      font-size: 13px;
+      font-size: 17px;
     }
 
-    /* =========================================
-       REPOSITORY GRID
-    ========================================= */
+    .filter-select {
+      min-width: 190px;
 
-    .repository-grid {
-      display: grid;
+      height: 48px;
 
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap: 15px;
-    }
-
-    .repo-card {
-      position: relative;
-
-      min-height: 235px;
-
-      padding: 23px;
-
-      display: flex;
-      flex-direction: column;
+      padding: 0 14px;
 
       background: white;
 
       border: 1px solid var(--border);
 
-      border-radius: var(--radius);
+      border-radius: 11px;
+
+      outline: none;
+
+      color: var(--navy);
+
+      cursor: pointer;
+
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    /* =========================================
+       REPOSITORIES GRID
+    ========================================= */
+
+    .repo-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+      gap: 17px;
+    }
+
+    .repo-card {
+      display: flex;
+      flex-direction: column;
+
+      min-height: 245px;
+
+      padding: 21px;
+
+      background: white;
+
+      border: 1px solid var(--border);
+
+      border-radius: var(--radius-md);
 
       box-shadow: var(--shadow-sm);
 
       transition:
-        transform .22s ease,
-        box-shadow .22s ease,
-        border-color .22s ease;
+        transform 0.22s ease,
+        box-shadow 0.22s ease,
+        border-color 0.22s ease;
     }
 
     .repo-card:hover {
       transform: translateY(-4px);
 
-      border-color: var(--border-blue);
-
       box-shadow: var(--shadow-md);
+
+      border-color: #bfdbfe;
     }
 
-    .repo-top {
+    .repo-header {
       display: flex;
-      align-items: center;
+
+      align-items: flex-start;
       justify-content: space-between;
 
-      gap: 10px;
+      gap: 12px;
     }
 
-    .repo-index {
+    .repo-number {
+      min-width: 34px;
+
       color: #94a3b8;
 
-      font-family: "Space Grotesk";
-
-      font-size: 10px;
-      font-weight: 700;
+      font-size: 11px;
+      font-weight: 800;
     }
 
-    .repo-category {
-      padding: 4px 7px;
+    .repo-icon {
+      width: 38px;
+      height: 38px;
 
-      border-radius: 6px;
+      display: grid;
+      place-items: center;
 
-      background: var(--blue-soft);
+      border-radius: 10px;
+
+      background: var(--bg-soft);
 
       color: var(--blue);
 
-      font-size: 8px;
+      font-size: 17px;
       font-weight: 800;
-
-      text-transform: uppercase;
-      letter-spacing: .06em;
     }
 
     .repo-card h3 {
-      margin-top: 17px;
+      margin-top: 16px;
 
       color: var(--navy);
 
-      font-family: "Space Grotesk";
+      font-size: 16px;
 
-      font-size: 17px;
+      line-height: 1.35;
 
-      line-height: 1.25;
+      word-break: break-word;
+    }
 
-      overflow-wrap: anywhere;
+    .repo-card h3 a:hover {
+      color: var(--blue);
     }
 
     .repo-description {
@@ -781,7 +816,9 @@
 
       color: var(--muted);
 
-      font-size: 11px;
+      font-size: 12px;
+
+      line-height: 1.65;
 
       display: -webkit-box;
       -webkit-line-clamp: 3;
@@ -790,269 +827,157 @@
       overflow: hidden;
     }
 
-    .repo-tags {
+    .repo-meta {
       display: flex;
+
       flex-wrap: wrap;
 
-      gap: 5px;
+      gap: 7px;
 
-      margin-top: 13px;
+      margin-top: 14px;
     }
 
-    .repo-tag {
-      padding: 3px 6px;
+    .meta-item {
+      padding: 4px 7px;
+
+      background: #f8fafc;
+
+      border: 1px solid var(--border);
+
+      border-radius: 6px;
 
       color: var(--text);
 
-      background: var(--bg);
-
-      border: 1px solid var(--border);
-
-      border-radius: 5px;
-
-      font-size: 8px;
+      font-size: 10px;
       font-weight: 600;
     }
 
-    .repo-bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      gap: 10px;
-
+    .repo-footer {
       margin-top: auto;
-      padding-top: 18px;
-    }
 
-    .repo-open {
-      color: var(--blue);
-
-      font-size: 10px;
-      font-weight: 800;
-    }
-
-    .repo-open:hover {
-      text-decoration: underline;
-    }
-
-    .repo-type {
-      color: var(--muted);
-
-      font-size: 9px;
-    }
-
-    .no-results {
-      display: none;
-
-      padding: 50px 20px;
-
-      color: var(--muted);
-
-      text-align: center;
-
-      background: white;
-
-      border: 1px solid var(--border);
-
-      border-radius: var(--radius);
-    }
-
-    /* =========================================
-       PROJECT PHILOSOPHY
-    ========================================= */
-
-    .philosophy {
-      background: var(--blue-soft);
-
-      border-top: 1px solid var(--border-blue);
-      border-bottom: 1px solid var(--border-blue);
-    }
-
-    .philosophy-grid {
-      display: grid;
-
-      grid-template-columns:
-        1fr 1fr;
-
-      gap: 40px;
-
-      align-items: center;
-    }
-
-    .philosophy h2 {
-      color: var(--navy);
-
-      font-family: "Space Grotesk";
-
-      font-size: clamp(29px, 4vw, 42px);
-
-      line-height: 1.1;
-
-      letter-spacing: -.035em;
-    }
-
-    .philosophy p {
-      margin-top: 15px;
-
-      color: var(--muted);
-
-      font-size: 13px;
-    }
-
-    .principles {
-      display: grid;
-
-      grid-template-columns: 1fr 1fr;
-
-      gap: 12px;
-    }
-
-    .principle {
-      padding: 19px;
-
-      background: white;
-
-      border: 1px solid var(--border);
-
-      border-radius: 14px;
-    }
-
-    .principle strong {
-      color: var(--blue);
-
-      font-family: "Space Grotesk";
-
-      font-size: 12px;
-    }
-
-    .principle h3 {
-      margin-top: 7px;
-
-      color: var(--navy);
-
-      font-size: 14px;
-    }
-
-    .principle p {
-      margin-top: 5px;
-
-      font-size: 10px;
-    }
-
-    /* =========================================
-       CTA
-    ========================================= */
-
-    .cta-section {
-      padding: 75px 0;
-    }
-
-    .cta-card {
-      padding: 50px;
-
-      background: var(--navy);
-
-      color: white;
-
-      border-radius: var(--radius-lg);
-
-      overflow: hidden;
-
-      position: relative;
-    }
-
-    .cta-card::after {
-      content: "";
-
-      position: absolute;
-
-      width: 260px;
-      height: 260px;
-
-      right: -100px;
-      top: -110px;
-
-      border: 45px solid rgba(255,255,255,.05);
-
-      border-radius: 50%;
-    }
-
-    .cta-card h2 {
-      position: relative;
-      z-index: 1;
-
-      max-width: 720px;
-
-      font-family: "Space Grotesk";
-
-      font-size: clamp(28px, 4vw, 43px);
-
-      line-height: 1.12;
-
-      letter-spacing: -.035em;
-    }
-
-    .cta-card p {
-      position: relative;
-      z-index: 1;
-
-      max-width: 650px;
-
-      margin-top: 13px;
-
-      color: #cbd5e1;
-
-      font-size: 13px;
-    }
-
-    .cta-actions {
-      position: relative;
-      z-index: 1;
+      padding-top: 17px;
 
       display: flex;
-      flex-wrap: wrap;
+
+      align-items: center;
+      justify-content: space-between;
 
       gap: 10px;
-
-      margin-top: 25px;
     }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+    .repo-updated {
+      color: #94a3b8;
 
-      padding: 11px 17px;
+      font-size: 10px;
+    }
 
-      border-radius: 9px;
+    .github-link {
+      color: var(--blue);
 
       font-size: 11px;
       font-weight: 800;
-
-      transition:
-        transform .2s ease,
-        background .2s ease;
     }
 
-    .btn:hover {
-      transform: translateY(-2px);
+    .github-link:hover {
+      text-decoration: underline;
     }
 
-    .btn-white {
-      color: var(--navy);
+    /* =========================================
+       LOADING
+    ========================================= */
+
+    .loading {
+      grid-column: 1 / -1;
+
+      padding: 70px 20px;
+
+      text-align: center;
+
+      color: var(--muted);
+    }
+
+    .loader {
+      width: 34px;
+      height: 34px;
+
+      margin: 0 auto 15px;
+
+      border: 3px solid var(--blue-light);
+
+      border-top-color: var(--blue);
+
+      border-radius: 50%;
+
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .error-message {
+      grid-column: 1 / -1;
+
+      padding: 35px;
 
       background: white;
+
+      border: 1px solid var(--border);
+
+      border-radius: var(--radius-md);
+
+      text-align: center;
+
+      color: var(--muted);
     }
 
-    .btn-outline {
-      color: white;
+    .error-message strong {
+      display: block;
 
-      border: 1px solid rgba(255,255,255,.25);
+      margin-bottom: 6px;
+
+      color: var(--navy);
     }
 
-    .btn-outline:hover {
-      background: rgba(255,255,255,.08);
+    .empty-message {
+      grid-column: 1 / -1;
+
+      padding: 50px;
+
+      text-align: center;
+
+      color: var(--muted);
+    }
+
+    /* =========================================
+       SYNC INFO
+    ========================================= */
+
+    .sync-info {
+      display: flex;
+
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 15px;
+
+      margin-top: 24px;
+
+      padding-top: 16px;
+
+      border-top: 1px solid var(--border);
+
+      color: var(--muted);
+
+      font-size: 11px;
+    }
+
+    .github-profile-link {
+      color: var(--blue);
+
+      font-weight: 700;
     }
 
     /* =========================================
@@ -1060,52 +985,71 @@
     ========================================= */
 
     footer {
-      padding: 55px 0 25px;
-
       background: white;
 
       border-top: 1px solid var(--border);
     }
 
+    .footer-inner {
+      max-width: var(--max-width);
+
+      margin: 0 auto;
+
+      padding: 55px 24px 25px;
+    }
+
     .footer-grid {
       display: grid;
 
-      grid-template-columns:
-        1.7fr 1fr 1fr 1fr;
+      grid-template-columns: 1.7fr repeat(3, 1fr);
 
-      gap: 35px;
+      gap: 40px;
+
+      padding-bottom: 42px;
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .footer-brand strong {
+      display: block;
+
+      color: var(--navy);
+
+      font-size: 17px;
     }
 
     .footer-brand p {
       max-width: 330px;
 
-      margin-top: 12px;
+      margin-top: 10px;
 
       color: var(--muted);
 
-      font-size: 11px;
+      font-size: 12px;
+
+      line-height: 1.7;
     }
 
     .footer-column h4 {
+      margin-bottom: 13px;
+
       color: var(--navy);
 
-      font-size: 11px;
-      font-weight: 800;
+      font-size: 12px;
 
-      letter-spacing: .08em;
       text-transform: uppercase;
+
+      letter-spacing: 0.08em;
     }
 
     .footer-column a {
       display: block;
 
-      margin-top: 8px;
+      margin: 8px 0;
 
       color: var(--muted);
 
-      font-size: 11px;
-
-      transition: color .2s ease;
+      font-size: 12px;
     }
 
     .footer-column a:hover {
@@ -1114,14 +1058,13 @@
 
     .footer-bottom {
       display: flex;
+
+      align-items: center;
       justify-content: space-between;
 
-      gap: 20px;
+      gap: 15px;
 
-      margin-top: 42px;
-      padding-top: 19px;
-
-      border-top: 1px solid var(--border);
+      padding-top: 20px;
 
       color: var(--muted);
 
@@ -1129,56 +1072,35 @@
     }
 
     /* =========================================
-       REVEAL
-    ========================================= */
-
-    .reveal {
-      opacity: 0;
-
-      transform: translateY(15px);
-
-      transition:
-        opacity .55s ease,
-        transform .55s ease;
-    }
-
-    .reveal.visible {
-      opacity: 1;
-
-      transform: translateY(0);
-    }
-
-    /* =========================================
        RESPONSIVE
     ========================================= */
 
-    @media (max-width: 1000px) {
+    @media (max-width: 950px) {
 
       .nav-menu {
         position: absolute;
 
-        left: 20px;
-        right: 20px;
-        top: 70px;
+        top: 76px;
+        left: 0;
+        right: 0;
 
         display: none;
 
-        flex-direction: column;
-        align-items: stretch;
-
-        padding: 9px;
+        padding: 12px 20px 18px;
 
         background: white;
 
-        border: 1px solid var(--border);
-
-        border-radius: 14px;
+        border-bottom: 1px solid var(--border);
 
         box-shadow: var(--shadow-md);
       }
 
       .nav-menu.open {
         display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
       }
 
       .nav-menu a {
@@ -1189,67 +1111,81 @@
         display: block;
       }
 
-      .featured-grid,
-      .repository-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .hero-inner {
+        grid-template-columns: 1fr;
       }
 
-      .philosophy-grid {
-        grid-template-columns: 1fr;
+      .hero-stat {
+        justify-content: flex-start;
+      }
+
+      .featured-grid,
+      .repo-grid {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 650px) {
 
-      .container {
-        width: min(calc(100% - 28px), var(--max));
+      .nav-container {
+        min-height: 68px;
+
+        padding: 0 17px;
+      }
+
+      .brand-copy span {
+        display: none;
       }
 
       .projects-hero {
-        padding: 65px 0 55px;
+        padding: 65px 18px 55px;
       }
 
-      .section {
-        padding: 60px 0;
+      .projects-hero h1 {
+        font-size: 43px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      main {
+        padding: 55px 18px 70px;
       }
 
       .featured-grid,
-      .repository-grid {
+      .repo-grid {
         grid-template-columns: 1fr;
       }
 
-      .section-header {
-        display: block;
-      }
-
-      .section-description {
-        margin-top: 12px;
-      }
-
-      .search-box {
-        width: 100%;
-
-        margin-left: 0;
-      }
-
-      .search-box input {
-        width: 100%;
-      }
-
-      .principles {
+      .toolbar {
         grid-template-columns: 1fr;
       }
 
-      .cta-card {
-        padding: 35px 24px;
+      .filter-select {
+        width: 100%;
+      }
+
+      .sync-info,
+      .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
       }
 
       .footer-grid {
         grid-template-columns: 1fr 1fr;
+
+        gap: 28px;
       }
 
-      .footer-bottom {
-        flex-direction: column;
+      .footer-brand {
+        grid-column: 1 / -1;
       }
     }
 
@@ -1262,3333 +1198,1233 @@
       *,
       *::before,
       *::after {
-        transition-duration: .01ms !important;
-        animation-duration: .01ms !important;
-      }
-
-      .reveal {
-        opacity: 1;
-        transform: none;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
       }
     }
-
   </style>
 </head>
 
-
 <body>
 
+  <!-- =========================================
+       HEADER
+  ========================================== -->
 
-<!-- =========================================
-     HEADER
-========================================= -->
+  <header class="site-header">
 
-<header class="site-header">
+    <div class="nav-container">
 
-  <div class="container nav-container">
+      <a href="index.html" class="brand">
 
-    <a href="index.html" class="brand">
+        <div class="brand-mark">
+          MM
+        </div>
 
-      <div class="brand-mark">
-        MM
-      </div>
+        <div class="brand-copy">
+          <strong>MICHAEL MAHESH</strong>
+          <span>Professor · Artificial Intelligence</span>
+        </div>
 
-      <div class="brand-copy">
-        <strong>MICHAEL MAHESH</strong>
-        <span>Professor · Artificial Intelligence</span>
-      </div>
-
-    </a>
-
-
-    <button
-      class="menu-toggle"
-      aria-label="Open navigation"
-      aria-expanded="false">
-      ☰
-    </button>
-
-
-    <nav class="nav-menu">
-
-      <a href="research.html">
-        Research
       </a>
 
-      <a href="projects.html" class="active">
-        Projects
-      </a>
-
-      <a href="learning.html">
-        Learning
-      </a>
-
-      <a href="publications.html">
-        Publications
-      </a>
-
-      <a href="about.html">
-        About
-      </a>
-
-      <a href="contact.html" class="nav-connect">
-        Connect
-      </a>
-
-    </nav>
-
-  </div>
-
-</header>
-
-
-<!-- =========================================
-     HERO
-========================================= -->
-
-<section class="projects-hero">
-
-  <div class="hero-grid"></div>
-
-  <div class="container">
-
-    <div class="projects-hero-content reveal">
-
-      <div class="eyebrow">
-        <span class="eyebrow-dot"></span>
-        Project Lab
-      </div>
-
-
-      <h1>
-        Ideas become
-        <span>working systems.</span>
-      </h1>
-
-
-      <p class="hero-description">
-        A collection of AI, Deep Learning, Computer Vision,
-        Digital Image Processing, Python and intelligent
-        system projects — from teaching experiments to
-        research-oriented implementations.
-      </p>
-
-
-      <div class="hero-stats">
-
-        <div class="hero-stat">
-          <strong>51</strong>
-          <span>Repositories</span>
-        </div>
-
-        <div class="hero-stat">
-          <strong>AI</strong>
-          <span>Research</span>
-        </div>
-
-        <div class="hero-stat">
-          <strong>CV</strong>
-          <span>Vision</span>
-        </div>
-
-        <div class="hero-stat">
-          <strong>Open</strong>
-          <span>Learning</span>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================
-     FEATURED PROJECTS
-========================================= -->
-
-<section class="section featured-section">
-
-  <div class="container">
-
-    <div class="section-header reveal">
-
-      <div>
-
-        <div class="section-label">
-          Selected Projects
-        </div>
-
-        <h2 class="section-title">
-          Current research & flagship work.
-        </h2>
-
-      </div>
-
-      <p class="section-description">
-        A small selection is highlighted here.
-        The complete repository collection appears below.
-      </p>
-
-    </div>
-
-
-    <div class="featured-grid">
-
-
-      <!-- GeoSentinel -->
-
-      <article class="featured-card reveal">
-
-        <div class="project-label">
-
-          <span class="project-category">
-            Environmental AI
-          </span>
-
-          <span class="project-number">
-            01
-          </span>
-
-        </div>
-
-
-        <h3>
-          GeoSentinel
-        </h3>
-
-
-        <p>
-          Explainable foundation-model research for
-          multi-temporal environmental change detection
-          using satellite imagery.
-        </p>
-
-
-        <div class="tech-tags">
-
-          <span class="tech-tag">
-            Foundation Models
-          </span>
-
-          <span class="tech-tag">
-            Remote Sensing
-          </span>
-
-          <span class="tech-tag">
-            Explainable AI
-          </span>
-
-        </div>
-
-
-        <div class="project-footer">
-
-          <span class="project-status">
-            Research Project
-          </span>
-
-          <a
-            href="https://github.com/michaelmahesh/GeoSentinel"
-            target="_blank"
-            rel="noopener"
-            class="project-link">
-            GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- TAQB -->
-
-      <article class="featured-card reveal">
-
-        <div class="project-label">
-
-          <span class="project-category">
-            Medical AI
-          </span>
-
-          <span class="project-number">
-            02
-          </span>
-
-        </div>
-
-
-        <h3>
-          TAQB-V4
-        </h3>
-
-
-        <p>
-          Hybrid quantum–classical residual fusion
-          framework for multi-class blood-cell
-          classification using microscopic images.
-        </p>
-
-
-        <div class="tech-tags">
-
-          <span class="tech-tag">
-            Quantum AI
-          </span>
-
-          <span class="tech-tag">
-            Medical Imaging
-          </span>
-
-          <span class="tech-tag">
-            Classification
-          </span>
-
-        </div>
-
-
-        <div class="project-footer">
-
-          <span class="project-status">
-            Research Project
-          </span>
-
-          <a
-            href="https://github.com/michaelmahesh/TAQB-V4"
-            target="_blank"
-            rel="noopener"
-            class="project-link">
-            GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- YOLO -->
-
-      <article class="featured-card reveal">
-
-        <div class="project-label">
-
-          <span class="project-category">
-            Computer Vision
-          </span>
-
-          <span class="project-number">
-            03
-          </span>
-
-        </div>
-
-
-        <h3>
-          YOLOv8 Camera Detection
-        </h3>
-
-
-        <p>
-          Real-time object detection using a laptop
-          camera with YOLOv8 and computer vision.
-        </p>
-
-
-        <div class="tech-tags">
-
-          <span class="tech-tag">
-            YOLOv8
-          </span>
-
-          <span class="tech-tag">
-            OpenCV
-          </span>
-
-          <span class="tech-tag">
-            Python
-          </span>
-
-        </div>
-
-
-        <div class="project-footer">
-
-          <span class="project-status">
-            Computer Vision
-          </span>
-
-          <a
-            href="https://github.com/michaelmahesh/YOLOv8-Laptop-Camera-Object-Detection"
-            target="_blank"
-            rel="noopener"
-            class="project-link">
-            GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================
-     ALL REPOSITORIES
-========================================= -->
-
-<section class="section repository-section">
-
-  <div class="container">
-
-    <div class="section-header reveal">
-
-      <div>
-
-        <div class="section-label">
-          GitHub Repository Lab
-        </div>
-
-        <h2 class="section-title">
-          Explore the complete collection.
-        </h2>
-
-      </div>
-
-      <p class="section-description">
-        Search or filter the repository collection by
-        research and learning area.
-      </p>
-
-    </div>
-
-
-    <!-- FILTERS -->
-
-    <div class="filter-bar">
-
-      <button class="filter-btn active"
-              data-filter="all">
-        All
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation"
+        aria-expanded="false"
+      >
+        ☰
       </button>
 
-      <button class="filter-btn"
-              data-filter="ai">
-        AI & Deep Learning
-      </button>
+      <nav class="nav-menu" id="navMenu">
 
-      <button class="filter-btn"
-              data-filter="vision">
-        Computer Vision
-      </button>
-
-      <button class="filter-btn"
-              data-filter="image">
-        Image Processing
-      </button>
-
-      <button class="filter-btn"
-              data-filter="python">
-        Python & Data
-      </button>
-
-      <button class="filter-btn"
-              data-filter="teaching">
-        Teaching
-      </button>
-
-
-      <div class="search-box">
-
-        <span class="search-icon">
-          ⌕
-        </span>
-
-        <input
-          type="search"
-          id="repoSearch"
-          placeholder="Search repositories...">
-
-      </div>
-
-    </div>
-
-
-    <!-- REPOSITORIES -->
-
-    <div class="repository-grid" id="repositoryGrid">
-
-
-      <!-- 01 -->
-
-      <article class="repo-card reveal"
-               data-category="ai"
-               data-name="Neural Network using PyTorch">
-
-        <div class="repo-top">
-
-          <span class="repo-index">
-            01
-          </span>
-
-          <span class="repo-category">
-            AI
-          </span>
-
-        </div>
-
-        <h3>
-          Neural-Network-using-PyTorch
-        </h3>
-
-        <p class="repo-description">
-          Neural network implementation and experimentation
-          using PyTorch.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">PyTorch</span>
-          <span class="repo-tag">Deep Learning</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">
-            Public
-          </span>
-
-          <a
-            href="https://github.com/michaelmahesh/Neural-Network-using-PyTorch"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 02 -->
-
-      <article class="repo-card reveal"
-               data-category="ai"
-               data-name="IBM AI Engineering Specialization">
-
-        <div class="repo-top">
-
-          <span class="repo-index">02</span>
-
-          <span class="repo-category">AI</span>
-
-        </div>
-
-        <h3>
-          IBM-AI-Engineering-Specialization
-        </h3>
-
-        <p class="repo-description">
-          AI engineering learning and implementation
-          materials.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">AI</span>
-          <span class="repo-tag">Engineering</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/IBM-AI-Engineering-Specialization"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 03 -->
-
-      <article class="repo-card reveal"
-               data-category="ai"
-               data-name="RNN using PyTorch">
-
-        <div class="repo-top">
-
-          <span class="repo-index">03</span>
-
-          <span class="repo-category">AI</span>
-
-        </div>
-
-        <h3>
-          RNN-using-PyTorch
-        </h3>
-
-        <p class="repo-description">
-          Recurrent neural network implementation using
-          PyTorch.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">RNN</span>
-          <span class="repo-tag">PyTorch</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/RNN-using-PyTorch"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 04 -->
-
-      <article class="repo-card reveal"
-               data-category="vision"
-               data-name="Edge Detection using OpenCV">
-
-        <div class="repo-top">
-
-          <span class="repo-index">04</span>
-
-          <span class="repo-category">Vision</span>
-
-        </div>
-
-        <h3>
-          Edge-Detection-using-OpenCV
-        </h3>
-
-        <p class="repo-description">
-          Edge detection experiments using OpenCV.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">OpenCV</span>
-          <span class="repo-tag">Edges</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/Edge-Detection-using-OpenCV"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 05 -->
-
-      <article class="repo-card reveal"
-               data-category="image"
-               data-name="Histogram Equalization">
-
-        <div class="repo-top">
-
-          <span class="repo-index">05</span>
-
-          <span class="repo-category">Image</span>
-
-        </div>
-
-        <h3>
-          Histogram-Equalization-Using-OpenCV
-        </h3>
-
-        <p class="repo-description">
-          Histogram equalization experiments using
-          OpenCV.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">OpenCV</span>
-          <span class="repo-tag">Histogram</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/Histogram-Equalization-Using-OpenCV"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 06 -->
-
-      <article class="repo-card reveal"
-               data-category="vision"
-               data-name="Sunglasses Placement OpenCV">
-
-        <div class="repo-top">
-
-          <span class="repo-index">06</span>
-
-          <span class="repo-category">Vision</span>
-
-        </div>
-
-        <h3>
-          Sunglasses-Placement-Using-OpenCV
-        </h3>
-
-        <p class="repo-description">
-          Face-oriented computer vision experiment
-          using OpenCV.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">OpenCV</span>
-          <span class="repo-tag">Face</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/Sunglasses-Placement-Using-OpenCV"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 07 -->
-
-      <article class="repo-card reveal"
-               data-category="image"
-               data-name="grayscale morphology fracture detection">
-
-        <div class="repo-top">
-
-          <span class="repo-index">07</span>
-
-          <span class="repo-category">Medical</span>
-
-        </div>
-
-        <h3>
-          grayscale-morphology-fracture-detection
-        </h3>
-
-        <p class="repo-description">
-          Grayscale morphology experimentation for
-          fracture-oriented image analysis.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">Morphology</span>
-          <span class="repo-tag">Medical Imaging</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/grayscale-morphology-fracture-detection"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 08 -->
-
-      <article class="repo-card reveal"
-               data-category="ai"
-               data-name="GAN Network">
-
-        <div class="repo-top">
-
-          <span class="repo-index">08</span>
-
-          <span class="repo-category">AI</span>
-
-        </div>
-
-        <h3>
-          GAN-Network-
-        </h3>
-
-        <p class="repo-description">
-          Generative adversarial network experimentation.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">GAN</span>
-          <span class="repo-tag">Deep Learning</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/GAN-Network-"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 09 -->
-
-      <article class="repo-card reveal"
-               data-category="vision"
-               data-name="Vision Object Search Engine">
-
-        <div class="repo-top">
-
-          <span class="repo-index">09</span>
-
-          <span class="repo-category">Vision</span>
-
-        </div>
-
-        <h3>
-          vision-object-search-engine
-        </h3>
-
-        <p class="repo-description">
-          Object-oriented visual search experimentation.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">Vision</span>
-          <span class="repo-tag">Search</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/vision-object-search-engine"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 10 -->
-
-      <article class="repo-card reveal"
-               data-category="vision"
-               data-name="Webcam Image Capture Video Processing">
-
-        <div class="repo-top">
-
-          <span class="repo-index">10</span>
-
-          <span class="repo-category">Vision</span>
-
-        </div>
-
-        <h3>
-          Webcam-Image-Capture-and-Video-Processing-Using-OpenCV
-        </h3>
-
-        <p class="repo-description">
-          Webcam capture and real-time video processing
-          using OpenCV.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">OpenCV</span>
-          <span class="repo-tag">Video</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/Webcam-Image-Capture-and-Video-Processing-Using-OpenCV"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 11 -->
-
-      <article class="repo-card reveal"
-               data-category="image"
-               data-name="Digital Image Processing OpenCV">
-
-        <div class="repo-top">
-
-          <span class="repo-index">11</span>
-
-          <span class="repo-category">Image</span>
-
-        </div>
-
-        <h3>
-          Digital-mage-Processing-using-OpenCV-
-        </h3>
-
-        <p class="repo-description">
-          Digital image processing experiments using
-          OpenCV.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">DIP</span>
-          <span class="repo-tag">OpenCV</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/Digital-mage-Processing-using-OpenCV-"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 12 -->
-
-      <article class="repo-card reveal"
-               data-category="other"
-               data-name="project">
-
-        <div class="repo-top">
-
-          <span class="repo-index">12</span>
-
-          <span class="repo-category">Other</span>
-
-        </div>
-
-        <h3>
-          project
-        </h3>
-
-        <p class="repo-description">
-          GitHub project repository.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">Project</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/project"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 13 -->
-
-      <article class="repo-card reveal"
-               data-category="ai"
-               data-name="CNN with PyTorch">
-
-        <div class="repo-top">
-
-          <span class="repo-index">13</span>
-
-          <span class="repo-category">AI</span>
-
-        </div>
-
-        <h3>
-          CNN-with-PyTorch
-        </h3>
-
-        <p class="repo-description">
-          Convolutional neural network implementation
-          using PyTorch.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">CNN</span>
-          <span class="repo-tag">PyTorch</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/CNN-with-PyTorch"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 14 -->
-
-      <article class="repo-card reveal"
-               data-category="vision"
-               data-name="opencv real time projects">
-
-        <div class="repo-top">
-
-          <span class="repo-index">14</span>
-
-          <span class="repo-category">Vision</span>
-
-        </div>
-
-        <h3>
-          opencv-real-time-projects
-        </h3>
-
-        <p class="repo-description">
-          Collection of real-time OpenCV projects.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">OpenCV</span>
-          <span class="repo-tag">Real Time</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/opencv-real-time-projects"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 15 -->
-
-      <article class="repo-card reveal"
-               data-category="python"
-               data-name="COVID19 Data Analysis Python">
-
-        <div class="repo-top">
-
-          <span class="repo-index">15</span>
-
-          <span class="repo-category">Python</span>
-
-        </div>
-
-        <h3>
-          COVID19-Data-Analysis-Using-Python
-        </h3>
-
-        <p class="repo-description">
-          Data analysis using Python.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">Python</span>
-          <span class="repo-tag">Data Analysis</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/COVID19-Data-Analysis-Using-Python"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 16 -->
-
-      <article class="repo-card reveal"
-               data-category="vision"
-               data-name="Face Detection Haar Cascades">
-
-        <div class="repo-top">
-
-          <span class="repo-index">16</span>
-
-          <span class="repo-category">Vision</span>
-
-        </div>
-
-        <h3>
-          Face-Detection-with-Haar-Cascades
-        </h3>
-
-        <p class="repo-description">
-          Face detection using Haar cascade classifiers.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">Face Detection</span>
-          <span class="repo-tag">OpenCV</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/Face-Detection-with-Haar-Cascades"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 17 -->
-
-      <article class="repo-card reveal"
-               data-category="image"
-               data-name="Histogram Equalization Grayscale Color Images">
-
-        <div class="repo-top">
-
-          <span class="repo-index">17</span>
-
-          <span class="repo-category">Image</span>
-
-        </div>
-
-        <h3>
-          Histogram-Equalization-for-Grayscale-and-Color-Images
-        </h3>
-
-        <p class="repo-description">
-          Histogram processing for grayscale and colour
-          images.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">Histogram</span>
-          <span class="repo-tag">DIP</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/Histogram-Equalization-for-Grayscale-and-Color-Images"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 18 -->
-
-      <article class="repo-card reveal"
-               data-category="python"
-               data-name="Plotting Visualization Matplotlib">
-
-        <div class="repo-top">
-
-          <span class="repo-index">18</span>
-
-          <span class="repo-category">Python</span>
-
-        </div>
-
-        <h3>
-          Plotting-and-Visualization-using-Matplotlib
-        </h3>
-
-        <p class="repo-description">
-          Data visualization and plotting using Matplotlib.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">Python</span>
-          <span class="repo-tag">Matplotlib</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/Plotting-and-Visualization-using-Matplotlib"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 19 -->
-
-      <article class="repo-card reveal"
-               data-category="ai"
-               data-name="pytorch linear regression">
-
-        <div class="repo-top">
-
-          <span class="repo-index">19</span>
-
-          <span class="repo-category">AI</span>
-
-        </div>
-
-        <h3>
-          pytorch-linear-regression
-        </h3>
-
-        <p class="repo-description">
-          Linear regression implementation using PyTorch.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">PyTorch</span>
-          <span class="repo-tag">Regression</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/pytorch-linear-regression"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 20 -->
-
-      <article class="repo-card reveal"
-               data-category="python"
-               data-name="python tutorial">
-
-        <div class="repo-top">
-
-          <span class="repo-index">20</span>
-
-          <span class="repo-category">Teaching</span>
-
-        </div>
-
-        <h3>
-          python-tutorial
-        </h3>
-
-        <p class="repo-description">
-          Python tutorial and learning resources.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">Python</span>
-          <span class="repo-tag">Tutorial</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/python-tutorial"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 21 -->
-
-      <article class="repo-card reveal"
-               data-category="python"
-               data-name="Covid 19 analysis TN">
-
-        <div class="repo-top">
-
-          <span class="repo-index">21</span>
-
-          <span class="repo-category">Python</span>
-
-        </div>
-
-        <h3>
-          Covid-19-analysis-TN
-        </h3>
-
-        <p class="repo-description">
-          COVID-19 data analysis for Tamil Nadu.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">Python</span>
-          <span class="repo-tag">Analysis</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/Covid-19-analysis-TN"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 22 -->
-
-      <article class="repo-card reveal"
-               data-category="image"
-               data-name="Coin Detection OpenCV">
-
-        <div class="repo-top">
-
-          <span class="repo-index">22</span>
-
-          <span class="repo-category">Image</span>
-
-        </div>
-
-        <h3>
-          SEC-DIP--Coin-Detection-using-OpenCV-in-Python
-        </h3>
-
-        <p class="repo-description">
-          Coin detection using image processing and
-          OpenCV.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">DIP</span>
-          <span class="repo-tag">OpenCV</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/SEC-DIP--Coin-Detection-using-OpenCV-in-Python"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 23 -->
-
-      <article class="repo-card reveal"
-               data-category="other"
-               data-name="blog">
-
-        <div class="repo-top">
-
-          <span class="repo-index">23</span>
-
-          <span class="repo-category">Other</span>
-
-        </div>
-
-        <h3>
-          blog
-        </h3>
-
-        <p class="repo-description">
-          Blog-oriented web repository.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">Web</span>
-          <span class="repo-tag">Blog</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/blog"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 24 -->
-
-      <article class="repo-card reveal"
-               data-category="image"
-               data-name="Implementation filter Edge Detection">
-
-        <div class="repo-top">
-
-          <span class="repo-index">24</span>
-
-          <span class="repo-category">Image</span>
-
-        </div>
-
-        <h3>
-          Implementation-of-filter-Edge-Detection
-        </h3>
-
-        <p class="repo-description">
-          Filter-based edge detection implementation.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">Filters</span>
-          <span class="repo-tag">Edges</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/Implementation-of-filter-Edge-Detection"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 25 -->
-
-      <article class="repo-card reveal"
-               data-category="image"
-               data-name="image enhancement filters opencv">
-
-        <div class="repo-top">
-
-          <span class="repo-index">25</span>
-
-          <span class="repo-category">Image</span>
-
-        </div>
-
-        <h3>
-          image-enhancement-filters-opencv
-        </h3>
-
-        <p class="repo-description">
-          Image enhancement and filtering using OpenCV.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">Enhancement</span>
-          <span class="repo-tag">OpenCV</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/image-enhancement-filters-opencv"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 26 -->
-
-      <article class="repo-card reveal"
-               data-category="image"
-               data-name="erosion dilation">
-
-        <div class="repo-top">
-
-          <span class="repo-index">26</span>
-
-          <span class="repo-category">Image</span>
-
-        </div>
-
-        <h3>
-          erosion-and-dilation
-        </h3>
-
-        <p class="repo-description">
-          Fundamental morphological erosion and dilation
-          operations.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">Morphology</span>
-          <span class="repo-tag">OpenCV</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/erosion-and-dilation"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 27 -->
-
-      <article class="repo-card reveal"
-               data-category="ai"
-               data-name="Deep Learning with PyTorch">
-
-        <div class="repo-top">
-
-          <span class="repo-index">27</span>
-
-          <span class="repo-category">AI</span>
-
-        </div>
-
-        <h3>
-          Deep-Learning-with-PyTorch
-        </h3>
-
-        <p class="repo-description">
-          Deep learning experiments and implementations
-          using PyTorch.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">Deep Learning</span>
-          <span class="repo-tag">PyTorch</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/Deep-Learning-with-PyTorch"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 28 -->
-
-      <article class="repo-card reveal"
-               data-category="other"
-               data-name="michaelmahesh">
-
-        <div class="repo-top">
-
-          <span class="repo-index">28</span>
-
-          <span class="repo-category">Profile</span>
-
-        </div>
-
-        <h3>
-          michaelmahesh
-        </h3>
-
-        <p class="repo-description">
-          GitHub profile repository.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">GitHub</span>
-          <span class="repo-tag">Profile</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/michaelmahesh"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 29 -->
-
-      <article class="repo-card reveal"
-               data-category="vision"
-               data-name="edge detection opencv">
-
-        <div class="repo-top">
-
-          <span class="repo-index">29</span>
-
-          <span class="repo-category">Vision</span>
-
-        </div>
-
-        <h3>
-          edge-detection-opencv
-        </h3>
-
-        <p class="repo-description">
-          Edge detection implementation using OpenCV.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">OpenCV</span>
-          <span class="repo-tag">Edges</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/edge-detection-opencv"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 30 -->
-
-      <article class="repo-card reveal"
-               data-category="ai"
-               data-name="Deep Learning Regression">
-
-        <div class="repo-top">
-
-          <span class="repo-index">30</span>
-
-          <span class="repo-category">AI</span>
-
-        </div>
-
-        <h3>
-          Deep-Learning-Regression
-        </h3>
-
-        <p class="repo-description">
-          Deep learning approaches for regression tasks.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">Deep Learning</span>
-          <span class="repo-tag">Regression</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/Deep-Learning-Regression"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 31 -->
-
-      <article class="repo-card reveal"
-               data-category="image"
-               data-name="Morphological Operators">
-
-        <div class="repo-top">
-
-          <span class="repo-index">31</span>
-
-          <span class="repo-category">Image</span>
-
-        </div>
-
-        <h3>
-          Morphological-Operators
-        </h3>
-
-        <p class="repo-description">
-          Morphological image processing operations.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">Morphology</span>
-          <span class="repo-tag">DIP</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/Morphological-Operators"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 32 -->
-
-      <article class="repo-card reveal"
-               data-category="image"
-               data-name="Image Transformations OpenCV">
-
-        <div class="repo-top">
-
-          <span class="repo-index">32</span>
-
-          <span class="repo-category">Image</span>
-
-        </div>
-
-        <h3>
-          Image-Transformations-with-OpenCV
-        </h3>
-
-        <p class="repo-description">
-          Geometric and image transformation experiments
-          using OpenCV.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">OpenCV</span>
-          <span class="repo-tag">Transforms</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/Image-Transformations-with-OpenCV"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 33 -->
-
-      <article class="repo-card reveal"
-               data-category="ai"
-               data-name="AI Enrollment System">
-
-        <div class="repo-top">
-
-          <span class="repo-index">33</span>
-
-          <span class="repo-category">AI</span>
-
-        </div>
-
-        <h3>
-          AI-Enrollment-System
-        </h3>
-
-        <p class="repo-description">
-          AI-oriented enrollment system project.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">AI</span>
-          <span class="repo-tag">System</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/AI-Enrollment-System"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 34 -->
-
-      <article class="repo-card reveal"
-               data-category="vision"
-               data-name="YOLOv8 Laptop Camera Object Detection">
-
-        <div class="repo-top">
-
-          <span class="repo-index">34</span>
-
-          <span class="repo-category">Vision</span>
-
-        </div>
-
-        <h3>
-          YOLOv8-Laptop-Camera-Object-Detection
-        </h3>
-
-        <p class="repo-description">
-          Real-time object detection using YOLOv8 and
-          a laptop camera.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">YOLOv8</span>
-          <span class="repo-tag">OpenCV</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/YOLOv8-Laptop-Camera-Object-Detection"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 35 -->
-
-      <article class="repo-card reveal"
-               data-category="other"
-               data-name="michaelmahesh github pages">
-
-        <div class="repo-top">
-
-          <span class="repo-index">35</span>
-
-          <span class="repo-category">Web</span>
-
-        </div>
-
-        <h3>
-          michaelmahesh.github.io
-        </h3>
-
-        <p class="repo-description">
-          Personal academic and professional website.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">HTML</span>
-          <span class="repo-tag">Web</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/michaelmahesh.github.io"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 36 -->
-
-      <article class="repo-card reveal"
-               data-category="image"
-               data-name="Coin Detection">
-
-        <div class="repo-top">
-
-          <span class="repo-index">36</span>
-
-          <span class="repo-category">Image</span>
-
-        </div>
-
-        <h3>
-          Coin-Detection-
-        </h3>
-
-        <p class="repo-description">
-          Computer vision based coin detection.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">Detection</span>
-          <span class="repo-tag">OpenCV</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/Coin-Detection-"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 37 -->
-
-      <article class="repo-card reveal"
-               data-category="ai"
-               data-name="Word Embedding">
-
-        <div class="repo-top">
-
-          <span class="repo-index">37</span>
-
-          <span class="repo-category">AI</span>
-
-        </div>
-
-        <h3>
-          Word-Embedding
-        </h3>
-
-        <p class="repo-description">
-          Word embedding and representation learning
-          experimentation.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">NLP</span>
-          <span class="repo-tag">Embeddings</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/Word-Embedding"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 38 -->
-
-      <article class="repo-card reveal"
-               data-category="teaching"
-               data-name="SEC Digital Image Processing">
-
-        <div class="repo-top">
-
-          <span class="repo-index">38</span>
-
-          <span class="repo-category">Teaching</span>
-
-        </div>
-
-        <h3>
-          SEC---19AI406_DIGITAL-IMAGE-PROCESSING-
-        </h3>
-
-        <p class="repo-description">
-          Digital Image Processing teaching and
-          practical resources.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">DIP</span>
-          <span class="repo-tag">Teaching</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/SEC---19AI406_DIGITAL-IMAGE-PROCESSING-"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 39 -->
-
-      <article class="repo-card reveal"
-               data-category="image"
-               data-name="opening closing opencv">
-
-        <div class="repo-top">
-
-          <span class="repo-index">39</span>
-
-          <span class="repo-category">Image</span>
-
-        </div>
-
-        <h3>
-          opening-closing-opencv
-        </h3>
-
-        <p class="repo-description">
-          Morphological opening and closing operations
-          using OpenCV.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">Morphology</span>
-          <span class="repo-tag">OpenCV</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/opening-closing-opencv"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 40 -->
-
-      <article class="repo-card reveal"
-               data-category="image"
-               data-name="Image Masking OpenCV">
-
-        <div class="repo-top">
-
-          <span class="repo-index">40</span>
-
-          <span class="repo-category">Image</span>
-
-        </div>
-
-        <h3>
-          Image-Masking-using-OpenCV
-        </h3>
-
-        <p class="repo-description">
-          Image masking and region-based processing
-          using OpenCV.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">Masking</span>
-          <span class="repo-tag">OpenCV</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/Image-Masking-using-OpenCV"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 41 -->
-
-      <article class="repo-card reveal"
-               data-category="image"
-               data-name="image thresholding opencv">
-
-        <div class="repo-top">
-
-          <span class="repo-index">41</span>
-
-          <span class="repo-category">Image</span>
-
-        </div>
-
-        <h3>
-          image-thresholding-opencv
-        </h3>
-
-        <p class="repo-description">
-          Thresholding techniques using OpenCV.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">Thresholding</span>
-          <span class="repo-tag">OpenCV</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/image-thresholding-opencv"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 42 -->
-
-      <article class="repo-card reveal"
-               data-category="image"
-               data-name="Image Handling Pixel Transformations">
-
-        <div class="repo-top">
-
-          <span class="repo-index">42</span>
-
-          <span class="repo-category">Image</span>
-
-        </div>
-
-        <h3>
-          Image-Handling-and-Pixel-Transformations-Using-OpenCV
-        </h3>
-
-        <p class="repo-description">
-          Image handling, display and pixel-level
-          transformations using OpenCV.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">Pixels</span>
-          <span class="repo-tag">OpenCV</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/Image-Handling-and-Pixel-Transformations-Using-OpenCV"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 43 -->
-
-      <article class="repo-card reveal"
-               data-category="vision"
-               data-name="opencv basic image operations">
-
-        <div class="repo-top">
-
-          <span class="repo-index">43</span>
-
-          <span class="repo-category">Vision</span>
-
-        </div>
-
-        <h3>
-          opencv-basic-image-operations
-        </h3>
-
-        <p class="repo-description">
-          Fundamental image operations using OpenCV.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">OpenCV</span>
-          <span class="repo-tag">Basics</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/opencv-basic-image-operations"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 44 -->
-
-      <article class="repo-card reveal"
-               data-category="other"
-               data-name="stjoseph">
-
-        <div class="repo-top">
-
-          <span class="repo-index">44</span>
-
-          <span class="repo-category">Other</span>
-
-        </div>
-
-        <h3>
-          stjoseph
-        </h3>
-
-        <p class="repo-description">
-          GitHub project repository.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">Project</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/stjoseph"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 45 -->
-
-      <article class="repo-card reveal"
-               data-category="image"
-               data-name="Geometric Transformations OpenCV">
-
-        <div class="repo-top">
-
-          <span class="repo-index">45</span>
-
-          <span class="repo-category">Image</span>
-
-        </div>
-
-        <h3>
-          Geometric-Transformations-Using-OpenCV
-        </h3>
-
-        <p class="repo-description">
-          Geometric transformation techniques using
-          OpenCV.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">Transforms</span>
-          <span class="repo-tag">OpenCV</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/Geometric-Transformations-Using-OpenCV"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 46 -->
-
-      <article class="repo-card reveal"
-               data-category="teaching"
-               data-name="essential python deep learning">
-
-        <div class="repo-top">
-
-          <span class="repo-index">46</span>
-
-          <span class="repo-category">Teaching</span>
-
-        </div>
-
-        <h3>
-          essential-python-for-deep-learning
-        </h3>
-
-        <p class="repo-description">
-          Essential Python concepts for deep learning
-          learners.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">Python</span>
-          <span class="repo-tag">Teaching</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/essential-python-for-deep-learning"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 47 -->
-
-      <article class="repo-card reveal"
-               data-category="ai"
-               data-name="TAQB V4">
-
-        <div class="repo-top">
-
-          <span class="repo-index">47</span>
-
-          <span class="repo-category">Medical AI</span>
-
-        </div>
-
-        <h3>
-          TAQB-V4
-        </h3>
-
-        <p class="repo-description">
-          Hybrid quantum-classical residual fusion for
-          blood-cell classification.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">Quantum AI</span>
-          <span class="repo-tag">Medical AI</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/TAQB-V4"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 48 -->
-
-      <article class="repo-card reveal"
-               data-category="vision"
-               data-name="Sunglasses Placement OpenCV">
-
-        <div class="repo-top">
-
-          <span class="repo-index">48</span>
-
-          <span class="repo-category">Vision</span>
-
-        </div>
-
-        <h3>
-          Sunglasses-Placement-Using-OpenCV
-        </h3>
-
-        <p class="repo-description">
-          OpenCV-based visual overlay experiment.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">OpenCV</span>
-          <span class="repo-tag">Vision</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/Sunglasses-Placement-Using-OpenCV"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 49 -->
-
-      <article class="repo-card reveal"
-               data-category="vision"
-               data-name="Capturing Images Webcam OpenCV">
-
-        <div class="repo-top">
-
-          <span class="repo-index">49</span>
-
-          <span class="repo-category">Vision</span>
-
-        </div>
-
-        <h3>
-          Capturing-Images-from-Webcam-using-OpenCV
-        </h3>
-
-        <p class="repo-description">
-          Webcam image capture using OpenCV.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">OpenCV</span>
-          <span class="repo-tag">Webcam</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/Capturing-Images-from-Webcam-using-OpenCV"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 50 -->
-
-      <article class="repo-card reveal"
-               data-category="image"
-               data-name="Hough Transform Lines">
-
-        <div class="repo-top">
-
-          <span class="repo-index">50</span>
-
-          <span class="repo-category">Vision</span>
-
-        </div>
-
-        <h3>
-          Detect-the-lines-using-Hough-Transform
-        </h3>
-
-        <p class="repo-description">
-          Line detection using the Hough Transform.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">Hough</span>
-          <span class="repo-tag">OpenCV</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/Detect-the-lines-using-Hough-Transform"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- 51 -->
-
-      <article class="repo-card reveal"
-               data-category="vision"
-               data-name="License Plate Detection">
-
-        <div class="repo-top">
-
-          <span class="repo-index">51</span>
-
-          <span class="repo-category">Vision</span>
-
-        </div>
-
-        <h3>
-          SEC-DIP-19AI406-License-Plate-Detection-
-        </h3>
-
-        <p class="repo-description">
-          License plate detection using computer vision
-          techniques.
-        </p>
-
-        <div class="repo-tags">
-          <span class="repo-tag">Detection</span>
-          <span class="repo-tag">OpenCV</span>
-        </div>
-
-        <div class="repo-bottom">
-
-          <span class="repo-type">Public</span>
-
-          <a
-            href="https://github.com/michaelmahesh/SEC-DIP-19AI406-License-Plate-Detection-"
-            target="_blank"
-            rel="noopener"
-            class="repo-open">
-            View GitHub →
-          </a>
-
-        </div>
-
-      </article>
-
-
-    </div>
-
-
-    <div class="no-results" id="noResults">
-      No repositories match your search.
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================
-     PROJECT PHILOSOPHY
-========================================= -->
-
-<section class="section philosophy">
-
-  <div class="container">
-
-    <div class="philosophy-grid">
-
-      <div class="reveal">
-
-        <div class="section-label">
-          Project Philosophy
-        </div>
-
-        <h2>
-          Learn by building.
-          Research by experimenting.
-        </h2>
-
-        <p>
-          Projects are used as a bridge between concepts,
-          experimentation and practical implementation.
-          Some repositories support teaching and learning,
-          while others grow from research questions and
-          technical exploration.
-        </p>
-
-      </div>
-
-
-      <div class="principles">
-
-        <div class="principle reveal">
-
-          <strong>01</strong>
-
-          <h3>
-            Understand
-          </h3>
-
-          <p>
-            Start with the underlying concept.
-          </p>
-
-        </div>
-
-
-        <div class="principle reveal">
-
-          <strong>02</strong>
-
-          <h3>
-            Implement
-          </h3>
-
-          <p>
-            Convert ideas into working code.
-          </p>
-
-        </div>
-
-
-        <div class="principle reveal">
-
-          <strong>03</strong>
-
-          <h3>
-            Experiment
-          </h3>
-
-          <p>
-            Test, compare and investigate.
-          </p>
-
-        </div>
-
-
-        <div class="principle reveal">
-
-          <strong>04</strong>
-
-          <h3>
-            Share
-          </h3>
-
-          <p>
-            Make useful work accessible to learners.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================
-     CTA
-========================================= -->
-
-<section class="cta-section">
-
-  <div class="container">
-
-    <div class="cta-card reveal">
-
-      <h2>
-        Want to explore the research behind the projects?
-      </h2>
-
-      <p>
-        Move from implementations to the research questions,
-        publications and ideas that drive the work.
-      </p>
-
-      <div class="cta-actions">
-
-        <a
-          href="research.html"
-          class="btn btn-white">
-          Explore Research →
+        <a href="index.html">
+          Home
         </a>
-
-        <a
-          href="publications.html"
-          class="btn btn-outline">
-          View Publications
-        </a>
-
-        <a
-          href="https://github.com/michaelmahesh"
-          target="_blank"
-          rel="noopener"
-          class="btn btn-outline">
-          GitHub Profile
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================
-     FOOTER
-========================================= -->
-
-<footer>
-
-  <div class="container">
-
-    <div class="footer-grid">
-
-
-      <div class="footer-brand">
-
-        <div class="brand">
-
-          <div class="brand-mark">
-            MM
-          </div>
-
-          <div class="brand-copy">
-            <strong>MICHAEL MAHESH</strong>
-            <span>Professor · Artificial Intelligence</span>
-          </div>
-
-        </div>
-
-        <p>
-          Research, teaching and practical exploration
-          across Artificial Intelligence, Deep Learning
-          and Computer Vision.
-        </p>
-
-      </div>
-
-
-      <div class="footer-column">
-
-        <h4>
-          Research
-        </h4>
 
         <a href="research.html">
-          Research Areas
+          Research
         </a>
 
-        <a href="projects.html">
+        <a href="projects.html" class="active">
           Projects
+        </a>
+
+        <a href="learning.html">
+          Learning
         </a>
 
         <a href="publications.html">
           Publications
         </a>
 
-      </div>
-
-
-      <div class="footer-column">
-
-        <h4>
-          Learning
-        </h4>
-
-        <a href="learning.html">
-          Teaching Materials
-        </a>
-
-        <a href="learning.html#deep-learning">
-          Deep Learning
-        </a>
-
-        <a href="learning.html#dip">
-          Digital Image Processing
-        </a>
-
-      </div>
-
-
-      <div class="footer-column">
-
-        <h4>
-          Connect
-        </h4>
-
         <a href="about.html">
           About
         </a>
 
-        <a href="contact.html">
-          Contact
+        <a href="#connect" class="connect-btn">
+          Connect
         </a>
 
-        <a
-          href="https://github.com/michaelmahesh"
-          target="_blank"
-          rel="noopener">
-          GitHub
-        </a>
+      </nav>
 
-        <a
-          href="https://orcid.org/0000-0002-9948-5743"
-          target="_blank"
-          rel="noopener">
-          ORCID
-        </a>
+    </div>
+
+  </header>
+
+
+  <!-- =========================================
+       HERO
+  ========================================== -->
+
+  <section class="projects-hero">
+
+    <div class="hero-inner">
+
+      <div>
+
+        <div class="eyebrow">
+          PROJECT LAB
+        </div>
+
+        <h1>
+          Ideas into
+          <span>working systems.</span>
+        </h1>
+
+        <p class="hero-description">
+          A collection of research prototypes, AI experiments,
+          computer vision implementations, teaching projects and
+          practical machine learning systems developed through
+          research, teaching and continuous exploration.
+        </p>
+
+        <div class="hero-links">
+
+          <a
+            href="https://github.com/michaelmahesh"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="primary-btn"
+          >
+            View GitHub →
+          </a>
+
+          <a
+            href="#all-projects"
+            class="secondary-btn"
+          >
+            Explore Projects ↓
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-stat">
+
+        <div class="repo-count-card">
+
+          <div
+            class="repo-count-number"
+            id="repoCount"
+          >
+            —
+          </div>
+
+          <div class="repo-count-label">
+            Public Repositories
+          </div>
+
+          <div class="repo-count-small">
+            Automatically synced from GitHub
+          </div>
+
+        </div>
 
       </div>
 
     </div>
 
+  </section>
 
-    <div class="footer-bottom">
 
-      <span>
-        © <span id="year"></span>
-        Dr. K. Michael Mahesh. All rights reserved.
-      </span>
+  <!-- =========================================
+       MAIN
+  ========================================== -->
 
-      <a href="privacy.html">
-        Privacy
-      </a>
+  <main>
+
+
+    <!-- =====================================
+         FEATURED PROJECTS
+    ====================================== -->
+
+    <section>
+
+      <div class="section-heading">
+
+        <div class="section-label">
+          SELECTED WORK
+        </div>
+
+        <h2>
+          Featured Projects
+        </h2>
+
+        <p>
+          A few projects that represent current research,
+          experimentation and applied AI development.
+        </p>
+
+      </div>
+
+
+      <div class="featured-grid">
+
+
+        <!-- GeoSentinel -->
+
+        <article class="featured-card">
+
+          <div class="featured-top">
+
+            <span class="project-type">
+              Research
+            </span>
+
+            <span class="project-index">
+              01
+            </span>
+
+          </div>
+
+          <h3>
+            GeoSentinel
+          </h3>
+
+          <p>
+            Explainable foundation model for multi-temporal
+            environmental change detection using satellite imagery.
+          </p>
+
+          <div class="featured-footer">
+
+            <div class="featured-tags">
+
+              <span class="featured-tag">
+                AI
+              </span>
+
+              <span class="featured-tag">
+                Remote Sensing
+              </span>
+
+              <span class="featured-tag">
+                Vision
+              </span>
+
+            </div>
+
+            <a
+              href="https://github.com/michaelmahesh/GeoSentinel"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              View →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- TAQB -->
+
+        <article class="featured-card">
+
+          <div class="featured-top">
+
+            <span class="project-type">
+              Medical AI
+            </span>
+
+            <span class="project-index">
+              02
+            </span>
+
+          </div>
+
+          <h3>
+            TAQB-V4
+          </h3>
+
+          <p>
+            Hybrid quantum-classical residual fusion framework
+            for multi-class blood cell classification using
+            microscopic images.
+          </p>
+
+          <div class="featured-footer">
+
+            <div class="featured-tags">
+
+              <span class="featured-tag">
+                Medical AI
+              </span>
+
+              <span class="featured-tag">
+                PyTorch
+              </span>
+
+              <span class="featured-tag">
+                Quantum
+              </span>
+
+            </div>
+
+            <a
+              href="https://github.com/michaelmahesh/TAQB-V4"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              View →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- YOLO -->
+
+        <article class="featured-card">
+
+          <div class="featured-top">
+
+            <span class="project-type">
+              Computer Vision
+            </span>
+
+            <span class="project-index">
+              03
+            </span>
+
+          </div>
+
+          <h3>
+            YOLOv8 Camera Detection
+          </h3>
+
+          <p>
+            Real-time object detection using YOLOv8 and a
+            laptop camera for practical computer vision
+            experimentation.
+          </p>
+
+          <div class="featured-footer">
+
+            <div class="featured-tags">
+
+              <span class="featured-tag">
+                YOLO
+              </span>
+
+              <span class="featured-tag">
+                OpenCV
+              </span>
+
+              <span class="featured-tag">
+                Python
+              </span>
+
+            </div>
+
+            <a
+              href="https://github.com/michaelmahesh/YOLOv8-Laptop-Camera-Object-Detection"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              View →
+            </a>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         ALL PROJECTS
+    ====================================== -->
+
+    <section
+      class="all-projects-section"
+      id="all-projects"
+    >
+
+      <div class="section-heading">
+
+        <div class="section-label">
+          GITHUB REPOSITORIES
+        </div>
+
+        <h2>
+          All Projects
+        </h2>
+
+        <p>
+          Public repositories are loaded directly from GitHub.
+          Create a new public repository and it can appear here
+          automatically.
+        </p>
+
+      </div>
+
+
+      <!-- Toolbar -->
+
+      <div class="toolbar">
+
+        <div class="search-box">
+
+          <span class="search-icon">
+            ⌕
+          </span>
+
+          <input
+            type="search"
+            id="projectSearch"
+            placeholder="Search projects, technologies or topics..."
+            autocomplete="off"
+          >
+
+        </div>
+
+
+        <select
+          id="projectFilter"
+          class="filter-select"
+          aria-label="Filter projects"
+        >
+
+          <option value="all">
+            All Projects
+          </option>
+
+          <option value="ai">
+            AI & Deep Learning
+          </option>
+
+          <option value="vision">
+            Computer Vision
+          </option>
+
+          <option value="medical">
+            Medical AI
+          </option>
+
+          <option value="image">
+            Image Processing
+          </option>
+
+          <option value="python">
+            Python & Data
+          </option>
+
+          <option value="teaching">
+            Teaching & Learning
+          </option>
+
+          <option value="other">
+            Other
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <!-- Dynamic Repository Grid -->
+
+      <div
+        class="repo-grid"
+        id="repoGrid"
+      >
+
+        <div class="loading">
+
+          <div class="loader"></div>
+
+          Loading projects from GitHub...
+
+        </div>
+
+      </div>
+
+
+      <div class="sync-info">
+
+        <span id="syncStatus">
+          Connecting to GitHub...
+        </span>
+
+        <a
+          href="https://github.com/michaelmahesh?tab=repositories"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="github-profile-link"
+        >
+          View all repositories on GitHub →
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================================
+       FOOTER
+  ========================================== -->
+
+  <footer id="connect">
+
+    <div class="footer-inner">
+
+      <div class="footer-grid">
+
+
+        <div class="footer-brand">
+
+          <strong>
+            Dr. K. Michael Mahesh
+          </strong>
+
+          <p>
+            Professor and AI researcher working across
+            Artificial Intelligence, Deep Learning,
+            Computer Vision, Medical AI and Image Processing.
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Explore
+          </h4>
+
+          <a href="research.html">
+            Research
+          </a>
+
+          <a href="projects.html">
+            Projects
+          </a>
+
+          <a href="learning.html">
+            Learning
+          </a>
+
+          <a href="publications.html">
+            Publications
+          </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Academic
+          </h4>
+
+          <a href="about.html">
+            About Me
+          </a>
+
+          <a
+            href="https://orcid.org/0000-0002-9948-5743"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ORCID
+          </a>
+
+          <a
+            href="https://scholar.google.com/citations?user=YxDQyvIAAAAJ&hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google Scholar
+          </a>
+
+          <a
+            href="https://www.scopus.com/authid/detail.uri?authorId=57202852137"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Scopus
+          </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Connect
+          </h4>
+
+          <a
+            href="https://github.com/michaelmahesh"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/michaelmahesh"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+
+          <a href="mailto:michaelmaheshk@gmail.com">
+            Email
+          </a>
+
+          <a href="privacy.html">
+            Privacy
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <span>
+          © <span id="currentYear"></span>
+          Dr. K. Michael Mahesh. All rights reserved.
+        </span>
+
+        <span>
+          Built with research · code · curiosity.
+        </span>
+
+      </div>
 
     </div>
 
-  </div>
-
-</footer>
+  </footer>
 
 
-<!-- =========================================
-     JAVASCRIPT
-========================================= -->
+  <!-- =========================================
+       JAVASCRIPT
+  ========================================== -->
 
-<script>
+  <script>
 
-  /* -----------------------------------------
-     MOBILE NAVIGATION
-  ----------------------------------------- */
+    const GITHUB_USERNAME = "michaelmahesh";
 
-  const menuToggle =
-    document.querySelector(".menu-toggle");
+    const repoGrid =
+      document.getElementById("repoGrid");
 
-  const navMenu =
-    document.querySelector(".nav-menu");
+    const repoCount =
+      document.getElementById("repoCount");
 
+    const searchInput =
+      document.getElementById("projectSearch");
 
-  if (menuToggle && navMenu) {
+    const filterSelect =
+      document.getElementById("projectFilter");
 
-    menuToggle.addEventListener("click", () => {
+    const syncStatus =
+      document.getElementById("syncStatus");
 
-      const isOpen =
-        navMenu.classList.toggle("open");
+    const menuToggle =
+      document.getElementById("menuToggle");
 
-      menuToggle.setAttribute(
-        "aria-expanded",
-        isOpen
-      );
-
-    });
+    const navMenu =
+      document.getElementById("navMenu");
 
 
-    navMenu.querySelectorAll("a").forEach(link => {
+    let repositories = [];
 
-      link.addEventListener("click", () => {
 
-        navMenu.classList.remove("open");
+    /* =========================================
+       MOBILE NAVIGATION
+    ========================================== */
+
+    menuToggle.addEventListener(
+      "click",
+      () => {
+
+        const opened =
+          navMenu.classList.toggle("open");
 
         menuToggle.setAttribute(
           "aria-expanded",
-          "false"
+          opened ? "true" : "false"
+        );
+
+        menuToggle.textContent =
+          opened ? "×" : "☰";
+
+      }
+    );
+
+
+    document.querySelectorAll(".nav-menu a")
+      .forEach(link => {
+
+        link.addEventListener(
+          "click",
+          () => {
+
+            navMenu.classList.remove("open");
+
+            menuToggle.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+            menuToggle.textContent = "☰";
+
+          }
         );
 
       });
 
-    });
 
-  }
+    /* =========================================
+       CATEGORY DETECTION
+    ========================================== */
 
+    function getCategory(repo) {
 
-  /* -----------------------------------------
-     HEADER SCROLL
-  ----------------------------------------- */
+      const text = (
 
-  const header =
-    document.querySelector(".site-header");
+        (repo.name || "") + " " +
+        (repo.description || "") + " " +
+        (repo.language || "") + " " +
+        ((repo.topics || []).join(" "))
 
-
-  window.addEventListener(
-    "scroll",
-    () => {
-
-      if (window.scrollY > 12) {
-
-        header.classList.add("scrolled");
-
-      } else {
-
-        header.classList.remove("scrolled");
-
-      }
-
-    },
-    { passive: true }
-  );
-
-
-  /* -----------------------------------------
-     REPOSITORY FILTER
-  ----------------------------------------- */
-
-  const filterButtons =
-    document.querySelectorAll(".filter-btn");
-
-  const repoCards =
-    document.querySelectorAll(".repo-card");
-
-  const searchInput =
-    document.getElementById("repoSearch");
-
-  const noResults =
-    document.getElementById("noResults");
-
-
-  let activeFilter = "all";
-
-
-  function filterRepositories() {
-
-    const searchTerm =
-      searchInput.value
-        .toLowerCase()
-        .trim();
-
-
-    let visibleCount = 0;
-
-
-    repoCards.forEach(card => {
-
-      const category =
-        card.dataset.category || "";
-
-      const name =
-        card.dataset.name || "";
-
-      const title =
-        card.querySelector("h3")?.textContent || "";
-
-      const description =
-        card.querySelector(".repo-description")?.textContent || "";
-
-
-      const searchable =
-        (
-          name +
-          " " +
-          title +
-          " " +
-          description
-        ).toLowerCase();
-
-
-      const matchesFilter =
-        activeFilter === "all" ||
-        category === activeFilter;
-
-
-      const matchesSearch =
-        !searchTerm ||
-        searchable.includes(searchTerm);
+      ).toLowerCase();
 
 
       if (
-        matchesFilter &&
-        matchesSearch
+        text.includes("medical") ||
+        text.includes("mri") ||
+        text.includes("tumor") ||
+        text.includes("cancer") ||
+        text.includes("blood") ||
+        text.includes("health") ||
+        text.includes("clinical")
       ) {
 
-        card.style.display = "flex";
-
-        visibleCount++;
-
-      } else {
-
-        card.style.display = "none";
+        return "medical";
 
       }
 
-    });
 
+      if (
+        text.includes("opencv") ||
+        text.includes("image") ||
+        text.includes("edge") ||
+        text.includes("histogram") ||
+        text.includes("morpholog") ||
+        text.includes("threshold") ||
+        text.includes("hough") ||
+        text.includes("segmentation")
+      ) {
 
-    noResults.style.display =
-      visibleCount === 0
-        ? "block"
-        : "none";
-
-  }
-
-
-  filterButtons.forEach(button => {
-
-    button.addEventListener(
-      "click",
-      () => {
-
-        filterButtons.forEach(btn => {
-          btn.classList.remove("active");
-        });
-
-        button.classList.add("active");
-
-        activeFilter =
-          button.dataset.filter;
-
-        filterRepositories();
+        return "image";
 
       }
-    );
-
-  });
 
 
-  if (searchInput) {
+      if (
+        text.includes("yolo") ||
+        text.includes("vision") ||
+        text.includes("face") ||
+        text.includes("object-detection") ||
+        text.includes("detection") ||
+        text.includes("cnn") ||
+        text.includes("camera")
+      ) {
 
-    searchInput.addEventListener(
-      "input",
-      filterRepositories
-    );
+        return "vision";
 
-  }
-
-
-  /* -----------------------------------------
-     SCROLL REVEAL
-  ----------------------------------------- */
-
-  const revealElements =
-    document.querySelectorAll(".reveal");
+      }
 
 
-  if (
-    "IntersectionObserver" in window &&
-    !window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches
-  ) {
+      if (
+        text.includes("python") ||
+        text.includes("matplotlib") ||
+        text.includes("data-analysis") ||
+        text.includes("data science")
+      ) {
 
-    const revealObserver =
-      new IntersectionObserver(
-        entries => {
+        return "python";
 
-          entries.forEach(entry => {
+      }
 
-            if (entry.isIntersecting) {
 
-              entry.target.classList.add(
-                "visible"
-              );
+      if (
+        text.includes("deep-learning") ||
+        text.includes("neural") ||
+        text.includes("pytorch") ||
+        text.includes("tensorflow") ||
+        text.includes("keras") ||
+        text.includes("rnn") ||
+        text.includes("gan") ||
+        text.includes("machine-learning") ||
+        text.includes("ai")
+      ) {
 
-              revealObserver.unobserve(
-                entry.target
-              );
+        return "ai";
 
-            }
+      }
 
-          });
 
-        },
+      if (
+        text.includes("tutorial") ||
+        text.includes("course") ||
+        text.includes("teaching") ||
+        text.includes("learning") ||
+        text.includes("sec-dip")
+      ) {
+
+        return "teaching";
+
+      }
+
+
+      return "other";
+
+    }
+
+
+    /* =========================================
+       DATE FORMAT
+    ========================================== */
+
+    function formatDate(dateString) {
+
+      if (!dateString) {
+        return "Unknown";
+      }
+
+      const date =
+        new Date(dateString);
+
+      return date.toLocaleDateString(
+        "en-IN",
         {
-          threshold: 0.08
+          day: "2-digit",
+          month: "short",
+          year: "numeric"
         }
       );
 
-
-    revealElements.forEach(element => {
-
-      revealObserver.observe(element);
-
-    });
-
-  } else {
-
-    revealElements.forEach(element => {
-
-      element.classList.add("visible");
-
-    });
-
-  }
+    }
 
 
-  /* -----------------------------------------
-     YEAR
-  ----------------------------------------- */
+    /* =========================================
+       ESCAPE TEXT
+       Prevents repository metadata from
+       becoming executable HTML.
+    ========================================== */
 
-  const year =
-    document.getElementById("year");
+    function escapeHTML(value) {
+
+      return String(value ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+
+    }
 
 
-  if (year) {
+    /* =========================================
+       REPOSITORY ICON
+    ========================================== */
 
-    year.textContent =
+    function getRepoIcon(repo) {
+
+      const category =
+        getCategory(repo);
+
+      if (category === "medical") {
+        return "✚";
+      }
+
+      if (category === "image") {
+        return "◉";
+      }
+
+      if (category === "vision") {
+        return "◈";
+      }
+
+      if (category === "ai") {
+        return "AI";
+      }
+
+      if (category === "python") {
+        return "Py";
+      }
+
+      if (category === "teaching") {
+        return "▤";
+      }
+
+      return "⌘";
+
+    }
+
+
+    /* =========================================
+       RENDER REPOSITORIES
+    ========================================== */
+
+    function renderRepositories() {
+
+      const searchTerm =
+        searchInput.value
+          .trim()
+          .toLowerCase();
+
+      const selectedCategory =
+        filterSelect.value;
+
+
+      const filtered =
+        repositories.filter(repo => {
+
+          const category =
+            getCategory(repo);
+
+
+          const searchableText = (
+
+            repo.name + " " +
+            (repo.description || "") + " " +
+            (repo.language || "") + " " +
+            ((repo.topics || []).join(" "))
+
+          ).toLowerCase();
+
+
+          const matchesSearch =
+            !searchTerm ||
+            searchableText.includes(searchTerm);
+
+
+          const matchesCategory =
+            selectedCategory === "all" ||
+            category === selectedCategory;
+
+
+          return (
+            matchesSearch &&
+            matchesCategory
+          );
+
+        });
+
+
+      repoGrid.innerHTML = "";
+
+
+      if (filtered.length === 0) {
+
+        const empty =
+          document.createElement("div");
+
+        empty.className =
+          "empty-message";
+
+        empty.textContent =
+          "No projects match your search.";
+
+        repoGrid.appendChild(empty);
+
+        return;
+
+      }
+
+
+      filtered.forEach(
+        (repo, index) => {
+
+          const card =
+            document.createElement("article");
+
+          card.className =
+            "repo-card";
+
+
+          const number =
+            String(index + 1)
+              .padStart(2, "0");
+
+
+          const description =
+            repo.description ||
+            "Repository for research, experimentation, development or learning.";
+
+
+          const language =
+            repo.language ||
+            "Code";
+
+
+          const stars =
+            repo.stargazers_count ?? 0;
+
+
+          const forks =
+            repo.forks_count ?? 0;
+
+
+          const category =
+            getCategory(repo);
+
+
+          card.innerHTML = `
+
+            <div class="repo-header">
+
+              <span class="repo-number">
+                #${number}
+              </span>
+
+              <div class="repo-icon">
+                ${escapeHTML(
+                  getRepoIcon(repo)
+                )}
+              </div>
+
+            </div>
+
+
+            <h3>
+
+              <a
+                href="${escapeHTML(repo.html_url)}"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                ${escapeHTML(repo.name)}
+              </a>
+
+            </h3>
+
+
+            <p class="repo-description">
+              ${escapeHTML(description)}
+            </p>
+
+
+            <div class="repo-meta">
+
+              <span class="meta-item">
+                ${escapeHTML(language)}
+              </span>
+
+              <span class="meta-item">
+                ★ ${stars}
+              </span>
+
+              <span class="meta-item">
+                Forks ${forks}
+              </span>
+
+            </div>
+
+
+            <div class="repo-footer">
+
+              <span class="repo-updated">
+                Updated ${formatDate(
+                  repo.updated_at
+                )}
+              </span>
+
+              <a
+                href="${escapeHTML(repo.html_url)}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github-link"
+              >
+                GitHub →
+              </a>
+
+            </div>
+
+          `;
+
+
+          repoGrid.appendChild(card);
+
+        }
+      );
+
+    }
+
+
+    /* =========================================
+       LOAD GITHUB REPOSITORIES
+    ========================================== */
+
+    async function loadRepositories() {
+
+      try {
+
+        syncStatus.textContent =
+          "Loading public repositories from GitHub...";
+
+
+        const response =
+          await fetch(
+            `https://api.github.com/users/${GITHUB_USERNAME}/repos?per_page=100&sort=updated&direction=desc`
+          );
+
+
+        if (!response.ok) {
+
+          throw new Error(
+            `GitHub API returned ${response.status}`
+          );
+
+        }
+
+
+        const data =
+          await response.json();
+
+
+        repositories =
+          data
+            .filter(repo => !repo.archived)
+            .sort(
+              (a, b) =>
+                new Date(b.updated_at) -
+                new Date(a.updated_at)
+            );
+
+
+        repoCount.textContent =
+          repositories.length;
+
+
+        renderRepositories();
+
+
+        syncStatus.textContent =
+          `Showing ${repositories.length} public repositories · Last synced ${new Date().toLocaleTimeString("en-IN", {
+            hour: "2-digit",
+            minute: "2-digit"
+          })}`;
+
+
+      } catch (error) {
+
+        console.error(
+          "GitHub repository loading failed:",
+          error
+        );
+
+
+        repoGrid.innerHTML = `
+
+          <div class="error-message">
+
+            <strong>
+              Unable to load GitHub repositories
+            </strong>
+
+            The project list could not be retrieved
+            right now. You can still browse the repositories
+            directly on GitHub.
+
+            <br><br>
+
+            <a
+              href="https://github.com/michaelmahesh?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="primary-btn"
+            >
+              Open GitHub →
+            </a>
+
+          </div>
+
+        `;
+
+
+        syncStatus.textContent =
+          "GitHub repository sync unavailable.";
+
+      }
+
+    }
+
+
+    /* =========================================
+       SEARCH + FILTER
+    ========================================== */
+
+    searchInput.addEventListener(
+      "input",
+      renderRepositories
+    );
+
+
+    filterSelect.addEventListener(
+      "change",
+      renderRepositories
+    );
+
+
+    /* =========================================
+       YEAR
+    ========================================== */
+
+    document.getElementById(
+      "currentYear"
+    ).textContent =
       new Date().getFullYear();
 
-  }
 
+    /* =========================================
+       START
+    ========================================== */
 
-  /* -----------------------------------------
-     GITHUB EXTERNAL LINKS
-  ----------------------------------------- */
+    loadRepositories();
 
-  document
-    .querySelectorAll(
-      'a[href*="github.com"]'
-    )
-    .forEach(link => {
-
-      link.setAttribute(
-        "target",
-        "_blank"
-      );
-
-      link.setAttribute(
-        "rel",
-        "noopener"
-      );
-
-    });
-
-</script>
-
+  </script>
 
 </body>
 </html>
