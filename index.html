@@ -362,7 +362,7 @@
 
 
     /* =========================================================
-       WHAT'S NEW — FIXED TICKER
+       WHAT'S NEW — FIXED LABEL + MOVING CONTENT
        ========================================================= */
 
     .whats-new {
@@ -370,7 +370,6 @@
       position: fixed;
 
       top: var(--header-height);
-
       left: 0;
       right: 0;
 
@@ -379,14 +378,11 @@
       height: var(--ticker-height);
 
       display: flex;
-
       align-items: center;
 
       overflow: hidden;
 
-      background:
-        var(--navy);
-
+      background: var(--navy);
       color: var(--white);
 
       border-bottom:
@@ -394,15 +390,113 @@
     }
 
 
-    .whats-new-inner {
+    /* ---------------------------------------------------------
+       FIXED LABEL — NEVER MOVES
+       --------------------------------------------------------- */
+
+    .whats-label {
+
+      flex: 0 0 155px;
+
+      height: var(--ticker-height);
 
       display: flex;
-
       align-items: center;
 
-      min-width: max-content;
+      padding:
+        0 18px 0 24px;
+
+      background: var(--navy);
+      color: #bfdbfe;
+
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .12em;
+
+      white-space: nowrap;
+
+      position: relative;
+      z-index: 10;
+
+      border-right:
+        1px solid rgba(255,255,255,.06);
+    }
+
+
+    /* ---------------------------------------------------------
+       MOVING CONTENT WINDOW
+       --------------------------------------------------------- */
+
+    .ticker-window {
+
+      flex: 1;
+      min-width: 0;
+
+      height: var(--ticker-height);
+
+      overflow: hidden;
+
+      position: relative;
+    }
+
+
+    /* Soft fade at both edges */
+
+    .ticker-window::before,
+    .ticker-window::after {
+
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+      bottom: 0;
+
+      width: 38px;
+
+      z-index: 5;
+
+      pointer-events: none;
+    }
+
+
+    .ticker-window::before {
+
+      left: 0;
+
+      background:
+        linear-gradient(
+          to right,
+          var(--navy),
+          transparent
+        );
+    }
+
+
+    .ticker-window::after {
+
+      right: 0;
+
+      background:
+        linear-gradient(
+          to left,
+          var(--navy),
+          transparent
+        );
+    }
+
+
+    /* ---------------------------------------------------------
+       MOVING TRACK
+       --------------------------------------------------------- */
+
+    .ticker-track {
+
+      display: flex;
+      align-items: center;
 
       width: max-content;
+      height: 100%;
 
       will-change: transform;
 
@@ -411,36 +505,14 @@
     }
 
 
-    .whats-label {
+    .ticker-sequence {
 
       display: flex;
-
-      align-items: center;
-
-      height: var(--ticker-height);
-
-      padding-right: 25px;
-
-      color:
-        #bfdbfe;
-
-      font-size: 11px;
-
-      font-weight: 800;
-
-      letter-spacing: .15em;
-
-      white-space: nowrap;
-    }
-
-
-    .ticker-items {
-
-      display: flex;
-
       align-items: center;
 
       gap: 28px;
+
+      padding-right: 28px;
 
       white-space: nowrap;
     }
@@ -448,12 +520,14 @@
 
     .ticker-item {
 
-      color:
-        #e2e8f0;
+      color: #e2e8f0;
 
       font-size: 12px;
+      font-weight: 500;
 
       white-space: nowrap;
+
+      flex-shrink: 0;
     }
 
 
@@ -463,10 +537,15 @@
 
       margin-left: 28px;
 
-      color:
-        #60a5fa;
+      color: #60a5fa;
+
+      font-weight: 700;
     }
 
+
+    /* ---------------------------------------------------------
+       SEAMLESS LOOP
+       --------------------------------------------------------- */
 
     @keyframes ticker-scroll {
 
@@ -480,10 +559,9 @@
     }
 
 
-    .whats-new:hover .whats-new-inner {
+    .ticker-window:hover .ticker-track {
 
-      animation-play-state:
-        paused;
+      animation-play-state: paused;
     }
 
 
@@ -496,7 +574,7 @@
       position: relative;
 
       padding:
-        88px 0 82px;
+        76px 0 72px;
 
       background:
 
@@ -1743,6 +1821,53 @@
       }
 
 
+      .whats-label {
+
+        flex-basis:
+          126px;
+
+        padding:
+          0 10px 0 14px;
+
+        font-size:
+          9px;
+
+        letter-spacing:
+          .10em;
+      }
+
+
+      .ticker-sequence {
+
+        gap:
+          20px;
+
+        padding-right:
+          20px;
+      }
+
+
+      .ticker-item {
+
+        font-size:
+          11px;
+      }
+
+
+      .ticker-item::after {
+
+        margin-left:
+          20px;
+      }
+
+
+      .ticker-track {
+
+        animation-duration:
+          26s;
+      }
+
+
       .nav-links {
 
         top:
@@ -1930,6 +2055,13 @@
           1;
       }
 
+
+      .ticker-track {
+
+        animation:
+          none;
+      }
+
     }
 
   </style>
@@ -2024,86 +2156,81 @@
 
   <!-- =========================================================
        WHAT'S NEW
-       FIXED BELOW HEADER
+       FIXED LABEL + MOVING CONTENT
        ========================================================= -->
 
   <div
     class="whats-new"
     aria-label="What's New">
 
-    <div class="whats-new-inner">
+    <!-- FIXED: this label never moves -->
+    <div class="whats-label">
+      ⚡&nbsp; WHAT'S NEW
+    </div>
+
+    <!-- MOVING: only this window scrolls -->
+    <div class="ticker-window">
+
+      <div class="ticker-track">
+
+        <div class="ticker-sequence">
+
+          <span class="ticker-item">
+            New Project
+          </span>
+
+          <span class="ticker-item">
+            New Teaching Material
+          </span>
+
+          <span class="ticker-item">
+            New Discovery
+          </span>
+
+          <span class="ticker-item">
+            Student Guidance
+          </span>
+
+          <span class="ticker-item">
+            New Publication
+          </span>
+
+          <span class="ticker-item">
+            Announcement
+          </span>
+
+        </div>
 
 
-      <div class="whats-label">
-        WHAT'S NEW
-      </div>
+        <!-- Exact duplicate for seamless continuous movement -->
 
+        <div class="ticker-sequence">
 
-      <div class="ticker-items">
+          <span class="ticker-item">
+            New Project
+          </span>
 
+          <span class="ticker-item">
+            New Teaching Material
+          </span>
 
-        <span class="ticker-item">
-          New Project
-        </span>
+          <span class="ticker-item">
+            New Discovery
+          </span>
 
+          <span class="ticker-item">
+            Student Guidance
+          </span>
 
-        <span class="ticker-item">
-          New Teaching Material
-        </span>
+          <span class="ticker-item">
+            New Publication
+          </span>
 
+          <span class="ticker-item">
+            Announcement
+          </span>
 
-        <span class="ticker-item">
-          New Discovery
-        </span>
-
-
-        <span class="ticker-item">
-          Student Guidance
-        </span>
-
-
-        <span class="ticker-item">
-          New Publication
-        </span>
-
-
-        <span class="ticker-item">
-          Announcement
-        </span>
-
-
-        <!-- Duplicate sequence for continuous ticker -->
-
-
-        <span class="ticker-item">
-          New Project
-        </span>
-
-
-        <span class="ticker-item">
-          New Teaching Material
-        </span>
-
-
-        <span class="ticker-item">
-          New Discovery
-        </span>
-
-
-        <span class="ticker-item">
-          Student Guidance
-        </span>
-
-
-        <span class="ticker-item">
-          New Publication
-        </span>
-
-
-        <span class="ticker-item">
-          Announcement
-        </span>
-
+        </div>
 
       </div>
 
@@ -2161,7 +2288,7 @@
 
             Researching and building intelligent systems across
             Artificial Intelligence, Deep Learning, Computer Vision,
-            Medical AI, Image Processing and intelligent applications.
+            Medical AI, Image Processing and intelligent transportation.
 
           </p>
 
@@ -2203,7 +2330,8 @@
               src="profile.jpg"
               alt="Dr. K. Michael Mahesh"
               class="profile-image"
-              loading="eager">
+              loading="eager"
+              decoding="async">
 
 
             <div class="profile-caption">
