@@ -1230,6 +1230,145 @@
 
 
     /* =========================================================
+       SKILLDUX COURSE CARDS
+       ========================================================= */
+
+    .course-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+
+      gap: 18px;
+    }
+
+    .course-card {
+
+      position: relative;
+
+      display: flex;
+
+      flex-direction: column;
+
+      min-height: 285px;
+
+      padding: 25px;
+
+      background: var(--white);
+
+      border: 1px solid var(--border);
+
+      border-radius: var(--radius);
+
+      box-shadow: 0 5px 20px rgba(15,23,42,.035);
+
+      overflow: hidden;
+
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+
+    .course-card::before {
+
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+    }
+
+    .course-card-xai::before {
+      background: linear-gradient(90deg, #2563eb, #8b5cf6);
+    }
+
+    .course-card-seg::before {
+      background: linear-gradient(90deg, #10b981, #06b6d4);
+    }
+
+    .course-card-cnn::before {
+      background: linear-gradient(90deg, #f59e0b, #ec4899);
+    }
+
+    .course-card:hover {
+
+      transform: translateY(-5px);
+
+      box-shadow: var(--shadow-hover);
+
+      border-color: #bfdbfe;
+    }
+
+    .course-card .project-content {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .course-card .project-kicker {
+      color: var(--blue);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+
+    .course-card-seg .project-kicker {
+      color: #059669;
+    }
+
+    .course-card-cnn .project-kicker {
+      color: #d97706;
+    }
+
+    .course-card h3 {
+      margin-top: 12px;
+      color: var(--navy);
+      font-size: 20px;
+      line-height: 1.3;
+    }
+
+    .course-card p {
+      margin-top: 9px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .course-card .project-tags {
+      margin-top: 17px;
+    }
+
+    .course-card .project-tag {
+      background: #eff6ff;
+      color: #2563eb;
+    }
+
+    .course-card-seg .project-tag {
+      background: #ecfdf5;
+      color: #059669;
+    }
+
+    .course-card-cnn .project-tag {
+      background: #fff7ed;
+      color: #d97706;
+    }
+
+    .course-card .project-link {
+      margin-top: auto;
+      padding-top: 22px;
+    }
+
+    @media (max-width: 900px) {
+
+      .course-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+
+    /* =========================================================
        PROJECT LAB
        ========================================================= */
 
@@ -1755,7 +1894,8 @@
 
 
       .topics-grid,
-      .project-grid {
+      .project-grid,
+      .course-grid {
 
         grid-template-columns:
           repeat(2, 1fr);
@@ -2963,9 +3103,9 @@
 
         </div>
 
-        <div class="projects-grid">
+        <div class="course-grid">
 
-          <article class="project-card reveal">
+          <article class="course-card course-card-xai reveal">
 
             <div class="project-content">
 
@@ -3000,7 +3140,7 @@
           </article>
 
 
-          <article class="project-card reveal">
+          <article class="course-card course-card-seg reveal">
 
             <div class="project-content">
 
@@ -3036,7 +3176,7 @@
           </article>
 
 
-          <article class="project-card reveal">
+          <article class="course-card course-card-cnn reveal">
 
             <div class="project-content">
 
