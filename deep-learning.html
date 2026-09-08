@@ -569,6 +569,92 @@
   </section>
 </main>
 
+
+<section class="section discussion-section" id="discussion-feedback">
+  <div class="container">
+    <div class="discussion-card">
+      <div class="discussion-icon">💬</div>
+      <div class="discussion-content">
+        <div class="section-kicker">Discussion &amp; Feedback</div>
+        <h2 class="section-title">Share Your Thoughts</h2>
+        <p class="section-description">
+          Have a question, comment, suggestion, or feedback about this subject?
+          Use the discussion form to share it.
+        </p>
+        <div class="discussion-actions">
+          <a class="discussion-action primary" href="#" data-feedback-type="Discussion">
+            💬 Discussion
+          </a>
+          <a class="discussion-action" href="#" data-feedback-type="Feedback">
+            📝 Feedback
+          </a>
+          <a class="discussion-action" href="#" data-feedback-type="Suggestion">
+            💡 Suggestions
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Subject-wise Discussion & Feedback */
+.discussion-section{padding-top:58px;padding-bottom:58px}
+.discussion-card{
+  display:flex;align-items:center;gap:28px;
+  padding:34px 36px;border:1px solid #dbe4ee;border-radius:20px;
+  background:linear-gradient(135deg,#f8fbff,#ffffff);
+  box-shadow:0 12px 30px rgba(15,23,42,.07)
+}
+.discussion-icon{
+  width:72px;height:72px;flex:0 0 72px;display:grid;place-items:center;
+  border-radius:18px;background:#e0f2fe;font-size:32px
+}
+.discussion-content{flex:1}
+.discussion-content .section-title{margin:4px 0 8px}
+.discussion-content .section-description{margin-bottom:20px;max-width:760px}
+.discussion-actions{display:flex;flex-wrap:wrap;gap:12px}
+.discussion-action{
+  display:inline-flex;align-items:center;justify-content:center;gap:7px;
+  padding:11px 17px;border-radius:10px;border:1px solid #d6dee8;
+  background:#fff;color:#1e3a5f;text-decoration:none;font-weight:700;font-size:14px;
+  transition:transform .2s ease,box-shadow .2s ease
+}
+.discussion-action:hover{transform:translateY(-2px);box-shadow:0 7px 16px rgba(15,23,42,.10)}
+.discussion-action.primary{background:#1d4ed8;color:#fff;border-color:#1d4ed8}
+@media(max-width:700px){
+  .discussion-card{display:block;padding:28px 22px}
+  .discussion-icon{margin-bottom:18px}
+  .discussion-actions{display:grid;grid-template-columns:1fr}
+  .discussion-action{width:100%}
+}
+</style>
+
+<script>
+/*
+ * Google Form connection:
+ * Replace the value below with your Google Form URL.
+ * Example:
+ * const SUBJECT_FEEDBACK_FORM = "https://docs.google.com/forms/d/e/XXXXXXXX/viewform";
+ */
+const SUBJECT_FEEDBACK_FORM = "PASTE_YOUR_GOOGLE_FORM_LINK_HERE";
+
+document.querySelectorAll("[data-feedback-type]").forEach(function(button){
+  button.addEventListener("click", function(event){
+    event.preventDefault();
+
+    if (SUBJECT_FEEDBACK_FORM === "PASTE_YOUR_GOOGLE_FORM_LINK_HERE") {
+      alert("Please add your Google Form link in SUBJECT_FEEDBACK_FORM in this page.");
+      return;
+    }
+
+    const type = encodeURIComponent(this.getAttribute("data-feedback-type"));
+    const separator = SUBJECT_FEEDBACK_FORM.includes("?") ? "&" : "?";
+    window.open(SUBJECT_FEEDBACK_FORM + separator + "type=" + type, "_blank", "noopener");
+  });
+});
+</script>
+
 <footer>
   <div class="container footer-inner">
     <strong>Deep Learning · Dr. K. Michael Mahesh</strong>
