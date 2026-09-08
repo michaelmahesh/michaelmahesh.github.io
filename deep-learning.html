@@ -1,0 +1,2045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Deep Learning | Dr. K. Michael Mahesh</title>
+
+  <meta name="description"
+        content="Deep Learning learning resources by Dr. K. Michael Mahesh covering neural networks, CNNs, RNNs, LSTMs, unsupervised learning, PyTorch implementations and applications.">
+
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --surface: #ffffff;
+      --surface-soft: #f8fbff;
+      --text: #182230;
+      --muted: #667384;
+      --primary: #1261c9;
+      --primary-dark: #0b4ea2;
+      --primary-soft: #eaf3ff;
+      --border: #dce3eb;
+      --shadow: 0 8px 24px rgba(26, 53, 87, 0.07);
+      --radius: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================== */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      font-weight: 800;
+      color: #123f75;
+      font-size: 15px;
+    }
+
+    .brand span {
+      display: block;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 14px;
+      color: #566477;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      background: linear-gradient(
+        135deg,
+        #edf5ff 0%,
+        #ffffff 70%
+      );
+
+      border-bottom: 1px solid var(--border);
+      padding: 68px 0 58px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 14px 0 12px;
+      font-size: clamp(40px, 6vw, 64px);
+      line-height: 1.03;
+      letter-spacing: -1.8px;
+    }
+
+    .hero-text {
+      max-width: 820px;
+      color: var(--muted);
+      font-size: 17px;
+      margin: 0;
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .stat {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 7px 12px;
+      color: #536275;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    /* =========================
+       MAIN
+    ========================== */
+
+    main {
+      padding: 42px 0 70px;
+    }
+
+    .section-heading {
+      margin-bottom: 18px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-size: 22px;
+      letter-spacing: -0.3px;
+    }
+
+    .section-heading p {
+      margin: 5px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* =========================
+       OVERVIEW
+    ========================== */
+
+    .overview {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      margin-bottom: 42px;
+    }
+
+    .overview p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* =========================
+       MODULES
+    ========================== */
+
+    .modules {
+      display: grid;
+      gap: 20px;
+    }
+
+    .module {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .module-header {
+      padding: 22px 24px;
+      background: linear-gradient(
+        90deg,
+        #eaf3ff,
+        #f8fbff
+      );
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .module-number {
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+    }
+
+    .module-header h3 {
+      margin: 3px 0 5px;
+      font-size: 20px;
+    }
+
+    .module-header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* =========================
+       TOPICS
+    ========================== */
+
+    .topics {
+      display: grid;
+    }
+
+    .topic {
+      padding: 18px 24px;
+      border-bottom: 1px solid #e7ebf0;
+      transition: background 0.2s ease;
+    }
+
+    .topic:last-child {
+      border-bottom: 0;
+    }
+
+    .topic:hover {
+      background: var(--surface-soft);
+    }
+
+    .topic-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+    }
+
+    .topic-number {
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 13px;
+      min-width: 42px;
+    }
+
+    .topic-title {
+      flex: 1;
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .topic-description {
+      margin: 5px 0 0 60px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .topic-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin: 12px 0 0 60px;
+    }
+
+    .topic-btn {
+      border: 1px solid var(--border);
+      background: #fff;
+      color: #506074;
+      border-radius: 7px;
+      padding: 5px 10px;
+      font-size: 11px;
+      font-weight: 800;
+      transition: all 0.2s ease;
+    }
+
+    .topic-btn:hover {
+      border-color: #a9c6e9;
+      color: var(--primary);
+      background: var(--primary-soft);
+    }
+
+    /* =========================
+       IMPLEMENTATION
+    ========================== */
+
+    .implementation {
+      margin-top: 42px;
+    }
+
+    .coding-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .coding-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .coding-icon {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-weight: 900;
+      margin-bottom: 13px;
+    }
+
+    .coding-card h3 {
+      margin: 0 0 6px;
+      font-size: 17px;
+    }
+
+    .coding-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .coding-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 15px;
+    }
+
+    .coding-tags span {
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 4px 8px;
+      font-size: 10px;
+      font-weight: 800;
+      color: #59687b;
+    }
+
+    /* =========================
+       LEARNING MATERIAL
+    ========================== */
+
+    .material {
+      margin-top: 42px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .material-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .material-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 15px;
+      background: var(--surface-soft);
+    }
+
+    .material-item strong {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 3px;
+    }
+
+    .material-item span {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      border-top: 1px solid var(--border);
+      background: #fff;
+      padding: 28px 0;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 850px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .coding-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .material-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .hero {
+        padding: 48px 0;
+      }
+
+      .module-header,
+      .topic,
+      .overview,
+      .material {
+        padding-left: 17px;
+        padding-right: 17px;
+      }
+
+      .topic-description,
+      .topic-actions {
+        margin-left: 0;
+      }
+
+      .topic-description {
+        margin-top: 7px;
+      }
+
+      .material-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================== -->
+
+<header class="site-header">
+
+  <div class="container nav">
+
+    <a href="index.html" class="brand">
+      Dr. K. Michael Mahesh
+      <span>
+        Artificial Intelligence · Deep Learning · Computer Vision
+      </span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="learning.html">Learning</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+    </nav>
+
+  </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================== -->
+
+<section class="hero">
+
+  <div class="container">
+
+    <span class="eyebrow">
+      Learning Resource
+    </span>
+
+    <h1>
+      Deep Learning
+    </h1>
+
+    <p class="hero-text">
+      A structured collection of Deep Learning concepts, visual
+      explanations, mathematical foundations, Python programming,
+      PyTorch implementations, practical examples, and applications.
+    </p>
+
+    <div class="hero-stats">
+
+      <span class="stat">5 Modules</span>
+
+      <span class="stat">50 Topics</span>
+
+      <span class="stat">Python</span>
+
+      <span class="stat">PyTorch</span>
+
+      <span class="stat">Theory + Implementation</span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     MAIN CONTENT
+========================== -->
+
+<main class="container">
+
+
+  <!-- OVERVIEW -->
+
+  <section class="overview">
+
+    <div class="section-heading">
+      <h2>
+        About Deep Learning
+      </h2>
+    </div>
+
+    <p>
+      This section introduces Deep Learning from fundamental neural
+      network concepts through convolutional networks, recurrent
+      networks, unsupervised learning, and practical applications.
+      Each topic can be expanded with notes, diagrams, mathematics,
+      Python code, PyTorch implementations, practical exercises,
+      and case studies.
+    </p>
+
+  </section>
+
+
+  <!-- MODULES -->
+
+  <section>
+
+    <div class="section-heading">
+
+      <h2>
+        Modules and Topics
+      </h2>
+
+      <p>
+        Explore the topics module by module.
+      </p>
+
+    </div>
+
+
+    <div class="modules">
+
+
+      <!-- =================================
+           MODULE 1
+      ================================== -->
+
+      <article class="module">
+
+        <div class="module-header">
+
+          <div class="module-number">
+            Module 1
+          </div>
+
+          <h3>
+            Foundations of Deep Learning
+          </h3>
+
+          <p>
+            Neural networks, learning mechanisms, optimization,
+            and fundamental training concepts.
+          </p>
+
+        </div>
+
+
+        <div class="topics">
+
+
+          <div class="topic">
+
+            <div class="topic-top">
+
+              <span class="topic-number">
+                1.1
+              </span>
+
+              <div class="topic-title">
+                History and Evolution of Deep Learning
+              </div>
+
+            </div>
+
+            <p class="topic-description">
+              Development of deep learning and its role in modern
+              artificial intelligence.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Diagram</a>
+              <a href="#" class="topic-btn">References</a>
+            </div>
+
+          </div>
+
+
+          <div class="topic">
+
+            <div class="topic-top">
+
+              <span class="topic-number">
+                1.2
+              </span>
+
+              <div class="topic-title">
+                Neuron Model
+              </div>
+
+            </div>
+
+            <p class="topic-description">
+              Artificial neuron, inputs, weights, bias, activation,
+              and output computation.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Python</a>
+              <a href="#" class="topic-btn">Diagram</a>
+            </div>
+
+          </div>
+
+
+          <div class="topic">
+
+            <div class="topic-top">
+
+              <span class="topic-number">
+                1.3
+              </span>
+
+              <div class="topic-title">
+                Deep Neural Network Architecture
+              </div>
+
+            </div>
+
+            <p class="topic-description">
+              Multilayer networks, hidden layers, parameters,
+              and network depth.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Python</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+            </div>
+
+          </div>
+
+
+          <div class="topic">
+
+            <div class="topic-top">
+
+              <span class="topic-number">
+                1.4
+              </span>
+
+              <div class="topic-title">
+                Activation Functions
+              </div>
+
+            </div>
+
+            <p class="topic-description">
+              Sigmoid, tanh, ReLU, softmax, and their roles
+              in neural networks.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Mathematics</a>
+              <a href="#" class="topic-btn">Python</a>
+            </div>
+
+          </div>
+
+
+          <div class="topic">
+
+            <div class="topic-top">
+
+              <span class="topic-number">
+                1.5
+              </span>
+
+              <div class="topic-title">
+                Loss Functions
+              </div>
+
+            </div>
+
+            <p class="topic-description">
+              Loss functions for regression and classification,
+              including MSE and cross-entropy.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Mathematics</a>
+              <a href="#" class="topic-btn">Python</a>
+            </div>
+
+          </div>
+
+
+          <div class="topic">
+
+            <div class="topic-top">
+
+              <span class="topic-number">
+                1.6
+              </span>
+
+              <div class="topic-title">
+                Optimizers
+              </div>
+
+            </div>
+
+            <p class="topic-description">
+              Optimization algorithms used for neural network
+              training.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Python</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+            </div>
+
+          </div>
+
+
+          <div class="topic">
+
+            <div class="topic-top">
+
+              <span class="topic-number">
+                1.7
+              </span>
+
+              <div class="topic-title">
+                Backpropagation
+              </div>
+
+            </div>
+
+            <p class="topic-description">
+              Error propagation, gradient computation, and neural
+              network weight updates.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Mathematics</a>
+              <a href="#" class="topic-btn">Python</a>
+            </div>
+
+          </div>
+
+
+          <div class="topic">
+
+            <div class="topic-top">
+
+              <span class="topic-number">
+                1.8
+              </span>
+
+              <div class="topic-title">
+                Regularization and Batch Normalization
+              </div>
+
+            </div>
+
+            <p class="topic-description">
+              Methods for improving generalization and training
+              stability.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Diagram</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+            </div>
+
+          </div>
+
+
+          <div class="topic">
+
+            <div class="topic-top">
+
+              <span class="topic-number">
+                1.9
+              </span>
+
+              <div class="topic-title">
+                Deep Networks versus Shallow Networks
+              </div>
+
+            </div>
+
+            <p class="topic-description">
+              Comparison of representation capability, complexity,
+              and performance.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Comparison</a>
+              <a href="#" class="topic-btn">Diagram</a>
+            </div>
+
+          </div>
+
+
+          <div class="topic">
+
+            <div class="topic-top">
+
+              <span class="topic-number">
+                1.10
+              </span>
+
+              <div class="topic-title">
+                Regression and Classification using PyTorch
+              </div>
+
+            </div>
+
+            <p class="topic-description">
+              Neural network implementation for regression and
+              classification tasks using PyTorch.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Python</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+              <a href="#" class="topic-btn">Practical</a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- =================================
+           MODULE 2
+      ================================== -->
+
+      <article class="module">
+
+        <div class="module-header">
+
+          <div class="module-number">
+            Module 2
+          </div>
+
+          <h3>
+            Convolutional Neural Networks
+          </h3>
+
+          <p>
+            CNN architecture, convolution, feature learning,
+            image classification, transfer learning, and augmentation.
+          </p>
+
+        </div>
+
+
+        <div class="topics">
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">2.1</span>
+              <div class="topic-title">
+                Introduction to CNN Architectures
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Overview of CNN architectures and their use in
+              visual computing tasks.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Diagram</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">2.2</span>
+              <div class="topic-title">
+                Properties of CNN Representations
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Local connectivity, parameter sharing, translation
+              invariance, and hierarchical feature learning.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Diagram</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">2.3</span>
+              <div class="topic-title">
+                Convolution Operation
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Filters, kernels, feature maps, and convolution
+              operations in CNNs.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Mathematics</a>
+              <a href="#" class="topic-btn">Python</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">2.4</span>
+              <div class="topic-title">
+                Pooling Layers
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Max pooling, average pooling, and dimensionality reduction.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Diagram</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">2.5</span>
+              <div class="topic-title">
+                Strides and Padding
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Effect of stride and padding on feature-map dimensions
+              and information preservation.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Mathematics</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">2.6</span>
+              <div class="topic-title">
+                Fully Connected Layer in CNN
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Dense layers for feature interpretation and classification.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">2.7</span>
+              <div class="topic-title">
+                CNN for CIFAR-10
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Design and training of CNN models using the CIFAR-10 dataset.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Python</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+              <a href="#" class="topic-btn">Practical</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">2.8</span>
+              <div class="topic-title">
+                Transfer Learning
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Pretrained models and fine-tuning strategies for
+              image classification.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+              <a href="#" class="topic-btn">Practical</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">2.9</span>
+              <div class="topic-title">
+                Data Augmentation
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Image transformations for increasing training-data diversity.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Python</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">2.10</span>
+              <div class="topic-title">
+                Image Classification using PyTorch
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Implementation of CNN image classifiers using PyTorch.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Python</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+              <a href="#" class="topic-btn">Practical</a>
+            </div>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- =================================
+           MODULE 3
+      ================================== -->
+
+      <article class="module">
+
+        <div class="module-header">
+
+          <div class="module-number">
+            Module 3
+          </div>
+
+          <h3>
+            Recurrent Neural Networks and LSTM
+          </h3>
+
+          <p>
+            Sequence modeling, RNN architectures, LSTM, BiLSTM,
+            GRU, word embeddings, and sequence applications.
+          </p>
+
+        </div>
+
+
+        <div class="topics">
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">3.1</span>
+              <div class="topic-title">
+                Introduction to Recurrent Neural Networks
+              </div>
+            </div>
+
+            <p class="topic-description">
+              RNNs and their suitability for sequential data processing.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Diagram</a>
+              <a href="#" class="topic-btn">Python</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">3.2</span>
+              <div class="topic-title">
+                RNN Topologies
+              </div>
+            </div>
+
+            <p class="topic-description">
+              One-to-one, one-to-many, many-to-one, and
+              many-to-many structures.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Diagram</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">3.3</span>
+              <div class="topic-title">
+                Difficulties in Training RNNs
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Vanishing gradients, exploding gradients, and
+              limitations of basic RNN training.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Mathematics</a>
+              <a href="#" class="topic-btn">Diagram</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">3.4</span>
+              <div class="topic-title">
+                Bidirectional RNN
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Forward and backward context for sequence processing.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Diagram</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">3.5</span>
+              <div class="topic-title">
+                Long Short-Term Memory Networks
+              </div>
+            </div>
+
+            <p class="topic-description">
+              LSTM architecture with input, forget, and output gates.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Mathematics</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">3.6</span>
+              <div class="topic-title">
+                Bidirectional LSTM
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Forward and backward dependencies for improved
+              sequence learning.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Diagram</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">3.7</span>
+              <div class="topic-title">
+                Gated Recurrent Unit
+              </div>
+            </div>
+
+            <p class="topic-description">
+              GRU architecture and comparison with LSTM.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Comparison</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">3.8</span>
+              <div class="topic-title">
+                Word Embeddings
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Dense vector representations of words for
+              natural language processing.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Python</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">3.9</span>
+              <div class="topic-title">
+                Named Entity Recognition
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Sequence-model applications for identifying
+              named entities in text.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Python</a>
+              <a href="#" class="topic-btn">Practical</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">3.10</span>
+              <div class="topic-title">
+                RNN and LSTM Implementation using PyTorch
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Practical implementation of RNN and LSTM models
+              using PyTorch.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Python</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+              <a href="#" class="topic-btn">Practical</a>
+            </div>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- =================================
+           MODULE 4
+      ================================== -->
+
+      <article class="module">
+
+        <div class="module-header">
+
+          <div class="module-number">
+            Module 4
+          </div>
+
+          <h3>
+            Deep Unsupervised Learning
+          </h3>
+
+          <p>
+            Autoencoders, variational learning, generative models,
+            and Boltzmann-machine based approaches.
+          </p>
+
+        </div>
+
+
+        <div class="topics">
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">4.1</span>
+              <div class="topic-title">
+                Introduction to Deep Unsupervised Learning
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Unsupervised representation learning and its
+              importance in deep learning.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Diagram</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">4.2</span>
+              <div class="topic-title">
+                Standard Autoencoders
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Encoder-decoder architecture, latent representation,
+              and reconstruction loss.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Diagram</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">4.3</span>
+              <div class="topic-title">
+                Sparse Autoencoders
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Sparsity constraints for learning compact
+              and meaningful representations.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Mathematics</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">4.4</span>
+              <div class="topic-title">
+                Denoising Autoencoders
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Reconstruction of clean inputs from corrupted
+              or noisy data.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Python</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">4.5</span>
+              <div class="topic-title">
+                Contractive Autoencoders
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Robust representations through penalties on
+              sensitivity to input variations.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Mathematics</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">4.6</span>
+              <div class="topic-title">
+                Variational Autoencoders
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Probabilistic latent variables and generative
+              learning using VAEs.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Mathematics</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">4.7</span>
+              <div class="topic-title">
+                Generative Adversarial Networks
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Generator, discriminator, adversarial training,
+              and synthetic-data generation.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Diagram</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">4.8</span>
+              <div class="topic-title">
+                Restricted Boltzmann Machines
+              </div>
+            </div>
+
+            <p class="topic-description">
+              RBM structure, visible and hidden units,
+              and energy-based learning.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Diagram</a>
+              <a href="#" class="topic-btn">Python</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">4.9</span>
+              <div class="topic-title">
+                Deep Boltzmann Machines
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Multilayer Boltzmann machines and their role
+              in deep generative modeling.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Diagram</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">4.10</span>
+              <div class="topic-title">
+                Autoencoder Implementation using PyTorch
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Implementation of autoencoder models for
+              unsupervised feature learning.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Python</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+              <a href="#" class="topic-btn">Practical</a>
+            </div>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- =================================
+           MODULE 5
+      ================================== -->
+
+      <article class="module">
+
+        <div class="module-header">
+
+          <div class="module-number">
+            Module 5
+          </div>
+
+          <h3>
+            Applications of Deep Learning
+          </h3>
+
+          <p>
+            Image segmentation, object detection, recognition,
+            localization, cloud deployment, and web deployment.
+          </p>
+
+        </div>
+
+
+        <div class="topics">
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">5.1</span>
+              <div class="topic-title">
+                Image Segmentation
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Image segmentation concepts and pixel-level
+              classification in deep learning.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Diagram</a>
+              <a href="#" class="topic-btn">Python</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">5.2</span>
+              <div class="topic-title">
+                Object Detection and Recognition
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Detecting and recognizing objects in images
+              using deep learning models.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Diagram</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">5.3</span>
+              <div class="topic-title">
+                Faster R-CNN
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Region proposal networks and Faster R-CNN
+              architecture for object detection.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Architecture</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">5.4</span>
+              <div class="topic-title">
+                YOLO Object Detection
+              </div>
+            </div>
+
+            <p class="topic-description">
+              You Only Look Once approach for real-time
+              object detection.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Architecture</a>
+              <a href="#" class="topic-btn">Python</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">5.5</span>
+              <div class="topic-title">
+                Single Shot Detector
+              </div>
+            </div>
+
+            <p class="topic-description">
+              SSD architecture and multiscale feature maps
+              for object detection.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Architecture</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">5.6</span>
+              <div class="topic-title">
+                Multiclass Object Detection
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Detection and classification of multiple object
+              categories in images or video.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Python</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+              <a href="#" class="topic-btn">Practical</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">5.7</span>
+              <div class="topic-title">
+                Object Classification and Localization
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Object labels and bounding-box location prediction.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Diagram</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">5.8</span>
+              <div class="topic-title">
+                Object Detection using AWS SageMaker
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Training and deployment of object detection
+              models using AWS SageMaker.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Notes</a>
+              <a href="#" class="topic-btn">Practical</a>
+              <a href="#" class="topic-btn">Deployment</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">5.9</span>
+              <div class="topic-title">
+                Object Detection Implementation using CNN
+              </div>
+            </div>
+
+            <p class="topic-description">
+              CNN-based object detection methods for practical
+              image analysis.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Python</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+              <a href="#" class="topic-btn">Practical</a>
+            </div>
+          </div>
+
+
+          <div class="topic">
+            <div class="topic-top">
+              <span class="topic-number">5.10</span>
+              <div class="topic-title">
+                Web Deployment of Deep Neural Networks
+              </div>
+            </div>
+
+            <p class="topic-description">
+              Building and deploying deep learning models
+              for web-based applications.
+            </p>
+
+            <div class="topic-actions">
+              <a href="#" class="topic-btn">Python</a>
+              <a href="#" class="topic-btn">PyTorch</a>
+              <a href="#" class="topic-btn">Deployment</a>
+              <a href="#" class="topic-btn">Practical</a>
+            </div>
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- =================================
+       IMPLEMENTATION
+  ================================== -->
+
+  <section class="implementation">
+
+    <div class="section-heading">
+
+      <h2>
+        Implementation & Coding
+      </h2>
+
+      <p>
+        Practical implementations using Python and PyTorch.
+      </p>
+
+    </div>
+
+
+    <div class="coding-grid">
+
+
+      <!-- PYTHON -->
+
+      <article class="coding-card">
+
+        <div class="coding-icon">
+          PY
+        </div>
+
+        <h3>
+          Python
+        </h3>
+
+        <p>
+          Python-based implementations using NumPy, data processing,
+          visualization, numerical examples, and fundamental
+          neural-network operations.
+        </p>
+
+        <div class="coding-tags">
+
+          <span>Python</span>
+          <span>NumPy</span>
+          <span>Matplotlib</span>
+          <span>Data Processing</span>
+          <span>Numerical Examples</span>
+
+        </div>
+
+      </article>
+
+
+      <!-- PYTORCH -->
+
+      <article class="coding-card">
+
+        <div class="coding-icon">
+          PT
+        </div>
+
+        <h3>
+          PyTorch
+        </h3>
+
+        <p>
+          PyTorch implementations covering neural networks, CNNs,
+          RNNs, LSTMs, autoencoders, generative models, and
+          computer-vision applications.
+        </p>
+
+        <div class="coding-tags">
+
+          <span>PyTorch</span>
+          <span>torchvision</span>
+          <span>Training</span>
+          <span>Deep Learning</span>
+          <span>Computer Vision</span>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- =================================
+       LEARNING MATERIAL
+  ================================== -->
+
+  <section class="material">
+
+    <div class="section-heading">
+
+      <h2>
+        Learning Material
+      </h2>
+
+      <p>
+        Each topic can be expanded into a complete learning resource.
+      </p>
+
+    </div>
+
+
+    <div class="material-grid">
+
+
+      <div class="material-item">
+        <strong>Concepts</strong>
+        <span>Clear topic explanations</span>
+      </div>
+
+
+      <div class="material-item">
+        <strong>Mathematics</strong>
+        <span>Equations and numerical examples</span>
+      </div>
+
+
+      <div class="material-item">
+        <strong>Visualizations</strong>
+        <span>Diagrams and architecture views</span>
+      </div>
+
+
+      <div class="material-item">
+        <strong>Python</strong>
+        <span>Hands-on coding examples</span>
+      </div>
+
+
+      <div class="material-item">
+        <strong>PyTorch</strong>
+        <span>Deep learning implementations</span>
+      </div>
+
+
+      <div class="material-item">
+        <strong>Practicals</strong>
+        <span>Step-by-step experiments</span>
+      </div>
+
+
+      <div class="material-item">
+        <strong>Case Studies</strong>
+        <span>Real-world applications</span>
+      </div>
+
+
+      <div class="material-item">
+        <strong>References</strong>
+        <span>Books, papers, and useful resources</span>
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+<footer>
+
+  <div class="container">
+
+    © 2026 Dr. K. Michael Mahesh · Deep Learning
+
+  </div>
+
+</footer>
+
+</body>
+</html>
