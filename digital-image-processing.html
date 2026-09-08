@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Digital Image Processing learning resource by Dr. K. Michael Mahesh covering image fundamentals, enhancement, segmentation, morphology, compression, Python and OpenCV implementation.">
+  <meta name="author" content="Dr. K. Michael Mahesh">
+  <title>Digital Image Processing | Dr. K. Michael Mahesh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --white:#ffffff;
+      --bg:#f7faff;
+      --surface:#ffffff;
+      --surface-soft:#f8fbff;
+      --navy:#0f172a;
+      --text:#334155;
+      --muted:#64748b;
+      --blue:#1d4ed8;
+      --blue-dark:#173ea5;
+      --blue-soft:#eff6ff;
+      --blue-border:#dbeafe;
+      --cyan:#0891b2;
+      --purple:#7c3aed;
+      --orange:#ea580c;
+      --green:#059669;
+      --border:#e2e8f0;
+      --shadow:0 12px 34px rgba(15,23,42,.06);
+      --shadow-hover:0 18px 42px rgba(15,23,42,.10);
+      --radius:18px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden
+    }
+    a{color:inherit;text-decoration:none}
+    .container{width:min(var(--max),calc(100% - 40px));margin:auto}
+
+    /* Header */
+    .site-header{
+      position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.96);
+      border-bottom:1px solid var(--border);backdrop-filter:blur(14px)
+    }
+    .nav{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px;min-width:max-content}
+    .brand-mark{
+      width:42px;height:42px;display:grid;place-items:center;border-radius:12px;
+      background:var(--blue);color:#fff;font-weight:800;font-size:12px;box-shadow:0 7px 18px rgba(29,78,216,.16)
+    }
+    .brand-name{font-size:15px;font-weight:800;letter-spacing:.04em;color:var(--navy)}
+    .brand-role{font-size:11px;color:var(--muted);margin-top:-2px}
+    .nav-links{display:flex;gap:4px;align-items:center}
+    .nav-links a{padding:9px 12px;border-radius:9px;color:var(--muted);font-size:14px;font-weight:600}
+    .nav-links a:hover,.nav-links a.active{color:var(--blue);background:var(--blue-soft)}
+    .nav-connect{background:var(--blue)!important;color:#fff!important;margin-left:6px}
+
+    /* Hero */
+    .hero{
+      position:relative;padding:72px 0 64px;background:
+      radial-gradient(circle at 82% 20%,rgba(219,234,254,.8),transparent 31%),
+      linear-gradient(180deg,#fff 0%,#f7faff 100%);border-bottom:1px solid var(--border);overflow:hidden
+    }
+    .hero::after{
+      content:"";position:absolute;width:320px;height:320px;right:-170px;bottom:-180px;
+      border:1px solid rgba(59,130,246,.12);border-radius:50%
+    }
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border-radius:999px;
+      background:var(--blue-soft);border:1px solid var(--blue-border);color:var(--blue);
+      font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase
+    }
+    .eyebrow-dot{width:7px;height:7px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 4px rgba(29,78,216,.08)}
+    h1{font-family:"Space Grotesk",Inter,sans-serif;font-size:clamp(42px,6vw,68px);line-height:1.02;letter-spacing:-.055em;color:var(--navy);margin-top:20px}
+    h1 span{color:var(--blue)}
+    .hero-text{max-width:820px;margin-top:18px;font-size:17px;color:var(--muted)}
+    .hero-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+    .hero-tag{padding:7px 11px;border:1px solid var(--border);background:#fff;border-radius:999px;font-size:12px;font-weight:700;color:#526176}
+
+    /* Sections */
+    .section{padding:72px 0}
+    .section-white{background:#fff}
+    .section-header{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:30px}
+    .section-kicker{font-size:11px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--blue)}
+    .section-title{font-family:"Space Grotesk",Inter,sans-serif;color:var(--navy);font-size:32px;letter-spacing:-.035em;margin-top:6px}
+    .section-description{max-width:720px;margin-top:8px;color:var(--muted);font-size:15px}
+
+    .overview-card{
+      background:#fff;border:1px solid var(--border);border-radius:18px;padding:26px;box-shadow:var(--shadow)
+    }
+    .overview-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:24px;align-items:stretch}
+    .overview-card p{color:var(--muted);font-size:15px}
+    .overview-points{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .overview-point{padding:15px;border:1px solid var(--border);border-radius:13px;background:var(--surface-soft)}
+    .overview-point strong{display:block;color:var(--navy);font-size:14px}
+    .overview-point span{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+
+    /* Modules */
+    .module-list{display:grid;gap:18px}
+    .module{
+      background:#fff;border:1px solid var(--border);border-radius:18px;overflow:hidden;box-shadow:0 7px 22px rgba(15,23,42,.045)
+    }
+    .module summary{
+      list-style:none;cursor:pointer;padding:20px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px;
+      background:linear-gradient(90deg,var(--blue-soft),#fff);border-bottom:1px solid transparent
+    }
+    .module[open] summary{border-bottom-color:var(--border)}
+    .module summary::-webkit-details-marker{display:none}
+    .module summary::after{content:"+";width:32px;height:32px;display:grid;place-items:center;border:1px solid var(--blue-border);border-radius:9px;color:var(--blue);font-weight:800;background:#fff;flex:none}
+    .module[open] summary::after{content:"−"}
+    .module-number{display:block;color:var(--blue);font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+    .module-title{display:block;margin-top:3px;color:var(--navy);font-family:"Space Grotesk",Inter,sans-serif;font-size:22px;font-weight:700}
+    .module-desc{margin-top:4px;color:var(--muted);font-size:13px;max-width:900px}
+
+    .topic-list{padding:6px 22px 18px}
+    .topic{
+      display:grid;grid-template-columns:70px 1fr auto;gap:16px;align-items:center;padding:17px 0;border-bottom:1px solid #edf1f5
+    }
+    .topic:last-child{border-bottom:0}
+    .topic-no{font-family:"Space Grotesk",Inter,sans-serif;color:var(--blue);font-size:13px;font-weight:800}
+    .topic-title{font-size:15px;font-weight:800;color:var(--navy)}
+    .topic-desc{font-size:12px;color:var(--muted);margin-top:3px}
+    .topic-tools{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px}
+    .tool{padding:5px 8px;border-radius:7px;background:#f8fafc;border:1px solid var(--border);color:#526176;font-size:10px;font-weight:800;white-space:nowrap}
+    .tool.python{background:#fff7ed;border-color:#fed7aa;color:#c2410c}
+    .tool.pytorch{background:#fff1f2;border-color:#fecdd3;color:#be123c}
+    .tool.math{background:#f5f3ff;border-color:#ddd6fe;color:#6d28d9}
+    .tool.practice{background:#ecfdf5;border-color:#a7f3d0;color:#047857}
+
+    /* Implementation */
+    .implementation{background:#fff}
+    .code-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .code-card{border:1px solid var(--border);border-radius:18px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+    .code-head{padding:19px 20px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;gap:15px}
+    .code-head h3{font-family:"Space Grotesk",Inter,sans-serif;color:var(--navy);font-size:19px}
+    .code-badge{font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 8px;border-radius:999px;background:var(--blue-soft);color:var(--blue);border:1px solid var(--blue-border)}
+    .code-card pre{margin:0;padding:20px;background:#0f172a;color:#e2e8f0;overflow:auto;font:12px/1.65 "SFMono-Regular",Consolas,"Liberation Mono",monospace}
+    .code-note{padding:14px 20px;color:var(--muted);font-size:12px;background:var(--surface-soft)}
+
+    /* Resources */
+    .resource-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .resource-card{padding:20px;border:1px solid var(--border);border-radius:15px;background:#fff;transition:transform .2s,box-shadow .2s,border-color .2s}
+    .resource-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);border-color:var(--blue-border)}
+    .resource-icon{font-size:23px}.resource-card h3{font-size:15px;color:var(--navy);margin-top:10px}.resource-card p{font-size:12px;color:var(--muted);margin-top:4px}
+
+    /* Footer */
+    footer{background:var(--navy);color:#cbd5e1;padding:28px 0;margin-top:0}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:12px}
+    .footer-inner a{color:#bfdbfe}
+
+    @media(max-width:900px){
+      .overview-grid{grid-template-columns:1fr}.resource-grid{grid-template-columns:repeat(2,1fr)}
+      .code-grid{grid-template-columns:1fr}.topic{grid-template-columns:55px 1fr}.topic-tools{grid-column:2;justify-content:flex-start}
+    }
+    @media(max-width:700px){
+      .container{width:min(100% - 28px,var(--max))}.nav-links{display:none}.hero{padding:52px 0 48px}.section{padding:54px 0}
+      .section-header{display:block}.section-title{font-size:28px}.overview-points{grid-template-columns:1fr}.resource-grid{grid-template-columns:1fr 1fr}
+      .module summary{padding:17px}.topic-list{padding-left:17px;padding-right:17px}.topic{grid-template-columns:48px 1fr}.topic-tools{grid-column:2}
+      .footer-inner{display:block}.footer-inner span{display:block;margin-top:5px}
+    }
+    @media(max-width:480px){.resource-grid{grid-template-columns:1fr}.hero-tags{gap:7px}.hero-tag{font-size:11px}.topic-title{font-size:14px}}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="Back to home">
+      <span class="brand-mark">KM</span>
+      <span><span class="brand-name">DR. K. MICHAEL MAHESH</span><span class="brand-role">Professor · Artificial Intelligence · Computer Vision</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a><a href="learning.html" class="active">Learning</a><a href="research.html">Research</a><a href="publications.html">Publications</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow"><span class="eyebrow-dot"></span> Subject · Digital Image Processing</div>
+    <h1>Digital Image <span>Processing</span></h1>
+    <p class="hero-text">A structured learning resource covering image fundamentals, enhancement, segmentation, morphological image processing and image compression — with mathematics, Python, OpenCV, visualization and practical implementation.</p>
+    <div class="hero-tags">
+      <span class="hero-tag">5 Modules</span><span class="hero-tag">50 Topics</span><span class="hero-tag">Python</span><span class="hero-tag">OpenCV</span><span class="hero-tag">Theory + Practical</span>
+    </div>
+  </div>
+</section>
+
+<main>
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-kicker">Overview</div>
+        <h2 class="section-title">Digital Image Processing Learning Path</h2>
+        <p class="section-description">The subject is organised as five modules and 50 numbered topics. The learning path combines concepts, mathematics, visualization, Python programming and practical image-processing experiments.</p>
+      </div>
+    </div>
+    <div class="overview-grid">
+      <div class="overview-card"><p>Digital Image Processing develops the foundations required to represent, enhance, segment, analyse and compress digital images. The progression moves from pixels and color models through spatial and frequency-domain enhancement, segmentation, morphology and compression. Each topic can be connected to detailed notes, mathematical explanations, diagrams, Python examples, OpenCV experiments, practical exercises and references.</p></div>
+      <div class="overview-points">
+        <div class="overview-point"><strong>Concepts</strong><span>Clear topic-wise explanations</span></div>
+        <div class="overview-point"><strong>Mathematics</strong><span>Equations and numerical intuition</span></div>
+        <div class="overview-point"><strong>Python</strong><span>Implementation-oriented examples</span></div>
+        <div class="overview-point"><strong>OpenCV</strong><span>Practical image-processing workflows</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-white" id="modules">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-kicker">Course Structure</div>
+        <h2 class="section-title">Modules & Topics</h2>
+        <p class="section-description">Select a module to view its numbered topics and the recommended learning and implementation areas.</p>
+      </div>
+    </div>
+    <div class="module-list">
+      <details class="module" open>
+  <summary>
+    <div><span class="module-number">Module 1</span><span class="module-title">Image Fundamentals</span><p class="module-desc">Digital image representation, acquisition, visual perception, color models, pixel relationships and 2D transforms.</p></div>
+  </summary>
+  <div class="topic-list"><article class="topic" id="topic-1-1">
+  <div class="topic-no">1.1</div>
+  <div><div class="topic-title">Overview of Digital Image Processing</div><div class="topic-desc">Introduction to digital images, image-processing stages and major application areas.</div></div>
+  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool ">Diagram</span></div>
+</article><article class="topic" id="topic-1-2">
+  <div class="topic-no">1.2</div>
+  <div><div class="topic-title">Components of an Image Processing System</div><div class="topic-desc">Image acquisition, processing hardware, storage, display and software components.</div></div>
+  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool ">System</span></div>
+</article><article class="topic" id="topic-1-3">
+  <div class="topic-no">1.3</div>
+  <div><div class="topic-title">Elements of Visual Perception</div><div class="topic-desc">Human visual perception, brightness adaptation, contrast and image interpretation.</div></div>
+  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool ">Visualization</span></div>
+</article><article class="topic" id="topic-1-4">
+  <div class="topic-no">1.4</div>
+  <div><div class="topic-title">Image Sensing and Acquisition</div><div class="topic-desc">Image formation, sensing principles, digitization and acquisition devices.</div></div>
+  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool practice">Practical</span></div>
+</article><article class="topic" id="topic-1-5">
+  <div class="topic-no">1.5</div>
+  <div><div class="topic-title">Image Sampling and Quantization</div><div class="topic-desc">Spatial sampling, gray-level quantization, resolution and digital image representation.</div></div>
+  <div class="topic-tools"><span class="tool math">Math</span><span class="tool python">Python</span></div>
+</article><article class="topic" id="topic-1-6">
+  <div class="topic-no">1.6</div>
+  <div><div class="topic-title">Relationships Between Pixels</div><div class="topic-desc">Neighborhoods, adjacency, connectivity, distance measures and paths.</div></div>
+  <div class="topic-tools"><span class="tool math">Math</span><span class="tool ">Example</span></div>
+</article><article class="topic" id="topic-1-7">
+  <div class="topic-no">1.7</div>
+  <div><div class="topic-title">Color Image Fundamentals</div><div class="topic-desc">Color perception, color representation and fundamental color image-processing concepts.</div></div>
+  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool python">Python</span></div>
+</article><article class="topic" id="topic-1-8">
+  <div class="topic-no">1.8</div>
+  <div><div class="topic-title">RGB and HSI Color Models</div><div class="topic-desc">RGB and HSI representations and conversion between color models.</div></div>
+  <div class="topic-tools"><span class="tool math">Math</span><span class="tool python">Python</span></div>
+</article><article class="topic" id="topic-1-9">
+  <div class="topic-no">1.9</div>
+  <div><div class="topic-title">Two-Dimensional Mathematical Preliminaries</div><div class="topic-desc">Mathematical foundations for two-dimensional image representation and processing.</div></div>
+  <div class="topic-tools"><span class="tool math">Math</span><span class="tool ">Concept</span></div>
+</article><article class="topic" id="topic-1-10">
+  <div class="topic-no">1.10</div>
+  <div><div class="topic-title">2D Transforms: DFT and DCT</div><div class="topic-desc">Two-dimensional Discrete Fourier Transform and Discrete Cosine Transform for images.</div></div>
+  <div class="topic-tools"><span class="tool math">Math</span><span class="tool python">Python</span></div>
+</article></div>
+</details><details class="module" >
+  <summary>
+    <div><span class="module-number">Module 2</span><span class="module-title">Image Enhancement</span><p class="module-desc">Spatial- and frequency-domain techniques for improving image appearance and interpretability.</p></div>
+  </summary>
+  <div class="topic-list"><article class="topic" id="topic-2-1">
+  <div class="topic-no">2.1</div>
+  <div><div class="topic-title">Introduction to Image Enhancement</div><div class="topic-desc">Purpose, categories and applications of image enhancement in spatial and frequency domains.</div></div>
+  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool ">Diagram</span></div>
+</article><article class="topic" id="topic-2-2">
+  <div class="topic-no">2.2</div>
+  <div><div class="topic-title">Gray Level Transformations</div><div class="topic-desc">Negative, logarithmic, power-law and contrast-stretching transformations.</div></div>
+  <div class="topic-tools"><span class="tool math">Math</span><span class="tool python">Python</span></div>
+</article><article class="topic" id="topic-2-3">
+  <div class="topic-no">2.3</div>
+  <div><div class="topic-title">Histogram Processing</div><div class="topic-desc">Histograms, histogram equalization, histogram specification and contrast enhancement.</div></div>
+  <div class="topic-tools"><span class="tool math">Math</span><span class="tool pytorch">OpenCV</span></div>
+</article><article class="topic" id="topic-2-4">
+  <div class="topic-no">2.4</div>
+  <div><div class="topic-title">Basics of Spatial Filtering</div><div class="topic-desc">Spatial masks, correlation, convolution and neighborhood-based image filtering.</div></div>
+  <div class="topic-tools"><span class="tool math">Math</span><span class="tool python">Python</span></div>
+</article><article class="topic" id="topic-2-5">
+  <div class="topic-no">2.5</div>
+  <div><div class="topic-title">Smoothing Spatial Filters</div><div class="topic-desc">Averaging, weighted averaging and median filtering for noise reduction.</div></div>
+  <div class="topic-tools"><span class="tool python">Python</span><span class="tool practice">Practical</span></div>
+</article><article class="topic" id="topic-2-6">
+  <div class="topic-no">2.6</div>
+  <div><div class="topic-title">Sharpening Spatial Filters</div><div class="topic-desc">Gradient and Laplacian operators for edge enhancement and sharpening.</div></div>
+  <div class="topic-tools"><span class="tool math">Math</span><span class="tool pytorch">OpenCV</span></div>
+</article><article class="topic" id="topic-2-7">
+  <div class="topic-no">2.7</div>
+  <div><div class="topic-title">Fourier Transform for Enhancement</div><div class="topic-desc">Frequency-domain representation and its role in image enhancement.</div></div>
+  <div class="topic-tools"><span class="tool math">Math</span><span class="tool ">Visualization</span></div>
+</article><article class="topic" id="topic-2-8">
+  <div class="topic-no">2.8</div>
+  <div><div class="topic-title">Frequency Domain Smoothing Filters</div><div class="topic-desc">Low-pass filtering in the frequency domain for image smoothing.</div></div>
+  <div class="topic-tools"><span class="tool math">Math</span><span class="tool python">Python</span></div>
+</article><article class="topic" id="topic-2-9">
+  <div class="topic-no">2.9</div>
+  <div><div class="topic-title">Frequency Domain Sharpening Filters</div><div class="topic-desc">High-pass filtering using ideal, Butterworth and Gaussian filters.</div></div>
+  <div class="topic-tools"><span class="tool math">Math</span><span class="tool python">Python</span></div>
+</article><article class="topic" id="topic-2-10">
+  <div class="topic-no">2.10</div>
+  <div><div class="topic-title">Homomorphic and Color Image Enhancement</div><div class="topic-desc">Illumination-reflectance enhancement and extension of enhancement methods to color images.</div></div>
+  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool practice">Practical</span></div>
+</article></div>
+</details><details class="module" >
+  <summary>
+    <div><span class="module-number">Module 3</span><span class="module-title">Image Segmentation</span><p class="module-desc">Techniques for detecting boundaries, separating regions and extracting meaningful objects from images.</p></div>
+  </summary>
+  <div class="topic-list"><article class="topic" id="topic-3-1">
+  <div class="topic-no">3.1</div>
+  <div><div class="topic-title">Introduction to Image Segmentation</div><div class="topic-desc">Purpose, challenges and major approaches for separating meaningful regions and objects.</div></div>
+  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool ">Diagram</span></div>
+</article><article class="topic" id="topic-3-2">
+  <div class="topic-no">3.2</div>
+  <div><div class="topic-title">Edge Detection Fundamentals</div><div class="topic-desc">Intensity discontinuities, gradients, edge models and edge detection criteria.</div></div>
+  <div class="topic-tools"><span class="tool math">Math</span><span class="tool ">Visualization</span></div>
+</article><article class="topic" id="topic-3-3">
+  <div class="topic-no">3.3</div>
+  <div><div class="topic-title">Edge Detection Operators</div><div class="topic-desc">Roberts, Prewitt, Sobel and Canny edge detectors and their comparison.</div></div>
+  <div class="topic-tools"><span class="tool python">Python</span><span class="tool pytorch">OpenCV</span></div>
+</article><article class="topic" id="topic-3-4">
+  <div class="topic-no">3.4</div>
+  <div><div class="topic-title">Edge Linking and Boundary Detection</div><div class="topic-desc">Methods for connecting edge pixels and forming meaningful object boundaries.</div></div>
+  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool practice">Practical</span></div>
+</article><article class="topic" id="topic-3-5">
+  <div class="topic-no">3.5</div>
+  <div><div class="topic-title">Hough Transform</div><div class="topic-desc">Line and shape detection using parameter-space representation and voting.</div></div>
+  <div class="topic-tools"><span class="tool math">Math</span><span class="tool python">Python</span></div>
+</article><article class="topic" id="topic-3-6">
+  <div class="topic-no">3.6</div>
+  <div><div class="topic-title">Thresholding Techniques</div><div class="topic-desc">Global, adaptive and optimal thresholding for foreground-background separation.</div></div>
+  <div class="topic-tools"><span class="tool python">Python</span><span class="tool pytorch">OpenCV</span></div>
+</article><article class="topic" id="topic-3-7">
+  <div class="topic-no">3.7</div>
+  <div><div class="topic-title">Region-Based Segmentation</div><div class="topic-desc">Segmentation using similarity, homogeneity and connected regions.</div></div>
+  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool practice">Practical</span></div>
+</article><article class="topic" id="topic-3-8">
+  <div class="topic-no">3.8</div>
+  <div><div class="topic-title">Region Growing</div><div class="topic-desc">Seed-based region expansion and criteria for growing and stopping.</div></div>
+  <div class="topic-tools"><span class="tool python">Python</span><span class="tool practice">Algorithm</span></div>
+</article><article class="topic" id="topic-3-9">
+  <div class="topic-no">3.9</div>
+  <div><div class="topic-title">Region Splitting and Merging</div><div class="topic-desc">Quadtree-based splitting and merging for region segmentation.</div></div>
+  <div class="topic-tools"><span class="tool practice">Algorithm</span><span class="tool ">Example</span></div>
+</article><article class="topic" id="topic-3-10">
+  <div class="topic-no">3.10</div>
+  <div><div class="topic-title">Watershed Segmentation</div><div class="topic-desc">Morphological watershed concepts, markers, dams and watershed segmentation.</div></div>
+  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool pytorch">OpenCV</span></div>
+</article></div>
+</details><details class="module" >
+  <summary>
+    <div><span class="module-number">Module 4</span><span class="module-title">Morphological Image Processing</span><p class="module-desc">Shape-based processing using structuring elements for binary and grayscale images.</p></div>
+  </summary>
+  <div class="topic-list"><article class="topic" id="topic-4-1">
+  <div class="topic-no">4.1</div>
+  <div><div class="topic-title">Introduction to Morphological Processing</div><div class="topic-desc">Mathematical morphology for binary and grayscale image processing.</div></div>
+  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool ">Diagram</span></div>
+</article><article class="topic" id="topic-4-2">
+  <div class="topic-no">4.2</div>
+  <div><div class="topic-title">Structuring Elements</div><div class="topic-desc">Design, shape, size and selection of structuring elements.</div></div>
+  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool ">Visualization</span></div>
+</article><article class="topic" id="topic-4-3">
+  <div class="topic-no">4.3</div>
+  <div><div class="topic-title">Erosion Operation</div><div class="topic-desc">Erosion principles and its use for shrinking and removing image components.</div></div>
+  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool python">Python</span></div>
+</article><article class="topic" id="topic-4-4">
+  <div class="topic-no">4.4</div>
+  <div><div class="topic-title">Dilation Operation</div><div class="topic-desc">Dilation principles and its use for expanding and connecting image components.</div></div>
+  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool python">Python</span></div>
+</article><article class="topic" id="topic-4-5">
+  <div class="topic-no">4.5</div>
+  <div><div class="topic-title">Opening Operation</div><div class="topic-desc">Opening for removing small objects, smoothing contours and separating thin connections.</div></div>
+  <div class="topic-tools"><span class="tool python">Python</span><span class="tool pytorch">OpenCV</span></div>
+</article><article class="topic" id="topic-4-6">
+  <div class="topic-no">4.6</div>
+  <div><div class="topic-title">Closing Operation</div><div class="topic-desc">Closing for filling gaps, joining narrow breaks and smoothing boundaries.</div></div>
+  <div class="topic-tools"><span class="tool python">Python</span><span class="tool pytorch">OpenCV</span></div>
+</article><article class="topic" id="topic-4-7">
+  <div class="topic-no">4.7</div>
+  <div><div class="topic-title">Hit-or-Miss Transform</div><div class="topic-desc">Binary pattern detection using foreground and background structuring elements.</div></div>
+  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool practice">Practical</span></div>
+</article><article class="topic" id="topic-4-8">
+  <div class="topic-no">4.8</div>
+  <div><div class="topic-title">Morphological Reconstruction</div><div class="topic-desc">Marker-based reconstruction for extracting and restoring image structures.</div></div>
+  <div class="topic-tools"><span class="tool practice">Algorithm</span><span class="tool ">Example</span></div>
+</article><article class="topic" id="topic-4-9">
+  <div class="topic-no">4.9</div>
+  <div><div class="topic-title">Grayscale Morphology</div><div class="topic-desc">Erosion, dilation, opening and closing extended to grayscale images.</div></div>
+  <div class="topic-tools"><span class="tool math">Math</span><span class="tool pytorch">OpenCV</span></div>
+</article><article class="topic" id="topic-4-10">
+  <div class="topic-no">4.10</div>
+  <div><div class="topic-title">Applications of Morphological Operations</div><div class="topic-desc">Noise removal, boundary extraction, filling, object detection and shape analysis.</div></div>
+  <div class="topic-tools"><span class="tool ">Application</span><span class="tool practice">Practical</span></div>
+</article></div>
+</details><details class="module" >
+  <summary>
+    <div><span class="module-number">Module 5</span><span class="module-title">Image Compression</span><p class="module-desc">Image redundancy, information theory, lossless/lossy coding and the JPEG compression standard.</p></div>
+  </summary>
+  <div class="topic-list"><article class="topic" id="topic-5-1">
+  <div class="topic-no">5.1</div>
+  <div><div class="topic-title">Fundamentals of Image Compression</div><div class="topic-desc">Compression need, redundancy, compression ratio, distortion and performance measures.</div></div>
+  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool math">Math</span></div>
+</article><article class="topic" id="topic-5-2">
+  <div class="topic-no">5.2</div>
+  <div><div class="topic-title">Image Compression Models</div><div class="topic-desc">Source encoder, representation, decoder and reconstructed image.</div></div>
+  <div class="topic-tools"><span class="tool ">Diagram</span><span class="tool ">Concept</span></div>
+</article><article class="topic" id="topic-5-3">
+  <div class="topic-no">5.3</div>
+  <div><div class="topic-title">Elements of Information Theory</div><div class="topic-desc">Entropy, average code length, coding efficiency and information content.</div></div>
+  <div class="topic-tools"><span class="tool math">Math</span><span class="tool ">Example</span></div>
+</article><article class="topic" id="topic-5-4">
+  <div class="topic-no">5.4</div>
+  <div><div class="topic-title">Error-Free Compression</div><div class="topic-desc">Lossless compression methods that permit exact image reconstruction.</div></div>
+  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool practice">Practical</span></div>
+</article><article class="topic" id="topic-5-5">
+  <div class="topic-no">5.5</div>
+  <div><div class="topic-title">Lossy Compression</div><div class="topic-desc">Irreversible compression and trade-offs among compression ratio, distortion and quality.</div></div>
+  <div class="topic-tools"><span class="tool math">Math</span><span class="tool ">Example</span></div>
+</article><article class="topic" id="topic-5-6">
+  <div class="topic-no">5.6</div>
+  <div><div class="topic-title">Huffman Coding</div><div class="topic-desc">Construction and implementation of variable-length Huffman codes.</div></div>
+  <div class="topic-tools"><span class="tool practice">Algorithm</span><span class="tool python">Python</span></div>
+</article><article class="topic" id="topic-5-7">
+  <div class="topic-no">5.7</div>
+  <div><div class="topic-title">Run Length Encoding</div><div class="topic-desc">Encoding repeated pixel values and runs for simple lossless compression.</div></div>
+  <div class="topic-tools"><span class="tool practice">Algorithm</span><span class="tool python">Python</span></div>
+</article><article class="topic" id="topic-5-8">
+  <div class="topic-no">5.8</div>
+  <div><div class="topic-title">Shift Codes and Arithmetic Coding</div><div class="topic-desc">Efficient data representation using shift coding and arithmetic coding.</div></div>
+  <div class="topic-tools"><span class="tool math">Math</span><span class="tool practice">Algorithm</span></div>
+</article><article class="topic" id="topic-5-9">
+  <div class="topic-no">5.9</div>
+  <div><div class="topic-title">Image Compression Standards</div><div class="topic-desc">Common compression standards and their relevance to image storage and transmission.</div></div>
+  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool ">Application</span></div>
+</article><article class="topic" id="topic-5-10">
+  <div class="topic-no">5.10</div>
+  <div><div class="topic-title">JPEG Standard</div><div class="topic-desc">JPEG workflow including blocks, DCT, quantization, zig-zag ordering and entropy coding.</div></div>
+  <div class="topic-tools"><span class="tool math">Math</span><span class="tool ">Diagram</span></div>
+</article></div>
+</details>
+    </div>
+  </div>
+</section>
+
+<section class="section implementation" id="implementation">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-kicker">Coding & Implementation</div>
+        <h2 class="section-title">Python + OpenCV</h2>
+        <p class="section-description">The practical implementation layer uses Python, NumPy, Matplotlib and OpenCV to move from pixel-level operations to complete image-processing workflows.</p>
+      </div>
+    </div>
+    <div class="code-grid">
+      <article class="code-card">
+        <div class="code-head"><h3>Python · Read and Inspect an Image</h3><span class="code-badge">Foundation</span></div>
+        <pre><code>import cv2
+
+image = cv2.imread("image.jpg")
+print("Shape:", image.shape)
+print("Height:", image.shape[0])
+print("Width:", image.shape[1])
+print("Channels:", image.shape[2])
+
+cv2.imshow("Image", image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()</code></pre>
+        <div class="code-note">A first experiment for understanding image dimensions, channels and basic image acquisition from a file.</div>
+      </article>
+
+      <article class="code-card">
+        <div class="code-head"><h3>Python · Histogram Equalization</h3><span class="code-badge">Enhancement</span></div>
+        <pre><code>import cv2
+import matplotlib.pyplot as plt
+
+image = cv2.imread("low_contrast.jpg", 0)
+enhanced = cv2.equalizeHist(image)
+
+plt.figure(figsize=(10, 4))
+plt.subplot(1, 2, 1)
+plt.imshow(image, cmap="gray")
+plt.title("Original")
+plt.axis("off")
+
+plt.subplot(1, 2, 2)
+plt.imshow(enhanced, cmap="gray")
+plt.title("Equalized")
+plt.axis("off")
+plt.show()</code></pre>
+        <div class="code-note">Useful for connecting histogram concepts with a practical contrast-enhancement workflow.</div>
+      </article>
+
+      <article class="code-card">
+        <div class="code-head"><h3>OpenCV · Canny Edge Detection</h3><span class="code-badge">Segmentation</span></div>
+        <pre><code>import cv2
+
+image = cv2.imread("image.jpg", 0)
+blur = cv2.GaussianBlur(image, (5, 5), 0)
+
+edges = cv2.Canny(
+    blur,
+    threshold1=50,
+    threshold2=150
+)
+
+cv2.imwrite("edges.jpg", edges)
+cv2.imshow("Canny Edges", edges)
+cv2.waitKey(0)
+cv2.destroyAllWindows()</code></pre>
+        <div class="code-note">A practical starting point for edge detection, boundary analysis and later segmentation experiments.</div>
+      </article>
+
+      <article class="code-card">
+        <div class="code-head"><h3>OpenCV · Morphological Processing</h3><span class="code-badge">Morphology</span></div>
+        <pre><code>import cv2
+import numpy as np
+
+image = cv2.imread("binary.png", 0)
+
+kernel = np.ones((3, 3), np.uint8)
+
+erosion = cv2.erode(image, kernel, iterations=1)
+dilation = cv2.dilate(image, kernel, iterations=1)
+
+opening = cv2.morphologyEx(
+    image, cv2.MORPH_OPEN, kernel
+)
+closing = cv2.morphologyEx(
+    image, cv2.MORPH_CLOSE, kernel
+)</code></pre>
+        <div class="code-note">Use the HIT/FIT idea when teaching binary morphology: erosion requires the structuring element to fit; dilation detects a hit.</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-white" id="learning-material">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-kicker">Learning Material</div>
+        <h2 class="section-title">Topic Resources</h2>
+        <p class="section-description">The page is designed so every numbered topic can later be expanded with dedicated teaching, practical and research material.</p>
+      </div>
+    </div>
+    <div class="resource-grid">
+      <div class="resource-card"><div class="resource-icon">📘</div><h3>Concept Notes</h3><p>Topic-wise explanations for learning, teaching and revision.</p></div>
+      <div class="resource-card"><div class="resource-icon">∑</div><h3>Mathematics</h3><p>Equations, derivations and numerical image examples.</p></div>
+      <div class="resource-card"><div class="resource-icon">🧩</div><h3>Visualizations</h3><p>Pixel grids, histograms, filters, spectra, segmentation and morphology diagrams.</p></div>
+      <div class="resource-card"><div class="resource-icon">🐍</div><h3>Python</h3><p>NumPy, Matplotlib and programming examples for image analysis.</p></div>
+      <div class="resource-card"><div class="resource-icon">CV</div><h3>OpenCV</h3><p>Practical image acquisition, enhancement, segmentation and morphology.</p></div>
+      <div class="resource-card"><div class="resource-icon">🧪</div><h3>Practicals</h3><p>Hands-on experiments from pixels to complete image-processing workflows.</p></div>
+      <div class="resource-card"><div class="resource-icon">📝</div><h3>Practice Questions</h3><p>Conceptual, numerical, algorithmic and implementation-oriented questions.</p></div>
+      <div class="resource-card"><div class="resource-icon">🔗</div><h3>References</h3><p>Standard textbooks, research papers and official documentation.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <strong>Digital Image Processing · Dr. K. Michael Mahesh</strong>
+    <span><a href="index.html">← Back to Home</a></span>
+  </div>
+</footer>
+</body>
+</html>
