@@ -131,23 +131,26 @@
     .tool.python{background:#fff7ed;border-color:#fed7aa;color:#c2410c}
     .tool.pytorch{background:#fff1f2;border-color:#fecdd3;color:#be123c}
     .tool.math{background:#f5f3ff;border-color:#ddd6fe;color:#6d28d9}
+    .tool.practice{background:#ecfdf5;border-color:#a7f3d0;color:#047857}    /* Topic & Learning Resources */
+    .topic-tools{display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:6px}
+    .tool{display:inline-flex;align-items:center;padding:6px 9px;border-radius:8px;border:1px solid var(--border);font-size:10px;font-weight:800;white-space:nowrap;transition:transform .2s,box-shadow .2s}
+    .tool:hover,.code-option:hover{transform:translateY(-1px);box-shadow:0 5px 12px rgba(15,23,42,.07)}
+    .tool.notes{background:#eff6ff;border-color:#bfdbfe;color:#1d4ed8}
     .tool.practice{background:#ecfdf5;border-color:#a7f3d0;color:#047857}
-
-    /* Implementation */
-    .implementation{background:#fff}
-    .code-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-    .code-card{border:1px solid var(--border);border-radius:18px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
-    .code-head{padding:19px 20px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;gap:15px}
-    .code-head h3{font-family:"Space Grotesk",Inter,sans-serif;color:var(--navy);font-size:19px}
-    .code-badge{font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 8px;border-radius:999px;background:var(--blue-soft);color:var(--blue);border:1px solid var(--blue-border)}
-    .code-card pre{margin:0;padding:20px;background:#0f172a;color:#e2e8f0;overflow:auto;font:12px/1.65 "SFMono-Regular",Consolas,"Liberation Mono",monospace}
-    .code-note{padding:14px 20px;color:var(--muted);font-size:12px;background:var(--surface-soft)}
+    .code-resource{display:inline-flex;align-items:center;flex-wrap:wrap;gap:5px;padding:4px 6px;border:1px solid #fed7aa;border-radius:9px;background:#fff7ed}
+    .code-label{font-size:10px;font-weight:800;color:#c2410c;padding:2px 3px}
+    .code-option{display:inline-flex;align-items:center;padding:5px 7px;border-radius:6px;font-size:9px;font-weight:800;text-decoration:none;white-space:nowrap}
+    .code-option.pdf{background:#fff;color:#9a3412;border:1px solid #fdba74}
+    .code-option.ipynb{background:#ffedd5;color:#9a3412;border:1px solid #fdba74}
 
     /* Resources */
-    .resource-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-    .resource-card{padding:20px;border:1px solid var(--border);border-radius:15px;background:#fff;transition:transform .2s,box-shadow .2s,border-color .2s}
+    .resource-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .resource-card{padding:22px;border:1px solid var(--border);border-radius:16px;background:#fff;transition:transform .2s,box-shadow .2s,border-color .2s}
     .resource-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);border-color:var(--blue-border)}
-    .resource-icon{font-size:23px}.resource-card h3{font-size:15px;color:var(--navy);margin-top:10px}.resource-card p{font-size:12px;color:var(--muted);margin-top:4px}
+    .resource-icon{font-size:24px}.resource-card h3{font-size:16px;color:var(--navy);margin-top:10px}
+    .resource-card p{font-size:13px;color:var(--muted);margin-top:5px}
+
+
 
     /* Footer */
     footer{background:var(--navy);color:#cbd5e1;padding:28px 0;margin-top:0}
@@ -184,7 +187,7 @@
   <div class="container">
     <div class="eyebrow"><span class="eyebrow-dot"></span> Subject · Digital Image Processing</div>
     <h1>Digital Image <span>Processing</span></h1>
-    <p class="hero-text">A structured learning resource covering image fundamentals, enhancement, segmentation, morphological image processing and image compression — with mathematics, Python, OpenCV, visualization and practical implementation.</p>
+    <p class="hero-text">A structured learning resource covering image fundamentals, enhancement, segmentation, morphological image processing and image compression — with Python, OpenCV and practical implementation.</p>
     <div class="hero-tags">
       <span class="hero-tag">5 Modules</span><span class="hero-tag">50 Topics</span><span class="hero-tag">Python</span><span class="hero-tag">OpenCV</span><span class="hero-tag">Theory + Practical</span>
     </div>
@@ -198,17 +201,18 @@
       <div>
         <div class="section-kicker">Overview</div>
         <h2 class="section-title">Digital Image Processing Learning Path</h2>
-        <p class="section-description">The subject is organised as five modules and 50 numbered topics. The learning path combines concepts, mathematics, visualization, Python programming and practical image-processing experiments.</p>
+        <p class="section-description">The subject is organised as five modules and 50 numbered topics. Each numbered topic is organised around three student-focused resources: Notes, Python/OpenCV Code and Practice Questions.</p>
       </div>
     </div>
     <div class="overview-grid">
-      <div class="overview-card"><p>Digital Image Processing develops the foundations required to represent, enhance, segment, analyse and compress digital images. The progression moves from pixels and color models through spatial and frequency-domain enhancement, segmentation, morphology and compression. Each topic can be connected to detailed notes, mathematical explanations, diagrams, Python examples, OpenCV experiments, practical exercises and references.</p></div>
+      <div class="overview-card"><p>Digital Image Processing develops the foundations required to represent, enhance, segment, analyse and compress digital images. The progression moves from pixels and color models through spatial and frequency-domain enhancement, segmentation, morphology and compression. Each numbered topic provides direct access to Notes, Python/OpenCV Code and Practice Questions.</p></div>
       <div class="overview-points">
-        <div class="overview-point"><strong>Concepts</strong><span>Clear topic-wise explanations</span></div>
-        <div class="overview-point"><strong>Mathematics</strong><span>Equations and numerical intuition</span></div>
-        <div class="overview-point"><strong>Python</strong><span>Implementation-oriented examples</span></div>
-        <div class="overview-point"><strong>OpenCV</strong><span>Practical image-processing workflows</span></div>
+        <div class="overview-point"><strong>Notes</strong><span>Clear topic-wise explanations</span></div>
+        <div class="overview-point"><strong>Python/OpenCV</strong><span>Implementation-oriented examples</span></div>
+        <div class="overview-point"><strong>Practice</strong><span>Questions for revision and preparation</span></div>
+        <div class="overview-point"><strong>Resources</strong><span>PDF and IPYNB access</span></div>
       </div>
+    </div>
     </div>
   </div>
 </section>
@@ -219,7 +223,7 @@
       <div>
         <div class="section-kicker">Course Structure</div>
         <h2 class="section-title">Modules & Topics</h2>
-        <p class="section-description">Select a module to view its numbered topics and the recommended learning and implementation areas.</p>
+        <p class="section-description">Select a module to view its numbered topics and access Notes, Python/OpenCV Code and Practice Questions.</p>
       </div>
     </div>
     <div class="module-list">
@@ -230,43 +234,103 @@
   <div class="topic-list"><article class="topic" id="topic-1-1">
   <div class="topic-no">1.1</div>
   <div><div class="topic-title">Overview of Digital Image Processing</div><div class="topic-desc">Introduction to digital images, image-processing stages and major application areas.</div></div>
-  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool ">Diagram</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-1/topic-1-1-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-1/topic-1-1-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-1/topic-1-1-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-1/topic-1-1-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-1-2">
   <div class="topic-no">1.2</div>
   <div><div class="topic-title">Components of an Image Processing System</div><div class="topic-desc">Image acquisition, processing hardware, storage, display and software components.</div></div>
-  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool ">System</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-1/topic-1-2-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-1/topic-1-2-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-1/topic-1-2-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-1/topic-1-2-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-1-3">
   <div class="topic-no">1.3</div>
   <div><div class="topic-title">Elements of Visual Perception</div><div class="topic-desc">Human visual perception, brightness adaptation, contrast and image interpretation.</div></div>
-  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool ">Visualization</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-1/topic-1-3-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-1/topic-1-3-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-1/topic-1-3-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-1/topic-1-3-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-1-4">
   <div class="topic-no">1.4</div>
   <div><div class="topic-title">Image Sensing and Acquisition</div><div class="topic-desc">Image formation, sensing principles, digitization and acquisition devices.</div></div>
-  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool practice">Practical</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-1/topic-1-4-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-1/topic-1-4-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-1/topic-1-4-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-1/topic-1-4-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-1-5">
   <div class="topic-no">1.5</div>
   <div><div class="topic-title">Image Sampling and Quantization</div><div class="topic-desc">Spatial sampling, gray-level quantization, resolution and digital image representation.</div></div>
-  <div class="topic-tools"><span class="tool math">Math</span><span class="tool python">Python</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-1/topic-1-5-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-1/topic-1-5-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-1/topic-1-5-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-1/topic-1-5-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-1-6">
   <div class="topic-no">1.6</div>
   <div><div class="topic-title">Relationships Between Pixels</div><div class="topic-desc">Neighborhoods, adjacency, connectivity, distance measures and paths.</div></div>
-  <div class="topic-tools"><span class="tool math">Math</span><span class="tool ">Example</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-1/topic-1-6-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-1/topic-1-6-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-1/topic-1-6-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-1/topic-1-6-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-1-7">
   <div class="topic-no">1.7</div>
   <div><div class="topic-title">Color Image Fundamentals</div><div class="topic-desc">Color perception, color representation and fundamental color image-processing concepts.</div></div>
-  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool python">Python</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-1/topic-1-7-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-1/topic-1-7-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-1/topic-1-7-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-1/topic-1-7-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-1-8">
   <div class="topic-no">1.8</div>
   <div><div class="topic-title">RGB and HSI Color Models</div><div class="topic-desc">RGB and HSI representations and conversion between color models.</div></div>
-  <div class="topic-tools"><span class="tool math">Math</span><span class="tool python">Python</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-1/topic-1-8-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-1/topic-1-8-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-1/topic-1-8-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-1/topic-1-8-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-1-9">
   <div class="topic-no">1.9</div>
   <div><div class="topic-title">Two-Dimensional Mathematical Preliminaries</div><div class="topic-desc">Mathematical foundations for two-dimensional image representation and processing.</div></div>
-  <div class="topic-tools"><span class="tool math">Math</span><span class="tool ">Concept</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-1/topic-1-9-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-1/topic-1-9-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-1/topic-1-9-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-1/topic-1-9-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-1-10">
   <div class="topic-no">1.10</div>
   <div><div class="topic-title">2D Transforms: DFT and DCT</div><div class="topic-desc">Two-dimensional Discrete Fourier Transform and Discrete Cosine Transform for images.</div></div>
-  <div class="topic-tools"><span class="tool math">Math</span><span class="tool python">Python</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-1/topic-1-10-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-1/topic-1-10-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-1/topic-1-10-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-1/topic-1-10-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article></div>
 </details><details class="module" >
   <summary>
@@ -275,43 +339,103 @@
   <div class="topic-list"><article class="topic" id="topic-2-1">
   <div class="topic-no">2.1</div>
   <div><div class="topic-title">Introduction to Image Enhancement</div><div class="topic-desc">Purpose, categories and applications of image enhancement in spatial and frequency domains.</div></div>
-  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool ">Diagram</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-2/topic-2-1-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-2/topic-2-1-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-2/topic-2-1-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-2/topic-2-1-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-2-2">
   <div class="topic-no">2.2</div>
   <div><div class="topic-title">Gray Level Transformations</div><div class="topic-desc">Negative, logarithmic, power-law and contrast-stretching transformations.</div></div>
-  <div class="topic-tools"><span class="tool math">Math</span><span class="tool python">Python</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-2/topic-2-2-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-2/topic-2-2-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-2/topic-2-2-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-2/topic-2-2-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-2-3">
   <div class="topic-no">2.3</div>
   <div><div class="topic-title">Histogram Processing</div><div class="topic-desc">Histograms, histogram equalization, histogram specification and contrast enhancement.</div></div>
-  <div class="topic-tools"><span class="tool math">Math</span><span class="tool pytorch">OpenCV</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-2/topic-2-3-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-2/topic-2-3-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-2/topic-2-3-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-2/topic-2-3-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-2-4">
   <div class="topic-no">2.4</div>
   <div><div class="topic-title">Basics of Spatial Filtering</div><div class="topic-desc">Spatial masks, correlation, convolution and neighborhood-based image filtering.</div></div>
-  <div class="topic-tools"><span class="tool math">Math</span><span class="tool python">Python</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-2/topic-2-4-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-2/topic-2-4-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-2/topic-2-4-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-2/topic-2-4-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-2-5">
   <div class="topic-no">2.5</div>
   <div><div class="topic-title">Smoothing Spatial Filters</div><div class="topic-desc">Averaging, weighted averaging and median filtering for noise reduction.</div></div>
-  <div class="topic-tools"><span class="tool python">Python</span><span class="tool practice">Practical</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-2/topic-2-5-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-2/topic-2-5-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-2/topic-2-5-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-2/topic-2-5-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-2-6">
   <div class="topic-no">2.6</div>
   <div><div class="topic-title">Sharpening Spatial Filters</div><div class="topic-desc">Gradient and Laplacian operators for edge enhancement and sharpening.</div></div>
-  <div class="topic-tools"><span class="tool math">Math</span><span class="tool pytorch">OpenCV</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-2/topic-2-6-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-2/topic-2-6-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-2/topic-2-6-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-2/topic-2-6-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-2-7">
   <div class="topic-no">2.7</div>
   <div><div class="topic-title">Fourier Transform for Enhancement</div><div class="topic-desc">Frequency-domain representation and its role in image enhancement.</div></div>
-  <div class="topic-tools"><span class="tool math">Math</span><span class="tool ">Visualization</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-2/topic-2-7-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-2/topic-2-7-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-2/topic-2-7-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-2/topic-2-7-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-2-8">
   <div class="topic-no">2.8</div>
   <div><div class="topic-title">Frequency Domain Smoothing Filters</div><div class="topic-desc">Low-pass filtering in the frequency domain for image smoothing.</div></div>
-  <div class="topic-tools"><span class="tool math">Math</span><span class="tool python">Python</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-2/topic-2-8-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-2/topic-2-8-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-2/topic-2-8-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-2/topic-2-8-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-2-9">
   <div class="topic-no">2.9</div>
   <div><div class="topic-title">Frequency Domain Sharpening Filters</div><div class="topic-desc">High-pass filtering using ideal, Butterworth and Gaussian filters.</div></div>
-  <div class="topic-tools"><span class="tool math">Math</span><span class="tool python">Python</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-2/topic-2-9-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-2/topic-2-9-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-2/topic-2-9-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-2/topic-2-9-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-2-10">
   <div class="topic-no">2.10</div>
   <div><div class="topic-title">Homomorphic and Color Image Enhancement</div><div class="topic-desc">Illumination-reflectance enhancement and extension of enhancement methods to color images.</div></div>
-  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool practice">Practical</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-2/topic-2-10-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-2/topic-2-10-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-2/topic-2-10-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-2/topic-2-10-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article></div>
 </details><details class="module" >
   <summary>
@@ -320,43 +444,103 @@
   <div class="topic-list"><article class="topic" id="topic-3-1">
   <div class="topic-no">3.1</div>
   <div><div class="topic-title">Introduction to Image Segmentation</div><div class="topic-desc">Purpose, challenges and major approaches for separating meaningful regions and objects.</div></div>
-  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool ">Diagram</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-3/topic-3-1-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-3/topic-3-1-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-3/topic-3-1-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-3/topic-3-1-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-3-2">
   <div class="topic-no">3.2</div>
   <div><div class="topic-title">Edge Detection Fundamentals</div><div class="topic-desc">Intensity discontinuities, gradients, edge models and edge detection criteria.</div></div>
-  <div class="topic-tools"><span class="tool math">Math</span><span class="tool ">Visualization</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-3/topic-3-2-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-3/topic-3-2-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-3/topic-3-2-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-3/topic-3-2-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-3-3">
   <div class="topic-no">3.3</div>
   <div><div class="topic-title">Edge Detection Operators</div><div class="topic-desc">Roberts, Prewitt, Sobel and Canny edge detectors and their comparison.</div></div>
-  <div class="topic-tools"><span class="tool python">Python</span><span class="tool pytorch">OpenCV</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-3/topic-3-3-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-3/topic-3-3-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-3/topic-3-3-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-3/topic-3-3-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-3-4">
   <div class="topic-no">3.4</div>
   <div><div class="topic-title">Edge Linking and Boundary Detection</div><div class="topic-desc">Methods for connecting edge pixels and forming meaningful object boundaries.</div></div>
-  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool practice">Practical</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-3/topic-3-4-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-3/topic-3-4-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-3/topic-3-4-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-3/topic-3-4-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-3-5">
   <div class="topic-no">3.5</div>
   <div><div class="topic-title">Hough Transform</div><div class="topic-desc">Line and shape detection using parameter-space representation and voting.</div></div>
-  <div class="topic-tools"><span class="tool math">Math</span><span class="tool python">Python</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-3/topic-3-5-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-3/topic-3-5-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-3/topic-3-5-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-3/topic-3-5-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-3-6">
   <div class="topic-no">3.6</div>
   <div><div class="topic-title">Thresholding Techniques</div><div class="topic-desc">Global, adaptive and optimal thresholding for foreground-background separation.</div></div>
-  <div class="topic-tools"><span class="tool python">Python</span><span class="tool pytorch">OpenCV</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-3/topic-3-6-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-3/topic-3-6-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-3/topic-3-6-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-3/topic-3-6-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-3-7">
   <div class="topic-no">3.7</div>
   <div><div class="topic-title">Region-Based Segmentation</div><div class="topic-desc">Segmentation using similarity, homogeneity and connected regions.</div></div>
-  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool practice">Practical</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-3/topic-3-7-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-3/topic-3-7-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-3/topic-3-7-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-3/topic-3-7-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-3-8">
   <div class="topic-no">3.8</div>
   <div><div class="topic-title">Region Growing</div><div class="topic-desc">Seed-based region expansion and criteria for growing and stopping.</div></div>
-  <div class="topic-tools"><span class="tool python">Python</span><span class="tool practice">Algorithm</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-3/topic-3-8-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-3/topic-3-8-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-3/topic-3-8-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-3/topic-3-8-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-3-9">
   <div class="topic-no">3.9</div>
   <div><div class="topic-title">Region Splitting and Merging</div><div class="topic-desc">Quadtree-based splitting and merging for region segmentation.</div></div>
-  <div class="topic-tools"><span class="tool practice">Algorithm</span><span class="tool ">Example</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-3/topic-3-9-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-3/topic-3-9-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-3/topic-3-9-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-3/topic-3-9-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-3-10">
   <div class="topic-no">3.10</div>
   <div><div class="topic-title">Watershed Segmentation</div><div class="topic-desc">Morphological watershed concepts, markers, dams and watershed segmentation.</div></div>
-  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool pytorch">OpenCV</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-3/topic-3-10-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-3/topic-3-10-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-3/topic-3-10-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-3/topic-3-10-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article></div>
 </details><details class="module" >
   <summary>
@@ -365,43 +549,103 @@
   <div class="topic-list"><article class="topic" id="topic-4-1">
   <div class="topic-no">4.1</div>
   <div><div class="topic-title">Introduction to Morphological Processing</div><div class="topic-desc">Mathematical morphology for binary and grayscale image processing.</div></div>
-  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool ">Diagram</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-4/topic-4-1-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-4/topic-4-1-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-4/topic-4-1-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-4/topic-4-1-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-4-2">
   <div class="topic-no">4.2</div>
   <div><div class="topic-title">Structuring Elements</div><div class="topic-desc">Design, shape, size and selection of structuring elements.</div></div>
-  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool ">Visualization</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-4/topic-4-2-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-4/topic-4-2-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-4/topic-4-2-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-4/topic-4-2-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-4-3">
   <div class="topic-no">4.3</div>
   <div><div class="topic-title">Erosion Operation</div><div class="topic-desc">Erosion principles and its use for shrinking and removing image components.</div></div>
-  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool python">Python</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-4/topic-4-3-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-4/topic-4-3-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-4/topic-4-3-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-4/topic-4-3-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-4-4">
   <div class="topic-no">4.4</div>
   <div><div class="topic-title">Dilation Operation</div><div class="topic-desc">Dilation principles and its use for expanding and connecting image components.</div></div>
-  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool python">Python</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-4/topic-4-4-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-4/topic-4-4-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-4/topic-4-4-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-4/topic-4-4-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-4-5">
   <div class="topic-no">4.5</div>
   <div><div class="topic-title">Opening Operation</div><div class="topic-desc">Opening for removing small objects, smoothing contours and separating thin connections.</div></div>
-  <div class="topic-tools"><span class="tool python">Python</span><span class="tool pytorch">OpenCV</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-4/topic-4-5-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-4/topic-4-5-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-4/topic-4-5-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-4/topic-4-5-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-4-6">
   <div class="topic-no">4.6</div>
   <div><div class="topic-title">Closing Operation</div><div class="topic-desc">Closing for filling gaps, joining narrow breaks and smoothing boundaries.</div></div>
-  <div class="topic-tools"><span class="tool python">Python</span><span class="tool pytorch">OpenCV</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-4/topic-4-6-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-4/topic-4-6-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-4/topic-4-6-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-4/topic-4-6-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-4-7">
   <div class="topic-no">4.7</div>
   <div><div class="topic-title">Hit-or-Miss Transform</div><div class="topic-desc">Binary pattern detection using foreground and background structuring elements.</div></div>
-  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool practice">Practical</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-4/topic-4-7-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-4/topic-4-7-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-4/topic-4-7-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-4/topic-4-7-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-4-8">
   <div class="topic-no">4.8</div>
   <div><div class="topic-title">Morphological Reconstruction</div><div class="topic-desc">Marker-based reconstruction for extracting and restoring image structures.</div></div>
-  <div class="topic-tools"><span class="tool practice">Algorithm</span><span class="tool ">Example</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-4/topic-4-8-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-4/topic-4-8-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-4/topic-4-8-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-4/topic-4-8-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-4-9">
   <div class="topic-no">4.9</div>
   <div><div class="topic-title">Grayscale Morphology</div><div class="topic-desc">Erosion, dilation, opening and closing extended to grayscale images.</div></div>
-  <div class="topic-tools"><span class="tool math">Math</span><span class="tool pytorch">OpenCV</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-4/topic-4-9-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-4/topic-4-9-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-4/topic-4-9-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-4/topic-4-9-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-4-10">
   <div class="topic-no">4.10</div>
   <div><div class="topic-title">Applications of Morphological Operations</div><div class="topic-desc">Noise removal, boundary extraction, filling, object detection and shape analysis.</div></div>
-  <div class="topic-tools"><span class="tool ">Application</span><span class="tool practice">Practical</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-4/topic-4-10-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-4/topic-4-10-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-4/topic-4-10-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-4/topic-4-10-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article></div>
 </details><details class="module" >
   <summary>
@@ -410,159 +654,121 @@
   <div class="topic-list"><article class="topic" id="topic-5-1">
   <div class="topic-no">5.1</div>
   <div><div class="topic-title">Fundamentals of Image Compression</div><div class="topic-desc">Compression need, redundancy, compression ratio, distortion and performance measures.</div></div>
-  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool math">Math</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-5/topic-5-1-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-5/topic-5-1-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-5/topic-5-1-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-5/topic-5-1-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-5-2">
   <div class="topic-no">5.2</div>
   <div><div class="topic-title">Image Compression Models</div><div class="topic-desc">Source encoder, representation, decoder and reconstructed image.</div></div>
-  <div class="topic-tools"><span class="tool ">Diagram</span><span class="tool ">Concept</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-5/topic-5-2-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-5/topic-5-2-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-5/topic-5-2-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-5/topic-5-2-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-5-3">
   <div class="topic-no">5.3</div>
   <div><div class="topic-title">Elements of Information Theory</div><div class="topic-desc">Entropy, average code length, coding efficiency and information content.</div></div>
-  <div class="topic-tools"><span class="tool math">Math</span><span class="tool ">Example</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-5/topic-5-3-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-5/topic-5-3-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-5/topic-5-3-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-5/topic-5-3-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-5-4">
   <div class="topic-no">5.4</div>
   <div><div class="topic-title">Error-Free Compression</div><div class="topic-desc">Lossless compression methods that permit exact image reconstruction.</div></div>
-  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool practice">Practical</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-5/topic-5-4-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-5/topic-5-4-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-5/topic-5-4-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-5/topic-5-4-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-5-5">
   <div class="topic-no">5.5</div>
   <div><div class="topic-title">Lossy Compression</div><div class="topic-desc">Irreversible compression and trade-offs among compression ratio, distortion and quality.</div></div>
-  <div class="topic-tools"><span class="tool math">Math</span><span class="tool ">Example</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-5/topic-5-5-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-5/topic-5-5-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-5/topic-5-5-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-5/topic-5-5-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-5-6">
   <div class="topic-no">5.6</div>
   <div><div class="topic-title">Huffman Coding</div><div class="topic-desc">Construction and implementation of variable-length Huffman codes.</div></div>
-  <div class="topic-tools"><span class="tool practice">Algorithm</span><span class="tool python">Python</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-5/topic-5-6-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-5/topic-5-6-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-5/topic-5-6-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-5/topic-5-6-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-5-7">
   <div class="topic-no">5.7</div>
   <div><div class="topic-title">Run Length Encoding</div><div class="topic-desc">Encoding repeated pixel values and runs for simple lossless compression.</div></div>
-  <div class="topic-tools"><span class="tool practice">Algorithm</span><span class="tool python">Python</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-5/topic-5-7-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-5/topic-5-7-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-5/topic-5-7-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-5/topic-5-7-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-5-8">
   <div class="topic-no">5.8</div>
   <div><div class="topic-title">Shift Codes and Arithmetic Coding</div><div class="topic-desc">Efficient data representation using shift coding and arithmetic coding.</div></div>
-  <div class="topic-tools"><span class="tool math">Math</span><span class="tool practice">Algorithm</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-5/topic-5-8-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-5/topic-5-8-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-5/topic-5-8-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-5/topic-5-8-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-5-9">
   <div class="topic-no">5.9</div>
   <div><div class="topic-title">Image Compression Standards</div><div class="topic-desc">Common compression standards and their relevance to image storage and transmission.</div></div>
-  <div class="topic-tools"><span class="tool ">Concept</span><span class="tool ">Application</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-5/topic-5-9-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-5/topic-5-9-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-5/topic-5-9-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-5/topic-5-9-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article><article class="topic" id="topic-5-10">
   <div class="topic-no">5.10</div>
   <div><div class="topic-title">JPEG Standard</div><div class="topic-desc">JPEG workflow including blocks, DCT, quantization, zig-zag ordering and entropy coding.</div></div>
-  <div class="topic-tools"><span class="tool math">Math</span><span class="tool ">Diagram</span></div>
+  <div class="topic-tools"><a class="tool notes" href="materials/digital-image-processing/module-5/topic-5-10-notes.pdf" target="_blank" rel="noopener">📘 Notes</a>
+      <span class="code-resource">
+        <span class="code-label">💻 Python/OpenCV Code</span>
+        <a class="code-option pdf" href="materials/digital-image-processing/module-5/topic-5-10-code.pdf" target="_blank" rel="noopener">View PDF</a>
+        <a class="code-option ipynb" href="materials/digital-image-processing/module-5/topic-5-10-code.ipynb" download>Download IPYNB</a>
+      </span>
+      <a class="tool practice" href="materials/digital-image-processing/module-5/topic-5-10-practice.pdf" target="_blank" rel="noopener">📝 Practice Questions</a></div>
 </article></div>
 </details>
     </div>
   </div>
 </section>
-
-<section class="section implementation" id="implementation">
-  <div class="container">
-    <div class="section-header">
-      <div>
-        <div class="section-kicker">Coding & Implementation</div>
-        <h2 class="section-title">Python + OpenCV</h2>
-        <p class="section-description">The practical implementation layer uses Python, NumPy, Matplotlib and OpenCV to move from pixel-level operations to complete image-processing workflows.</p>
-      </div>
-    </div>
-    <div class="code-grid">
-      <article class="code-card">
-        <div class="code-head"><h3>Python · Read and Inspect an Image</h3><span class="code-badge">Foundation</span></div>
-        <pre><code>import cv2
-
-image = cv2.imread("image.jpg")
-print("Shape:", image.shape)
-print("Height:", image.shape[0])
-print("Width:", image.shape[1])
-print("Channels:", image.shape[2])
-
-cv2.imshow("Image", image)
-cv2.waitKey(0)
-cv2.destroyAllWindows()</code></pre>
-        <div class="code-note">A first experiment for understanding image dimensions, channels and basic image acquisition from a file.</div>
-      </article>
-
-      <article class="code-card">
-        <div class="code-head"><h3>Python · Histogram Equalization</h3><span class="code-badge">Enhancement</span></div>
-        <pre><code>import cv2
-import matplotlib.pyplot as plt
-
-image = cv2.imread("low_contrast.jpg", 0)
-enhanced = cv2.equalizeHist(image)
-
-plt.figure(figsize=(10, 4))
-plt.subplot(1, 2, 1)
-plt.imshow(image, cmap="gray")
-plt.title("Original")
-plt.axis("off")
-
-plt.subplot(1, 2, 2)
-plt.imshow(enhanced, cmap="gray")
-plt.title("Equalized")
-plt.axis("off")
-plt.show()</code></pre>
-        <div class="code-note">Useful for connecting histogram concepts with a practical contrast-enhancement workflow.</div>
-      </article>
-
-      <article class="code-card">
-        <div class="code-head"><h3>OpenCV · Canny Edge Detection</h3><span class="code-badge">Segmentation</span></div>
-        <pre><code>import cv2
-
-image = cv2.imread("image.jpg", 0)
-blur = cv2.GaussianBlur(image, (5, 5), 0)
-
-edges = cv2.Canny(
-    blur,
-    threshold1=50,
-    threshold2=150
-)
-
-cv2.imwrite("edges.jpg", edges)
-cv2.imshow("Canny Edges", edges)
-cv2.waitKey(0)
-cv2.destroyAllWindows()</code></pre>
-        <div class="code-note">A practical starting point for edge detection, boundary analysis and later segmentation experiments.</div>
-      </article>
-
-      <article class="code-card">
-        <div class="code-head"><h3>OpenCV · Morphological Processing</h3><span class="code-badge">Morphology</span></div>
-        <pre><code>import cv2
-import numpy as np
-
-image = cv2.imread("binary.png", 0)
-
-kernel = np.ones((3, 3), np.uint8)
-
-erosion = cv2.erode(image, kernel, iterations=1)
-dilation = cv2.dilate(image, kernel, iterations=1)
-
-opening = cv2.morphologyEx(
-    image, cv2.MORPH_OPEN, kernel
-)
-closing = cv2.morphologyEx(
-    image, cv2.MORPH_CLOSE, kernel
-)</code></pre>
-        <div class="code-note">Use the HIT/FIT idea when teaching binary morphology: erosion requires the structuring element to fit; dilation detects a hit.</div>
-      </article>
-    </div>
-  </div>
-</section>
-
 <section class="section section-white" id="learning-material">
   <div class="container">
     <div class="section-header">
       <div>
         <div class="section-kicker">Learning Material</div>
         <h2 class="section-title">Topic Resources</h2>
-        <p class="section-description">The page is designed so every numbered topic can later be expanded with dedicated teaching, practical and research material.</p>
+        <p class="section-description">Every numbered topic is supported by Notes, Python/OpenCV Code and Practice Questions.</p>
       </div>
     </div>
     <div class="resource-grid">
-      <div class="resource-card"><div class="resource-icon">📘</div><h3>Concept Notes</h3><p>Topic-wise explanations for learning, teaching and revision.</p></div>
-      <div class="resource-card"><div class="resource-icon">∑</div><h3>Mathematics</h3><p>Equations, derivations and numerical image examples.</p></div>
-      <div class="resource-card"><div class="resource-icon">🧩</div><h3>Visualizations</h3><p>Pixel grids, histograms, filters, spectra, segmentation and morphology diagrams.</p></div>
-      <div class="resource-card"><div class="resource-icon">🐍</div><h3>Python</h3><p>NumPy, Matplotlib and programming examples for image analysis.</p></div>
-      <div class="resource-card"><div class="resource-icon">CV</div><h3>OpenCV</h3><p>Practical image acquisition, enhancement, segmentation and morphology.</p></div>
-      <div class="resource-card"><div class="resource-icon">🧪</div><h3>Practicals</h3><p>Hands-on experiments from pixels to complete image-processing workflows.</p></div>
-      <div class="resource-card"><div class="resource-icon">📝</div><h3>Practice Questions</h3><p>Conceptual, numerical, algorithmic and implementation-oriented questions.</p></div>
-      <div class="resource-card"><div class="resource-icon">🔗</div><h3>References</h3><p>Standard textbooks, research papers and official documentation.</p></div>
+      <div class="resource-card"><div class="resource-icon">📘</div><h3>Notes</h3><p>Clear topic-wise explanations, concepts and revision points.</p></div>
+      <div class="resource-card"><div class="resource-icon">💻</div><h3>Python/OpenCV Code</h3><p>View implementation as PDF or download the original Jupyter Notebook (.ipynb).</p></div>
+      <div class="resource-card"><div class="resource-icon">📝</div><h3>Practice Questions</h3><p>Questions for concept checking, revision and examination preparation.</p></div>
     </div>
   </div>
 </section>
