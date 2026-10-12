@@ -2026,6 +2026,343 @@
 
 
 
+    /* =====================================================
+           CHATBOT
+        ====================================================== */
+
+        .chatbot {
+
+            position: fixed;
+
+            right: 25px;
+            bottom: 25px;
+
+            z-index: 8000;
+        }
+
+
+        .chat-close {
+
+            position: absolute;
+
+            top: -8px;
+            left: -8px;
+
+            width: 22px;
+            height: 22px;
+
+            display: none;
+
+            place-items: center;
+
+            border: 0;
+
+            border-radius: 50%;
+
+            color: white;
+
+            background:
+                #ff3d3d;
+
+            font-size: 13px;
+
+            cursor: pointer;
+        }
+
+
+        .chatbot.open
+        .chat-close {
+
+            display: grid;
+        }
+
+
+        .chat-message {
+
+            position: absolute;
+
+            right: 75px;
+            bottom: 14px;
+
+            width: 245px;
+
+            padding: 18px;
+
+            border:
+                1px solid #dce5f2;
+
+            border-radius: 18px 18px 3px 18px;
+
+            color: #3b4a61;
+
+            background:
+                rgba(255,255,255,.96);
+
+            box-shadow:
+                0 15px 40px
+                rgba(35,60,100,.12);
+
+            font-size: 14px;
+
+            line-height: 1.55;
+
+            opacity: 0;
+
+            transform:
+                translateY(10px)
+                scale(.95);
+
+            pointer-events: none;
+
+            transition:
+                .3s ease;
+        }
+
+
+        .chatbot.open
+        .chat-message {
+
+            opacity: 1;
+
+            transform:
+                translateY(0)
+                scale(1);
+
+            pointer-events: auto;
+        }
+
+
+        .chat-message strong {
+
+            display: block;
+
+            margin-bottom: 6px;
+
+            color: #172033;
+
+            font-size: 16px;
+        }
+
+
+        .chat-avatar {
+
+            width: 68px;
+            height: 68px;
+
+            display: grid;
+
+            place-items: center;
+
+            border:
+                5px solid white;
+
+            border-radius: 50%;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #2864e8,
+                    #765cf5
+                );
+
+            box-shadow:
+                0 12px 35px
+                rgba(35,75,160,.25);
+
+            cursor: pointer;
+
+            font-size: 30px;
+
+            animation:
+                chatFloat 4s
+                ease-in-out
+                infinite;
+        }
+
+
+        .chat-window {
+
+            position: absolute;
+
+            right: 0;
+
+            bottom: 85px;
+
+            width: 350px;
+
+            overflow: hidden;
+
+            border:
+                1px solid #dce5f2;
+
+            border-radius: 22px;
+
+            background:
+                white;
+
+            box-shadow:
+                0 25px 70px
+                rgba(25,50,90,.18);
+
+            opacity: 0;
+
+            transform:
+                translateY(20px)
+                scale(.95);
+
+            pointer-events: none;
+
+            transition:
+                .35s ease;
+        }
+
+
+        .chatbot.active
+        .chat-window {
+
+            opacity: 1;
+
+            transform:
+                translateY(0)
+                scale(1);
+
+            pointer-events: auto;
+        }
+
+
+        .chat-header {
+
+            padding: 18px;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #2864e8,
+                    #5e68e8
+                );
+        }
+
+
+        .chat-header strong {
+
+            display: block;
+
+            font-size: 16px;
+        }
+
+
+        .chat-header span {
+
+            font-size: 12px;
+
+            opacity: .85;
+        }
+
+
+        .chat-body {
+
+            height: 270px;
+
+            padding: 16px;
+
+            overflow-y: auto;
+
+            background:
+                #f8faff;
+        }
+
+
+        .bot-message,
+        .user-message {
+
+            max-width: 85%;
+
+            margin-bottom: 10px;
+
+            padding: 10px 13px;
+
+            border-radius: 14px;
+
+            font-size: 13px;
+
+            line-height: 1.5;
+        }
+
+
+        .bot-message {
+
+            background: white;
+
+            border:
+                1px solid #e2e9f4;
+        }
+
+
+        .user-message {
+
+            margin-left: auto;
+
+            color: white;
+
+            background:
+                #2864e8;
+        }
+
+
+        .chat-input {
+
+            display: flex;
+
+            gap: 7px;
+
+            padding: 10px;
+
+            border-top:
+                1px solid #e0e7f2;
+
+            background: white;
+        }
+
+
+        .chat-input input {
+
+            min-width: 0;
+
+            flex: 1;
+
+            padding: 11px;
+
+            border:
+                1px solid #dce5f2;
+
+            border-radius: 10px;
+
+            outline: none;
+
+            font-family: inherit;
+        }
+
+
+        .chat-input button {
+
+            width: 42px;
+
+            border: 0;
+
+            border-radius: 10px;
+
+            color: white;
+
+            background:
+                var(--blue);
+
+            cursor: pointer;
+        }
+
     /* =========================================================
 
        FOOTER
@@ -4099,6 +4436,49 @@
 
 
     <!-- =======================================================
+         STARTUP APPS & PRODUCT VENTURES
+         ======================================================= -->
+    <section class="section" id="startup-apps">
+      <div class="container">
+        <div class="section-header reveal">
+          <div>
+            <div class="section-kicker">Startup Lab</div>
+            <h2 class="section-title">Our Startup Apps &amp; Products</h2>
+            <p class="section-description">
+              Technology products focused on solving everyday problems through practical software and AI.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <div class="project-label">Community Technology · Active Development</div>
+            <h3>GateEase</h3>
+            <p>A gated-community management platform concept connecting residents, security teams, and community administrators. Planned capabilities include visitor management and streamlined community services.</p>
+            <p><strong>Technology:</strong> FastAPI, PostgreSQL, SQLAlchemy and Alembic.</p>
+            <span class="project-link" aria-label="GateEase is under development">In Development</span>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-label">Mobility Technology · Research &amp; Planning</div>
+            <h3>MetroLink AI</h3>
+            <p>A multilingual metro-travel companion planned to help Chennai commuters understand routes, interchanges, station counts, exits and last-mile options.</p>
+            <p><strong>Planned languages:</strong> Tamil, English and Hindi.</p>
+            <span class="project-link" aria-label="MetroLink AI is in research and planning">Research &amp; Planning</span>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-label">Agentic AI · Prototype</div>
+            <h3>PersonalAI</h3>
+            <p>A privacy-focused personal AI assistant concept designed to provide a chat interface and connect to locally running language and vision-language models. The goal is to explore useful AI-agent workflows while keeping inference on the user's own computer where supported.</p>
+            <p><strong>Technology explored:</strong> FastAPI, Uvicorn and Ollama.</p>
+            <span class="project-link" aria-label="PersonalAI is a prototype">Prototype</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
 
          SELECTED PUBLICATIONS
 
@@ -4170,8 +4550,28 @@
 
 
 
-          <!-- PUBLICATION 01 — NEW SCIENTIFIC REPORTS PUBLICATION -->
+          <!-- PUBLICATION 01 — SPRINGER NATURE PUBLICATION -->
+          <article class="publication reveal">
 
+            <div class="publication-year">
+              2026
+            </div>
+            <div>
+              <h3>
+                Deep Kronecker NasNet-based AB-M Tree for Storage and Efficient
+                Retrieval Model using Blockchain
+              </h3>
+              <div class="publication-meta">
+                Iranian Journal of Science and Technology, Transactions of Electrical Engineering · Springer Nature
+              </div>
+            </div>
+            <div class="publication-actions">
+              <span class="publication-badge" title="Journal quartile: Q3 (SCImago 2025)">Q3</span>
+              <a href="https://doi.org/10.1007/s40998-026-01236-7" target="_blank" rel="noopener noreferrer" class="publication-badge">Read Paper →</a>
+            </div>
+          </article>
+
+          <!-- PUBLICATION 02 — EXISTING SCIENTIFIC REPORTS PUBLICATION -->
           <article class="publication reveal">
 
             <div class="publication-year">
@@ -4200,19 +4600,10 @@
 
             </div>
 
-            <a
-
-              href="https://doi.org/10.1038/s41598-026-68755-5"
-
-              target="_blank"
-
-              rel="noopener noreferrer"
-
-              class="publication-badge">
-
-              New Publication →
-
-            </a>
+            <div class="publication-actions">
+              <span class="publication-badge" title="Journal quartile: Q1 (SCImago 2025)">Q1</span>
+              <a href="https://doi.org/10.1038/s41598-026-68755-5" target="_blank" rel="noopener noreferrer" class="publication-badge">Read Paper →</a>
+            </div>
 
           </article>
 
@@ -4254,11 +4645,7 @@
 
 
 
-            <div class="publication-badge">
-
-              Q3
-
-            </div>
+            <span class="publication-badge" title="Journal quartile: Q3">Q3</span>
 
 
 
@@ -4304,11 +4691,7 @@
 
 
 
-            <div class="publication-badge">
-
-              Q2
-
-            </div>
+            <span class="publication-badge" title="Journal quartile: Q2">Q2</span>
 
 
 
@@ -4352,11 +4735,7 @@
 
 
 
-            <div class="publication-badge">
-
-              Q1
-
-            </div>
+            <span class="publication-badge" title="Journal quartile: Q1">Q1</span>
 
 
 
@@ -4402,11 +4781,7 @@
 
 
 
-            <div class="publication-badge">
-
-              Q2
-
-            </div>
+            <span class="publication-badge" title="Journal quartile: Q2">Q2</span>
 
 
 
@@ -4694,7 +5069,419 @@
 
        ========================================================= -->
 
+  
+
+  <!-- =====================================================
+         CHATBOT
+    ====================================================== -->
+
+    <div
+        class="chatbot"
+        id="chatbot"
+    >
+
+
+        <button
+            class="chat-close"
+            id="chatClose"
+            aria-label="Close chat"
+        >
+            ×
+        </button>
+
+
+        <!-- MINI MESSAGE -->
+
+        <div class="chat-message">
+
+            <strong>
+                Hello 👋
+            </strong>
+
+            Explore my research,
+            projects and AI learning resources.
+
+        </div>
+
+
+        <!-- CHAT WINDOW -->
+
+        <div class="chat-window">
+
+            <div class="chat-header">
+
+                <strong>
+                    AI Research Assistant
+                </strong>
+
+                <span>
+                    Ask about research, projects or learning
+                </span>
+
+            </div>
+
+
+            <div
+                class="chat-body"
+                id="chatBody"
+            >
+
+                <div class="bot-message">
+
+                    Hello! 👋
+                    I can help you explore
+                    Dr. Michael's research,
+                    projects, publications
+                    and learning resources.
+
+                </div>
+
+
+                <div class="bot-message">
+
+                    Try asking:
+
+                    <br><br>
+
+                    • What are the projects?
+                    <br>
+                    • What is FaceMorph?
+                    <br>
+                    • What can I learn?
+                    <br>
+                    • What are the research areas?
+
+                </div>
+
+            </div>
+
+
+            <div class="chat-input">
+
+                <input
+                    type="text"
+                    id="chatInput"
+                    placeholder="Ask something..."
+                    autocomplete="off"
+                >
+
+                <button
+                    id="chatSend"
+                    aria-label="Send"
+                >
+                    →
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- CHAT BUTTON -->
+
+        <button
+            class="chat-avatar"
+            id="chatAvatar"
+            aria-label="Open AI assistant"
+        >
+            🤖
+        </button>
+
+    </div>
+
   <script>
+
+    /* =====================================================
+           CHATBOT
+        ====================================================== */
+
+        const chatbot =
+            document.getElementById(
+                "chatbot"
+            );
+
+
+        const chatAvatar =
+            document.getElementById(
+                "chatAvatar"
+            );
+
+
+        const chatClose =
+            document.getElementById(
+                "chatClose"
+            );
+
+
+        const chatInput =
+            document.getElementById(
+                "chatInput"
+            );
+
+
+        const chatSend =
+            document.getElementById(
+                "chatSend"
+            );
+
+
+        const chatBody =
+            document.getElementById(
+                "chatBody"
+            );
+
+
+        chatAvatar.addEventListener(
+            "click",
+            () => {
+
+                chatbot.classList.toggle(
+                    "active"
+                );
+
+                chatbot.classList.add(
+                    "open"
+                );
+
+                document.querySelector(
+                    ".chat-message"
+                ).style.display = "none";
+
+            }
+        );
+
+
+        chatClose.addEventListener(
+            "click",
+            () => {
+
+                chatbot.classList.remove(
+                    "active"
+                );
+
+                chatbot.classList.remove(
+                    "open"
+                );
+
+            }
+        );
+
+
+
+        /* =====================================================
+           CHAT RESPONSES
+        ====================================================== */
+
+        function getBotResponse(
+            question
+        ) {
+
+            const q =
+                question.toLowerCase();
+
+
+            if (
+                q.includes("project") ||
+                q.includes("facemorph")
+            ) {
+
+                return `
+                    The featured project on this
+                    website is <strong>FaceMorph</strong>,
+                    a Computer Vision project using
+                    Python, OpenCV and MediaPipe.
+                `;
+            }
+
+
+            if (
+                q.includes("research") ||
+                q.includes("area")
+            ) {
+
+                return `
+                    The research areas include
+                    Artificial Intelligence, Deep Learning,
+                    Computer Vision, Medical Imaging,
+                    Image Processing and intelligent
+                    transportation.
+                `;
+            }
+
+
+            if (
+                q.includes("learn") ||
+                q.includes("course") ||
+                q.includes("python")
+            ) {
+
+                return `
+                    The Learning Hub covers Python,
+                    Machine Learning, Deep Learning,
+                    Digital Image Processing,
+                    Computer Vision, Object Detection,
+                    Generative AI and ADAS.
+                `;
+            }
+
+
+            if (
+                q.includes("publication") ||
+                q.includes("paper")
+            ) {
+
+                return `
+                    You can explore selected publications
+                    covering medical imaging, ADAS,
+                    computer vision and deep learning
+                    in the Publications section.
+                `;
+            }
+
+
+            if (
+                q.includes("blog")
+            ) {
+
+                return `
+                    The AI Blog contains practical articles
+                    on Ensemble Learning, Transformers,
+                    YOLO, Vision Transformers, Generative AI,
+                    Deepfakes and more.
+                `;
+            }
+
+
+            if (
+                q.includes("contact") ||
+                q.includes("email")
+            ) {
+
+                return `
+                    Please use the Contact page from
+                    the navigation menu to get in touch.
+                `;
+            }
+
+
+            return `
+                I can help you explore the website.
+                Try asking about research, projects,
+                FaceMorph, publications, blog or learning.
+            `;
+        }
+
+
+
+        function addMessage(
+            message,
+            type
+        ) {
+
+            const div =
+                document.createElement(
+                    "div"
+                );
+
+            div.className =
+                type === "user"
+                    ? "user-message"
+                    : "bot-message";
+
+            div.innerHTML =
+                message;
+
+            chatBody.appendChild(
+                div
+            );
+
+            chatBody.scrollTop =
+                chatBody.scrollHeight;
+        }
+
+
+
+        function sendChat() {
+
+            const question =
+                chatInput.value.trim();
+
+
+            if (!question) return;
+
+
+            addMessage(
+                question,
+                "user"
+            );
+
+
+            chatInput.value = "";
+
+
+            setTimeout(
+                () => {
+
+                    addMessage(
+                        getBotResponse(
+                            question
+                        ),
+                        "bot"
+                    );
+
+                },
+                450
+            );
+        }
+
+
+        chatSend.addEventListener(
+            "click",
+            sendChat
+        );
+
+
+        chatInput.addEventListener(
+            "keydown",
+            event => {
+
+                if (
+                    event.key === "Enter"
+                ) {
+
+                    sendChat();
+
+                }
+
+            }
+        );
+
+
+
+        /* =====================================================
+           MOBILE CHAT
+        ====================================================== */
+
+        document.addEventListener(
+            "click",
+            event => {
+
+                if (
+                    !chatbot.contains(
+                        event.target
+                    )
+                ) {
+
+                    chatbot.classList.remove(
+                        "active"
+                    );
+
+                }
+
+            }
+        );
+
+
 
     /* =========================================================
 
