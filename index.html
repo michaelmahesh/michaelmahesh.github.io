@@ -1,38 +1,16 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
 <head>
-
-  <meta charset="UTF-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="theme-color" content="#ffffff">
-
-  <meta
-
-    name="description"
-
-    content="Dr. K. Michael Mahesh — Professor, Artificial Intelligence researcher, Computer Vision, Deep Learning, Medical AI and intelligent systems."
-
-  >
-
-  <meta name="author" content="Dr. K. Michael Mahesh">
-
-  <title>Dr. K. Michael Mahesh | Professor · Artificial Intelligence</title>
-
-  <script async
-
-     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6687646879167326"
-
-     crossorigin="anonymous"></script>
-
-
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SL2GKJ42ES"></script>
-
-   <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#ffffff" name="theme-color"/>
+<meta content="Dr. K. Michael Mahesh — Professor, Artificial Intelligence researcher, Computer Vision, Deep Learning, Medical AI and intelligent systems." name="description"/>
+<meta content="Dr. K. Michael Mahesh" name="author"/>
+<title>Dr. K. Michael Mahesh | Professor · Artificial Intelligence</title>
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6687646879167326"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-SL2GKJ42ES"></script>
+<script>
 
       window.dataLayer = window.dataLayer || [];
 
@@ -43,3429 +21,194 @@
       gtag('config', 'G-SL2GKJ42ES');
 
    </script>
-
-
-
-  <style>
-
-    /* =========================================================
-
-       DESIGN TOKENS
-
-       ========================================================= */
-
-    :root {
-
-      --white: #ffffff;
-
-      --background: #f7faff;
-
-      --surface: #ffffff;
-
-      --surface-soft: #f8fbff;
-
-      --blue: #1d4ed8;
-
-      --blue-dark: #173ea5;
-
-      --blue-light: #3b82f6;
-
-      --blue-soft: #eff6ff;
-
-      --blue-border: #dbeafe;
-
-      --navy: #0f172a;
-
-      --text: #334155;
-
-      --muted: #64748b;
-
-      --border: #e2e8f0;
-
-      --cyan: #0891b2;
-
-      --purple: #7c3aed;
-
-      --orange: #ea580c;
-
-      --green: #059669;
-
-      --radius: 18px;
-
-      --shadow:
-
-        0 10px 30px rgba(15, 23, 42, 0.06);
-
-      --shadow-hover:
-
-        0 18px 42px rgba(15, 23, 42, 0.10);
-
-      --max-width: 1180px;
-
-      --header-height: 76px;
-
-      --ticker-height: 38px;
-
-      --total-top-space: 114px;
-
-    }
-
-
-
-    /* =========================================================
-
-       RESET
-
-       ========================================================= */
-
-    * {
-
-      margin: 0;
-
-      padding: 0;
-
-      box-sizing: border-box;
-
-    }
-
-
-
-    html {
-
-      scroll-behavior: smooth;
-
-    }
-
-
-
-    body {
-
-      padding-top: var(--total-top-space);
-
-      font-family:
-
-        Inter,
-
-        ui-sans-serif,
-
-        system-ui,
-
-        -apple-system,
-
-        BlinkMacSystemFont,
-
-        "Segoe UI",
-
-        sans-serif;
-
-      background: var(--background);
-
-      color: var(--text);
-
-      line-height: 1.6;
-
-      overflow-x: hidden;
-
-    }
-
-
-
-    a {
-
-      color: inherit;
-
-      text-decoration: none;
-
-    }
-
-
-
-    button {
-
-      font: inherit;
-
-    }
-
-
-
-    img {
-
-      display: block;
-
-      max-width: 100%;
-
-    }
-
-
-
-    .container {
-
-      width:
-
-        min(
-
-          var(--max-width),
-
-          calc(100% - 40px)
-
-        );
-
-      margin-inline: auto;
-
-    }
-
-
-
-    /* =========================================================
-
-       FIXED HEADER
-
-       ========================================================= */
-
-    .site-header {
-
-      position: fixed;
-
-      top: 0;
-
-      left: 0;
-
-      right: 0;
-
-      z-index: 2000;
-
-      height: var(--header-height);
-
-      background:
-
-        rgba(255, 255, 255, 0.97);
-
-      border-bottom:
-
-        1px solid var(--border);
-
-      backdrop-filter:
-
-        blur(14px);
-
-      -webkit-backdrop-filter:
-
-        blur(14px);
-
-    }
-
-
-
-    .nav {
-
-      height: var(--header-height);
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: space-between;
-
-      gap: 30px;
-
-    }
-
-
-
-    /* =========================================================
-
-       BRAND
-
-       ========================================================= */
-
-    .brand {
-
-      display: flex;
-
-      align-items: center;
-
-      gap: 12px;
-
-      min-width: max-content;
-
-    }
-
-
-
-    .brand-mark {
-
-      width: 42px;
-
-      height: 42px;
-
-      display: grid;
-
-      place-items: center;
-
-      border-radius: 12px;
-
-      background: var(--blue);
-
-      color: var(--white);
-
-      font-size: 12px;
-
-      font-weight: 800;
-
-      letter-spacing: -0.04em;
-
-      box-shadow:
-
-        0 6px 16px rgba(29, 78, 216, 0.15);
-
-    }
-
-
-
-    .brand-name {
-
-      color: var(--navy);
-
-      font-size: 15px;
-
-      font-weight: 800;
-
-      letter-spacing: 0.08em;
-
-    }
-
-
-
-    .brand-role {
-
-      color: var(--muted);
-
-      font-size: 11px;
-
-      margin-top: -2px;
-
-    }
-
-
-
-    /* =========================================================
-
-       NAVIGATION
-
-       ========================================================= */
-
-    .nav-links {
-
-      display: flex;
-
-      align-items: center;
-
-      gap: 4px;
-
-    }
-
-
-
-    .nav-links a {
-
-      position: relative;
-
-      padding: 9px 12px;
-
-      color: var(--muted);
-
-      font-size: 14px;
-
-      font-weight: 600;
-
-      border-radius: 9px;
-
-      transition:
-
-        color .2s ease,
-
-*background* .2s ease;
-
-    }
-
-
-
-    .nav-links a:hover,
-
-    .nav-links a.active {
-
-      color: var(--blue);
-
-      background: var(--blue-soft);
-
-    }
-
-
-
-    .nav-connect {
-
-      margin-left: 8px;
-
-      padding:
-
-        10px 16px !important;
-
-      background:
-
-        var(--blue) !important;
-
-      color:
-
-        var(--white) !important;
-
-    }
-
-
-
-    .nav-connect:hover {
-
-      background:
-
-        var(--blue-dark) !important;
-
-    }
-
-
-
-    /* =========================================================
-
-       MOBILE MENU BUTTON
-
-       ========================================================= */
-
-    .menu-toggle {
-
-      display: none;
-
-      width: 42px;
-
-      height: 42px;
-
-      border:
-
-        1px solid var(--border);
-
-      border-radius: 10px;
-
-      background: var(--white);
-
-      color: var(--navy);
-
-      cursor: pointer;
-
-      font-size: 20px;
-
-      line-height: 1;
-
-      transition:
-
-*background* .2s ease,
-
-        border-color .2s ease;
-
-    }
-
-
-
-    .menu-toggle:hover {
-
-      background:
-
-        var(--blue-soft);
-
-      border-color:
-
-        var(--blue-border);
-
-    }
-
-
-
-    /* =========================================================
-
-       WHAT'S NEW — FIXED LABEL + MOVING CONTENT
-
-       ========================================================= */
-
-    .whats-new {
-
-      position: fixed;
-
-      top: var(--header-height);
-
-      left: 0;
-
-      right: 0;
-
-      z-index: 1900;
-
-      height: var(--ticker-height);
-
-      display: flex;
-
-      align-items: center;
-
-      overflow: hidden;
-
-      background: var(--navy);
-
-      color: var(--white);
-
-      border-bottom:
-
-        1px solid rgba(255,255,255,.08);
-
-    }
-
-
-
-    /* ---------------------------------------------------------
-
-       FIXED LABEL — NEVER MOVES
-
-       --------------------------------------------------------- */
-
-    .whats-label {
-
-      flex: 0 0 155px;
-
-      height: var(--ticker-height);
-
-      display: flex;
-
-      align-items: center;
-
-      padding:
-
-        0 18px 0 24px;
-
-      background: var(--navy);
-
-      color: #bfdbfe;
-
-      font-size: 11px;
-
-      font-weight: 800;
-
-      letter-spacing: .12em;
-
-      white-space: nowrap;
-
-      position: relative;
-
-      z-index: 10;
-
-      border-right:
-
-        1px solid rgba(255,255,255,.06);
-
-    }
-
-
-
-    /* ---------------------------------------------------------
-
-       MOVING CONTENT WINDOW
-
-       --------------------------------------------------------- */
-
-    .ticker-window {
-
-      flex: 1;
-
-      min-width: 0;
-
-      height: var(--ticker-height);
-
-      overflow: hidden;
-
-      position: relative;
-
-    }
-
-
-
-    /* Soft fade at both edges */
-
-    .ticker-window::before,
-
-    .ticker-window::after {
-
-      content: "";
-
-      position: absolute;
-
-      top: 0;
-
-      bottom: 0;
-
-      width: 38px;
-
-      z-index: 5;
-
-      pointer-events: none;
-
-    }
-
-
-
-    .ticker-window::before {
-
-      left: 0;
-
-      background:
-
-        linear-gradient(
-
-          to right,
-
-          var(--navy),
-
-          transparent
-
-        );
-
-    }
-
-
-
-    .ticker-window::after {
-
-      right: 0;
-
-      background:
-
-        linear-gradient(
-
-          to left,
-
-          var(--navy),
-
-          transparent
-
-        );
-
-    }
-
-
-
-    /* ---------------------------------------------------------
-
-       MOVING TRACK
-
-       --------------------------------------------------------- */
-
-    .ticker-track {
-
-      display: flex;
-
-      align-items: center;
-
-      width: max-content;
-
-      height: 100%;
-
-      will-change: transform;
-
-      animation:
-
-        ticker-scroll 32s linear infinite;
-
-    }
-
-
-
-    .ticker-sequence {
-
-      display: flex;
-
-      align-items: center;
-
-      gap: 28px;
-
-      padding-right: 28px;
-
-      white-space: nowrap;
-
-    }
-
-
-
-    .ticker-item {
-
-      color: #e2e8f0;
-
-      font-size: 12px;
-
-      font-weight: 500;
-
-      white-space: nowrap;
-
-      flex-shrink: 0;
-
-    }
-
-
-
-    .ticker-item::after {
-
-      content: "→";
-
-      margin-left: 28px;
-
-      color: #60a5fa;
-
-      font-weight: 700;
-
-    }
-
-
-
-    /* ---------------------------------------------------------
-
-       SEAMLESS LOOP
-
-       --------------------------------------------------------- */
-
-    @keyframes ticker-scroll {
-
-      from {
-
-        transform: translateX(0);
-
-      }
-
-      to {
-
-        transform: translateX(-50%);
-
-      }
-
-    }
-
-
-
-    .ticker-window:hover .ticker-track {
-
-      animation-play-state: paused;
-
-    }
-
-
-
-    /* =========================================================
-
-       HERO
-
-       ========================================================= */
-
-    .hero {
-
-      position: relative;
-
-      padding:
-
-        76px 0 72px;
-
-      background:
-
-        radial-gradient(
-
-          circle at 80% 25%,
-
-          rgba(219, 234, 254, .72),
-
-          transparent 32%
-
-        ),
-
-        var(--white);
-
-      border-bottom:
-
-        1px solid var(--border);
-
-      overflow: hidden;
-
-    }
-
-
-
-    .hero::before {
-
-      content: "";
-
-      position: absolute;
-
-      width: 340px;
-
-      height: 340px;
-
-      right: -180px;
-
-      top: 120px;
-
-      border:
-
-        1px solid rgba(59,130,246,.10);
-
-      border-radius: 50%;
-
-    }
-
-
-
-    .hero-grid {
-
-      position: relative;
-
-      display: grid;
-
-      grid-template-columns:
-
-        1.05fr .95fr;
-
-      align-items: center;
-
-      gap: 70px;
-
-    }
-
-
-
-    .eyebrow {
-
-      display: inline-flex;
-
-      align-items: center;
-
-      gap: 9px;
-
-      padding:
-
-        7px 11px;
-
-      background:
-
-        var(--blue-soft);
-
-      color:
-
-        var(--blue);
-
-      border:
-
-        1px solid var(--blue-border);
-
-      border-radius:
-
-        999px;
-
-      font-size: 11px;
-
-      font-weight: 800;
-
-      letter-spacing: .12em;
-
-      text-transform:
-
-        uppercase;
-
-    }
-
-
-
-    .eyebrow-dot {
-
-      width: 7px;
-
-      height: 7px;
-
-      background:
-
-        var(--blue);
-
-      border-radius:
-
-        50%;
-
-      box-shadow:
-
-        0 0 0 4px rgba(29,78,216,.08);
-
-    }
-
-
-
-    .hero h1 {
-
-      margin-top: 22px;
-
-      color:
-
-        var(--navy);
-
-      font-size:
-
-        clamp(42px, 5vw, 64px);
-
-      line-height:
-
-        1.02;
-
-      letter-spacing:
-
-        -0.055em;
-
-      white-space:
-
-        nowrap;
-
-    }
-
-
-
-    .hero h1 span {
-
-      color:
-
-        var(--blue);
-
-    }
-
-
-
-    .hero-subtitle {
-
-      margin-top: 20px;
-
-      color:
-
-        var(--text);
-
-      font-size: 20px;
-
-      font-weight: 500;
-
-    }
-
-
-
-    .hero-description {
-
-      max-width: 650px;
-
-      margin-top: 18px;
-
-      color:
-
-        var(--muted);
-
-      font-size: 16px;
-
-    }
-
-
-
-    .hero-actions {
-
-      display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 12px;
-
-      margin-top: 30px;
-
-    }
-
-
-
-    /* =========================================================
-
-       BUTTONS
-
-       ========================================================= */
-
-    .button {
-
-      display: inline-flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      gap: 9px;
-
-      padding:
-
-        12px 18px;
-
-      border-radius:
-
-        11px;
-
-      font-size: 14px;
-
-      font-weight: 750;
-
-      transition:
-
-        transform .2s ease,
-
-        box-shadow .2s ease,
-
-*background* .2s ease,
-
-        border-color .2s ease;
-
-    }
-
-
-
-    .button:hover {
-
-      transform:
-
-        translateY(-2px);
-
-    }
-
-
-
-    .button-primary {
-
-      background:
-
-        var(--blue);
-
-      color:
-
-        var(--white);
-
-      box-shadow:
-
-        0 8px 20px rgba(29,78,216,.18);
-
-    }
-
-
-
-    .button-primary:hover {
-
-      background:
-
-        var(--blue-dark);
-
-      box-shadow:
-
-        0 12px 25px rgba(29,78,216,.22);
-
-    }
-
-
-
-    .button-secondary {
-
-      background:
-
-        var(--white);
-
-      color:
-
-        var(--navy);
-
-      border:
-
-        1px solid var(--border);
-
-    }
-
-
-
-    .button-secondary:hover {
-
-      border-color:
-
-        #bfdbfe;
-
-      background:
-
-        var(--blue-soft);
-
-    }
-
-
-
-    /* =========================================================
-
-       HERO PHOTO
-
-       ========================================================= */
-
-    .hero-visual {
-
-      position: relative;
-
-      max-width: 430px;
-
-      margin-left: auto;
-
-    }
-
-
-
-    .profile-frame {
-
-      position: relative;
-
-      padding: 12px;
-
-      background:
-
-        var(--white);
-
-      border:
-
-        1px solid var(--border);
-
-      border-radius:
-
-        28px;
-
-      box-shadow:
-
-        var(--shadow);
-
-    }
-
-
-
-    .profile-frame::before {
-
-      content: "";
-
-      position: absolute;
-
-      inset: -12px;
-
-      border:
-
-        1px solid var(--blue-border);
-
-      border-radius:
-
-        34px;
-
-      z-index: -1;
-
-    }
-
-
-
-    .profile-image {
-
-      width: 100%;
-
-      aspect-ratio:
-
-        4 / 5;
-
-      object-fit:
-
-        cover;
-
-      object-position:
-
-        center top;
-
-      border-radius:
-
-        19px;
-
-    }
-
-
-
-    .profile-caption {
-
-      position: absolute;
-
-      left: 28px;
-
-      right: 28px;
-
-      bottom: 28px;
-
-      padding:
-
-        13px 15px;
-
-      background:
-
-        rgba(255,255,255,.94);
-
-      border:
-
-        1px solid rgba(226,232,240,.9);
-
-      border-radius:
-
-        13px;
-
-      backdrop-filter:
-
-        blur(10px);
-
-    }
-
-
-
-    .profile-caption strong {
-
-      display: block;
-
-      color:
-
-        var(--navy);
-
-      font-size:
-
-        13px;
-
-    }
-
-
-
-    .profile-caption span {
-
-      color:
-
-        var(--muted);
-
-      font-size:
-
-        11px;
-
-    }
-
-
-
-    /* =========================================================
-
-       SECTIONS
-
-       ========================================================= */
-
-    .section {
-
-      padding:
-
-        82px 0;
-
-    }
-
-
-
-    .section-white {
-
-      background:
-
-        var(--white);
-
-    }
-
-
-
-    .section-header {
-
-      display: flex;
-
-      align-items: end;
-
-      justify-content: space-between;
-
-      gap: 30px;
-
-      margin-bottom: 34px;
-
-    }
-
-
-
-    .section-kicker {
-
-      color:
-
-        var(--blue);
-
-      font-size:
-
-        11px;
-
-      font-weight:
-
-        800;
-
-      letter-spacing:
-
-        .15em;
-
-      text-transform:
-
-        uppercase;
-
-    }
-
-
-
-    .section-title {
-
-      margin-top: 6px;
-
-      color:
-
-        var(--navy);
-
-      font-size:
-
-        clamp(27px, 4vw, 38px);
-
-      line-height:
-
-        1.15;
-
-      letter-spacing:
-
-        -.035em;
-
-    }
-
-
-
-    .section-description {
-
-      max-width:
-
-        550px;
-
-      margin-top:
-
-        10px;
-
-      color:
-
-        var(--muted);
-
-      font-size:
-
-        14px;
-
-    }
-
-
-
-    .section-link {
-
-      color:
-
-        var(--blue);
-
-      font-size:
-
-        13px;
-
-      font-weight:
-
-        750;
-
-      white-space:
-
-        nowrap;
-
-    }
-
-
-
-    .section-link:hover {
-
-      text-decoration:
-
-        underline;
-
-    }
-
-
-
-    /* =========================================================
-
-       TOPICS
-
-       ========================================================= */
-
-    .topics-grid {
-
-      display:
-
-        grid;
-
-      grid-template-columns:
-
-        repeat(3, 1fr);
-
-      gap:
-
-        14px;
-
-    }
-
-
-
-    .topic-card {
-
-      position: relative;
-
-      padding:
-
-        22px;
-
-      background:
-
-        var(--white);
-
-      border:
-
-        1px solid var(--border);
-
-      border-radius:
-
-        var(--radius);
-
-      transition:
-
-        transform .25s ease,
-
-        box-shadow .25s ease,
-
-        border-color .25s ease;
-
-    }
-
-
-
-    .topic-card:hover {
-
-      transform:
-
-        translateY(-4px);
-
-      box-shadow:
-
-        var(--shadow-hover);
-
-      border-color:
-
-        #bfdbfe;
-
-    }
-
-
-
-    .topic-icon {
-
-      width: 40px;
-
-      height: 40px;
-
-      display: grid;
-
-      place-items: center;
-
-      margin-bottom:
-
-        16px;
-
-      background:
-
-        var(--blue-soft);
-
-      border-radius:
-
-        11px;
-
-      color:
-
-        var(--blue);
-
-      font-size:
-
-        18px;
-
-    }
-
-
-
-    .topic-card:nth-child(2) .topic-icon,
-
-    .topic-card:nth-child(3) .topic-icon {
-
-      color:
-
-        var(--purple);
-
-      background:
-
-        #f5f3ff;
-
-    }
-
-
-
-    .topic-card:nth-child(7) .topic-icon,
-
-    .topic-card:nth-child(10) .topic-icon {
-
-      color:
-
-        var(--cyan);
-
-      background:
-
-        #ecfeff;
-
-    }
-
-
-
-    .topic-card:nth-child(9) .topic-icon {
-
-      color:
-
-        var(--green);
-
-      background:
-
-        #ecfdf5;
-
-    }
-
-
-
-    .topic-card:nth-child(12) .topic-icon {
-
-      color:
-
-        var(--orange);
-
-      background:
-
-        #fff7ed;
-
-    }
-
-
-
-    .topic-card h3 {
-
-      color:
-
-        var(--navy);
-
-      font-size:
-
-        15px;
-
-    }
-
-
-
-    .topic-card p {
-
-      margin-top:
-
-        5px;
-
-      color:
-
-        var(--muted);
-
-      font-size:
-
-        12px;
-
-      line-height:
-
-        1.55;
-
-    }
-
-
-
-    .topic-arrow {
-
-      position: absolute;
-
-      top: 21px;
-
-      right: 21px;
-
-      color:
-
-        #94a3b8;
-
-      font-size:
-
-        16px;
-
-      transition:
-
-        transform .2s ease,
-
-        color .2s ease;
-
-    }
-
-
-
-    .topic-card:hover .topic-arrow {
-
-      color:
-
-        var(--blue);
-
-      transform:
-
-        translate(2px,-2px);
-
-    }
-
-
-
-    /* =========================================================
-
-       PROJECT LAB
-
-       ========================================================= */
-
-    .project-grid {
-
-      display:
-
-        grid;
-
-      grid-template-columns:
-
-        repeat(3, 1fr);
-
-      gap:
-
-        18px;
-
-    }
-
-
-
-    .project-card {
-
-      display:
-
-        flex;
-
-      flex-direction:
-
-        column;
-
-      min-height:
-
-        270px;
-
-      padding:
-
-        23px;
-
-      background:
-
-        var(--white);
-
-      border:
-
-        1px solid var(--border);
-
-      border-radius:
-
-        var(--radius);
-
-      box-shadow:
-
-        0 5px 20px rgba(15,23,42,.035);
-
-      transition:
-
-        transform .25s ease,
-
-        box-shadow .25s ease,
-
-        border-color .25s ease;
-
-    }
-
-
-
-    .project-card:hover {
-
-      transform:
-
-        translateY(-5px);
-
-      box-shadow:
-
-        var(--shadow-hover);
-
-      border-color:
-
-        #bfdbfe;
-
-    }
-
-
-
-    .project-label {
-
-      color:
-
-        var(--blue);
-
-      font-size:
-
-        10px;
-
-      font-weight:
-
-        800;
-
-      letter-spacing:
-
-        .12em;
-
-      text-transform:
-
-        uppercase;
-
-    }
-
-
-
-    .project-card h3 {
-
-      margin-top:
-
-        11px;
-
-      color:
-
-        var(--navy);
-
-      font-size:
-
-        19px;
-
-    }
-
-
-
-    .project-card p {
-
-      margin-top:
-
-        9px;
-
-      color:
-
-        var(--muted);
-
-      font-size:
-
-        13px;
-
-      line-height:
-
-        1.6;
-
-    }
-
-
-
-    .project-tags {
-
-      display:
-
-        flex;
-
-      flex-wrap:
-
-        wrap;
-
-      gap:
-
-        6px;
-
-      margin-top:
-
-        17px;
-
-    }
-
-
-
-    .project-tag {
-
-      padding:
-
-        5px 8px;
-
-      border-radius:
-
-        7px;
-
-      background:
-
-        var(--blue-soft);
-
-      color:
-
-        var(--blue);
-
-      font-size:
-
-        10px;
-
-      font-weight:
-
-        700;
-
-    }
-
-
-
-    .project-link {
-
-      margin-top:
-
-        auto;
-
-      padding-top:
-
-        22px;
-
-      color:
-
-        var(--blue);
-
-      font-size:
-
-        12px;
-
-      font-weight:
-
-        750;
-
-    }
-
-
-
-    /* =========================================================
-
-       PUBLICATIONS
-
-       ========================================================= */
-
-    .publication-list {
-
-      border-top:
-
-        1px solid var(--border);
-
-    }
-
-
-
-    .publication {
-
-      display:
-
-        grid;
-
-      grid-template-columns:
-
-        80px 1fr auto;
-
-      gap:
-
-        25px;
-
-      align-items:
-
-        start;
-
-      padding:
-
-        25px 0;
-
-      border-bottom:
-
-        1px solid var(--border);
-
-      transition:
-
-        padding-left .2s ease;
-
-    }
-
-
-
-    .publication:hover {
-
-      padding-left:
-
-        8px;
-
-    }
-
-
-
-    .publication-year {
-
-      color:
-
-        var(--blue);
-
-      font-size:
-
-        13px;
-
-      font-weight:
-
-        800;
-
-    }
-
-
-
-    .publication h3 {
-
-      color:
-
-        var(--navy);
-
-      font-size:
-
-        15px;
-
-      line-height:
-
-        1.45;
-
-    }
-
-
-
-    .publication-meta {
-
-      margin-top:
-
-        6px;
-
-      color:
-
-        var(--muted);
-
-      font-size:
-
-        12px;
-
-    }
-
-
-
-    .publication-badge {
-
-      padding:
-
-        5px 8px;
-
-      background:
-
-        var(--blue-soft);
-
-      color:
-
-        var(--blue);
-
-      border-radius:
-
-        6px;
-
-      font-size:
-
-        10px;
-
-      font-weight:
-
-        800;
-
-      white-space:
-
-        nowrap;
-
-    }
-
-
-
-    /* =====================================================
-           CHATBOT
-        ====================================================== */
-
-        .chatbot {
-
-            position: fixed;
-
-            right: 25px;
-            bottom: 25px;
-
-            z-index: 8000;
-        }
-
-
-        .chat-close {
-
-            position: absolute;
-
-            top: -8px;
-            left: -8px;
-
-            width: 22px;
-            height: 22px;
-
-            display: none;
-
-            place-items: center;
-
-            border: 0;
-
-            border-radius: 50%;
-
-            color: white;
-
-            background:
-                #ff3d3d;
-
-            font-size: 13px;
-
-            cursor: pointer;
-        }
-
-
-        .chatbot.open
-        .chat-close {
-
-            display: grid;
-        }
-
-
-        .chat-message {
-
-            position: absolute;
-
-            right: 75px;
-            bottom: 14px;
-
-            width: 245px;
-
-            padding: 18px;
-
-            border:
-                1px solid #dce5f2;
-
-            border-radius: 18px 18px 3px 18px;
-
-            color: #3b4a61;
-
-            background:
-                rgba(255,255,255,.96);
-
-            box-shadow:
-                0 15px 40px
-                rgba(35,60,100,.12);
-
-            font-size: 14px;
-
-            line-height: 1.55;
-
-            opacity: 0;
-
-            transform:
-                translateY(10px)
-                scale(.95);
-
-            pointer-events: none;
-
-            transition:
-                .3s ease;
-        }
-
-
-        .chatbot.open
-        .chat-message {
-
-            opacity: 1;
-
-            transform:
-                translateY(0)
-                scale(1);
-
-            pointer-events: auto;
-        }
-
-
-        .chat-message strong {
-
-            display: block;
-
-            margin-bottom: 6px;
-
-            color: #172033;
-
-            font-size: 16px;
-        }
-
-
-        .chat-avatar {
-
-            width: 68px;
-            height: 68px;
-
-            display: grid;
-
-            place-items: center;
-
-            border:
-                5px solid white;
-
-            border-radius: 50%;
-
-            color: white;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #2864e8,
-                    #765cf5
-                );
-
-            box-shadow:
-                0 12px 35px
-                rgba(35,75,160,.25);
-
-            cursor: pointer;
-
-            font-size: 30px;
-
-            animation:
-                chatFloat 4s
-                ease-in-out
-                infinite;
-        }
-
-
-        .chat-window {
-
-            position: absolute;
-
-            right: 0;
-
-            bottom: 85px;
-
-            width: 350px;
-
-            overflow: hidden;
-
-            border:
-                1px solid #dce5f2;
-
-            border-radius: 22px;
-
-            background:
-                white;
-
-            box-shadow:
-                0 25px 70px
-                rgba(25,50,90,.18);
-
-            opacity: 0;
-
-            transform:
-                translateY(20px)
-                scale(.95);
-
-            pointer-events: none;
-
-            transition:
-                .35s ease;
-        }
-
-
-        .chatbot.active
-        .chat-window {
-
-            opacity: 1;
-
-            transform:
-                translateY(0)
-                scale(1);
-
-            pointer-events: auto;
-        }
-
-
-        .chat-header {
-
-            padding: 18px;
-
-            color: white;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #2864e8,
-                    #5e68e8
-                );
-        }
-
-
-        .chat-header strong {
-
-            display: block;
-
-            font-size: 16px;
-        }
-
-
-        .chat-header span {
-
-            font-size: 12px;
-
-            opacity: .85;
-        }
-
-
-        .chat-body {
-
-            height: 270px;
-
-            padding: 16px;
-
-            overflow-y: auto;
-
-            background:
-                #f8faff;
-        }
-
-
-        .bot-message,
-        .user-message {
-
-            max-width: 85%;
-
-            margin-bottom: 10px;
-
-            padding: 10px 13px;
-
-            border-radius: 14px;
-
-            font-size: 13px;
-
-            line-height: 1.5;
-        }
-
-
-        .bot-message {
-
-            background: white;
-
-            border:
-                1px solid #e2e9f4;
-        }
-
-
-        .user-message {
-
-            margin-left: auto;
-
-            color: white;
-
-            background:
-                #2864e8;
-        }
-
-
-        .chat-input {
-
-            display: flex;
-
-            gap: 7px;
-
-            padding: 10px;
-
-            border-top:
-                1px solid #e0e7f2;
-
-            background: white;
-        }
-
-
-        .chat-input input {
-
-            min-width: 0;
-
-            flex: 1;
-
-            padding: 11px;
-
-            border:
-                1px solid #dce5f2;
-
-            border-radius: 10px;
-
-            outline: none;
-
-            font-family: inherit;
-        }
-
-
-        .chat-input button {
-
-            width: 42px;
-
-            border: 0;
-
-            border-radius: 10px;
-
-            color: white;
-
-            background:
-                var(--blue);
-
-            cursor: pointer;
-        }
-
-    /* =========================================================
-
-       FOOTER
-
-       ========================================================= */
-
-    .footer {
-
-      background:
-
-        var(--white);
-
-      border-top:
-
-        1px solid var(--border);
-
-      padding:
-
-        55px 0 22px;
-
-    }
-
-
-
-    .footer-grid {
-
-      display:
-
-        grid;
-
-      grid-template-columns:
-
-        1.6fr 1fr 1fr 1fr;
-
-      gap:
-
-        45px;
-
-    }
-
-
-
-    .footer-brand {
-
-      color:
-
-        var(--navy);
-
-      font-size:
-
-        18px;
-
-      font-weight:
-
-        800;
-
-    }
-
-
-
-    .footer-intro {
-
-      max-width:
-
-        310px;
-
-      margin-top:
-
-        10px;
-
-      color:
-
-        var(--muted);
-
-      font-size:
-
-        12px;
-
-    }
-
-
-
-    .footer-heading {
-
-      color:
-
-        var(--navy);
-
-      font-size:
-
-        12px;
-
-      font-weight:
-
-        800;
-
-      margin-bottom:
-
-        12px;
-
-    }
-
-
-
-    .footer-links {
-
-      display:
-
-        grid;
-
-      gap:
-
-        7px;
-
-    }
-
-
-
-    .footer-links a {
-
-      color:
-
-        var(--muted);
-
-      font-size:
-
-        12px;
-
-      transition:
-
-        color .2s ease;
-
-    }
-
-
-
-    .footer-links a:hover {
-
-      color:
-
-        var(--blue);
-
-    }
-
-
-
-    .footer-bottom {
-
-      display:
-
-        flex;
-
-      justify-content:
-
-        space-between;
-
-      gap:
-
-        20px;
-
-      margin-top:
-
-        45px;
-
-      padding-top:
-
-        18px;
-
-      border-top:
-
-        1px solid var(--border);
-
-      color:
-
-        var(--muted);
-
-      font-size:
-
-        11px;
-
-    }
-
-
-
-    /* =========================================================
-
-       SCROLL REVEAL
-
-       IMPORTANT:
-
-       NO translateY.
-
-       This prevents the page from visually moving upward.
-
-       ========================================================= */
-
-    .reveal {
-
-      opacity:
-
-        0;
-
-      transition:
-
-        opacity .55s ease;
-
-    }
-
-
-
-    .reveal.visible {
-
-      opacity:
-
-        1;
-
-    }
-
-
-
-    /* =========================================================
-
-       RESPONSIVE — TABLET
-
-       ========================================================= */
-
-    @media (max-width: 900px) {
-
-      .nav-links {
-
-        position: fixed;
-
-        top:
-
-          var(--total-top-space);
-
-        left:
-
-          20px;
-
-        right:
-
-          20px;
-
-        display:
-
-          none;
-
-        flex-direction:
-
-          column;
-
-        align-items:
-
-          stretch;
-
-        padding:
-
-          12px;
-
-        background:
-
-          var(--white);
-
-        border:
-
-          1px solid var(--border);
-
-        border-radius:
-
-          14px;
-
-        box-shadow:
-
-          var(--shadow);
-
-      }
-
-
-
-      .nav-links.open {
-
-        display:
-
-          flex;
-
-      }
-
-
-
-      .nav-links a {
-
-        padding:
-
-          12px;
-
-      }
-
-
-
-      .nav-connect {
-
-        margin-left:
-
-          0;
-
-        text-align:
-
-          center;
-
-      }
-
-
-
-      .menu-toggle {
-
-        display:
-
-          block;
-
-      }
-
-
-
-      .hero-grid {
-
-        grid-template-columns:
-
-          1fr;
-
-        gap:
-
-          50px;
-
-      }
-
-
-
-      .hero-visual {
-
-        margin-inline:
-
-          auto;
-
-      }
-
-
-
-      .topics-grid,
-
-      .project-grid {
-
-        grid-template-columns:
-
-          repeat(2, 1fr);
-
-      }
-
-
-
-      .footer-grid {
-
-        grid-template-columns:
-
-          repeat(2, 1fr);
-
-      }
-
-    }
-
-
-
-    /* =========================================================
-
-       RESPONSIVE — MOBILE
-
-       ========================================================= */
-
-    @media (max-width: 620px) {
-
-      :root {
-
-        --header-height:
-
-          68px;
-
-        --ticker-height:
-
-          38px;
-
-        --total-top-space:
-
-          106px;
-
-      }
-
-
-
-      .container {
-
-        width:
-
-          min(
-
-            100% - 28px,
-
-            var(--max-width)
-
-          );
-
-      }
-
-
-
-      .site-header {
-
-        height:
-
-          var(--header-height);
-
-      }
-
-
-
-      .nav {
-
-        height:
-
-          var(--header-height);
-
-      }
-
-
-
-      .whats-new {
-
-        top:
-
-          var(--header-height);
-
-        height:
-
-          var(--ticker-height);
-
-      }
-
-
-
-      .whats-label {
-
-        flex-basis:
-
-          126px;
-
-        padding:
-
-          0 10px 0 14px;
-
-        font-size:
-
-          9px;
-
-        letter-spacing:
-
-          .10em;
-
-      }
-
-
-
-      .ticker-sequence {
-
-        gap:
-
-          20px;
-
-        padding-right:
-
-          20px;
-
-      }
-
-
-
-      .ticker-item {
-
-        font-size:
-
-          11px;
-
-      }
-
-
-
-      .ticker-item::after {
-
-        margin-left:
-
-          20px;
-
-      }
-
-
-
-      .ticker-track {
-
-        animation-duration:
-
-          26s;
-
-      }
-
-
-
-      .nav-links {
-
-        top:
-
-          var(--total-top-space);
-
-        left:
-
-          14px;
-
-        right:
-
-          14px;
-
-      }
-
-
-
-      .brand-name {
-
-        font-size:
-
-          13px;
-
-      }
-
-
-
-      .brand-role {
-
-        font-size:
-
-          10px;
-
-      }
-
-
-
-      .brand-mark {
-
-        width:
-
-          38px;
-
-        height:
-
-          38px;
-
-      }
-
-
-
-      .hero {
-
-        padding:
-
-          60px 0;
-
-      }
-
-
-
-      .hero h1 {
-
-        font-size:
-
-          43px;
-
-        white-space:
-
-          normal;
-
-      }
-
-
-
-      .hero-subtitle {
-
-        font-size:
-
-          17px;
-
-      }
-
-
-
-      .hero-description {
-
-        font-size:
-
-          14px;
-
-      }
-
-
-
-      .section {
-
-        padding:
-
-          60px 0;
-
-      }
-
-
-
-      .section-header {
-
-        display:
-
-          block;
-
-      }
-
-
-
-      .section-link {
-
-        display:
-
-          inline-block;
-
-        margin-top:
-
-          15px;
-
-      }
-
-
-
-      .topics-grid,
-
-      .project-grid {
-
-        grid-template-columns:
-
-          1fr;
-
-      }
-
-
-
-      .publication {
-
-        grid-template-columns:
-
-          55px 1fr;
-
-        gap:
-
-          15px;
-
-      }
-
-
-
-      .publication-badge {
-
-        grid-column:
-
-          2;
-
-        width:
-
-          max-content;
-
-      }
-
-
-
-      .footer-grid {
-
-        grid-template-columns:
-
-          1fr 1fr;
-
-        gap:
-
-          30px 20px;
-
-      }
-
-
-
-      .footer-grid > :first-child {
-
-        grid-column:
-
-          1 / -1;
-
-      }
-
-
-
-      .footer-bottom {
-
-        display:
-
-          block;
-
-      }
-
-
-
-      .footer-bottom span {
-
-        display:
-
-          block;
-
-        margin-top:
-
-          5px;
-
-      }
-
-    }
-
-
-
-    /* =========================================================
-
-       REDUCED MOTION
-
-       ========================================================= */
-
-    @media (prefers-reduced-motion: reduce) {
-
-      html {
-
-        scroll-behavior:
-
-          auto;
-
-      }
-
-
-
-      *,
-
-      *::before,
-
-      *::after {
-
-        animation-duration:
-
-          .01ms !important;
-
-        animation-iteration-count:
-
-          1 !important;
-
-        transition-duration:
-
-          .01ms !important;
-
-      }
-
-
-
-      .reveal {
-
-        opacity:
-
-          1;
-
-      }
-
-
-
-      .ticker-track {
-
-        animation:
-
-          none;
-
-      }
-
-    }
-
-  </style>
-
+<link href="style.css" rel="stylesheet"/>
 </head>
-
-
-
 <body>
-
-
-
-  <!-- =========================================================
+<!-- =========================================================
 
        HEADER
 
        ========================================================= -->
-
-  <header class="site-header">
-
-    <div class="container nav">
-
-
-
-      <a href="index.html" class="brand">
-
-        <div class="brand-mark">
+<header class="site-header">
+<div class="container nav">
+<a class="brand" href="index.html">
+<div class="brand-mark">
 
           MM
 
         </div>
-
-        <div>
-
-          <div class="brand-name">
+<div>
+<div class="brand-name">
 
             MICHAEL MAHESH
 
           </div>
-
-          <div class="brand-role">
+<div class="brand-role">
 
             Professor · Artificial Intelligence
 
           </div>
-
-        </div>
-
-      </a>
-
-
-
-      <button
-
-        class="menu-toggle"
-
-        id="menuToggle"
-
-        aria-label="Open navigation"
-
-        aria-expanded="false"
-
-        type="button">
+</div>
+</a>
+<button aria-expanded="false" aria-label="Open navigation" class="menu-toggle" id="menuToggle" type="button">
 
         ☰
 
       </button>
-
-
-
-      <nav
-
-        class="nav-links"
-
-        id="navLinks"
-
-        aria-label="Main navigation">
-
-        <a href="research.html">
+<nav aria-label="Main navigation" class="nav-links" id="navLinks">
+<a href="research.html">
 
           Research
 
         </a>
-
-        <a href="projects.html">
+<a href="projects.html">
 
           Projects
 
         </a>
-
-        <a href="learning.html">
+<a href="learning.html">
 
           Learning
 
         </a>
-
-        <a
-
-          href="https://courses.skilldux.com/course"
-
-          target="_blank"
-
-          rel="noopener noreferrer">
+<a href="https://courses.skilldux.com/course" rel="noopener noreferrer" target="_blank">
 
           Courses
 
         </a>
-
-        <a href="publications.html">
+<a href="publications.html">
 
           Publications
 
         </a>
-
-        <a href="about.html">
+<a href="about.html">
 
           About
 
         </a>
-
-        <a
-
-          href="connect.html"
-
-          class="nav-connect">
+<a class="nav-connect" href="connect.html">
 
           Connect
 
         </a>
-
-      </nav>
-
-    </div>
-
-  </header>
-
-
-
-  <!-- =========================================================
+</nav>
+</div>
+</header>
+<!-- =========================================================
 
        WHAT'S NEW
 
        FIXED LABEL + MOVING CONTENT
 
        ========================================================= -->
+<div aria-label="What's New" class="whats-new">
+<!-- FIXED: this label never moves -->
+<div class="whats-label">
 
-  <div
-
-    class="whats-new"
-
-    aria-label="What's New">
-
-    <!-- FIXED: this label never moves -->
-
-    <div class="whats-label">
-
-      ⚡&nbsp; WHAT'S NEW
+      ⚡  WHAT'S NEW
 
     </div>
-
-    <!-- MOVING: only this window scrolls -->
-
-    <div class="ticker-window">
-
-      <div class="ticker-track">
-
-        <div class="ticker-sequence">
-
-          <span class="ticker-item">
+<!-- MOVING: only this window scrolls -->
+<div class="ticker-window">
+<div class="ticker-track">
+<div class="ticker-sequence">
+<span class="ticker-item">
 
             New Scientific Reports Publication
 
           </span>
-
-          <span class="ticker-item">
+<span class="ticker-item">
 
             Rice Leaf Disease Classification
 
           </span>
-
-          <span class="ticker-item">
+<span class="ticker-item">
 
             HyResCN-Net · Hybrid ResCNN
 
           </span>
-
-          <span class="ticker-item">
+<span class="ticker-item">
 
             Published 06 September 2026
 
           </span>
-
-          <span class="ticker-item">
+<span class="ticker-item">
 
             Nature Portfolio · Scientific Reports
 
           </span>
-
-          <span class="ticker-item">
+<span class="ticker-item">
 
             DOI 10.1038/s41598-026-68755-5
 
           </span>
-
-        </div>
-
-
-
-        <!-- Exact duplicate for seamless continuous movement -->
-
-        <div class="ticker-sequence">
-
-          <span class="ticker-item">
+</div>
+<!-- Exact duplicate for seamless continuous movement -->
+<div class="ticker-sequence">
+<span class="ticker-item">
 
             New Scientific Reports Publication
 
           </span>
-
-          <span class="ticker-item">
+<span class="ticker-item">
 
             Rice Leaf Disease Classification
 
           </span>
-
-          <span class="ticker-item">
+<span class="ticker-item">
 
             HyResCN-Net · Hybrid ResCNN
 
           </span>
-
-          <span class="ticker-item">
+<span class="ticker-item">
 
             Published 06 September 2026
 
           </span>
-
-          <span class="ticker-item">
+<span class="ticker-item">
 
             Nature Portfolio · Scientific Reports
 
           </span>
-
-          <span class="ticker-item">
+<span class="ticker-item">
 
             DOI 10.1038/s41598-026-68755-5
 
           </span>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-
-  <!-- =========================================================
+</div>
+</div>
+</div>
+</div>
+<!-- =========================================================
 
        MAIN CONTENT
 
        ========================================================= -->
-
-  <main>
-
-
-
-    <!-- =======================================================
+<main>
+<!-- =======================================================
 
          HERO
 
          ======================================================= -->
-
-    <section class="hero">
-
-      <div class="container hero-grid">
-
-
-
-        <div class="hero-content reveal">
-
-
-
-          <div class="eyebrow">
-
-            <span class="eyebrow-dot"></span>
+<section class="hero">
+<div class="container hero-grid">
+<div class="hero-content reveal">
+<div class="eyebrow">
+<span class="eyebrow-dot"></span>
 
             Professor · Artificial Intelligence
 
           </div>
-
-
-
-          <h1>
+<h1>
 
             Dr. K. Michael <span>Mahesh</span>
-
-          </h1>
-
-
-
-          <div class="hero-subtitle">
+</h1>
+<div class="hero-subtitle">
 
             Professor · AI Researcher · Computer Vision
 
           </div>
-
-
-
-          <p class="hero-description">
+<p class="hero-description">
 
             Researching and building intelligent systems across
 
@@ -3474,138 +217,109 @@
             Medical AI, Image Processing and intelligent transportation.
 
           </p>
-
-
-
-          <div class="hero-actions">
-
-
-
-            <a
-
-              href="research.html"
-
-              class="button button-primary">
+<div class="hero-actions">
+<a class="button button-primary" href="research.html">
 
               Explore Research →
 
             </a>
-
-
-
-            <a
-
-              href="projects.html"
-
-              class="button button-secondary">
+<a class="button button-secondary" href="projects.html">
 
               View Projects →
 
             </a>
-
-
-
-          </div>
-
-
-
-        </div>
-
-
-
-        <div class="hero-visual reveal">
-
-
-
-          <div class="profile-frame">
-
-
-
-            <img
-
-              src="profile.jpg"
-
-              alt="Dr. K. Michael Mahesh"
-
-              class="profile-image"
-
-              loading="eager"
-
-              decoding="async">
-
-
-
-            <div class="profile-caption">
-
-              <strong>
+</div>
+</div>
+<div class="hero-visual reveal">
+<div class="profile-frame">
+<img alt="Dr. K. Michael Mahesh" class="profile-image" decoding="async" loading="eager" src="profile.jpg"/>
+<div class="profile-caption">
+<strong>
 
                 Research · Build · Teach · Share
 
               </strong>
-
-              <span>
+<span>
 
                 Artificial Intelligence &amp; Computer Vision
 
               </span>
-
-            </div>
-
-
-
-          </div>
-
-
-
-        </div>
-
-
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =======================================================
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =======================================================
+         STARTUP APPS & PRODUCT VENTURES
+         ======================================================= -->
+<section class="section" id="startup-apps">
+<div class="container">
+<div class="section-header reveal">
+<div>
+<div class="section-kicker">Startup Lab</div>
+<h2 class="section-title">Our Startup Apps &amp; Products</h2>
+<p class="section-description">
+              Technology products focused on solving everyday problems through practical software and AI.
+            </p>
+</div>
+</div>
+<div class="project-grid">
+<article class="project-card reveal">
+<div class="project-photo project-photo-gateease">
+<img alt="Modern residential community entrance and homes" loading="lazy" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=900&amp;q=85"/>
+<span class="project-photo-tag">COMMUNITY TECH</span>
+</div>
+<div class="project-label">Community Technology · Active Development</div>
+<h3>GateEase</h3>
+<p>A gated-community management platform concept connecting residents, security teams, and community administrators. Planned capabilities include visitor management and streamlined community services.</p>
+<p><strong>Technology:</strong> FastAPI, PostgreSQL, SQLAlchemy and Alembic.</p>
+<span aria-label="GateEase is under development" class="project-link">In Development</span>
+</article>
+<article class="project-card reveal">
+<div class="project-photo project-photo-metrolink">
+<img alt="Passenger train travelling along a railway line" loading="lazy" src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&amp;fit=crop&amp;w=900&amp;q=85"/>
+<span class="project-photo-tag">SMART MOBILITY</span>
+</div>
+<div class="project-label">Mobility Technology · Research &amp; Planning</div>
+<h3>MetroLink AI</h3>
+<p>A multilingual metro-travel companion planned to help Chennai commuters understand routes, interchanges, station counts, exits and last-mile options.</p>
+<p><strong>Planned languages:</strong> Tamil, English and Hindi.</p>
+<span aria-label="MetroLink AI is in research and planning" class="project-link">Research &amp; Planning</span>
+</article>
+<article class="project-card reveal">
+<div class="project-photo project-photo-personalai">
+<img alt="Abstract artificial intelligence neural network visualization" loading="lazy" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&amp;fit=crop&amp;w=900&amp;q=85"/>
+<span class="project-photo-tag">PERSONAL AI</span>
+</div>
+<div class="project-label">Agentic AI · Prototype</div>
+<h3>PersonalAI</h3>
+<p>A privacy-focused personal AI assistant concept designed to provide a chat interface and connect to locally running language and vision-language models. The goal is to explore useful AI-agent workflows while keeping inference on the user's own computer where supported.</p>
+<p><strong>Technology explored:</strong> FastAPI, Uvicorn and Ollama.</p>
+<span aria-label="PersonalAI is a prototype" class="project-link">Prototype</span>
+</article>
+</div>
+</div>
+</section>
+<!-- =======================================================
 
          EXPLORE TOPICS
 
          ======================================================= -->
-
-    <section class="section">
-
-
-
-      <div class="container">
-
-
-
-        <div class="section-header reveal">
-
-
-
-          <div>
-
-
-
-            <div class="section-kicker">
+<section class="section">
+<div class="container">
+<div class="section-header reveal">
+<div>
+<div class="section-kicker">
 
               Explore
 
             </div>
-
-
-
-            <h2 class="section-title">
+<h2 class="section-title">
 
               Topics I Work With
 
             </h2>
-
-
-
-            <p class="section-description">
+<p class="section-description">
 
               A broad learning and research map covering the
 
@@ -3614,544 +328,163 @@
               my teaching and research.
 
             </p>
-
-
-
-          </div>
-
-
-
-          <a
-
-            href="learning.html"
-
-            class="section-link">
+</div>
+<a class="section-link" href="learning.html">
 
             Explore Learning →
 
           </a>
-
-
-
-        </div>
-
-
-
-        <div class="topics-grid">
-
-
-
-          <a
-
-            href="learning.html#python"
-
-            class="topic-card reveal">
-
-            <div class="topic-icon">
-
-              🐍
-
-            </div>
-
-            <h3>
-
-              Python
-
-            </h3>
-
-            <p>
-
-              Programming for AI, data analysis and intelligent applications.
-
-            </p>
-
-            <span class="topic-arrow">
-
-              ↗
-
-            </span>
-
-          </a>
-
-
-
-          <a
-
-            href="learning.html#machine-learning"
-
-            class="topic-card reveal">
-
-            <div class="topic-icon">
-
-              🤖
-
-            </div>
-
-            <h3>
-
-              Machine Learning
-
-            </h3>
-
-            <p>
-
-              ML algorithms, models, optimization and practical applications.
-
-            </p>
-
-            <span class="topic-arrow">
-
-              ↗
-
-            </span>
-
-          </a>
-
-
-
-          <a
-
-            href="deep-learning.html"
-
-            class="topic-card reveal">
-
-            <div class="topic-icon">
-
-              🧠
-
-            </div>
-
-            <h3>
-
-              Deep Learning
-
-            </h3>
-
-            <p>
-
-              Neural networks, architectures, training and intelligent models.
-
-            </p>
-
-            <span class="topic-arrow">
-
-              ↗
-
-            </span>
-
-          </a>
-
-
-
-          <a
-
-            href="learning.html#data-science"
-
-            class="topic-card reveal">
-
-            <div class="topic-icon">
-
-              📊
-
-            </div>
-
-            <h3>
-
-              Data Science
-
-            </h3>
-
-            <p>
-
-              Data analysis, visualization and data-driven intelligence.
-
-            </p>
-
-            <span class="topic-arrow">
-
-              ↗
-
-            </span>
-
-          </a>
-
-
-
-          <a
-
-            href="digital-image-processing.html"
-
-            class="topic-card reveal">
-
-            <div class="topic-icon">
-
-              🖼
-
-            </div>
-
-            <h3>
-
-              Digital Image Processing
-
-            </h3>
-
-            <p>
-
-              Image fundamentals, enhancement, filtering, segmentation, morphology and compression.
-
-            </p>
-
-            <span class="topic-arrow">
-
-              ↗
-
-            </span>
-
-          </a>
-
-
-
-          <a
-
-            href="research.html#computer-vision"
-
-            class="topic-card reveal">
-
-            <div class="topic-icon">
-
-              👁
-
-            </div>
-
-            <h3>
-
-              Computer Vision
-
-            </h3>
-
-            <p>
-
-              Image understanding, visual recognition and intelligent perception.
-
-            </p>
-
-            <span class="topic-arrow">
-
-              ↗
-
-            </span>
-
-          </a>
-
-
-
-          <a
-
-            href="research.html#object-detection"
-
-            class="topic-card reveal">
-
-            <div class="topic-icon">
-
-              🎯
-
-            </div>
-
-            <h3>
-
-              Object Detection
-
-            </h3>
-
-            <p>
-
-              Detection, recognition, localization and visual tracking.
-
-            </p>
-
-            <span class="topic-arrow">
-
-              ↗
-
-            </span>
-
-          </a>
-
-
-
-          <a
-
-            href="research.html#generative-ai"
-
-            class="topic-card reveal">
-
-            <div class="topic-icon">
-
-              ✨
-
-            </div>
-
-            <h3>
-
-              Generative AI
-
-            </h3>
-
-            <p>
-
-              LLMs, RAG, agents and emerging generative AI applications.
-
-            </p>
-
-            <span class="topic-arrow">
-
-              ↗
-
-            </span>
-
-          </a>
-
-
-
-          <a
-
-            href="research.html#medical-ai"
-
-            class="topic-card reveal">
-
-            <div class="topic-icon">
-
-              🏥
-
-            </div>
-
-            <h3>
-
-              Medical AI
-
-            </h3>
-
-            <p>
-
-              Medical imaging, healthcare intelligence and biomedical applications.
-
-            </p>
-
-            <span class="topic-arrow">
-
-              ↗
-
-            </span>
-
-          </a>
-
-
-
-          <a
-
-            href="research.html#adas"
-
-            class="topic-card reveal">
-
-            <div class="topic-icon">
-
-              🚗
-
-            </div>
-
-            <h3>
-
-              ADAS &amp; Intelligent Systems
-
-            </h3>
-
-            <p>
-
-              Intelligent transportation, perception and decision systems.
-
-            </p>
-
-            <span class="topic-arrow">
-
-              ↗
-
-            </span>
-
-          </a>
-
-
-
-          <a
-
-            href="learning.html#education"
-
-            class="topic-card reveal">
-
-            <div class="topic-icon">
-
-              🎓
-
-            </div>
-
-            <h3>
-
-              AI Education
-
-            </h3>
-
-            <p>
-
-              Teaching, learning resources, student guidance and technical training.
-
-            </p>
-
-            <span class="topic-arrow">
-
-              ↗
-
-            </span>
-
-          </a>
-
-
-
-          <a
-
-            href="research.html#innovation"
-
-            class="topic-card reveal">
-
-            <div class="topic-icon">
-
-              🔬
-
-            </div>
-
-            <h3>
-
-              Research &amp; Innovation
-
-            </h3>
-
-            <p>
-
-              New ideas, technical discoveries, inventions and research directions.
-
-            </p>
-
-            <span class="topic-arrow">
-
-              ↗
-
-            </span>
-
-          </a>
-
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =======================================================
+</div>
+<div class="topics-grid topics-image-grid">
+<a class="topic-card topic-photo-card reveal" href="learning.html#python">
+<div class="topic-photo-wrap">
+<img alt="Python technology visual" loading="lazy" src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&amp;fit=crop&amp;w=900&amp;q=85"/>
+<span class="topic-photo-shade"></span>
+<span class="topic-photo-tag">PYTHON</span>
+</div>
+<div class="topic-card-content">
+<h3>Python</h3>
+<p>Programming, automation and practical tools for AI development.</p>
+<span aria-hidden="true" class="topic-arrow">↗</span>
+</div>
+</a>
+<a class="topic-card topic-photo-card reveal" href="learning.html#machine-learning">
+<div class="topic-photo-wrap">
+<img alt="Machine Learning technology visual" loading="lazy" src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&amp;fit=crop&amp;w=900&amp;q=85"/>
+<span class="topic-photo-shade"></span>
+<span class="topic-photo-tag">MACHINE LEARNING</span>
+</div>
+<div class="topic-card-content">
+<h3>Machine Learning</h3>
+<p>Algorithms that learn patterns from data and support prediction.</p>
+<span aria-hidden="true" class="topic-arrow">↗</span>
+</div>
+</a>
+<a class="topic-card topic-photo-card reveal" href="deep-learning.html">
+<div class="topic-photo-wrap">
+<img alt="Deep Learning technology visual" loading="lazy" src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&amp;fit=crop&amp;w=900&amp;q=85"/>
+<span class="topic-photo-shade"></span>
+<span class="topic-photo-tag">DEEP LEARNING</span>
+</div>
+<div class="topic-card-content">
+<h3>Deep Learning</h3>
+<p>Neural networks, model architectures and training workflows.</p>
+<span aria-hidden="true" class="topic-arrow">↗</span>
+</div>
+</a>
+<a class="topic-card topic-photo-card reveal" href="digital-image-processing.html">
+<div class="topic-photo-wrap">
+<img alt="Digital Image Processing technology visual" loading="lazy" src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&amp;fit=crop&amp;w=900&amp;q=85"/>
+<span class="topic-photo-shade"></span>
+<span class="topic-photo-tag">IMAGE PROCESSING</span>
+</div>
+<div class="topic-card-content">
+<h3>Digital Image Processing</h3>
+<p>Image enhancement, filtering, segmentation and visual analysis.</p>
+<span aria-hidden="true" class="topic-arrow">↗</span>
+</div>
+</a>
+<a class="topic-card topic-photo-card reveal" href="research.html#computer-vision">
+<div class="topic-photo-wrap">
+<img alt="Computer Vision technology visual" loading="lazy" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&amp;fit=crop&amp;w=900&amp;q=85"/>
+<span class="topic-photo-shade"></span>
+<span class="topic-photo-tag">COMPUTER VISION</span>
+</div>
+<div class="topic-card-content">
+<h3>Computer Vision</h3>
+<p>Help machines interpret images, video and visual scenes.</p>
+<span aria-hidden="true" class="topic-arrow">↗</span>
+</div>
+</a>
+<a class="topic-card topic-photo-card reveal" href="research.html#object-detection">
+<div class="topic-photo-wrap">
+<img alt="Object Detection technology visual" loading="lazy" src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&amp;fit=crop&amp;w=900&amp;q=85"/>
+<span class="topic-photo-shade"></span>
+<span class="topic-photo-tag">OBJECT DETECTION</span>
+</div>
+<div class="topic-card-content">
+<h3>Object Detection</h3>
+<p>Locate and identify objects in images and video streams.</p>
+<span aria-hidden="true" class="topic-arrow">↗</span>
+</div>
+</a>
+<a class="topic-card topic-photo-card reveal" href="research.html#generative-ai">
+<div class="topic-photo-wrap">
+<img alt="Generative AI technology visual" loading="lazy" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&amp;fit=crop&amp;w=900&amp;q=85"/>
+<span class="topic-photo-shade"></span>
+<span class="topic-photo-tag">GENERATIVE AI</span>
+</div>
+<div class="topic-card-content">
+<h3>Generative AI</h3>
+<p>Create and explore content with modern generative models and LLMs.</p>
+<span aria-hidden="true" class="topic-arrow">↗</span>
+</div>
+</a>
+<a class="topic-card topic-photo-card reveal" href="research.html#agentic-ai">
+<div class="topic-photo-wrap">
+<img alt="Agentic AI technology visual" loading="lazy" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&amp;fit=crop&amp;w=900&amp;q=85"/>
+<span class="topic-photo-shade"></span>
+<span class="topic-photo-tag">AGENTIC AI</span>
+</div>
+<div class="topic-card-content">
+<h3>Agentic AI</h3>
+<p>Explore AI agents that plan, use tools and complete multi-step tasks.</p>
+<span aria-hidden="true" class="topic-arrow">↗</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- =======================================================
 
          PROJECT LAB
 
          ======================================================= -->
-
-    <section class="section section-white">
-
-
-
-      <div class="container">
-
-
-
-        <div class="section-header reveal">
-
-
-
-          <div>
-
-
-
-            <div class="section-kicker">
+<section class="section section-white">
+<div class="container">
+<div class="section-header reveal">
+<div>
+<div class="section-kicker">
 
               Project Lab
 
             </div>
-
-
-
-            <h2 class="section-title">
+<h2 class="section-title">
 
               Selected Projects
 
             </h2>
-
-
-
-            <p class="section-description">
+<p class="section-description">
 
               A small selection of research and technical projects.
 
               The complete repository collection lives on the Projects page.
 
             </p>
-
-
-
-          </div>
-
-
-
-          <a
-
-            href="projects.html"
-
-            class="section-link">
+</div>
+<a class="section-link" href="projects.html">
 
             View All Projects →
 
           </a>
-
-
-
-        </div>
-
-
-
-        <div class="project-grid">
-
-
-
-          <!-- PROJECT 01 -->
-
-          <article class="project-card reveal">
-
-
-
-            <div class="project-label">
+</div>
+<div class="project-grid">
+<!-- PROJECT 01 -->
+<article class="project-card project-card-with-image reveal">
+<div class="project-image-inset">
+<img alt="Computer vision facial landmark and face morphing demonstration" loading="lazy" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=900&amp;q=85"/>
+</div>
+<div class="project-label">
 
               Computer Vision
 
             </div>
-
-
-
-            <h3>
+<h3>
 
               FaceMorph-OpenCV
 
             </h3>
-
-
-
-            <p>
+<p>
 
               Facial landmark detection and face morphing using
 
@@ -4160,429 +493,237 @@
               experimentation.
 
             </p>
-
-
-
-            <div class="project-tags">
-
-              <span class="project-tag">
+<div class="project-tags">
+<span class="project-tag">
 
                 OpenCV
 
               </span>
-
-              <span class="project-tag">
+<span class="project-tag">
 
                 MediaPipe
 
               </span>
-
-              <span class="project-tag">
+<span class="project-tag">
 
                 Python
 
               </span>
-
-            </div>
-
-
-
-            <a
-
-              href="FaceMorph-OpenCV.html"
-
-              class="project-link">
+</div>
+<a class="project-link" href="FaceMorph-OpenCV.html">
 
               View Project →
 
             </a>
-
-
-
-          </article>
-
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-
-
-    <!-- =======================================================
+</article>
+</div>
+</div>
+</section>
+<!-- =======================================================
 
          ONLINE COURSE
 
          SKILLDUX — DR. K. MICHAEL MAHESH
 
          ======================================================= -->
-
-    <section class="section">
-
-      <div class="container">
-
-        <div class="section-header reveal">
-
-          <div>
-
-            <div class="section-kicker">
+<section class="section">
+<div class="container">
+<div class="section-header reveal">
+<div>
+<div class="section-kicker">
 
               Online Course
 
             </div>
-
-            <h2 class="section-title">
+<h2 class="section-title">
 
               My Courses on SkillDux
 
             </h2>
-
-            <p class="section-description">
+<p class="section-description">
 
               Online courses by Dr. K. Michael Mahesh in
 
               Deep Learning, Computer Vision and Explainable AI.
 
             </p>
-
-          </div>
-
-          <a
-
-            href="https://courses.skilldux.com/course"
-
-            target="_blank"
-
-            rel="noopener noreferrer"
-
-            class="section-link">
+</div>
+<a class="section-link" href="https://courses.skilldux.com/course" rel="noopener noreferrer" target="_blank">
 
             View My Courses →
 
           </a>
-
-        </div>
-
-        <div class="projects-grid">
-
-          <article class="project-card reveal">
-
-            <div class="project-content">
-
-              <div class="project-kicker">
+</div>
+<div class="projects-grid">
+<article class="project-card reveal">
+<div class="course-photo"><img alt="Grad-CAM explainable AI heatmap visualization" loading="lazy" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&amp;fit=crop&amp;w=900&amp;q=85"/></div>
+<div class="project-content">
+<div class="project-kicker">
 
                 Explainable AI · Deep Learning
 
               </div>
-
-              <h3>
+<h3>
 
                 Gradient-weighted Class Activation Mapping
 
               </h3>
-
-              <p>
+<p>
 
                 Grad-CAM — Visual Model Explainability With Case Studies.
 
               </p>
-
-              <div class="project-tags">
-
-                <span class="project-tag">Grad-CAM</span>
-
-                <span class="project-tag">XAI</span>
-
-                <span class="project-tag">Deep Learning</span>
-
-              </div>
-
-              <a
-
-                href="https://courses.skilldux.com/course"
-
-                target="_blank"
-
-                rel="noopener noreferrer"
-
-                class="project-link">
+<div class="project-tags">
+<span class="project-tag">Grad-CAM</span>
+<span class="project-tag">XAI</span>
+<span class="project-tag">Deep Learning</span>
+</div>
+<a class="project-link" href="https://courses.skilldux.com/course" rel="noopener noreferrer" target="_blank">
 
                 View Course →
 
               </a>
-
-            </div>
-
-          </article>
-
-
-
-          <article class="project-card reveal">
-
-            <div class="project-content">
-
-              <div class="project-kicker">
+</div>
+</article>
+<article class="project-card reveal">
+<div class="course-photo"><img alt="Image segmentation visualization with colored pixel masks" loading="lazy" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&amp;fit=crop&amp;w=900&amp;q=85"/></div>
+<div class="project-content">
+<div class="project-kicker">
 
                 Computer Vision · Image Processing
 
               </div>
-
-              <h3>
+<h3>
 
                 Image Segmentation
 
               </h3>
-
-              <p>
+<p>
 
                 Mastering Image Segmentation With SegNet:
 
                 From Pixels To Boundaries.
 
               </p>
-
-              <div class="project-tags">
-
-                <span class="project-tag">SegNet</span>
-
-                <span class="project-tag">Segmentation</span>
-
-                <span class="project-tag">Image Processing</span>
-
-              </div>
-
-              <a
-
-                href="https://courses.skilldux.com/course"
-
-                target="_blank"
-
-                rel="noopener noreferrer"
-
-                class="project-link">
+<div class="project-tags">
+<span class="project-tag">SegNet</span>
+<span class="project-tag">Segmentation</span>
+<span class="project-tag">Image Processing</span>
+</div>
+<a class="project-link" href="https://courses.skilldux.com/course" rel="noopener noreferrer" target="_blank">
 
                 View Course →
 
               </a>
-
-            </div>
-
-          </article>
-
-
-
-          <article class="project-card reveal">
-
-            <div class="project-content">
-
-              <div class="project-kicker">
+</div>
+</article>
+<article class="project-card reveal">
+<div class="course-photo"><img alt="Convolutional neural network and deep learning visualization" loading="lazy" src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&amp;fit=crop&amp;w=900&amp;q=85"/></div>
+<div class="project-content">
+<div class="project-kicker">
 
                 Deep Learning · Computer Vision
 
               </div>
-
-              <h3>
+<h3>
 
                 Convolutional Neural Network
 
               </h3>
-
-              <p>
+<p>
 
                 From basics to mastery with numerical examples
 
                 and case studies.
 
               </p>
-
-              <div class="project-tags">
-
-                <span class="project-tag">CNN</span>
-
-                <span class="project-tag">Deep Learning</span>
-
-                <span class="project-tag">Computer Vision</span>
-
-              </div>
-
-              <a
-
-                href="https://courses.skilldux.com/course"
-
-                target="_blank"
-
-                rel="noopener noreferrer"
-
-                class="project-link">
+<div class="project-tags">
+<span class="project-tag">CNN</span>
+<span class="project-tag">Deep Learning</span>
+<span class="project-tag">Computer Vision</span>
+</div>
+<a class="project-link" href="https://courses.skilldux.com/course" rel="noopener noreferrer" target="_blank">
 
                 View Course →
 
               </a>
-
-            </div>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =======================================================
-         STARTUP APPS & PRODUCT VENTURES
-         ======================================================= -->
-    <section class="section" id="startup-apps">
-      <div class="container">
-        <div class="section-header reveal">
-          <div>
-            <div class="section-kicker">Startup Lab</div>
-            <h2 class="section-title">Our Startup Apps &amp; Products</h2>
-            <p class="section-description">
-              Technology products focused on solving everyday problems through practical software and AI.
-            </p>
-          </div>
-        </div>
-
-        <div class="project-grid">
-          <article class="project-card reveal">
-            <div class="project-label">Community Technology · Active Development</div>
-            <h3>GateEase</h3>
-            <p>A gated-community management platform concept connecting residents, security teams, and community administrators. Planned capabilities include visitor management and streamlined community services.</p>
-            <p><strong>Technology:</strong> FastAPI, PostgreSQL, SQLAlchemy and Alembic.</p>
-            <span class="project-link" aria-label="GateEase is under development">In Development</span>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-label">Mobility Technology · Research &amp; Planning</div>
-            <h3>MetroLink AI</h3>
-            <p>A multilingual metro-travel companion planned to help Chennai commuters understand routes, interchanges, station counts, exits and last-mile options.</p>
-            <p><strong>Planned languages:</strong> Tamil, English and Hindi.</p>
-            <span class="project-link" aria-label="MetroLink AI is in research and planning">Research &amp; Planning</span>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-label">Agentic AI · Prototype</div>
-            <h3>PersonalAI</h3>
-            <p>A privacy-focused personal AI assistant concept designed to provide a chat interface and connect to locally running language and vision-language models. The goal is to explore useful AI-agent workflows while keeping inference on the user's own computer where supported.</p>
-            <p><strong>Technology explored:</strong> FastAPI, Uvicorn and Ollama.</p>
-            <span class="project-link" aria-label="PersonalAI is a prototype">Prototype</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- =======================================================
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- =======================================================
 
          SELECTED PUBLICATIONS
 
          ======================================================= -->
-
-    <section class="section">
-
-
-
-      <div class="container">
-
-
-
-        <div class="section-header reveal">
-
-
-
-          <div>
-
-
-
-            <div class="section-kicker">
+<section class="section">
+<div class="container">
+<div class="section-header reveal">
+<div>
+<div class="section-kicker">
 
               Research Output
 
             </div>
-
-
-
-            <h2 class="section-title">
+<h2 class="section-title">
 
               Selected Publications
 
             </h2>
-
-
-
-            <p class="section-description">
+<p class="section-description">
 
               Selected research contributions across ADAS,
 
               medical imaging, computer vision and intelligent systems.
 
             </p>
-
-
-
-          </div>
-
-
-
-          <a
-
-            href="publications.html"
-
-            class="section-link">
+</div>
+<a class="section-link" href="publications.html">
 
             View All Publications →
 
           </a>
+</div>
+<div class="publication-list">
+<!-- PUBLICATION 01 — SPRINGER NATURE PUBLICATION -->
 
+<!-- PUBLICATION 02 — EXISTING SCIENTIFIC REPORTS PUBLICATION -->
 
+<!-- PUBLICATION 02 -->
 
-        </div>
+<!-- PUBLICATION 03 -->
 
+<!-- PUBLICATION 04 -->
 
+<!-- PUBLICATION 05 -->
 
-        <div class="publication-list">
-
-
-
-          <!-- PUBLICATION 01 — SPRINGER NATURE PUBLICATION -->
-          <article class="publication reveal">
-
-            <div class="publication-year">
+<article class="publication reveal">
+<div class="publication-year">
               2026
             </div>
-            <div>
-              <h3>
+<div>
+<h3>
                 Deep Kronecker NasNet-based AB-M Tree for Storage and Efficient
                 Retrieval Model using Blockchain
               </h3>
-              <div class="publication-meta">
-                Iranian Journal of Science and Technology, Transactions of Electrical Engineering · Springer Nature
+<div class="publication-meta">
+                Iranian Journal of Science and Technology, Transactions of Electrical Engineering
               </div>
-            </div>
-            <div class="publication-actions">
-              <span class="publication-badge" title="Journal quartile: Q3 (SCImago 2025)">Q3</span>
-              <a href="https://doi.org/10.1007/s40998-026-01236-7" target="_blank" rel="noopener noreferrer" class="publication-badge">Read Paper →</a>
-            </div>
-          </article>
-
-          <!-- PUBLICATION 02 — EXISTING SCIENTIFIC REPORTS PUBLICATION -->
-          <article class="publication reveal">
-
-            <div class="publication-year">
+<div class="publisher-wordmark publisher-springer" role="img" aria-label="Springer Nature publisher">SPRINGER <span>NATURE</span></div>
+</div>
+<div class="publication-actions">
+<span class="publication-badge" title="Journal quartile: Q3 (SCImago 2025)">Q3</span>
+<a class="publication-badge" href="https://doi.org/10.1007/s40998-026-01236-7" rel="noopener noreferrer" target="_blank">Read Paper →</a>
+</div>
+</article><article class="publication reveal">
+<div class="publication-year">
 
               2026
 
             </div>
-
-            <div>
-
-              <h3>
+<div>
+<h3>
 
                 Deep learning technique for rice leaf disease classification
 
@@ -4591,85 +732,54 @@
                 Neural Network
 
               </h3>
-
-              <div class="publication-meta">
-
+<div class="publication-meta">
                 Scientific Reports · Nature Portfolio
-
               </div>
-
-            </div>
-
-            <div class="publication-actions">
-              <span class="publication-badge" title="Journal quartile: Q1 (SCImago 2025)">Q1</span>
-              <a href="https://doi.org/10.1038/s41598-026-68755-5" target="_blank" rel="noopener noreferrer" class="publication-badge">Read Paper →</a>
-            </div>
-
-          </article>
-
-
-
-          <!-- PUBLICATION 02 -->
-
-          <article class="publication reveal">
-
-
-
-            <div class="publication-year">
+<div class="publisher-wordmark publisher-nature" role="img" aria-label="Nature Portfolio publisher">nature <span>portfolio</span></div>
+</div>
+<div class="publication-actions">
+<span class="publication-badge" title="Journal quartile: Q1 (SCImago 2025)">Q1</span>
+<a class="publication-badge" href="https://doi.org/10.1038/s41598-026-68755-5" rel="noopener noreferrer" target="_blank">Read Paper →</a>
+</div>
+</article><article class="publication reveal">
+<div class="publication-year">2025</div>
+<div>
+<h3>MICH-Net: A Novel Deep Learning Architecture With African Fire Hawk Optimization for Steering Angle Prediction in an Advanced Driver Assistance System</h3>
+<div class="publication-meta">IEEE Transactions on Intelligent Transportation Systems · IEEE</div>
+<div class="publisher-wordmark publisher-ieee" role="img" aria-label="IEEE publisher">IEEE</div>
+</div>
+<div class="publication-actions">
+<span class="publication-badge" title="Journal quartile: Q1">Q1</span>
+<a class="publication-badge" href="https://doi.org/10.1109/tits.2025.3623324" rel="noopener noreferrer" target="_blank">Read Paper →</a>
+</div>
+</article><article class="publication reveal">
+<div class="publication-year">
 
               2025
 
             </div>
-
-
-
-            <div>
-
-              <h3>
+<div>
+<h3>
 
                 Multi-Modal Lung Cancer Detection Using Pyramidal
 
                 Cascade Neuro-Fuzzy Fractional Network
 
               </h3>
-
-
-
-              <div class="publication-meta">
-
-                Cancer Investigation
-
+<div class="publication-meta">
+                Cancer Investigation · Taylor &amp; Francis
               </div>
-
-            </div>
-
-
-
-            <span class="publication-badge" title="Journal quartile: Q3">Q3</span>
-
-
-
-          </article>
-
-
-
-          <!-- PUBLICATION 03 -->
-
-          <article class="publication reveal">
-
-
-
-            <div class="publication-year">
+<div class="publisher-wordmark publisher-taylor" role="img" aria-label="Taylor and Francis publisher">Taylor &amp; Francis</div>
+</div>
+<span class="publication-badge" title="Journal quartile: Q3">Q3</span>
+</article><article class="publication reveal">
+<div class="publication-year">
 
               2025
 
             </div>
-
-
-
-            <div>
-
-              <h3>
+<div>
+<h3>
 
                 PMFHNet: Parallel Maxout Feed Harmonic Network for
 
@@ -4678,88 +788,40 @@
                 Low Light Conditions
 
               </h3>
-
-
-
-              <div class="publication-meta">
-
-                Imaging Science Journal
-
+<div class="publication-meta">
+                The Imaging Science Journal · Taylor &amp; Francis
               </div>
-
-            </div>
-
-
-
-            <span class="publication-badge" title="Journal quartile: Q2">Q2</span>
-
-
-
-          </article>
-
-
-
-          <!-- PUBLICATION 04 -->
-
-          <article class="publication reveal">
-
-
-
-            <div class="publication-year">
+<div class="publisher-wordmark publisher-taylor" role="img" aria-label="Taylor and Francis publisher">Taylor &amp; Francis</div>
+</div>
+<span class="publication-badge" title="Journal quartile: Q2">Q2</span>
+</article><article class="publication reveal">
+<div class="publication-year">
 
               2023
 
             </div>
-
-
-
-            <div>
-
-              <h3>
+<div>
+<h3>
 
                 DeepDrive: Braking Decision-Making Approach Using
 
                 Optimized GAN and Deep CNN for ADAS
 
               </h3>
-
-
-
-              <div class="publication-meta">
-
+<div class="publication-meta">
                 Engineering Applications of Artificial Intelligence
-
               </div>
-
-            </div>
-
-
-
-            <span class="publication-badge" title="Journal quartile: Q1">Q1</span>
-
-
-
-          </article>
-
-
-
-          <!-- PUBLICATION 05 -->
-
-          <article class="publication reveal">
-
-
-
-            <div class="publication-year">
+<div class="publisher-wordmark publisher-elsevier" role="img" aria-label="Elsevier publisher"><span class="elsevier-mark">E</span> ELSEVIER</div>
+</div>
+<span class="publication-badge" title="Journal quartile: Q1">Q1</span>
+</article><article class="publication reveal">
+<div class="publication-year">
 
               2020
 
             </div>
-
-
-
-            <div>
-
-              <h3>
+<div>
+<h3>
 
                 DeepJoint Segmentation for Classification of
 
@@ -4768,72 +830,32 @@
                 Multimodal MRI Images
 
               </h3>
-
-
-
-              <div class="publication-meta">
-
-                IET Image Processing
-
+<div class="publication-meta">
+                IET Image Processing · IET / Wiley
               </div>
-
-            </div>
-
-
-
-            <span class="publication-badge" title="Journal quartile: Q2">Q2</span>
-
-
-
-          </article>
-
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-  </main>
-
-
-
-  <!-- =========================================================
+<div class="publisher-wordmark publisher-wiley" role="img" aria-label="Wiley and IET publisher">WILEY <span>· IET</span></div>
+</div>
+<span class="publication-badge" title="Journal quartile: Q2">Q2</span>
+</article></div>
+</div>
+</section>
+</main>
+<!-- =========================================================
 
        FOOTER
 
        ========================================================= -->
-
-  <footer class="footer">
-
-
-
-    <div class="container">
-
-
-
-      <div class="footer-grid">
-
-
-
-        <!-- IDENTITY -->
-
-        <div>
-
-
-
-          <div class="footer-brand">
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<!-- IDENTITY -->
+<div>
+<div class="footer-brand">
 
             Dr. K. Michael Mahesh
 
           </div>
-
-
-
-          <p class="footer-intro">
+<p class="footer-intro">
 
             Professor and researcher working across Artificial
 
@@ -4842,196 +864,100 @@
             Medical AI and intelligent systems.
 
           </p>
-
-
-
-        </div>
-
-
-
-        <!-- EXPLORE -->
-
-        <div>
-
-
-
-          <div class="footer-heading">
+</div>
+<!-- EXPLORE -->
+<div>
+<div class="footer-heading">
 
             Explore
 
           </div>
-
-
-
-          <div class="footer-links">
-
-            <a href="research.html">
+<div class="footer-links">
+<a href="research.html">
 
               Research
 
             </a>
-
-            <a href="projects.html">
+<a href="projects.html">
 
               Projects
 
             </a>
-
-            <a href="learning.html">
+<a href="learning.html">
 
               Learning
 
             </a>
-
-            <a href="publications.html">
+<a href="publications.html">
 
               Publications
 
             </a>
-
-          </div>
-
-
-
-        </div>
-
-
-
-        <!-- ACADEMIC -->
-
-        <div>
-
-
-
-          <div class="footer-heading">
+</div>
+</div>
+<!-- ACADEMIC -->
+<div>
+<div class="footer-heading">
 
             Academic
 
           </div>
-
-
-
-          <div class="footer-links">
-
-            <a href="about.html">
+<div class="footer-links">
+<a href="about.html">
 
               About
 
             </a>
-
-            <a href="connect.html">
+<a href="connect.html">
 
               Connect
 
             </a>
-
-            <a
-
-              href="https://orcid.org/0000-0002-9948-5743"
-
-              target="_blank"
-
-              rel="noopener noreferrer">
+<a href="https://orcid.org/0000-0002-9948-5743" rel="noopener noreferrer" target="_blank">
 
               ORCID
 
             </a>
-
-            <a
-
-              href="https://scholar.google.com/citations?user=YxDQyvIAAAAJ&hl=en"
-
-              target="_blank"
-
-              rel="noopener noreferrer">
+<a href="https://scholar.google.com/citations?user=YxDQyvIAAAAJ&amp;hl=en" rel="noopener noreferrer" target="_blank">
 
               Google Scholar
 
             </a>
-
-          </div>
-
-
-
-        </div>
-
-
-
-        <!-- CONNECT -->
-
-        <div>
-
-
-
-          <div class="footer-heading">
+</div>
+</div>
+<!-- CONNECT -->
+<div>
+<div class="footer-heading">
 
             Connect
 
           </div>
-
-
-
-          <div class="footer-links">
-
-            <a
-
-              href="https://github.com/michaelmahesh"
-
-              target="_blank"
-
-              rel="noopener noreferrer">
+<div class="footer-links">
+<a href="https://github.com/michaelmahesh" rel="noopener noreferrer" target="_blank">
 
               GitHub
 
             </a>
-
-
-
-            <a
-
-              href="https://www.linkedin.com/in/michaelmahesh"
-
-              target="_blank"
-
-              rel="noopener noreferrer">
+<a href="https://www.linkedin.com/in/michaelmahesh" rel="noopener noreferrer" target="_blank">
 
               LinkedIn
 
             </a>
-
-
-
-            <a href="mailto:michaelmaheshk@gmail.com">
+<a href="mailto:michaelmaheshk@gmail.com">
 
               Email
 
             </a>
-
-
-
-            <a href="privacy.html">
+<a href="privacy.html">
 
               Privacy
 
             </a>
-
-          </div>
-
-
-
-        </div>
-
-
-
-      </div>
-
-
-
-      <div class="footer-bottom">
-
-
-
-        <span>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<span>
 
           ©
 
@@ -5042,59 +968,29 @@
           All rights reserved.
 
         </span>
-
-
-
-        <span>
+<span>
 
           Artificial Intelligence · Research · Teaching · Innovation
 
         </span>
-
-
-
-      </div>
-
-
-
-    </div>
-
-  </footer>
-
-
-
-  <!-- =========================================================
+</div>
+</div>
+</footer>
+<!-- =========================================================
 
        JAVASCRIPT
 
        ========================================================= -->
-
-  
-
-  <!-- =====================================================
+<!-- =====================================================
          CHATBOT
     ====================================================== -->
-
-    <div
-        class="chatbot"
-        id="chatbot"
-    >
-
-
-        <button
-            class="chat-close"
-            id="chatClose"
-            aria-label="Close chat"
-        >
+<div class="chatbot" id="chatbot">
+<button aria-label="Close chat" class="chat-close" id="chatClose">
             ×
         </button>
-
-
-        <!-- MINI MESSAGE -->
-
-        <div class="chat-message">
-
-            <strong>
+<!-- MINI MESSAGE -->
+<div class="chat-message">
+<strong>
                 Hello 👋
             </strong>
 
@@ -5102,31 +998,18 @@
             projects and AI learning resources.
 
         </div>
-
-
-        <!-- CHAT WINDOW -->
-
-        <div class="chat-window">
-
-            <div class="chat-header">
-
-                <strong>
+<!-- CHAT WINDOW -->
+<div class="chat-window">
+<div class="chat-header">
+<strong>
                     AI Research Assistant
                 </strong>
-
-                <span>
+<span>
                     Ask about research, projects or learning
                 </span>
-
-            </div>
-
-
-            <div
-                class="chat-body"
-                id="chatBody"
-            >
-
-                <div class="bot-message">
+</div>
+<div class="chat-body" id="chatBody">
+<div class="bot-message">
 
                     Hello! 👋
                     I can help you explore
@@ -5135,806 +1018,34 @@
                     and learning resources.
 
                 </div>
-
-
-                <div class="bot-message">
+<div class="bot-message">
 
                     Try asking:
 
-                    <br><br>
+                    <br/><br/>
 
                     • What are the projects?
-                    <br>
+                    <br/>
                     • What is FaceMorph?
-                    <br>
+                    <br/>
                     • What can I learn?
-                    <br>
+                    <br/>
                     • What are the research areas?
 
                 </div>
-
-            </div>
-
-
-            <div class="chat-input">
-
-                <input
-                    type="text"
-                    id="chatInput"
-                    placeholder="Ask something..."
-                    autocomplete="off"
-                >
-
-                <button
-                    id="chatSend"
-                    aria-label="Send"
-                >
+</div>
+<div class="chat-input">
+<input autocomplete="off" id="chatInput" placeholder="Ask something..." type="text"/>
+<button aria-label="Send" id="chatSend">
                     →
                 </button>
-
-            </div>
-
-        </div>
-
-
-        <!-- CHAT BUTTON -->
-
-        <button
-            class="chat-avatar"
-            id="chatAvatar"
-            aria-label="Open AI assistant"
-        >
+</div>
+</div>
+<!-- CHAT BUTTON -->
+<button aria-label="Open AI assistant" class="chat-avatar" id="chatAvatar">
             🤖
         </button>
-
-    </div>
-
-  <script>
-
-    /* =====================================================
-           CHATBOT
-        ====================================================== */
-
-        const chatbot =
-            document.getElementById(
-                "chatbot"
-            );
-
-
-        const chatAvatar =
-            document.getElementById(
-                "chatAvatar"
-            );
-
-
-        const chatClose =
-            document.getElementById(
-                "chatClose"
-            );
-
-
-        const chatInput =
-            document.getElementById(
-                "chatInput"
-            );
-
-
-        const chatSend =
-            document.getElementById(
-                "chatSend"
-            );
-
-
-        const chatBody =
-            document.getElementById(
-                "chatBody"
-            );
-
-
-        chatAvatar.addEventListener(
-            "click",
-            () => {
-
-                chatbot.classList.toggle(
-                    "active"
-                );
-
-                chatbot.classList.add(
-                    "open"
-                );
-
-                document.querySelector(
-                    ".chat-message"
-                ).style.display = "none";
-
-            }
-        );
-
-
-        chatClose.addEventListener(
-            "click",
-            () => {
-
-                chatbot.classList.remove(
-                    "active"
-                );
-
-                chatbot.classList.remove(
-                    "open"
-                );
-
-            }
-        );
-
-
-
-        /* =====================================================
-           CHAT RESPONSES
-        ====================================================== */
-
-        function getBotResponse(
-            question
-        ) {
-
-            const q =
-                question.toLowerCase();
-
-
-            if (
-                q.includes("project") ||
-                q.includes("facemorph")
-            ) {
-
-                return `
-                    The featured project on this
-                    website is <strong>FaceMorph</strong>,
-                    a Computer Vision project using
-                    Python, OpenCV and MediaPipe.
-                `;
-            }
-
-
-            if (
-                q.includes("research") ||
-                q.includes("area")
-            ) {
-
-                return `
-                    The research areas include
-                    Artificial Intelligence, Deep Learning,
-                    Computer Vision, Medical Imaging,
-                    Image Processing and intelligent
-                    transportation.
-                `;
-            }
-
-
-            if (
-                q.includes("learn") ||
-                q.includes("course") ||
-                q.includes("python")
-            ) {
-
-                return `
-                    The Learning Hub covers Python,
-                    Machine Learning, Deep Learning,
-                    Digital Image Processing,
-                    Computer Vision, Object Detection,
-                    Generative AI and ADAS.
-                `;
-            }
-
-
-            if (
-                q.includes("publication") ||
-                q.includes("paper")
-            ) {
-
-                return `
-                    You can explore selected publications
-                    covering medical imaging, ADAS,
-                    computer vision and deep learning
-                    in the Publications section.
-                `;
-            }
-
-
-            if (
-                q.includes("blog")
-            ) {
-
-                return `
-                    The AI Blog contains practical articles
-                    on Ensemble Learning, Transformers,
-                    YOLO, Vision Transformers, Generative AI,
-                    Deepfakes and more.
-                `;
-            }
-
-
-            if (
-                q.includes("contact") ||
-                q.includes("email")
-            ) {
-
-                return `
-                    Please use the Contact page from
-                    the navigation menu to get in touch.
-                `;
-            }
-
-
-            return `
-                I can help you explore the website.
-                Try asking about research, projects,
-                FaceMorph, publications, blog or learning.
-            `;
-        }
-
-
-
-        function addMessage(
-            message,
-            type
-        ) {
-
-            const div =
-                document.createElement(
-                    "div"
-                );
-
-            div.className =
-                type === "user"
-                    ? "user-message"
-                    : "bot-message";
-
-            div.innerHTML =
-                message;
-
-            chatBody.appendChild(
-                div
-            );
-
-            chatBody.scrollTop =
-                chatBody.scrollHeight;
-        }
-
-
-
-        function sendChat() {
-
-            const question =
-                chatInput.value.trim();
-
-
-            if (!question) return;
-
-
-            addMessage(
-                question,
-                "user"
-            );
-
-
-            chatInput.value = "";
-
-
-            setTimeout(
-                () => {
-
-                    addMessage(
-                        getBotResponse(
-                            question
-                        ),
-                        "bot"
-                    );
-
-                },
-                450
-            );
-        }
-
-
-        chatSend.addEventListener(
-            "click",
-            sendChat
-        );
-
-
-        chatInput.addEventListener(
-            "keydown",
-            event => {
-
-                if (
-                    event.key === "Enter"
-                ) {
-
-                    sendChat();
-
-                }
-
-            }
-        );
-
-
-
-        /* =====================================================
-           MOBILE CHAT
-        ====================================================== */
-
-        document.addEventListener(
-            "click",
-            event => {
-
-                if (
-                    !chatbot.contains(
-                        event.target
-                    )
-                ) {
-
-                    chatbot.classList.remove(
-                        "active"
-                    );
-
-                }
-
-            }
-        );
-
-
-
-    /* =========================================================
-
-       MOBILE NAVIGATION
-
-       ========================================================= */
-
-    const menuToggle =
-
-      document.getElementById("menuToggle");
-
-    const navLinks =
-
-      document.getElementById("navLinks");
-
-
-
-    if (menuToggle && navLinks) {
-
-
-
-      menuToggle.addEventListener(
-
-        "click",
-
-        () => {
-
-          const isOpen =
-
-            navLinks.classList.toggle("open");
-
-
-
-          menuToggle.setAttribute(
-
-            "aria-expanded",
-
-            String(isOpen)
-
-          );
-
-
-
-          menuToggle.setAttribute(
-
-            "aria-label",
-
-            isOpen
-
-              ? "Close navigation"
-
-              : "Open navigation"
-
-          );
-
-
-
-          menuToggle.textContent =
-
-            isOpen
-
-              ? "×"
-
-              : "☰";
-
-        }
-
-      );
-
-
-
-      navLinks
-
-        .querySelectorAll("a")
-
-        .forEach(link => {
-
-          link.addEventListener(
-
-            "click",
-
-            () => {
-
-              navLinks.classList.remove(
-
-                "open"
-
-              );
-
-
-
-              menuToggle.setAttribute(
-
-                "aria-expanded",
-
-                "false"
-
-              );
-
-
-
-              menuToggle.setAttribute(
-
-                "aria-label",
-
-                "Open navigation"
-
-              );
-
-
-
-              menuToggle.textContent =
-
-                "☰";
-
-            }
-
-          );
-
-        });
-
-    }
-
-
-
-    /* =========================================================
-
-       SCROLL REVEAL
-
-       ONLY OPACITY — NO POSITION MOVEMENT
-
-       ========================================================= */
-
-    const revealElements =
-
-      document.querySelectorAll(".reveal");
-
-
-
-    if (
-
-      "IntersectionObserver"
-
-      in window
-
-    ) {
-
-
-
-      const revealObserver =
-
-        new IntersectionObserver(
-
-          entries => {
-
-            entries.forEach(entry => {
-
-              if (
-
-                entry.isIntersecting
-
-              ) {
-
-                entry.target.classList.add(
-
-                  "visible"
-
-                );
-
-
-
-                revealObserver.unobserve(
-
-                  entry.target
-
-                );
-
-              }
-
-            });
-
-          },
-
-          {
-
-            threshold: 0.10
-
-          }
-
-        );
-
-
-
-      revealElements.forEach(
-
-        element => {
-
-          revealObserver.observe(
-
-            element
-
-          );
-
-        }
-
-      );
-
-
-
-    } else {
-
-      /* Fallback for older browsers */
-
-      revealElements.forEach(
-
-        element => {
-
-          element.classList.add(
-
-            "visible"
-
-          );
-
-        }
-
-      );
-
-    }
-
-
-
-    /* =========================================================
-
-       CURRENT YEAR
-
-       ========================================================= */
-
-    const yearElement =
-
-      document.getElementById("year");
-
-
-
-    if (yearElement) {
-
-      yearElement.textContent =
-
-        new Date().getFullYear();
-
-    }
-
-
-
-    /* =========================================================
-
-       ACTIVE NAVIGATION
-
-       ========================================================= */
-
-    const currentPage =
-
-      window.location.pathname
-
-        .split("/")
-
-        .pop() || "index.html";
-
-
-
-    document
-
-      .querySelectorAll(".nav-links a")
-
-      .forEach(link => {
-
-        const href =
-
-          link.getAttribute("href");
-
-
-
-        if (
-
-          href === currentPage
-
-        ) {
-
-          link.classList.add(
-
-            "active"
-
-          );
-
-        }
-
-      });
-
-
-
-    /* =========================================================
-
-       ESCAPE KEY CLOSES MOBILE MENU
-
-       ========================================================= */
-
-    document.addEventListener(
-
-      "keydown",
-
-      event => {
-
-        if (
-
-          event.key === "Escape"
-
-          &&
-
-          navLinks
-
-        ) {
-
-          navLinks.classList.remove(
-
-            "open"
-
-          );
-
-
-
-          menuToggle?.setAttribute(
-
-            "aria-expanded",
-
-            "false"
-
-          );
-
-
-
-          menuToggle?.setAttribute(
-
-            "aria-label",
-
-            "Open navigation"
-
-          );
-
-
-
-          if (menuToggle) {
-
-            menuToggle.textContent =
-
-              "☰";
-
-          }
-
-        }
-
-      }
-
-    );
-
-
-
-    /* =========================================================
-
-       CLOSE MOBILE MENU WHEN CLICKING OUTSIDE
-
-       ========================================================= */
-
-    document.addEventListener(
-
-      "click",
-
-      event => {
-
-        if (
-
-          !navLinks ||
-
-          !menuToggle
-
-        ) {
-
-          return;
-
-        }
-
-
-
-        const clickedInsideNav =
-
-          navLinks.contains(event.target);
-
-
-
-        const clickedButton =
-
-          menuToggle.contains(event.target);
-
-
-
-        if (
-
-          !clickedInsideNav &&
-
-          !clickedButton
-
-        ) {
-
-          navLinks.classList.remove(
-
-            "open"
-
-          );
-
-
-
-          menuToggle.setAttribute(
-
-            "aria-expanded",
-
-            "false"
-
-          );
-
-
-
-          menuToggle.setAttribute(
-
-            "aria-label",
-
-            "Open navigation"
-
-          );
-
-
-
-          menuToggle.textContent =
-
-            "☰";
-
-        }
-
-      }
-
-    );
-
-  </script>
-
-
-
+</div>
+<script src="script.js"></script>
 </body>
-
 </html>
