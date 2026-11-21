@@ -1,0 +1,43 @@
+
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import WhatsNew from '../components/WhatsNew.astro';
+import AcademicHighlights from '../components/AcademicHighlights.astro';
+import InsightsSection from '../components/InsightsSection.astro';
+import StartupSection from '../components/StartupSection.astro';
+import ProjectSection from '../components/ProjectSection.astro';
+import PublicationSection from '../components/PublicationSection.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<MainLayout>
+  <Header />
+
+  <main>
+    <!-- 1. Hero / Academic Profile -->
+    <Hero />
+
+    <!-- 2. Latest Updates -->
+    <WhatsNew />
+
+    <!-- 3. Academic & Research Highlights -->
+    <AcademicHighlights />
+
+    <!-- 4. Research Insights & Blogs -->
+    <InsightsSection />
+
+    <!-- 5. Innovation & Startup Portfolio -->
+    <StartupSection />
+
+    <!-- 6. Research & Technical Projects -->
+    <ProjectSection />
+
+    <!-- 7. Complete Research Publications -->
+    <PublicationSection />
+  </main>
+
+  <!-- 8. Connect & Contact -->
+  <Footer />
+</MainLayout>

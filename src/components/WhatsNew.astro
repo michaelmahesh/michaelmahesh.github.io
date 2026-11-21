@@ -1,0 +1,85 @@
+<section class="updates">
+  <div class="container updates-inner">
+    <div class="updates-heading">
+      <span class="live-dot"></span>
+      <span class="updates-label">WHAT'S NEW</span>
+    </div>
+
+    <div class="updates-content">
+      <p>Explore the latest developments across research, innovation, teaching and technology.</p>
+    </div>
+
+    <a href="/insights/" class="updates-link">
+      Explore Updates <span aria-hidden="true">→</span>
+    </a>
+  </div>
+</section>
+
+<style>
+  .updates {
+    border-bottom: 1px solid #e2e8f0;
+    background: #f8fafc;
+  }
+
+  .updates-inner {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .updates-heading {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    flex-shrink: 0;
+  }
+
+  .live-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4f46e5;
+  }
+
+  .updates-label {
+    color: #172554;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+  }
+
+  .updates-content {
+    flex: 1;
+  }
+
+  .updates-content p {
+    margin: 0;
+    color: #64748b;
+    font-size: 13px;
+  }
+
+  .updates-link {
+    flex-shrink: 0;
+    color: #4f46e5;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  @media(max-width: 640px) {
+    .updates-inner {
+      flex-wrap: wrap;
+      gap: 8px 16px;
+      padding-block: 15px;
+    }
+
+    .updates-content {
+      order: 3;
+      flex-basis: 100%;
+    }
+
+    .updates-link {
+      margin-left: auto;
+    }
+  }
+</style>

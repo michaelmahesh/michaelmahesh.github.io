@@ -1,0 +1,45 @@
+---
+import MainLayout from "../../../layouts/MainLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+const project = {
+  "title": "GeoSentinel",
+  "category": "Environmental AI · Research",
+  "description": "An explainable foundation-model direction for multi-temporal environmental change detection using satellite imagery.",
+  "tags": [
+    "AI",
+    "Foundation Models",
+    "Remote Sensing"
+  ],
+  "repo": "https://github.com/michaelmahesh/GeoSentinel",
+  "overview": "GeoSentinel explores explainable analysis of multi-temporal satellite imagery for environmental change detection. The project is positioned around combining temporal visual information with foundation-model approaches.",
+  "focus": [
+    "Multi-temporal satellite imagery",
+    "Environmental change detection",
+    "Explainable AI and foundation-model approaches"
+  ]
+};
+---
+<MainLayout title={`${project.title} | Projects | Dr. K. Michael Mahesh`} description={project.description}>
+  <Header />
+  <main class="detail-page">
+    <a class="back-link" href="/projects/">← Back to Projects</a>
+    <div class="detail-kicker">{project.category}</div>
+    <h1>{project.title}</h1>
+    <p class="lead">{project.description}</p>
+    <div class="detail-tags">{project.tags.map(tag => <span>{tag}</span>)}</div>
+    <section class="detail-panel">
+      <h2>Project overview</h2>
+      <p>{project.overview}</p>
+      <h2>Technical focus</h2>
+      <ul>{project.focus.map(item => <li>{item}</li>)}</ul>
+      {project.pipeline && <><h2>Workflow</h2><div class="pipeline">{project.pipeline.map((step, index) => <><span>{step}</span>{index < project.pipeline.length - 1 && <b>→</b>}</>)}</div></>}
+    </section>
+    {project.gallery && <section class="gallery"><h2>Visual walkthrough</h2><div class="gallery-grid">{project.gallery.map(item => <figure><img src={item.src} alt={item.alt} loading="lazy" /><figcaption>{item.caption}</figcaption></figure>)}</div></section>}
+    <div class="detail-actions"><a class="repo-button" href={project.repo} target="_blank" rel="noopener noreferrer">View source on GitHub ↗</a><a class="back-button" href="/projects/">All projects</a></div>
+  </main>
+  <Footer />
+</MainLayout>
+<style>
+.detail-page{max-width:960px;margin:auto;padding:52px 26px 90px;color:#1e293b}.back-link{font-size:13px;color:#64748b;text-decoration:none;font-weight:700}.detail-kicker{margin-top:52px;color:#4338ca;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.detail-page h1{font-size:clamp(38px,6vw,58px);line-height:1.08;letter-spacing:-.05em;color:#172554;margin:14px 0}.lead{font-size:17px;line-height:1.8;color:#64748b;max-width:760px}.detail-tags{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 40px}.detail-tags span{padding:7px 10px;background:#eef2ff;border-radius:6px;color:#4338ca;font-size:11px;font-weight:700}.detail-panel{border:1px solid #e2e8f0;border-radius:14px;padding:30px;background:#fff}.detail-panel h2,.gallery h2{font-size:21px;color:#172554;margin:0 0 12px}.detail-panel h2:not(:first-child){margin-top:30px}.detail-panel p,.detail-panel li{font-size:14px;line-height:1.85;color:#475569}.detail-panel ul{padding-left:20px}.pipeline{display:flex;align-items:center;flex-wrap:wrap;gap:10px}.pipeline span{background:#f1f5f9;padding:10px 12px;border-radius:7px;font-size:12px;font-weight:700;color:#334155}.pipeline b{color:#818cf8}.gallery{margin-top:42px}.gallery-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:18px}.gallery figure{margin:0;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;background:#f8fafc}.gallery img{width:100%;display:block;aspect-ratio:4/3;object-fit:contain;background:#f1f5f9}.gallery figcaption{padding:12px 14px;color:#64748b;font-size:12px}.detail-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.repo-button,.back-button{padding:13px 17px;border-radius:8px;text-decoration:none;font-size:13px;font-weight:800}.repo-button{background:#3730a3;color:#fff}.back-button{background:#f1f5f9;color:#334155}@media(max-width:600px){.detail-page{padding:32px 20px 64px}.gallery-grid{grid-template-columns:1fr}.detail-panel{padding:22px}}
+</style>

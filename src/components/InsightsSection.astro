@@ -1,0 +1,251 @@
+
+---
+const mediumProfile = 'https://medium.com/@michaelmahesh';
+
+const articles = [
+  {
+    category: 'COMPUTER VISION',
+    title: 'Decode the Image Matrix: A Beginner’s Guide to Image Types in OpenCV',
+    description: 'Understand RGB, grayscale and binary image representations using OpenCV.',
+    image: '/images/blogs/opencv-image-types.png',
+    number: '01',
+    topic: 'OPENCV',
+    href: 'https://medium.com/@michaelmahesh/decode-the-image-matrix-a-beginners-guide-to-image-types-in-opencv-88b8a77f69ae',
+  },
+  {
+    category: 'NATURAL LANGUAGE PROCESSING',
+    title: 'Word Embeddings and Word2Vec Explained: A Beginner-Friendly Guide to Modern NLP',
+    description: 'Discover how machines represent words and learn semantic relationships.',
+    image: '/images/blogs/word2vec-embeddings.png',
+    number: '02',
+    topic: 'WORD2VEC',
+    href: 'https://medium.com/@michaelmahesh/word-embeddings-and-word2vec-explained-a-beginner-friendly-guide-to-modern-nlp-6d83e8bf1937',
+  },
+  {
+    category: 'RESEARCH WRITING',
+    title: 'How to Write a Research Paper: A Step-by-Step Structured Guide',
+    description: 'A structured guide to planning and writing a research paper.',
+    image: '/images/blogs/research-paper-writing.png',
+    number: '03',
+    topic: 'RESEARCH',
+    href: 'https://medium.com/@michaelmahesh/how-to-write-a-research-paper-a-step-by-step-structured-guide-42a1e71e603a',
+  },
+];
+---
+
+<section class="section insights" id="insights">
+  <div class="container">
+    <div class="insights-heading">
+      <div>
+        <span class="section-label">INSIGHTS & STORIES</span>
+        <h2 class="section-title">Quick Blogs</h2>
+        <p class="section-description">
+          Research, tutorials and practical technology insights.
+        </p>
+      </div>
+
+      <a href={mediumProfile} target="_blank" rel="noopener noreferrer" class="view-all">
+        More Articles ↗
+      </a>
+    </div>
+
+    <div class="articles-grid">
+      {articles.map((article) => (
+        <article class="article-card">
+          <a
+            href={article.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="article-cover"
+            aria-label={`Read ${article.title}`}
+          >
+            <img src={article.image} alt={article.topic} loading="lazy" />
+            <span class="cover-number">{article.number}</span>
+            <span class="cover-topic">{article.topic}</span>
+          </a>
+
+          <div class="article-content">
+            <span class="article-category">{article.category}</span>
+            <h3>{article.title}</h3>
+            <p>{article.description}</p>
+
+            <div class="article-meta">
+              <span>Dr. K. Michael Mahesh</span>
+            </div>
+
+            <a
+              href={article.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="read-more"
+            >
+              Read More <span>→</span>
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <div class="insights-footer">
+      <a href={mediumProfile} target="_blank" rel="noopener noreferrer" class="button">
+        Explore More Articles →
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .insights {
+    background: #f8fafc;
+  }
+
+  .insights-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 24px;
+    margin-bottom: 35px;
+  }
+
+  .view-all {
+    color: #4f46e5;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .article-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+    background: #fff;
+    transition: .25s ease;
+  }
+
+  .article-card:hover {
+    transform: translateY(-5px);
+    border-color: #c7d2fe;
+    box-shadow: 0 14px 30px #1725540d;
+  }
+
+  .article-cover {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background: #e0e7ff;
+  }
+
+  .article-cover img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    transition: transform .35s ease;
+  }
+
+  .article-card:hover .article-cover img {
+    transform: scale(1.04);
+  }
+
+  .cover-number,
+  .cover-topic {
+    position: absolute;
+    color: white;
+    background: #172554d9;
+    font-size: 10px;
+    font-weight: 800;
+  }
+
+  .cover-number {
+    top: 12px;
+    left: 12px;
+    padding: 6px 9px;
+    border-radius: 6px;
+  }
+
+  .cover-topic {
+    bottom: 12px;
+    left: 12px;
+    padding: 7px 10px;
+    border-radius: 5px;
+    letter-spacing: .5px;
+  }
+
+  .article-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .article-category {
+    color: #4f46e5;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .6px;
+  }
+
+  .article-content h3 {
+    min-height: 72px;
+    margin: 10px 0;
+    color: #172554;
+    font-family: Manrope, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .article-content p {
+    min-height: 58px;
+    margin: 0 0 18px;
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .article-meta {
+    margin-top: auto;
+    padding-top: 13px;
+    border-top: 1px solid #f1f5f9;
+    color: #64748b;
+    font-size: 11px;
+  }
+
+  .read-more {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    color: #4f46e5;
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .insights-footer {
+    margin-top: 35px;
+    text-align: center;
+  }
+
+  @media (max-width: 1000px) {
+    .articles-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 560px) {
+    .insights-heading {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .articles-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

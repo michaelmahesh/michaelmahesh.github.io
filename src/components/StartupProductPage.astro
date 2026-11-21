@@ -1,0 +1,981 @@
+
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+
+interface Item {
+  title: string;
+  description: string;
+}
+
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
+interface Research {
+  title: string;
+  description: string;
+  focus: string[];
+}
+
+interface Props {
+  name: string;
+  category: string;
+  tagline: string;
+  summary: string;
+  image: string;
+  status: string;
+  audience: string;
+  problem: string;
+  solution: string;
+  features: Item[];
+  benefits: string[];
+  useCases: Item[];
+  differentiators: string[];
+  affordability: string;
+  model: string;
+  roadmap: Item[];
+  faqs: FAQ[];
+  nextStep: string;
+  research?: Research;
+}
+
+const p = Astro.props;
+
+const sections = [
+  { id: 'problem', label: 'The problem', content: p.problem },
+  { id: 'solution', label: 'Our approach', content: p.solution },
+  { id: 'audience', label: 'Who it is for', content: p.audience },
+  { id: 'affordability', label: 'Affordability and pricing', content: p.affordability },
+  { id: 'model', label: 'How to work with us', content: p.model },
+];
+---
+
+<MainLayout title={`${p.name} | Startup Lab`} description={p.summary}>
+  <Header />
+
+  <main class="product-page">
+
+    <!-- HERO -->
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <a class="back" href="/startups/">← Back to Startup Lab</a>
+
+        <p class="eyebrow">{p.category} · STARTUP LAB</p>
+
+        <h1>{p.name}</h1>
+
+        <p class="tagline">{p.tagline}</p>
+
+        <p class="summary">{p.summary}</p>
+
+        <div class="actions">
+          <a class="primary" href="/work-with-us/">
+            Discuss this product <span aria-hidden="true">↗</span>
+          </a>
+          <span class="status">{p.status}</span>
+        </div>
+
+        <a class="explore-link" href="#product-overview">
+          Explore product details <span aria-hidden="true">↓</span>
+        </a>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-image-frame">
+          <img
+            src={p.image}
+            alt={`${p.name} product illustration`}
+            loading="eager"
+            fetchpriority="high"
+          />
+        </div>
+        <p class="image-caption">
+          {p.name} · A practical product innovation initiative
+        </p>
+      </div>
+    </section>
+
+    <!-- PRODUCT OVERVIEW -->
+    <section class="wrap overview" id="product-overview">
+      <div class="section-heading">
+        <p class="eyebrow">PRODUCT OVERVIEW</p>
+        <h2>Designed around real-world needs</h2>
+        <p class="section-intro">
+          Understanding the challenge, the people and the opportunity
+          behind {p.name}.
+        </p>
+      </div>
+
+      <div class="overview-grid">
+        {sections.map((s) => (
+          <article class="info-card" id={s.id}>
+            <h3>{s.label}</h3>
+            <p>{s.content}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="tint">
+      <div class="wrap content-section">
+        <div class="section-heading">
+          <p class="eyebrow">PRODUCT SCOPE</p>
+          <h2>What the product aims to offer</h2>
+          <p class="section-intro">
+            Capabilities planned around the needs of its intended users.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          {p.features.map((f, i) => (
+            <article class="feature">
+              <span class="number">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              <h3>{f.title}</h3>
+              <p>{f.description}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS AND USE CASES -->
+    <section class="wrap content-section two-col">
+      <div>
+        <p class="eyebrow">CUSTOMER VALUE</p>
+        <h2>Benefits that matter</h2>
+
+        <ul class="check-list">
+          {p.benefits.map((b) => <li>{b}</li>)}
+        </ul>
+      </div>
+
+      <div>
+        <p class="eyebrow">IN PRACTICE</p>
+        <h2>Example use cases</h2>
+
+        <div class="stack">
+          {p.useCases.map((u) => (
+            <article class="mini-card">
+              <h3>{u.title}</h3>
+              <p>{u.description}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFFERENTIATION AND ROADMAP -->
+    <section class="tint">
+      <div class="wrap content-section two-col">
+        <div>
+          <p class="eyebrow">WHY THIS INITIATIVE</p>
+          <h2>Our focus</h2>
+
+          <ul class="check-list">
+            {p.differentiators.map((d) => <li>{d}</li>)}
+          </ul>
+        </div>
+
+        <div>
+          <p class="eyebrow">PRODUCT JOURNEY</p>
+          <h2>From discussion to deployment</h2>
+
+          <div class="stack">
+            {p.roadmap.map((r, i) => (
+              <article class="roadmap">
+                <span class="number">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <div>
+                  <h3>{r.title}</h3>
+                  <p>{r.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACADEMIC INNOVATION -->
+    {p.research && (
+      <section class="research-section">
+        <div class="wrap content-section">
+
+          <div class="research-top">
+            <div class="research-heading">
+              <p class="eyebrow">ACADEMIC INNOVATION · AI RESEARCH</p>
+              <h2>{p.research.title}</h2>
+              <p class="research-description">
+                {p.research.description}
+              </p>
+            </div>
+
+            <div class="research-identity">
+              <span class="identity-icon">AI</span>
+              <div>
+                <strong>Academic Research</strong>
+                <span>Professor–Student Innovation</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="research-banner">
+            <div class="research-symbol">
+              <span>HPC</span>
+            </div>
+
+            <div class="research-banner-content">
+              <p class="research-label">
+                RESEARCH AND DEVELOPMENT ECOSYSTEM
+              </p>
+              <h3>From academic research to practical products</h3>
+              <p>
+                Professor–student collaboration, research experimentation
+                and approved access to institutional high-performance
+                computing and GPU resources.
+              </p>
+            </div>
+
+            <div class="gpu-visual">
+              <span class="gpu-icon">▤</span>
+              <strong>HPC</strong>
+              <span>GPU Research</span>
+            </div>
+          </div>
+
+          <div class="research-grid">
+            {p.research.focus.map((item, i) => (
+              <article class="research-card">
+                <span class="number">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <h3>{item}</h3>
+              </article>
+            ))}
+          </div>
+
+          <div class="research-note">
+            <span class="note-icon">ⓘ</span>
+            <p>
+              <strong>Research note:</strong>
+              Research directions are exploratory. AI capabilities will be
+              evaluated and introduced only after suitable development,
+              testing, validation and product-readiness assessment.
+              Use of institutional HPC and GPU facilities is subject to
+              applicable college approvals and access arrangements.
+            </p>
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- FAQ -->
+    <section class="wrap content-section">
+      <div class="section-heading">
+        <p class="eyebrow">COMMON QUESTIONS</p>
+        <h2>Frequently asked questions</h2>
+      </div>
+
+      <div class="faq-list">
+        {p.faqs.map((f) => (
+          <details>
+            <summary>{f.question}</summary>
+            <p>{f.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="wrap final-cta">
+      <p class="eyebrow">LET'S EXPLORE TOGETHER</p>
+      <h2>Have a requirement, idea or partnership opportunity?</h2>
+      <p>{p.nextStep}</p>
+
+      <a class="primary" href="/work-with-us/">
+        Start a conversation <span aria-hidden="true">→</span>
+      </a>
+    </section>
+
+  </main>
+
+  <Footer />
+</MainLayout>
+
+<style>
+  :global(*) {
+    box-sizing: border-box;
+  }
+
+  :global(html) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+  }
+
+  .product-page {
+    color: #17243b;
+    background: #fff;
+  }
+
+  .wrap {
+    width: min(1180px, calc(100% - 64px));
+    margin-inline: auto;
+  }
+
+  /* HERO */
+
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 42px;
+    align-items: center;
+    padding-top: 54px;
+    padding-bottom: 62px;
+  }
+
+  .hero-copy {
+    min-width: 0;
+  }
+
+  .back {
+    display: inline-block;
+    color: #596b89;
+    text-decoration: none;
+    font-size: .9rem;
+    margin-bottom: 27px;
+  }
+
+  .back:hover {
+    color: #5148a8;
+  }
+
+  .eyebrow {
+    font-size: .72rem;
+    letter-spacing: .15em;
+    font-weight: 800;
+    color: #5148a8;
+    margin: 0 0 14px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.2rem, 5.2vw, 5.2rem);
+    letter-spacing: -.065em;
+    line-height: .98;
+    margin: 0 0 19px;
+    color: #17243b;
+  }
+
+  .tagline {
+    font-size: clamp(1.25rem, 2vw, 1.65rem);
+    line-height: 1.35;
+    font-weight: 700;
+    color: #394a68;
+    margin: 0 0 18px;
+  }
+
+  .summary {
+    font-size: 1rem;
+    line-height: 1.85;
+    color: #65728a;
+    max-width: 580px;
+    margin: 0;
+  }
+
+  .actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 27px;
+  }
+
+  .primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: #5148a8;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 22px;
+    border-radius: 10px;
+    font-weight: 750;
+    transition: background .2s ease, transform .2s ease;
+  }
+
+  .primary:hover {
+    background: #39317f;
+    transform: translateY(-2px);
+  }
+
+  .status {
+    font-size: .85rem;
+    color: #52627b;
+    background: #f0f2f8;
+    border-radius: 30px;
+    padding: 10px 15px;
+  }
+
+  .explore-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 22px;
+    color: #5148a8;
+    text-decoration: none;
+    font-size: .88rem;
+    font-weight: 750;
+  }
+
+  .explore-link:hover {
+    gap: 13px;
+  }
+
+  .hero-visual {
+    min-width: 0;
+  }
+
+  .hero-image-frame {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3f4fb;
+    border: 1px solid #e4e7f3;
+    border-radius: 22px;
+    padding: 10px;
+    box-shadow: 0 16px 38px rgba(31, 41, 91, .06);
+  }
+
+  .hero-image-frame img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 14px;
+  }
+
+  .image-caption {
+    text-align: right;
+    font-size: .74rem;
+    color: #8992a5;
+    margin: 11px 5px 0;
+  }
+
+  /* SECTION SPACING */
+
+  .content-section {
+    padding-top: 68px;
+    padding-bottom: 68px;
+  }
+
+  .overview {
+    padding-top: 18px;
+    padding-bottom: 72px;
+  }
+
+  .section-heading {
+    margin-bottom: 28px;
+  }
+
+  .section-heading h2,
+  .content-section h2,
+  .final-cta h2,
+  .research-heading h2 {
+    font-size: clamp(1.85rem, 3.3vw, 2.65rem);
+    letter-spacing: -.045em;
+    line-height: 1.16;
+    margin: 0;
+    color: #17243b;
+  }
+
+  .section-intro {
+    color: #758198;
+    line-height: 1.7;
+    margin: 12px 0 0;
+    max-width: 650px;
+  }
+
+  /* OVERVIEW */
+
+  .overview-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .info-card,
+  .feature,
+  .mini-card {
+    border: 1px solid #e8ebf2;
+    border-radius: 15px;
+    padding: 23px;
+    background: #fff;
+    transition: border-color .2s ease, box-shadow .2s ease;
+  }
+
+  .info-card:hover,
+  .feature:hover,
+  .mini-card:hover {
+    border-color: #c9c7eb;
+    box-shadow: 0 10px 25px rgba(31, 41, 91, .04);
+  }
+
+  .info-card h3,
+  .feature h3,
+  .mini-card h3,
+  .roadmap h3 {
+    font-size: 1.05rem;
+    margin: 0 0 10px;
+    color: #26344f;
+  }
+
+  .info-card p,
+  .feature p,
+  .mini-card p,
+  .roadmap p,
+  .final-cta > p:not(.eyebrow) {
+    color: #68758c;
+    line-height: 1.75;
+    margin: 0;
+    font-size: .94rem;
+  }
+
+  /* FEATURES */
+
+  .tint {
+    background: #f7f8fc;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 17px;
+  }
+
+  .feature {
+    min-height: 170px;
+    padding: 24px;
+  }
+
+  .number {
+    display: inline-flex;
+    color: #7169c3;
+    font-weight: 850;
+    font-size: .78rem;
+    margin-bottom: 16px;
+  }
+
+  /* BENEFITS AND USE CASES */
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
+  }
+
+  .check-list {
+    padding: 0;
+    list-style: none;
+    margin: 24px 0 0;
+    display: grid;
+    gap: 16px;
+  }
+
+  .check-list li {
+    position: relative;
+    padding-left: 29px;
+    color: #596981;
+    line-height: 1.7;
+  }
+
+  .check-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #5b55b5;
+    font-weight: 850;
+  }
+
+  .stack {
+    display: grid;
+    gap: 12px;
+    margin-top: 23px;
+  }
+
+  .mini-card {
+    padding: 18px 20px;
+  }
+
+  .roadmap {
+    display: flex;
+    gap: 18px;
+    padding: 17px 0;
+    border-bottom: 1px solid #e2e5ef;
+  }
+
+  .roadmap .number {
+    margin: 3px 0 0;
+  }
+
+  /* ACADEMIC INNOVATION */
+
+  .research-section {
+    background: linear-gradient(180deg, #f5f6ff 0%, #ffffff 100%);
+    border-top: 1px solid #e9e9f7;
+    border-bottom: 1px solid #e9e9f7;
+  }
+
+  .research-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 35px;
+    margin-bottom: 30px;
+  }
+
+  .research-heading {
+    max-width: 800px;
+  }
+
+  .research-description {
+    color: #65728a;
+    line-height: 1.85;
+    font-size: 1rem;
+    margin: 17px 0 0;
+  }
+
+  .research-identity {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    padding: 13px 17px;
+    background: #fff;
+    border: 1px solid #e4e5f4;
+    border-radius: 14px;
+  }
+
+  .identity-icon {
+    display: grid;
+    place-items: center;
+    width: 43px;
+    height: 43px;
+    border-radius: 12px;
+    background: #eeedff;
+    color: #5148a8;
+    font-weight: 900;
+    font-size: 1.1rem;
+  }
+
+  .research-identity strong,
+  .research-identity span:not(.identity-icon) {
+    display: block;
+  }
+
+  .research-identity strong {
+    font-size: .85rem;
+    color: #26344f;
+  }
+
+  .research-identity div span {
+    font-size: .73rem;
+    color: #7b8497;
+    margin-top: 4px;
+  }
+
+  .research-banner {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 24px;
+    padding: 25px 28px;
+    margin-bottom: 20px;
+    border-radius: 18px;
+    background: #fff;
+    border: 1px solid #e2e5f5;
+    box-shadow: 0 12px 35px rgba(31, 41, 91, .04);
+  }
+
+  .research-symbol {
+    width: 68px;
+    height: 68px;
+    display: grid;
+    place-items: center;
+    border-radius: 18px;
+    background: #eeedff;
+    color: #5148a8;
+    font-size: 1.25rem;
+    font-weight: 900;
+  }
+
+  .research-label {
+    color: #5148a8;
+    font-size: .67rem;
+    font-weight: 850;
+    letter-spacing: .12em;
+    margin: 0 0 8px;
+  }
+
+  .research-banner h3 {
+    font-size: 1.2rem;
+    margin: 0 0 8px;
+    color: #17243b;
+  }
+
+  .research-banner-content > p:last-child {
+    color: #68758c;
+    line-height: 1.7;
+    font-size: .9rem;
+    margin: 0;
+  }
+
+  .gpu-visual {
+    width: 155px;
+    min-height: 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 13px;
+    background: linear-gradient(135deg, #182c62, #5148a8);
+    color: #fff;
+  }
+
+  .gpu-icon {
+    font-size: 1.3rem;
+  }
+
+  .gpu-visual strong {
+    font-size: .95rem;
+  }
+
+  .gpu-visual span:last-child {
+    font-size: .68rem;
+    opacity: .85;
+  }
+
+  .research-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .research-card {
+    background: #fff;
+    border: 1px solid #e5e8f2;
+    border-radius: 15px;
+    padding: 21px;
+    min-height: 130px;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+
+  .research-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(31, 41, 91, .05);
+  }
+
+  .research-card h3 {
+    color: #26344f;
+    font-size: .98rem;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  .research-note {
+    display: flex;
+    gap: 13px;
+    align-items: flex-start;
+    margin-top: 22px;
+    padding: 17px 20px;
+    background: #eeedff;
+    border: 1px solid #deddf7;
+    border-radius: 13px;
+  }
+
+  .note-icon {
+    color: #5148a8;
+    font-size: 1.2rem;
+    font-weight: 900;
+  }
+
+  .research-note p {
+    color: #56627d;
+    font-size: .82rem;
+    line-height: 1.75;
+    margin: 0;
+  }
+
+  /* FAQ */
+
+  .faq-list {
+    display: grid;
+    gap: 11px;
+  }
+
+  .faq-list details {
+    border: 1px solid #e6e9f1;
+    border-radius: 12px;
+    padding: 18px 20px;
+    background: #fff;
+  }
+
+  .faq-list summary {
+    font-weight: 750;
+    cursor: pointer;
+    color: #26344f;
+  }
+
+  .faq-list summary::marker {
+    color: #5148a8;
+  }
+
+  .faq-list details p {
+    color: #68758c;
+    line-height: 1.75;
+    margin: 14px 0 0;
+  }
+
+  /* FINAL CTA */
+
+  .final-cta {
+    margin-top: 15px;
+    margin-bottom: 75px;
+    text-align: center;
+    padding: 55px 30px;
+    background: #f1f1fb;
+    border: 1px solid #e6e5f5;
+    border-radius: 22px;
+  }
+
+  .final-cta > p:not(.eyebrow) {
+    max-width: 740px;
+    margin: 16px auto 24px;
+  }
+
+  .final-cta .primary {
+    margin: auto;
+  }
+
+  /* TABLET */
+
+  @media (max-width: 950px) {
+    .hero {
+      gap: 27px;
+    }
+
+    .research-top {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .research-banner {
+      grid-template-columns: auto 1fr;
+    }
+
+    .gpu-visual {
+      display: none;
+    }
+  }
+
+  /* MOBILE */
+
+  @media (max-width: 700px) {
+    .wrap {
+      width: min(100% - 36px, 560px);
+    }
+
+    .hero {
+      grid-template-columns: 1fr;
+      gap: 27px;
+      padding-top: 32px;
+      padding-bottom: 45px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 12vw, 4rem);
+    }
+
+    .hero-image-frame {
+      aspect-ratio: 16 / 10;
+      border-radius: 17px;
+      padding: 7px;
+    }
+
+    .image-caption {
+      text-align: left;
+    }
+
+    .overview-grid,
+    .feature-grid,
+    .two-col,
+    .research-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .two-col {
+      gap: 42px;
+    }
+
+    .content-section {
+      padding-top: 48px;
+      padding-bottom: 48px;
+    }
+
+    .overview {
+      padding-top: 10px;
+      padding-bottom: 48px;
+    }
+
+    .section-heading {
+      margin-bottom: 22px;
+    }
+
+    .research-banner {
+      grid-template-columns: 1fr;
+      padding: 21px;
+    }
+
+    .research-symbol {
+      width: 55px;
+      height: 55px;
+    }
+
+    .research-identity {
+      width: 100%;
+    }
+
+    .research-note {
+      padding: 15px;
+    }
+
+    .final-cta {
+      padding: 40px 20px;
+      margin-bottom: 50px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :global(html) {
+      scroll-behavior: auto;
+    }
+
+    .primary,
+    .research-card,
+    .info-card,
+    .feature,
+    .mini-card {
+      transition: none;
+    }
+  }
+</style>

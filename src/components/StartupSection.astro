@@ -1,0 +1,179 @@
+---
+const startups = [
+  {
+    name: 'GateEase',
+    category: 'COMMUNITY TECH',
+    description: 'Smarter gated-community operations.',
+    image: '/images/startups/gateease.png',
+    href: '/startups/gateease/',
+  },
+  {
+    name: 'CampusNanba',
+    category: 'EDTECH',
+    description: 'Learning, skills and student innovation.',
+    image: '/images/startups/campusnanba.png',
+    href: '/startups/campusnanba/',
+  },
+  {
+    name: 'AgentFlow AI',
+    category: 'AGENTIC AI',
+    description: 'AI agents and intelligent automation.',
+    image: '/images/startups/agentflow-ai.png',
+    href: '/startups/agentflow-ai/',
+  },
+  {
+    name: 'DeptEase AI',
+    category: 'ACADEMIC TECH',
+    description: 'Simplifying academic workflows.',
+    image: '/images/startups/deptease-ai.png',
+    href: '/startups/deptease-ai/',
+  },
+  {
+    name: 'MetroLink AI',
+    category: 'SMART MOBILITY',
+    description: 'Intelligent mobility and transport solutions.',
+    image: '/images/startups/metrolink-ai.png',
+    href: '/startups/metrolink-ai/',
+  },
+  {
+    name: 'LifeLoop AI',
+    category: 'AI SOLUTIONS',
+    description: 'Connected digital experiences for everyday life.',
+    image: '/images/startups/lifeloop-ai.png',
+    href: '/startups/lifeloop-ai/',
+  },
+  {
+    name: 'AutoMate',
+    category: 'WHATSAPP MOBILITY',
+    description: 'Book an auto directly through WhatsApp.',
+    image: '/images/startups/automate.png',
+    href: '/startups/auto-stand-booking/',
+  },
+];
+---
+
+<section class="section startup-section" id="startups">
+  <div class="container">
+    <div class="section-heading">
+      <span class="section-label">STARTUP LAB · APPLIED INNOVATION</span>
+      <h2 class="section-title">Ideas into Intelligent Solutions.</h2>
+      <p class="section-description">
+        Digital products and emerging technology initiatives.
+      </p>
+    </div>
+
+    <div class="startup-grid">
+      {startups.map((startup, index) => (
+        <article class="startup-card">
+          <a href={startup.href} class="startup-image-link" aria-label={`Explore ${startup.name}`}>
+            <img
+              class="startup-image"
+              src={startup.image}
+              alt={`${startup.name} concept illustration`}
+              loading="lazy"
+              width="400"
+              height="225"
+            />
+          </a>
+          <div class="startup-content">
+            <span class="startup-category">{startup.category}</span>
+            <h3>{startup.name}</h3>
+            <p>{startup.description}</p>
+            <a href={startup.href} class="startup-link">
+              Explore Initiative <span>↗</span>
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <div class="startup-footer">
+      <a href="/startups/" class="button">Explore Startup Portfolio →</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .startup-section { background: #f8fafc; }
+  .section-heading { margin-bottom: 32px; }
+
+  .startup-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .startup-card {
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    background: #fff;
+    transition: .25s ease;
+  }
+
+  .startup-card:hover {
+    transform: translateY(-4px);
+    border-color: #c7d2fe;
+    box-shadow: 0 14px 30px #1725540d;
+  }
+
+  .startup-image-link {
+    display: block;
+    overflow: hidden;
+    background: #eef2ff;
+  }
+
+  .startup-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    transition: transform .3s ease;
+  }
+
+  .startup-card:hover .startup-image { transform: scale(1.035); }
+
+  .startup-content { padding: 19px 21px 20px; }
+
+  .startup-category {
+    color: #4f46e5;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .9px;
+  }
+
+  .startup-card h3 {
+    margin: 7px 0 6px;
+    color: #172554;
+    font-family: Manrope, sans-serif;
+    font-size: 18px;
+  }
+
+  .startup-card p {
+    min-height: 40px;
+    margin: 0 0 14px;
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .startup-link {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+    border-top: 1px solid #f1f5f9;
+    color: #4f46e5;
+    font-size: 12px;
+    font-weight: 800;
+  }
+
+  .startup-footer { margin-top: 32px; text-align: center; }
+
+  @media(max-width: 900px) {
+    .startup-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+
+  @media(max-width: 560px) {
+    .startup-grid { grid-template-columns: 1fr; }
+  }
+</style>

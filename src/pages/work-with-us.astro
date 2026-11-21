@@ -1,0 +1,68 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const pathways = [
+  {title:'I want to use a product',text:'Tell us about your organisation, the problem you want to solve and the product you are interested in. We can discuss product readiness, a walkthrough and possible adoption.',subject:'Customer%20Product%20Enquiry'},
+  {title:'I represent a college or institution',text:'Explore an institutional presentation, department-level evaluation, student engagement or a pilot that fits your requirements.',subject:'Institutional%20Collaboration%20Enquiry'},
+  {title:'I represent an industry partner',text:'Discuss domain expertise, joint product development, validation, distribution or other forms of collaboration.',subject:'Industry%20Partnership%20Enquiry'},
+  {title:'I am an investor or potential funder',text:'Start a conversation about the product vision, customer problem, development stage, validation needs and possible funding partnership.',subject:'Funding%20and%20Investment%20Enquiry'},
+  {title:'I am a student interested in contributing',text:'Share your interests and the product area you would like to contribute to. Participation depends on current project needs and opportunities.',subject:'Student%20Participation%20Enquiry'},
+];
+---
+<MainLayout title="Work With Us | Startup Lab – Dr. K. Michael Mahesh" description="Explore product demos, institutional adoption, industry partnerships, funding and student collaboration.">
+  <Header />
+  <main class="work-page">
+    <section class="hero">
+      <p class="eyebrow">STARTUP LAB · CONNECT & COLLABORATE</p>
+      <h1>Let's turn a useful idea into real-world value.</h1>
+      <p>Whether you are a customer, institution, industry partner, investor or student, we would be glad to hear from you. Our professor–student innovation initiatives are shaped through practical needs, collaboration and continuous feedback.</p>
+      <a class="button primary" href="mailto:michaelmaheshk@gmail.com?subject=Startup%20Lab%20Enquiry">Start a conversation ↗</a>
+    </section>
+
+    <section class="pathways">
+      <div class="heading"><p class="eyebrow">HOW WOULD YOU LIKE TO WORK WITH US?</p><h2>Choose the conversation that fits your interest.</h2></div>
+      <div class="path-grid">
+        {pathways.map((item,i)=><article class="path-card"><span class="number">{String(i+1).padStart(2,'0')}</span><h3>{item.title}</h3><p>{item.text}</p><a href={`mailto:michaelmaheshk@gmail.com?subject=${item.subject}`}>Enquire about this →</a></article>)}
+      </div>
+    </section>
+
+    <section class="process">
+      <p class="eyebrow">WHAT HAPPENS NEXT?</p><h2>A clear and practical process.</h2>
+      <div class="steps">
+        <article><b>01</b><h3>Share your requirement</h3><p>Tell us about your organisation, target users and the problem you want to address.</p></article>
+        <article><b>02</b><h3>Explore product fit</h3><p>We will discuss the relevant initiative, current readiness, proposed scope and possible next steps.</p></article>
+        <article><b>03</b><h3>Discuss a demo or pilot</h3><p>Where appropriate, we can discuss a walkthrough, pilot evaluation or collaboration plan.</p></article>
+        <article><b>04</b><h3>Agree on the way forward</h3><p>Scope, responsibilities, timelines, support and pricing are discussed transparently before any commitment.</p></article>
+      </div>
+    </section>
+
+    <section class="contact">
+      <p class="eyebrow">DIRECT ENQUIRIES</p><h2>Tell us what you have in mind.</h2>
+      <p>Email: <a href="mailto:michaelmaheshk@gmail.com">michaelmaheshk@gmail.com</a></p>
+      <a class="button light" href="mailto:michaelmaheshk@gmail.com?subject=Startup%20Lab%20Enquiry">Contact Startup Lab ↗</a>
+      <p class="note">A product enquiry does not create an obligation to purchase, invest or participate. Product availability, demonstration access, pricing and timelines depend on the initiative's current status and will be confirmed individually.</p>
+    </section>
+  </main>
+  <Footer />
+</MainLayout>
+<style>
+:global(*){box-sizing:border-box}.work-page{max-width:1120px;margin:auto;padding:38px 24px 80px;color:#17233f}
+.eyebrow{color:#6657c8;font-size:.75rem;font-weight:850;letter-spacing:.14em;margin:0 0 14px}
+h1{font-size:clamp(2.8rem,6vw,5rem);line-height:1.03;letter-spacing:-.06em;max-width:900px;margin:0 0 22px}
+h2{font-size:clamp(1.7rem,3.5vw,2.5rem);line-height:1.15;letter-spacing:-.04em;margin:0 0 15px}
+.hero{padding:50px 0 70px}.hero>p:not(.eyebrow){font-size:1.1rem;color:#65718a;line-height:1.85;max-width:820px;margin-bottom:25px}
+.button{display:inline-flex;padding:13px 19px;border-radius:12px;text-decoration:none;font-weight:750}.primary{background:#6555c8;color:white}
+.pathways{padding:55px 0;border-top:1px solid #e9edf4}.heading{max-width:730px;margin-bottom:28px}
+.path-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.path-card{padding:25px;border:1px solid #e7eaf2;border-radius:18px;background:#fff}.number{color:#6c5cc7;font-weight:850;font-size:.8rem}
+.path-card h3{font-size:1.15rem;margin:13px 0 9px}.path-card p{color:#69758b;line-height:1.75;min-height:80px}
+.path-card a{color:#6555c8;font-weight:750;text-decoration:none}
+.process{padding:50px 0 70px}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:25px}
+.steps article{padding:20px;border-radius:16px;background:#f8f9fc;border:1px solid #edf0f5}.steps b{color:#6c5cc7}.steps h3{font-size:1rem;margin:13px 0 8px}.steps p{font-size:.9rem;line-height:1.7;color:#69758b;margin:0}
+.contact{text-align:center;padding:45px 25px;border-radius:23px;background:#18264a;color:white}.contact .eyebrow{color:#c5beff}
+.contact>p:not(.eyebrow):not(.note){color:#d3daeb}.contact a:not(.button){color:#fff}
+.light{background:white;color:#26345a}.note{max-width:800px;margin:25px auto 0;color:#aeb9d2;font-size:.78rem;line-height:1.65}
+@media(max-width:760px){.work-page{padding:25px 17px 55px}.path-grid,.steps{grid-template-columns:1fr}.hero{padding:35px 0 50px}.pathways,.process{padding:42px 0}.path-card p{min-height:0}}
+</style>
