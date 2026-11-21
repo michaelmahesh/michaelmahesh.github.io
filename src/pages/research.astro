@@ -1,0 +1,178 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const researchAreas = [
+  { code: 'AI', title: 'Artificial Intelligence & Machine Learning', text: 'Intelligent computational approaches for solving complex engineering and real-world problems.', tone: 'indigo', papers: [{ label: 'Explore AI publications', href: '/publications/' }] },
+  { code: 'CV', title: 'Computer Vision', text: 'Image understanding, object detection, segmentation, recognition and visual intelligence.', tone: 'blue', papers: [{ label: 'PMFHNet · Road anomaly detection', href: 'https://doi.org/10.1080/13682199.2025.2599711' }, { label: 'RBorderNet · Road-scene segmentation', href: 'https://doi.org/10.1016/j.dsp.2022.103626' }] },
+  { code: 'DL', title: 'Deep Learning', text: 'Deep neural architectures, learning strategies and application-oriented models.', tone: 'violet', papers: [{ label: 'MICH-Net · Steering-angle prediction', href: 'https://doi.org/10.1109/TITS.2025.3623324' }, { label: 'Explore deep-learning publications', href: '/publications/' }] },
+  { code: 'MI', title: 'Medical AI & Image Analysis', text: 'Medical image processing, brain tumour analysis, segmentation and classification.', tone: 'teal', papers: [{ label: 'DeepJoint · Glioma segmentation', href: 'https://doi.org/10.1049/iet-ipr.2018.6682' }, { label: 'Multi-modal lung cancer detection', href: 'https://doi.org/10.1080/07357907.2025.2520610' }] },
+  { code: 'IP', title: 'Digital Image Processing', text: 'Image enhancement, transformations, feature extraction and visual analysis.', tone: 'sky', papers: [{ label: 'DeepJoint · Multimodal MRI analysis', href: 'https://doi.org/10.1049/iet-ipr.2018.6682' }, { label: 'Explore image-processing publications', href: '/publications/' }] },
+  { code: 'ADAS', title: 'ADAS & Intelligent Transportation', text: 'Road-scene understanding, pedestrian analysis, anomaly detection and driving decisions.', tone: 'amber', papers: [{ label: 'MICH-Net · Steering-angle prediction', href: 'https://doi.org/10.1109/TITS.2025.3623324' }, { label: 'HY-LSTM · Pedestrian crossing-time estimation', href: 'https://doi.org/10.1016/j.jvcir.2023.103982' }, { label: 'DeepDrive · Braking decision-making', href: 'https://doi.org/10.1016/j.engappai.2023.106111' }] },
+  { code: 'OPT', title: 'Optimization Algorithms', text: 'Evolutionary and metaheuristic optimization for model design and engineering applications.', tone: 'rose', papers: [{ label: 'MICH-Net · African Fire Hawk Optimization', href: 'https://doi.org/10.1109/TITS.2025.3623324' }, { label: 'Explore optimization-related publications', href: '/publications/' }] },
+  { code: 'VLM', title: 'Multimodal & Vision-Language AI', text: 'Emerging work around vision transformers, foundation models and multimodal learning.', tone: 'slate', papers: [{ label: 'Browse the complete publication list', href: '/publications/' }] },
+];
+
+const researchTimeline = [
+  { period: '2018–2020', title: 'Medical Image Intelligence', text: 'Research involving brain tumour recognition, multimodal MRI analysis, segmentation and severity-level classification.' },
+  { period: '2021–2022', title: 'Video Analytics & Road Scene Understanding', text: 'Research expanded into surveillance-video anomaly detection, road-scene segmentation and road-intersection classification.' },
+  { period: '2023–2024', title: 'ADAS & Intelligent Transportation', text: 'Research included braking decision-making, pedestrian crossing-time estimation and intelligent transportation applications.' },
+  { period: '2025–2026', title: 'Multidisciplinary AI Systems', text: 'Recent work spans ADAS, medical AI, road anomaly detection, wireless intelligent systems and emerging AI architectures.' },
+];
+
+const workflow = [
+  { number: '01', title: 'Identify the problem', text: 'Define a meaningful engineering, medical or real-world challenge.' },
+  { number: '02', title: 'Develop the approach', text: 'Design or adapt computational, machine-learning and deep-learning methods.' },
+  { number: '03', title: 'Experiment & evaluate', text: 'Use appropriate datasets, experiments, metrics and comparative analysis.' },
+  { number: '04', title: 'Translate the outcome', text: 'Communicate findings through publications, prototypes and shared knowledge.' },
+];
+
+const principles = [
+  { title: 'Research', text: 'Develop meaningful technical ideas supported by systematic experimentation and analysis.' },
+  { title: 'Build', text: 'Convert research concepts into working prototypes, implementations and reproducible experiments.' },
+  { title: 'Share', text: 'Make knowledge accessible through publications, teaching materials, projects and open-source work.' },
+];
+
+
+---
+
+<MainLayout
+  title="Research | Dr. K. Michael Mahesh"
+  description="Research profile of Dr. K. Michael Mahesh, covering artificial intelligence, deep learning, computer vision, medical image analysis, digital image processing and intelligent transportation systems."
+>
+  <Header />
+
+  <main class="research-page">
+    <section class="research-hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">RESEARCH PROFILE</span>
+          <h1>Researching <span>intelligent systems.</span></h1>
+          <p class="hero-description">
+            My research explores Artificial Intelligence, Machine Learning, Deep Learning, Computer Vision, Digital Image Processing, Medical AI and Advanced Driver Assistance Systems. The focus is on developing and evaluating intelligent approaches for visual, healthcare and transportation challenges.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="/publications/">Explore publications <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="/projects/">View research projects</a>
+          </div>
+        </div>
+        <aside class="research-aside" aria-label="Research focus">
+          <span class="aside-kicker">RESEARCH AT A GLANCE</span>
+          <div class="focus-row"><span class="focus-mark">01</span><div><strong>AI & Computer Vision</strong><small>Core research direction</small></div></div>
+          <div class="focus-row"><span class="focus-mark">02</span><div><strong>Medical AI</strong><small>Imaging and intelligent analysis</small></div></div>
+          <div class="focus-row"><span class="focus-mark">03</span><div><strong>ADAS</strong><small>Road scenes and intelligent transportation</small></div></div>
+          <div class="focus-row"><span class="focus-mark">04</span><div><strong>Deep Learning</strong><small>Architectures and applications</small></div></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="research-areas">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5 12 2l8 3.5-8 3.5-8-3.5Z"/><path d="M4 12l8 3.5 8-3.5M4 18.5 12 22l8-3.5"/></svg></div>
+          <div><span class="section-label">01 / AREAS OF INTEREST</span><h2>Research domains</h2><p>Research interests connect computational intelligence with visual, medical, transportation and emerging AI applications.</p></div>
+        </div>
+        <div class="area-grid">
+          {researchAreas.map((area) => (
+            <article class={`area-card tone-${area.tone}`}>
+              <span class="area-code">{area.code}</span>
+              <h3>{area.title}</h3>
+              <p>{area.text}</p>
+              <div class="area-resources" aria-label={`Related publications for ${area.title}`}>
+                {area.papers.map((paper) => (
+                  <a href={paper.href} target={paper.href.startsWith('http') ? '_blank' : undefined} rel={paper.href.startsWith('http') ? 'noopener noreferrer' : undefined}>
+                    {paper.label} <span aria-hidden="true">↗</span>
+                  </a>
+                ))}
+                <a class="project-resource" href="/projects/">Explore project portfolio <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="approach">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M7 6h10M6.5 8l4 8M17.5 8l-4 8"/></svg></div>
+          <div><span class="section-label">02 / RESEARCH APPROACH</span><h2>From problem to outcome</h2><p>A structured approach to framing research questions, developing methods and evaluating results.</p></div>
+        </div>
+        <div class="workflow-grid">
+          {workflow.map((step) => (
+            <article class="workflow-card"><span class="workflow-number">{step.number}</span><h3>{step.title}</h3><p>{step.text}</p></article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="research-journey">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v18M7 6h11l-2.5 3L18 12H7M7 16h10"/></svg></div>
+          <div><span class="section-label">03 / RESEARCH JOURNEY</span><h2>Evolving research directions</h2><p>A broad view of how the themes represented in my research have developed over time.</p></div>
+        </div>
+        <div class="timeline">
+          {researchTimeline.map((item) => (
+            <article class="timeline-item"><span class="timeline-period">{item.period}</span><div><h3>{item.title}</h3><p>{item.text}</p></div></article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="philosophy">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v4M5.6 5.6l2.8 2.8M3 12h4M5.6 18.4l2.8-2.8M12 17v4M18.4 18.4l-2.8-2.8M17 12h4M18.4 5.6l-2.8 2.8"/><circle cx="12" cy="12" r="4"/></svg></div>
+          <div><span class="section-label">04 / RESEARCH PHILOSOPHY</span><h2>Research should move beyond the paper.</h2><p>Connecting rigorous investigation with implementation and knowledge sharing.</p></div>
+        </div>
+        <div class="principle-grid">
+          {principles.map((item, index) => (
+            <article class="principle-card"><span class="principle-index">0{index + 1}</span><h3>{item.title}</h3><p>{item.text}</p></article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="research-output">
+      <div class="container">
+        <div class="output-panel">
+          <div><span class="section-label">RESEARCH OUTPUT</span><h2>Explore the research output.</h2><p>Browse the publication record and selected technical projects for more detail on the research work.</p></div>
+          <div class="output-actions"><a class="button button-primary" href="/publications/">Publications <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="/projects/">Projects <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</MainLayout>
+
+<style>
+  .research-page{--r-primary:#4338ca;--r-primary-dark:#3730a3;--r-navy:#172554;--r-text:#1e293b;--r-muted:#475569;--r-border:#e2e8f0;--r-soft:#f8fafc;color:var(--r-text);background:#fff}
+  .research-page *{box-sizing:border-box}
+  .container{width:min(1120px,calc(100% - 48px));margin-inline:auto}
+  .research-hero{padding:86px 0 78px;background:linear-gradient(180deg,#fff 0%,#f8fafc 100%);border-bottom:1px solid var(--r-border)}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(280px,.7fr);gap:64px;align-items:center}
+  .eyebrow,.section-label,.aside-kicker{font-size:11px;font-weight:750;letter-spacing:.13em;color:var(--r-primary);text-transform:uppercase}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:18px}.eyebrow:before{content:"";width:24px;height:2px;background:var(--r-primary);border-radius:2px}
+  .hero-copy h1{max-width:720px;color:var(--r-navy);font-size:clamp(42px,6vw,66px);line-height:1.04;letter-spacing:-.045em;font-weight:800;margin:0 0 22px}.hero-copy h1 span{color:var(--r-primary)}
+  .hero-description{max-width:700px;color:var(--r-muted);font-size:16px;line-height:1.8;margin:0}
+  .hero-actions,.output-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:28px}
+  .button{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 17px;border-radius:9px;font-size:13px;font-weight:700;text-decoration:none;transition:transform .2s ease,background .2s ease,border-color .2s ease}.button:hover{transform:translateY(-2px)}
+  .button-primary{background:var(--r-primary);color:#fff;border:1px solid var(--r-primary)}.button-primary:hover{background:var(--r-primary-dark)}.button-secondary{background:#fff;color:var(--r-navy);border:1px solid var(--r-border)}.button-secondary:hover{border-color:#a5b4fc}
+  .research-aside{padding:25px 27px;background:#fff;border:1px solid var(--r-border);border-radius:16px;box-shadow:0 12px 32px rgba(15,23,42,.045)}
+  .aside-kicker{display:block;padding-bottom:14px;border-bottom:1px solid var(--r-border);color:#64748b}
+  .focus-row{display:flex;gap:14px;align-items:center;padding:16px 0;border-bottom:1px solid var(--r-border)}.focus-row:last-child{border-bottom:0;padding-bottom:0}.focus-mark{width:34px;height:34px;display:grid;place-items:center;flex:none;border-radius:9px;background:#eef2ff;color:var(--r-primary);font-size:11px;font-weight:800}.focus-row strong{display:block;color:var(--r-navy);font-size:14px}.focus-row small{display:block;margin-top:3px;color:var(--r-muted);font-size:12px}
+  .section{padding:76px 0}.section-soft{background:#f8fafc;border-top:1px solid #f1f5f9;border-bottom:1px solid #f1f5f9}
+  .section-heading{display:flex;align-items:flex-start;gap:17px;margin-bottom:30px}.section-icon{width:42px;height:42px;display:grid;place-items:center;flex:none;border:1px solid #e0e7ff;border-radius:11px;background:#eef2ff;color:var(--r-primary)}.section-icon svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}.section-label{display:block;margin:1px 0 7px}.section-heading h2,.output-panel h2{margin:0;color:var(--r-navy);font-size:clamp(27px,3.2vw,35px);line-height:1.18;letter-spacing:-.03em}.section-heading p{max-width:760px;margin:9px 0 0;color:var(--r-muted);font-size:14px;line-height:1.7}
+  .area-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.area-card{min-height:190px;padding:21px;background:#fff;border:1px solid var(--r-border);border-radius:13px;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}.area-card:hover{transform:translateY(-3px);border-color:#c7d2fe;box-shadow:0 12px 28px rgba(15,23,42,.055)}.area-code{display:inline-grid;min-width:37px;height:30px;place-items:center;padding:0 7px;border-radius:7px;background:#eef2ff;color:#4338ca;font-size:10px;font-weight:800;letter-spacing:.04em}.area-card h3{margin:16px 0 7px;color:var(--r-navy);font-size:16px;line-height:1.35}.area-card p{margin:0;color:var(--r-muted);font-size:12.5px;line-height:1.65}.area-resources{display:grid;gap:7px;margin-top:16px;padding-top:12px;border-top:1px solid #f1f5f9}.area-resources a{width:fit-content;color:var(--r-primary);font-size:11px;font-weight:700;line-height:1.45;text-decoration:none}.area-resources a:hover{text-decoration:underline;text-underline-offset:3px}.area-resources .project-resource{color:#475569}.area-resources a:focus-visible{outline:2px solid #a5b4fc;outline-offset:3px;border-radius:3px}
+  .tone-blue .area-code{background:#eff6ff;color:#1d4ed8}.tone-violet .area-code{background:#f5f3ff;color:#6d28d9}.tone-teal .area-code{background:#f0fdfa;color:#0f766e}.tone-sky .area-code{background:#f0f9ff;color:#0369a1}.tone-amber .area-code{background:#fffbeb;color:#b45309}.tone-rose .area-code{background:#fff1f2;color:#be123c}.tone-slate .area-code{background:#f1f5f9;color:#334155}
+  .workflow-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border:1px solid var(--r-border);border-radius:14px;background:#fff;overflow:hidden}.workflow-card{padding:24px 21px;border-right:1px solid var(--r-border)}.workflow-card:last-child{border-right:0}.workflow-number{color:#818cf8;font-size:25px;font-weight:800;letter-spacing:-.04em}.workflow-card h3{margin:12px 0 6px;color:var(--r-navy);font-size:15px}.workflow-card p{margin:0;color:var(--r-muted);font-size:12.5px;line-height:1.65}
+  .timeline{position:relative;display:grid;gap:0;margin-left:9px;padding-left:28px;border-left:2px solid #e0e7ff}.timeline-item{position:relative;display:grid;grid-template-columns:145px 1fr;gap:20px;padding:0 0 30px}.timeline-item:last-child{padding-bottom:0}.timeline-item:before{position:absolute;content:"";left:-35px;top:5px;width:12px;height:12px;border:3px solid #fff;border-radius:50%;background:var(--r-primary);box-shadow:0 0 0 1px #c7d2fe}.timeline-period{color:var(--r-primary);font-size:12px;font-weight:750;letter-spacing:.04em}.timeline-item h3{margin:0 0 5px;color:var(--r-navy);font-size:17px}.timeline-item p{max-width:760px;margin:0;color:var(--r-muted);font-size:13px;line-height:1.7}
+  .principle-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.principle-card{position:relative;padding:25px;background:#fff;border:1px solid var(--r-border);border-radius:13px}.principle-index{display:inline-block;margin-bottom:17px;color:#a5b4fc;font-size:12px;font-weight:800;letter-spacing:.1em}.principle-card h3{margin:0 0 7px;color:var(--r-navy);font-size:19px}.principle-card p{margin:0;color:var(--r-muted);font-size:13px;line-height:1.7}
+  .output-panel{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:34px;background:#fff;border:1px solid var(--r-border);border-radius:16px;box-shadow:0 10px 28px rgba(15,23,42,.04)}.output-panel h2{margin-top:7px}.output-panel p{max-width:590px;margin:8px 0 0;color:var(--r-muted);font-size:13px;line-height:1.7}.output-actions{margin-top:0;flex:none}
+  a:focus-visible{outline:3px solid #a5b4fc;outline-offset:3px}
+  @media(max-width:960px){.hero-grid{grid-template-columns:1fr;gap:32px}.research-aside{max-width:620px}.area-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.workflow-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.workflow-card:nth-child(2){border-right:0}.workflow-card:nth-child(-n+2){border-bottom:1px solid var(--r-border)}}
+  @media(max-width:640px){.container{width:min(100% - 32px,1120px)}.research-hero{padding:60px 0 55px}.section{padding:58px 0}.section-heading{gap:12px}.section-icon{width:38px;height:38px}.area-grid,.workflow-grid,.principle-grid{grid-template-columns:1fr}.area-card{min-height:0}.workflow-card{border-right:0;border-bottom:1px solid var(--r-border)}.workflow-card:last-child{border-bottom:0}.workflow-card:nth-child(2){border-right:0}.workflow-card:nth-child(-n+2){border-bottom:1px solid var(--r-border)}.timeline-item{grid-template-columns:1fr;gap:5px;padding-bottom:25px}.output-panel{align-items:flex-start;flex-direction:column;padding:25px}.output-actions{margin-top:2px}}
+  @media(prefers-reduced-motion:reduce){.button,.area-card{transition:none}}
+</style>

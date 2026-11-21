@@ -1,0 +1,196 @@
+<section class="section projects" id="projects">
+  <div class="container">
+    <div class="section-top">
+      <div>
+        <span class="section-label">RESEARCH & TECHNICAL WORK</span>
+        <h2 class="section-title">Selected Projects</h2>
+        <p class="section-description">
+          Exploring practical applications of computer vision,
+          artificial intelligence and intelligent technologies.
+        </p>
+      </div>
+      <a href="/projects/" class="view-all">View All Projects ↗</a>
+    </div>
+
+    <article class="featured-project">
+      <div class="project-gallery">
+        <div class="main-image">
+          <img src="/images/projects/face-morph/face_morph_50.jpg"
+               alt="Face morphing intermediate result" loading="lazy" />
+          <span class="image-label">FACE MORPHING</span>
+        </div>
+        <div class="image-thumbnails">
+          <img src="/images/projects/face-morph/face1.jpg" alt="First source face" loading="lazy" />
+          <img src="/images/projects/face-morph/face_morph_25.jpg" alt="25 percent face morph" loading="lazy" />
+          <img src="/images/projects/face-morph/face_morph_75.jpg" alt="75 percent face morph" loading="lazy" />
+          <img src="/images/projects/face-morph/face2.jpg" alt="Second source face" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="project-content">
+        <span class="project-category">COMPUTER VISION · OPENCV</span>
+        <h3>FaceMorph – OpenCV</h3>
+        <p>
+          A computer vision project demonstrating facial morphing
+          through image alignment, facial landmark processing and
+          image blending techniques.
+        </p>
+
+        <div class="technology-list">
+          <span>Python</span>
+          <span>OpenCV</span>
+          <span>Image Processing</span>
+          <span>Computer Vision</span>
+        </div>
+
+        <a href="/projects/face-morph/" class="project-link">
+          Explore Project <span>↗</span>
+        </a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<style>
+  .projects {
+    background: white;
+  }
+
+  .section-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px;
+    margin-bottom: 35px;
+  }
+
+  .view-all {
+    color: #4f46e5;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .featured-project {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 40px;
+    padding: 25px;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    background: #fff;
+  }
+
+  .project-gallery {
+    min-width: 0;
+  }
+
+  .main-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 13px;
+    background: #f1f5f9;
+  }
+
+  .main-image img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+  }
+
+  .image-label {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: #172554dd;
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .image-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 12px;
+  }
+
+  .image-thumbnails img {
+    width: 100%;
+    aspect-ratio: 1.3;
+    object-fit: cover;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+  }
+
+  .project-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 15px 10px;
+  }
+
+  .project-category {
+    color: #4f46e5;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+  }
+
+  .project-content h3 {
+    margin: 15px 0 10px;
+    color: #172554;
+    font-family: Manrope, sans-serif;
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .project-content p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .technology-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 18px 0 25px;
+  }
+
+  .technology-list span {
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  .project-link {
+    color: #4f46e5;
+    font-size: 13px;
+    font-weight: 800;
+  }
+
+  @media(max-width: 760px) {
+    .section-top {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .featured-project {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 16px;
+    }
+
+    .project-content h3 {
+      font-size: 24px;
+    }
+  }
+</style>

@@ -1,0 +1,410 @@
+
+---
+const publications = [
+  {
+    year: 2026,
+    title: 'Deep Kronecker NasNet-based AB-M Tree for Storage and Efficient Retrieval Model using Blockchain',
+    snip: '0.778',
+    quartile: 'Q2',
+    publisher: 'Springer Nature',
+    doi: '10.1007/s40998-026-01236-7',
+    type: 'Journal Article',
+  },
+  {
+    year: 2026,
+    title: 'Deep learning technique for rice leaf disease classification and severity level identification via Hybrid ResConvolutional Neural Network',
+    snip: '1.213',
+    quartile: 'Q1',
+    publisher: 'Nature Portfolio',
+    doi: '10.1038/s41598-026-68755-5',
+    type: 'Journal Article',
+  },
+  {
+    year: 2026,
+    title: 'Elk Skill Optimizer Enabled Joint Channel Access and Energy Management Algorithm for Dynamic Channel Allocation in WSN',
+    publisher: 'Wiley',
+    doi: '10.1002/dac.70421',
+    type: 'Journal Article',
+  },
+  {
+    year: 2026,
+    title: 'Heterogeneous Graph Convolution Cell Attention Network with Skill Optimization Based Jasmine Fragrance Detection',
+    publisher: 'Springer Nature',
+    doi: '10.1007/978-981-95-4161-4_28',
+    type: 'Book Chapter',
+  },
+  {
+    year: 2025,
+    title: 'MICH-Net: A Novel Deep Learning Architecture With African Fire Hawk Optimization for Steering Angle Prediction in an Advanced Driver Assistance System',
+    snip: '2.758',
+    quartile: 'Q1',
+    publisher: 'IEEE',
+    doi: '10.1109/TITS.2025.3623324',
+    type: 'Journal Article',
+  },
+  {
+    year: 2025,
+    title: 'Multi-Modal Lung Cancer Detection Using Pyramidal Cascade Neuro-Fuzzy Fractional Network',
+    snip: '0.419',
+    quartile: 'Q3',
+    publisher: 'Taylor & Francis',
+    doi: '10.1080/07357907.2025.2520610',
+    type: 'Journal Article',
+  },
+  {
+    year: 2025,
+    title: 'PMFHNet: Parallel Maxout Feed Harmonic Network for Road Anomaly Object Detection in ADAS Under Low Light Conditions',
+    snip: '0.422',
+    quartile: 'Q2',
+    publisher: 'Taylor & Francis',
+    doi: '10.1080/13682199.2025.2599711',
+    type: 'Journal Article',
+  },
+  {
+    year: 2025,
+    title: 'Deep Learning-Based Energy Prediction and Tangent Search Remora Optimization-Based Secure Multi-Path Data Communication Mechanism in WSN',
+    snip: '0.560',
+    quartile: 'Q2',
+    publisher: 'Taylor & Francis',
+    doi: '10.1080/0954898X.2024.2393750',
+    type: 'Journal Article',
+  },
+  {
+    year: 2025,
+    title: 'Decentralized Control Design for UAV Swarms Communication',
+    publisher: 'Springer Nature',
+    doi: '10.1007/s42452-024-06408-w',
+    type: 'Journal Article',
+  },
+  {
+    year: 2025,
+    title: 'Detecting Early-Stage Stress Levels Using EEG and Heart Rate Monitoring with Enhanced Sparse Fire Hawk Graph Probabilistic Spiking Attention Neural Network',
+    publisher: 'IEEE',
+    doi: '10.1109/IDCIOT64235.2025.10915029',
+    type: 'Conference Paper',
+  },
+  {
+    year: 2024,
+    title: 'Improving FANET Communication with a QoS Optimized Location-Aided Routing Protocol',
+    publisher: 'IEEE',
+    doi: '10.1109/ICOSEC61587.2024.10722211',
+    type: 'Conference Paper',
+  },
+  {
+    year: 2024,
+    title: 'Next-Generation Wearable Antenna: Optimized Multi-Band Performance for Advanced Wireless Systems and Applications',
+    publisher: 'IEEE',
+    doi: '10.1109/I4C62240.2024.10748486',
+    type: 'Conference Paper',
+  },
+  {
+    year: 2023,
+    title: 'HY-LSTM: New Time Series Deep Learning Architecture for Estimation of Pedestrian Time to Cross in ADAS',
+    snip: '1.056',
+    quartile: 'Q1',
+    publisher: 'Elsevier',
+    doi: '10.1016/j.jvcir.2023.103982',
+    type: 'Journal Article',
+  },
+  {
+    year: 2023,
+    title: 'DeepDrive: Braking Decision-Making Approach Using Optimized GAN and Deep CNN for ADAS',
+    snip: '1.888',
+    quartile: 'Q1',
+    publisher: 'Elsevier',
+    doi: '10.1016/j.engappai.2023.106111',
+    type: 'Journal Article',
+  },
+  {
+    year: 2023,
+    title: 'Design and Implementation of a Bio-Inspired Robot Arm: Machine Learning, Robot Vision',
+    publisher: 'IEEE',
+    doi: '10.1109/ICCAMS60113.2023.10526171',
+    type: 'Conference Paper',
+  },
+  {
+    year: 2022,
+    title: 'RBorderNet: Rider Border Collie Optimization-Based Deep CNN for Road Scene Segmentation and Road Intersection Classification',
+    snip: '1.195',
+    quartile: 'Q1',
+    publisher: 'Elsevier',
+    doi: '10.1016/j.dsp.2022.103626',
+    type: 'Journal Article',
+  },
+  {
+    year: 2021,
+    title: 'Detection and Localization of Abnormalities in Surveillance Video Using Timerider-Based Neural Network',
+    snip: '0.856',
+    quartile: 'Q2',
+    publisher: 'Oxford University Press',
+    doi: '10.1093/comjnl/bxab002',
+    type: 'Journal Article',
+  },
+  {
+    year: 2020,
+    title: 'DeepJoint Segmentation for Classification of Severity-Levels of Glioma Tumour Using Multimodal MRI Images',
+    snip: '0.853',
+    quartile: 'Q2',
+    publisher: 'Wiley / IET',
+    doi: '10.1049/iet-ipr.2018.6682',
+    type: 'Journal Article',
+  },
+  {
+    year: 2020,
+    title: 'Multiclassifier for Severity-Level Categorization of Glioma Tumors Using Multimodal MRI Brain Images',
+    snip: '0.902',
+    quartile: 'Q2',
+    publisher: 'Wiley',
+    doi: '10.1002/ima.22357',
+    type: 'Journal Article',
+  },
+  {
+    year: 2020,
+    title: 'Workflow Scheduling Using Improved Moth Swarm Optimization Algorithm in Cloud Computing',
+    publisher: 'Multimedia Research',
+    doi: '10.46253/j.mr.v3i3.a5',
+    type: 'Journal Article',
+  },
+  {
+    year: 2018,
+    title: 'Evolutionary Intelligence for Brain Tumor Recognition from MRI Images: A Critical Study and Review',
+    publisher: 'Springer Nature',
+    doi: '10.1007/s12065-018-0156-2',
+    type: 'Journal Article',
+  },
+];
+
+const publisherDomains = {
+  'Springer Nature': 'springer.com',
+  'Nature Portfolio': 'nature.com',
+  'Wiley': 'wiley.com',
+  'Wiley / IET': 'theiet.org',
+  'IEEE': 'ieee.org',
+  'Taylor & Francis': 'tandfonline.com',
+  'Elsevier': 'elsevier.com',
+  'Oxford University Press': 'oup.com',
+  'Multimedia Research': null,
+};
+---
+
+<section class="section publications" id="publications">
+  <div class="container">
+    <div class="publication-heading">
+      <div>
+        <span class="section-label">RESEARCH & PUBLICATIONS</span>
+        <h2 class="section-title">Research Publications</h2>
+        <p class="section-description">
+          Research contributions in Artificial Intelligence, Deep Learning,
+          Computer Vision, Medical Imaging and Intelligent Systems.
+        </p>
+      </div>
+
+      <span class="publication-count">
+        {publications.length} PUBLICATIONS
+      </span>
+    </div>
+
+    <div class="publication-list">
+      {publications.map((paper) => (
+        <article class="publication-card">
+          <div class="publication-top">
+            <span class="publication-year">{paper.year}</span>
+
+            <a
+              class="doi-link"
+              href={`https://doi.org/${paper.doi}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`View DOI for ${paper.title}`}
+            >
+              DOI ↗
+            </a>
+          </div>
+
+          <h3>{paper.title}</h3>
+
+          <div class="publisher-row">
+            {publisherDomains[paper.publisher] ? (
+              <img
+                class="publisher-logo"
+                src={`https://www.google.com/s2/favicons?domain=${publisherDomains[paper.publisher]}&sz=128`}
+                alt={`${paper.publisher} logo`}
+                title={paper.publisher}
+                loading="lazy"
+              />
+            ) : (
+              <span class="publisher-fallback">{paper.publisher}</span>
+            )}
+
+            <span class="publisher-name">{paper.publisher}</span>
+          </div>
+
+          <div class="publication-meta">
+            <span class="type-badge">{paper.type}</span>
+
+            {paper.quartile && (
+              <span class="quartile-badge">{paper.quartile}</span>
+            )}
+
+            {paper.snip && (
+              <span class="snip-badge">SNIP {paper.snip}</span>
+            )}
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .publications {
+    background: #f8fafc;
+  }
+
+  .publication-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+
+  .publication-count {
+    flex-shrink: 0;
+    padding: 8px 12px;
+    border: 1px solid #c7d2fe;
+    border-radius: 8px;
+    background: #eef2ff;
+    color: #4338ca;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .6px;
+  }
+
+  .publication-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .publication-card {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    padding: 22px 23px;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    background: #fff;
+    transition: .2s ease;
+  }
+
+  .publication-card:hover {
+    transform: translateY(-3px);
+    border-color: #c7d2fe;
+    box-shadow: 0 10px 25px #1725540d;
+  }
+
+  .publication-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 15px;
+  }
+
+  .publication-year {
+    color: #4f46e5;
+    font-size: 17px;
+    font-weight: 800;
+  }
+
+  .doi-link {
+    flex-shrink: 0;
+    color: #4f46e5;
+    font-size: 11px;
+    font-weight: 800;
+  }
+
+  .publication-card h3 {
+    margin: 0 0 12px;
+    color: #172554;
+    font-family: Manrope, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .publisher-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 36px;
+    margin-top: auto;
+    margin-bottom: 14px;
+  }
+
+  .publisher-logo {
+    display: block;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+
+  .publisher-name {
+    color: #64748b;
+    font-size: 11px;
+    font-weight: 650;
+  }
+
+  .publisher-fallback {
+    color: #475569;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .publication-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px;
+    padding-top: 12px;
+    border-top: 1px solid #f1f5f9;
+  }
+
+  .type-badge,
+  .quartile-badge,
+  .snip-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 9px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 800;
+  }
+
+  .type-badge {
+    background: #f1f5f9;
+    color: #475569;
+  }
+
+  .quartile-badge {
+    background: #ecfdf5;
+    color: #047857;
+  }
+
+  .snip-badge {
+    background: #eef2ff;
+    color: #4338ca;
+  }
+
+  @media (max-width: 700px) {
+    .publication-list {
+      grid-template-columns: 1fr;
+    }
+
+    .publication-heading {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+</style>

@@ -1,0 +1,186 @@
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <span class="eyebrow">PROFESSOR · RESEARCHER · INNOVATOR</span>
+
+      <h1>
+        Exploring AI.<br />
+        Advancing Research.<br />
+        <span>Building Innovation.</span>
+      </h1>
+
+      <h2>Dr. K. Michael Mahesh</h2>
+
+      <p class="designation">
+        Professor – Electronics and Communication Engineering<br />
+        Saveetha Engineering College, Chennai
+      </p>
+
+      <div class="actions">
+        <a href="/research/" class="button">Explore My Research ↗</a>
+        <a href="/documents/my_cv-2.pdf" class="button button-outline" target="_blank" rel="noreferrer">
+          Download CV ↓
+        </a>
+      </div>
+
+      <div class="social-links">
+        <a href="https://scholar.google.com/" target="_blank" rel="noreferrer">Google Scholar</a>
+        <a href="https://orcid.org/" target="_blank" rel="noreferrer">ORCID</a>
+        <a href="https://github.com/michaelmahesh" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="hero-image-wrap">
+      <div class="image-decoration"></div>
+      <img
+        src="/images/profile.jpg"
+        alt="Portrait of Dr. K. Michael Mahesh"
+        class="profile-image"
+        fetchpriority="high"
+      />
+      <div class="profile-caption">
+        <strong>Research · Teaching · Innovation</strong>
+        <span>Building intelligent solutions for real-world challenges</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    overflow: hidden;
+    padding: 90px 0 100px;
+    background: linear-gradient(115deg, #fff 50%, #f8faff 100%);
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    align-items: center;
+    gap: 75px;
+  }
+
+  .eyebrow {
+    color: #4f46e5;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+
+  h1 {
+    margin: 20px 0;
+    color: #172554;
+    font-family: Manrope, sans-serif;
+    font-size: clamp(38px, 5vw, 59px);
+    font-weight: 800;
+    line-height: 1.16;
+    letter-spacing: -2.5px;
+  }
+
+  h1 span {
+    color: #4f46e5;
+  }
+
+  h2 {
+    margin: 26px 0 3px;
+    color: #1e293b;
+    font-size: 23px;
+  }
+
+  .designation {
+    color: #475569;
+    font-weight: 600;
+  }
+
+  .intro {
+    max-width: 610px;
+    color: #64748b;
+    line-height: 1.9;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 19px;
+    margin-top: 32px;
+  }
+
+  .social-links a {
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .social-links a:hover {
+    color: #4f46e5;
+  }
+
+  .hero-image-wrap {
+    position: relative;
+    max-width: 430px;
+    margin-inline: auto;
+  }
+
+  .image-decoration {
+    position: absolute;
+    inset: -22px 22px 35px -22px;
+    border: 2px solid #c7d2fe;
+    border-radius: 25px;
+  }
+
+  .profile-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 22px;
+    box-shadow: 0 25px 55px rgba(30, 41, 59, .14);
+  }
+
+  .profile-caption {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin: -35px 18px 0;
+    padding: 16px 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 13px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, .08);
+  }
+
+  .profile-caption strong {
+    color: #172554;
+    font-size: 13px;
+  }
+
+  .profile-caption span {
+    color: #64748b;
+    font-size: 11px;
+  }
+
+  @media (max-width: 850px) {
+    .hero {
+      padding: 65px 0;
+    }
+
+    .hero-grid {
+      grid-template-columns: 1fr;
+      gap: 55px;
+    }
+
+    .hero-image-wrap {
+      width: min(100%, 400px);
+    }
+  }
+</style>
